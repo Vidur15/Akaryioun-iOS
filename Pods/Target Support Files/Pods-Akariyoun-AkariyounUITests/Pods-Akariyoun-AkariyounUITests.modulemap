@@ -1,0 +1,6 @@
+framework module Pods_Akariyoun_AkariyounUITests {
+  umbrella header "Pods-Akariyoun-AkariyounUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
