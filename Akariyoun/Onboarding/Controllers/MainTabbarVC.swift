@@ -16,8 +16,6 @@ class MainTabbarVC: UITabBarController {
         self.tabBar.unselectedItemTintColor = UIColor.white.withAlphaComponent(0.5)
       //  self.tabBar.sizeThatFits(CGSize.init(width: view.frame.width, height: 240))
         
-      
-        
         // Do any additional setup after loading the view.
     }
 }

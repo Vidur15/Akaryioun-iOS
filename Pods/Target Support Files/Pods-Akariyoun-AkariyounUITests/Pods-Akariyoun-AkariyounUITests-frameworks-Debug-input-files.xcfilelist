@@ -1,2 +1,3 @@
 ${PODS_ROOT}/Target Support Files/Pods-Akariyoun-AkariyounUITests/Pods-Akariyoun-AkariyounUITests-frameworks.sh
 ${BUILT_PRODUCTS_DIR}/CHIPageControl/CHIPageControl.framework
+${BUILT_PRODUCTS_DIR}/KYDrawerController/KYDrawerController.framework

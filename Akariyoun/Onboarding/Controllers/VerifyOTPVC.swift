@@ -7,12 +7,16 @@
 //
 
 import UIKit
+import KYDrawerController
 
 class VerifyOTPVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
  self.setStatusBarColor()
+        if let drawerController = navigationController?.parent as? KYDrawerController {
+                   drawerController.screenEdgePanGestureEnabled = false
+               }
         // Do any additional setup after loading the view.
     }
     

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import KYDrawerController
 
 class RealEstateVC: UIViewController {
 
@@ -22,6 +23,18 @@ class RealEstateVC: UIViewController {
         self.mainTableView.register(nib, forCellReuseIdentifier: "RealEstateTVC")
         // Do any additional setup after loading the view.
     }
+    
+    @IBAction func drawerAction(_ sender: UIButton) {
+          DispatchQueue.main.async {
+                     if let drawerController = self.navigationController?.parent as? KYDrawerController {
+                         drawerController.drawerWidth = (kScreenWidth - 100)
+                        
+                         drawerController.drawerDirection = .left
+                         drawerController.setDrawerState(.opened, animated: true)
+                     }
+                 }
+      }
+
 }
 
 extension RealEstateVC: UITableViewDelegate,UITableViewDataSource {
@@ -38,5 +51,19 @@ extension RealEstateVC: UITableViewDelegate,UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 140
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "PropertyDetailsVC" ) as? PropertyDetailsVC  else { return }
+                 self.navigationController?.pushViewController(vc, animated: true)
+        
+//        guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "MessagePopVC" ) as? MessagePopVC  else { return }
+//           vc.modalPresentationStyle = .overFullScreen
+//           vc.modalTransitionStyle = .coverVertical
+//        //   vc.sender = self
+//
+//           //  vc.meetUpModel = self.meetUpModel
+//           self.present(vc, animated: true, completion: nil)
     }
 }

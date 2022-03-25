@@ -7,9 +7,10 @@
 //
 
 import UIKit
+import KYDrawerController
 
 class ViewController: UIViewController {
-
+    
     @IBOutlet weak var mainTableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,6 +22,24 @@ class ViewController: UIViewController {
         self.mainTableView.register(nib, forCellReuseIdentifier: "RequestsTVC")
         // Do any additional setup after loading the view.
     }
+    
+   @IBAction func addRequestAction(_ sender: UIButton) {
+   guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "ChooseMemberVC" ) as? ChooseMemberVC  else { return }
+   self.navigationController?.pushViewController(vc, animated: true)
+   }
+    
+    @IBAction func drawerAction(_ sender: UIButton) {
+          DispatchQueue.main.async {
+                     if let drawerController = self.navigationController?.parent as? KYDrawerController {
+                         drawerController.drawerWidth = (kScreenWidth - 100)
+                        
+                         drawerController.drawerDirection = .left
+                         drawerController.setDrawerState(.opened, animated: true)
+                     }
+                 }
+      }
+
+    
 }
 
 extension ViewController: UITableViewDelegate,UITableViewDataSource {
@@ -37,5 +56,10 @@ extension ViewController: UITableViewDelegate,UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 125
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "RequestDetailsVC" ) as? RequestDetailsVC  else { return }
+        self.navigationController?.pushViewController(vc, animated: true)
     }
 }

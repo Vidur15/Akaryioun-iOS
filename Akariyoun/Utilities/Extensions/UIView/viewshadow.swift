@@ -4,23 +4,22 @@ import Foundation
 import UIKit
 
 extension UIView {
-    
-
-    
+        
     func drawShadowwithCornerWithradius(radius : CGFloat) {
            let layer = self.layer
-        layer.shadowColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
-           layer.shadowOffset = CGSize(width: 0, height: 0)
-           layer.shadowOpacity = 0.2
-           layer.shadowRadius = radius
+        layer.shadowColor = #colorLiteral(red: 0.1333333333, green: 0.4705364108, blue: 0.7034772038, alpha: 0.5)
+           layer.shadowOffset = CGSize(width: 1, height: 10)
+        layer.shadowOpacity = 0.5
+        //   layer.shadowRadius = radius
            layer.cornerRadius = radius
+        layer.masksToBounds = false
        }
     
     func drawShadowwithCornerWithradius1(radius : CGFloat) {
               let layer = self.layer
            layer.shadowColor = #colorLiteral(red: 0.3215686275, green: 0.7137254902, blue: 0.6039215686, alpha: 1)
               layer.shadowOffset = CGSize(width: 1, height: 1)
-              layer.shadowOpacity = 0.8
+              layer.shadowOpacity = 0.2
               layer.shadowRadius = radius
               layer.cornerRadius = radius
           }
@@ -39,11 +38,12 @@ extension UIView {
     
     func drawShadowwithCorner() {
         let layer = self.layer
-        layer.shadowColor = UIColor.black.cgColor
-        layer.shadowOffset = CGSize(width: 3, height: 3)
+        layer.shadowColor = UIColor.darkGray.cgColor
+        layer.shadowOffset = CGSize(width: 0.5, height: 0.5)
         layer.shadowOpacity = 0.2
-        layer.shadowRadius = 10
-        layer.cornerRadius = 10
+        layer.shadowRadius = 20
+        layer.cornerRadius = 20
+        layer.masksToBounds = false
     }
     
     

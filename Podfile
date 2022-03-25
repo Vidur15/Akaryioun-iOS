@@ -5,6 +5,7 @@ target 'Akariyoun' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
 pod 'CHIPageControl', '~> 0.1.3'
+ pod 'KYDrawerController'
   # Pods for Akariyoun
 
   target 'AkariyounTests' do

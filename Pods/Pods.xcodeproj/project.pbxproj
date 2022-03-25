@@ -3,134 +3,165 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F08E787CC3420902EBBE0803ADE704E /* KYDrawerController-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D9D7F352F6601121F1306E927505490D /* KYDrawerController-dummy.m */; };
 		18CF459C669FAA7A70FC5420BBCA6AED /* Pods-AkariyounTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 05DA4B921B8EBE69C8F0596ABEEE1436 /* Pods-AkariyounTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		362B4C9D2E384BA0CCF01CEE893583DB /* CHIPageControllable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7538CA8DF0F3D487F838BE86A538994A /* CHIPageControllable.swift */; };
+		287AAFA05B0CA34DEBCC89F777918D96 /* KYDrawerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96EEC8D73BFF192142C1E80E63C2993 /* KYDrawerController.swift */; };
+		362B4C9D2E384BA0CCF01CEE893583DB /* CHIPageControllable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 069F151D90C867EFD3EF6CB9F04E91D2 /* CHIPageControllable.swift */; };
 		3685F0E6ACFD9CE9F03513C9813D7C42 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
-		3A374D3B2566DFA42CF3034DE03F28B6 /* CHIBasePageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFAC0E6F01297F9005BDF7629F7ED171 /* CHIBasePageControl.swift */; };
-		5B492E6A49B922C1A5363854795C3210 /* CHIPageControlChimayo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFC8708B37E99ABA315EC0B14337CC4 /* CHIPageControlChimayo.swift */; };
-		66572A16E262848ACD58968F0B23CFF0 /* CHIPageControlPuya.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E852AE87B33313CA0D404670D5F1C4 /* CHIPageControlPuya.swift */; };
-		6A27EE1594174DF12064D05E53B5BE4B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
-		8377753FAC9D25D1408518FB055A63AD /* CHIPageControlJalapeno.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92810E5AABE24B861617C9F544D88D3A /* CHIPageControlJalapeno.swift */; };
-		8814934323559605043AC4C984999FFD /* Pods-Akariyoun-AkariyounUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 69D72EC10F1BA9D9B49163E9BFE93DA6 /* Pods-Akariyoun-AkariyounUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9650F256401D0E06CD7ED643CAA313CF /* Pods-Akariyoun-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 911BA5E01CC72A099F6E7E323E0F593B /* Pods-Akariyoun-dummy.m */; };
-		9EBFB36A80060BA2A52FF58913BB2582 /* Pods-Akariyoun-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E66640AC0B79A407A7D46555FA53FCD4 /* Pods-Akariyoun-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A047E18BDE9F7AFE0B178ABB86FBF407 /* CHIPageControlAji.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48AE03B7FE80D198B0E14B6B03C576F /* CHIPageControlAji.swift */; };
-		A323AEFF51D4A980CC554EF3E84619F3 /* CHIPageControlPaprika.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3347B673F4917F2219D2D754E70094 /* CHIPageControlPaprika.swift */; };
-		C7F0C48049629F8DDF49863CC18DD080 /* CHIPageControl-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 66FF46EE3CB18BAA90F741E3032CA6FF /* CHIPageControl-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C8DB2343F778EB7929D679D53B76ECB8 /* CHIPageControl-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = AADA4CF5E412F1F47282D44303D52E02 /* CHIPageControl-dummy.m */; };
-		C9DECE4E661C5852243A60BD5160D1A4 /* Pods-Akariyoun-AkariyounUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C0D0474FF56CA006B3A2875F29BAB184 /* Pods-Akariyoun-AkariyounUITests-dummy.m */; };
-		CA43AE02267EC6A32F75A8BF4FA62691 /* CHIPageControlFresno.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F10CED426F150D67BCA0EA1CCF071D9 /* CHIPageControlFresno.swift */; };
-		D030071FC58D8A5A5AB5886F28DAA532 /* CHILayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3CDAB8786E308C521FC4E63278A750 /* CHILayer.swift */; };
-		D6E80C1DDB6E76EC3E9D66DE958E14E2 /* CHIPageControlJaloro.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD72C56BF64F6C1DEC16B2043128894 /* CHIPageControlJaloro.swift */; };
-		D8052C068BE5968B2F03E729877EDA83 /* CHIPageControlAleppo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21DC6B34844F78CFADE8D2AB46D515B1 /* CHIPageControlAleppo.swift */; };
+		3A374D3B2566DFA42CF3034DE03F28B6 /* CHIBasePageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD18DCB03E5B21EA5CE525AB25B1110 /* CHIBasePageControl.swift */; };
+		3EA64075C84634889E4ECDEE714FC983 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		505639E46B32F125513B1194941C0B12 /* Pods-Akariyoun-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 911BA5E01CC72A099F6E7E323E0F593B /* Pods-Akariyoun-dummy.m */; };
+		5320B0D5894BA05E260A4499260F623E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		5B317DC1470166C6D1DF0DD1A6EDE41D /* KYEmbedMainControllerSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD944820CB0FA3522E365F6468D6436 /* KYEmbedMainControllerSegue.swift */; };
+		5B492E6A49B922C1A5363854795C3210 /* CHIPageControlChimayo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8429395FC2A0B1B2BF849F4109DD16 /* CHIPageControlChimayo.swift */; };
+		66572A16E262848ACD58968F0B23CFF0 /* CHIPageControlPuya.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4698BF45E574D555E5E43F4747C4FCF5 /* CHIPageControlPuya.swift */; };
+		6D3B58FC4FC31426D485A6FC6A632C62 /* Pods-Akariyoun-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E66640AC0B79A407A7D46555FA53FCD4 /* Pods-Akariyoun-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8377753FAC9D25D1408518FB055A63AD /* CHIPageControlJalapeno.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C0EDB1F4E60C2C6E87D1959FA15D177 /* CHIPageControlJalapeno.swift */; };
+		A047E18BDE9F7AFE0B178ABB86FBF407 /* CHIPageControlAji.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59AB5F82ABCBD7305105F23347CB6484 /* CHIPageControlAji.swift */; };
+		A323AEFF51D4A980CC554EF3E84619F3 /* CHIPageControlPaprika.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA6B06AAFD61D3009D8B54D04C40EAE /* CHIPageControlPaprika.swift */; };
+		BA6D3D5307CBA9B8959A5E950395972E /* Pods-Akariyoun-AkariyounUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C0D0474FF56CA006B3A2875F29BAB184 /* Pods-Akariyoun-AkariyounUITests-dummy.m */; };
+		C596A00955CB42A1A044B337385CC007 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		C7F0C48049629F8DDF49863CC18DD080 /* CHIPageControl-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6CB1B7D7BF144E7CCC3190F1419CA0EA /* CHIPageControl-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C875BDFC9A457372C38B9252A45CC9DD /* Pods-Akariyoun-AkariyounUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 69D72EC10F1BA9D9B49163E9BFE93DA6 /* Pods-Akariyoun-AkariyounUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C8DB2343F778EB7929D679D53B76ECB8 /* CHIPageControl-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C308E9C64B42C3852945CCAB16923D72 /* CHIPageControl-dummy.m */; };
+		CA43AE02267EC6A32F75A8BF4FA62691 /* CHIPageControlFresno.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25E1EC1BC3516DD5B9DE3B37A91333D /* CHIPageControlFresno.swift */; };
+		D030071FC58D8A5A5AB5886F28DAA532 /* CHILayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065D33B0EB9E954FAED203040EA34AAD /* CHILayer.swift */; };
+		D6E80C1DDB6E76EC3E9D66DE958E14E2 /* CHIPageControlJaloro.swift in Sources */ = {isa = PBXBuildFile; fileRef = E976F051AB61A6C4807BED0429F47511 /* CHIPageControlJaloro.swift */; };
+		D767A423B09360B012538E0F2938FDF6 /* KYEmbedDrawerControllerSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4712600AD8E0E8F9725D8D6F1CCA53 /* KYEmbedDrawerControllerSegue.swift */; };
+		D8052C068BE5968B2F03E729877EDA83 /* CHIPageControlAleppo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E51FA530D84D15D471861BE6EC6BE91C /* CHIPageControlAleppo.swift */; };
 		D909E8F46F7A53BC4FABD9AC24899353 /* Pods-AkariyounTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E3FBD4D35406E267A23FC5DDD9FC6A6D /* Pods-AkariyounTests-dummy.m */; };
-		DA28DBD97151CC77710A0152245011F9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
 		DCABF84F5006970D06F511E2C5AD2D4E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		F0053595B9CBAFAF0BF668D747FE02F7 /* KYDrawerController-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1EDAB0AD0D4804F3B95F8E5FAF310761 /* KYDrawerController-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		7800F8863BF80BD884798F338C897EE0 /* PBXContainerItemProxy */ = {
+		0B5E6863F023E380F330CAF4A715D808 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0BBCBDAFBA68F76840AC5B2B6F9A9628;
+			remoteInfo = KYDrawerController;
+		};
+		608AF6AC9B01800FBFCADC4937DDD647 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 58A7AC722D45BA5EF49F00D98C86978B;
+			remoteInfo = CHIPageControl;
+		};
+		7BF507CAA77D3ABEBB60AD4E4ED23A9A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 58A7AC722D45BA5EF49F00D98C86978B;
+			remoteInfo = CHIPageControl;
+		};
+		8DF0944B4A496DAA932FFE31FE9E42BD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0BBCBDAFBA68F76840AC5B2B6F9A9628;
+			remoteInfo = KYDrawerController;
+		};
+		BA874DC4D025FEA1FBEE20D347D6D1B0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 8A73B493681C9FE53EA184F7FABC3B73;
 			remoteInfo = "Pods-Akariyoun";
 		};
-		7DD1EAB3839FBCC73FD05EE00E616BEA /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 58A7AC722D45BA5EF49F00D98C86978B;
-			remoteInfo = CHIPageControl;
-		};
-		CF6778CED7613478F5087ECE682077E6 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 58A7AC722D45BA5EF49F00D98C86978B;
-			remoteInfo = CHIPageControl;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		007E8835942CFD80DA4C9EFF431FE380 /* Pods-Akariyoun-AkariyounUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Akariyoun-AkariyounUITests-acknowledgements.plist"; sourceTree = "<group>"; };
 		05DA4B921B8EBE69C8F0596ABEEE1436 /* Pods-AkariyounTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-AkariyounTests-umbrella.h"; sourceTree = "<group>"; };
+		065D33B0EB9E954FAED203040EA34AAD /* CHILayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CHILayer.swift; path = CHIPageControl/Core/CHILayer.swift; sourceTree = "<group>"; };
+		069F151D90C867EFD3EF6CB9F04E91D2 /* CHIPageControllable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CHIPageControllable.swift; path = CHIPageControl/Core/CHIPageControllable.swift; sourceTree = "<group>"; };
 		089B4810A95DB4FAF902198617555065 /* Pods-AkariyounTests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-AkariyounTests"; path = Pods_AkariyounTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C6051CD750DE0FB932A0832B1543DB2 /* Pods-AkariyounTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-AkariyounTests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		1213FAB27D33728548843E016E941FDC /* Pods-Akariyoun.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Akariyoun.release.xcconfig"; sourceTree = "<group>"; };
-		21DC6B34844F78CFADE8D2AB46D515B1 /* CHIPageControlAleppo.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CHIPageControlAleppo.swift; path = CHIPageControl/CHIPageControlAleppo.swift; sourceTree = "<group>"; };
+		1B93A9025CDA5A4691B54B2924242868 /* CHIPageControl.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CHIPageControl.debug.xcconfig; sourceTree = "<group>"; };
+		1C0EDB1F4E60C2C6E87D1959FA15D177 /* CHIPageControlJalapeno.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CHIPageControlJalapeno.swift; path = CHIPageControl/CHIPageControlJalapeno.swift; sourceTree = "<group>"; };
+		1EDAB0AD0D4804F3B95F8E5FAF310761 /* KYDrawerController-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KYDrawerController-umbrella.h"; sourceTree = "<group>"; };
 		23BD652286D9A53883DDAEDA6DAD4B3C /* Pods-Akariyoun-AkariyounUITests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-Akariyoun-AkariyounUITests"; path = Pods_Akariyoun_AkariyounUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		26687DF026E86425D266DF4DF5A3043C /* CHIPageControl-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CHIPageControl-prefix.pch"; sourceTree = "<group>"; };
 		2D65A7FB38C257817EB9DC1EB84A6F80 /* Pods-Akariyoun */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-Akariyoun"; path = Pods_Akariyoun.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DD47ED27E317A19373103FA0BD1BE29 /* Pods-Akariyoun-AkariyounUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Akariyoun-AkariyounUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		3269482455059993A7DCCB7766EDCF71 /* KYDrawerController.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = KYDrawerController.modulemap; sourceTree = "<group>"; };
 		3949B617EADF3EFA4F2E157D2E193428 /* Pods-AkariyounTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AkariyounTests.release.xcconfig"; sourceTree = "<group>"; };
 		39F6F091C3D924DBE7B2847ACFFA47EF /* Pods-Akariyoun.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Akariyoun.debug.xcconfig"; sourceTree = "<group>"; };
+		3B8429395FC2A0B1B2BF849F4109DD16 /* CHIPageControlChimayo.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CHIPageControlChimayo.swift; path = CHIPageControl/CHIPageControlChimayo.swift; sourceTree = "<group>"; };
+		448C6CFC8AD9F3F23945189DCEBEA688 /* CHIPageControl.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = CHIPageControl.modulemap; sourceTree = "<group>"; };
+		4698BF45E574D555E5E43F4747C4FCF5 /* CHIPageControlPuya.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CHIPageControlPuya.swift; path = CHIPageControl/CHIPageControlPuya.swift; sourceTree = "<group>"; };
 		4A90E991BC0CB35AB6D91E18C9490643 /* CHIPageControl */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = CHIPageControl; path = CHIPageControl.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		4F10CED426F150D67BCA0EA1CCF071D9 /* CHIPageControlFresno.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CHIPageControlFresno.swift; path = CHIPageControl/CHIPageControlFresno.swift; sourceTree = "<group>"; };
 		4F30D3067C43EE67FE02A53E6C6775AC /* Pods-Akariyoun-AkariyounUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Akariyoun-AkariyounUITests-frameworks.sh"; sourceTree = "<group>"; };
-		5E3CDAB8786E308C521FC4E63278A750 /* CHILayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CHILayer.swift; path = CHIPageControl/Core/CHILayer.swift; sourceTree = "<group>"; };
+		59AB5F82ABCBD7305105F23347CB6484 /* CHIPageControlAji.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CHIPageControlAji.swift; path = CHIPageControl/CHIPageControlAji.swift; sourceTree = "<group>"; };
 		6254301EDD3970B2EA62E83405C9C46A /* Pods-AkariyounTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-AkariyounTests.modulemap"; sourceTree = "<group>"; };
 		65B586A4F8BFB19F8F1D79ACA43CA5FE /* Pods-AkariyounTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AkariyounTests.debug.xcconfig"; sourceTree = "<group>"; };
-		660FF1AA683302D0C6B59B5ABCC53020 /* CHIPageControl.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = CHIPageControl.modulemap; sourceTree = "<group>"; };
-		66FF46EE3CB18BAA90F741E3032CA6FF /* CHIPageControl-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CHIPageControl-umbrella.h"; sourceTree = "<group>"; };
 		69D72EC10F1BA9D9B49163E9BFE93DA6 /* Pods-Akariyoun-AkariyounUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Akariyoun-AkariyounUITests-umbrella.h"; sourceTree = "<group>"; };
+		6CB1B7D7BF144E7CCC3190F1419CA0EA /* CHIPageControl-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CHIPageControl-umbrella.h"; sourceTree = "<group>"; };
 		6F3084927D37D39AEAC2685B0E094B4D /* Pods-Akariyoun-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Akariyoun-acknowledgements.plist"; sourceTree = "<group>"; };
 		727144641D955F333307BEA1AB5AA61C /* Pods-Akariyoun.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Akariyoun.modulemap"; sourceTree = "<group>"; };
 		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		7538CA8DF0F3D487F838BE86A538994A /* CHIPageControllable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CHIPageControllable.swift; path = CHIPageControl/Core/CHIPageControllable.swift; sourceTree = "<group>"; };
-		90E852AE87B33313CA0D404670D5F1C4 /* CHIPageControlPuya.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CHIPageControlPuya.swift; path = CHIPageControl/CHIPageControlPuya.swift; sourceTree = "<group>"; };
+		76C8CCC37E778CCAEE7FC0874B4BCF88 /* CHIPageControl.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CHIPageControl.release.xcconfig; sourceTree = "<group>"; };
+		7BD944820CB0FA3522E365F6468D6436 /* KYEmbedMainControllerSegue.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KYEmbedMainControllerSegue.swift; path = KYDrawerController/Classes/KYEmbedMainControllerSegue.swift; sourceTree = "<group>"; };
+		8580DCFDD0AF9C0A5ECE3DB2AE481AE8 /* CHIPageControl-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "CHIPageControl-Info.plist"; sourceTree = "<group>"; };
+		862D74E1877F73DFB86764A5F0631821 /* KYDrawerController-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KYDrawerController-prefix.pch"; sourceTree = "<group>"; };
 		911BA5E01CC72A099F6E7E323E0F593B /* Pods-Akariyoun-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Akariyoun-dummy.m"; sourceTree = "<group>"; };
-		92810E5AABE24B861617C9F544D88D3A /* CHIPageControlJalapeno.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CHIPageControlJalapeno.swift; path = CHIPageControl/CHIPageControlJalapeno.swift; sourceTree = "<group>"; };
 		9BBCA5C47FCD058EDFAEC1959E30C4D8 /* Pods-AkariyounTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AkariyounTests-Info.plist"; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A7142FC3FC21D6B8753FBC630135E208 /* Pods-Akariyoun-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Akariyoun-Info.plist"; sourceTree = "<group>"; };
-		AADA4CF5E412F1F47282D44303D52E02 /* CHIPageControl-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CHIPageControl-dummy.m"; sourceTree = "<group>"; };
 		ADE77CFB836DD533C64ADA769CF6E1DA /* Pods-Akariyoun-AkariyounUITests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Akariyoun-AkariyounUITests-Info.plist"; sourceTree = "<group>"; };
-		B2AE7C6B2430D3137E1131E5CC5D22BC /* CHIPageControl-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CHIPageControl-prefix.pch"; sourceTree = "<group>"; };
+		B25E1EC1BC3516DD5B9DE3B37A91333D /* CHIPageControlFresno.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CHIPageControlFresno.swift; path = CHIPageControl/CHIPageControlFresno.swift; sourceTree = "<group>"; };
 		B5DBB6F9DE7AA68B260CF869A7EABEF9 /* Pods-Akariyoun-AkariyounUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Akariyoun-AkariyounUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		B9109303CFBA3677D95AE9158D2C8B7F /* Pods-Akariyoun-AkariyounUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Akariyoun-AkariyounUITests.modulemap"; sourceTree = "<group>"; };
+		B96EEC8D73BFF192142C1E80E63C2993 /* KYDrawerController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KYDrawerController.swift; path = KYDrawerController/Classes/KYDrawerController.swift; sourceTree = "<group>"; };
 		C0D0474FF56CA006B3A2875F29BAB184 /* Pods-Akariyoun-AkariyounUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Akariyoun-AkariyounUITests-dummy.m"; sourceTree = "<group>"; };
-		C48AE03B7FE80D198B0E14B6B03C576F /* CHIPageControlAji.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CHIPageControlAji.swift; path = CHIPageControl/CHIPageControlAji.swift; sourceTree = "<group>"; };
+		C308E9C64B42C3852945CCAB16923D72 /* CHIPageControl-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CHIPageControl-dummy.m"; sourceTree = "<group>"; };
+		CAA6B06AAFD61D3009D8B54D04C40EAE /* CHIPageControlPaprika.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CHIPageControlPaprika.swift; path = CHIPageControl/CHIPageControlPaprika.swift; sourceTree = "<group>"; };
 		CBD053ABCE6ED6650B13727224D5B4D4 /* Pods-Akariyoun-AkariyounUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Akariyoun-AkariyounUITests.release.xcconfig"; sourceTree = "<group>"; };
-		CC3347B673F4917F2219D2D754E70094 /* CHIPageControlPaprika.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CHIPageControlPaprika.swift; path = CHIPageControl/CHIPageControlPaprika.swift; sourceTree = "<group>"; };
+		CBD18DCB03E5B21EA5CE525AB25B1110 /* CHIBasePageControl.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CHIBasePageControl.swift; path = CHIPageControl/Core/CHIBasePageControl.swift; sourceTree = "<group>"; };
 		CCA88D8EA1D9BDE331E0255990A999FD /* Pods-Akariyoun-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Akariyoun-acknowledgements.markdown"; sourceTree = "<group>"; };
-		CEFC8708B37E99ABA315EC0B14337CC4 /* CHIPageControlChimayo.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CHIPageControlChimayo.swift; path = CHIPageControl/CHIPageControlChimayo.swift; sourceTree = "<group>"; };
-		CF90C09E5BF490E7D6DD01BBB8FF11D4 /* CHIPageControl.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CHIPageControl.release.xcconfig; sourceTree = "<group>"; };
+		CF4712600AD8E0E8F9725D8D6F1CCA53 /* KYEmbedDrawerControllerSegue.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KYEmbedDrawerControllerSegue.swift; path = KYDrawerController/Classes/KYEmbedDrawerControllerSegue.swift; sourceTree = "<group>"; };
 		D03F2FF0AEC5F9233ED6A859645A27F0 /* Pods-Akariyoun-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Akariyoun-frameworks.sh"; sourceTree = "<group>"; };
+		D433130E5270B10F1A4A124AB2A965DF /* KYDrawerController */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = KYDrawerController; path = KYDrawerController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5F478E1758A27B045BD39F514F4C6E2 /* Pods-AkariyounTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AkariyounTests-acknowledgements.plist"; sourceTree = "<group>"; };
-		DCD72C56BF64F6C1DEC16B2043128894 /* CHIPageControlJaloro.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CHIPageControlJaloro.swift; path = CHIPageControl/CHIPageControlJaloro.swift; sourceTree = "<group>"; };
-		DFAC0E6F01297F9005BDF7629F7ED171 /* CHIBasePageControl.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CHIBasePageControl.swift; path = CHIPageControl/Core/CHIBasePageControl.swift; sourceTree = "<group>"; };
+		D9D7F352F6601121F1306E927505490D /* KYDrawerController-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "KYDrawerController-dummy.m"; sourceTree = "<group>"; };
+		E2CEA2F2963628FBAF70F32B451FE813 /* KYDrawerController.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = KYDrawerController.release.xcconfig; sourceTree = "<group>"; };
 		E3FBD4D35406E267A23FC5DDD9FC6A6D /* Pods-AkariyounTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-AkariyounTests-dummy.m"; sourceTree = "<group>"; };
+		E51FA530D84D15D471861BE6EC6BE91C /* CHIPageControlAleppo.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CHIPageControlAleppo.swift; path = CHIPageControl/CHIPageControlAleppo.swift; sourceTree = "<group>"; };
 		E66640AC0B79A407A7D46555FA53FCD4 /* Pods-Akariyoun-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Akariyoun-umbrella.h"; sourceTree = "<group>"; };
-		EDF729F3157F9B7DEF29A870EBF75FB2 /* CHIPageControl.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CHIPageControl.debug.xcconfig; sourceTree = "<group>"; };
-		F05F1C667BAFE194FDA07A8DCA3EA36E /* CHIPageControl-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "CHIPageControl-Info.plist"; sourceTree = "<group>"; };
+		E976F051AB61A6C4807BED0429F47511 /* CHIPageControlJaloro.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CHIPageControlJaloro.swift; path = CHIPageControl/CHIPageControlJaloro.swift; sourceTree = "<group>"; };
+		EFEDA6D4F7BA3194833B1C05C148144B /* KYDrawerController.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = KYDrawerController.debug.xcconfig; sourceTree = "<group>"; };
+		F5AFD75BDF92005F82DFC758673A2667 /* KYDrawerController-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "KYDrawerController-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		0A9AEDC444907A92AB18E69D1B96F8CA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3EA64075C84634889E4ECDEE714FC983 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2217E402DAB384CBD45FF81F4DB81E67 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5320B0D5894BA05E260A4499260F623E /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		271CF6C13DCC658892560D8FC09CDB9F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				DCABF84F5006970D06F511E2C5AD2D4E /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		31CADEFFBBD02C61910888F4F8C43142 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				DA28DBD97151CC77710A0152245011F9 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		3BF6EF728076D50B2532D283C177338A /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				6A27EE1594174DF12064D05E53B5BE4B /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -142,26 +173,49 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		93B05765BB5EB6AA801DA0773A723412 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C596A00955CB42A1A044B337385CC007 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0FB54850181AD0EE785BD641777B2D84 /* Aleppo */ = {
+		0B3F78D8F922FFBE03E9BBB82857D509 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				3269482455059993A7DCCB7766EDCF71 /* KYDrawerController.modulemap */,
+				D9D7F352F6601121F1306E927505490D /* KYDrawerController-dummy.m */,
+				F5AFD75BDF92005F82DFC758673A2667 /* KYDrawerController-Info.plist */,
+				862D74E1877F73DFB86764A5F0631821 /* KYDrawerController-prefix.pch */,
+				1EDAB0AD0D4804F3B95F8E5FAF310761 /* KYDrawerController-umbrella.h */,
+				EFEDA6D4F7BA3194833B1C05C148144B /* KYDrawerController.debug.xcconfig */,
+				E2CEA2F2963628FBAF70F32B451FE813 /* KYDrawerController.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/KYDrawerController";
+			sourceTree = "<group>";
+		};
+		14DAEC7C26CAD98218C95B98CBC5664D /* Jalapeno */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			name = Aleppo;
+			name = Jalapeno;
 			sourceTree = "<group>";
 		};
-		250A43C52BAFE2D5DA1B98C7F07FFD29 /* Support Files */ = {
+		222D9A18C05744098AF320A58E1C4A1C /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				660FF1AA683302D0C6B59B5ABCC53020 /* CHIPageControl.modulemap */,
-				AADA4CF5E412F1F47282D44303D52E02 /* CHIPageControl-dummy.m */,
-				F05F1C667BAFE194FDA07A8DCA3EA36E /* CHIPageControl-Info.plist */,
-				B2AE7C6B2430D3137E1131E5CC5D22BC /* CHIPageControl-prefix.pch */,
-				66FF46EE3CB18BAA90F741E3032CA6FF /* CHIPageControl-umbrella.h */,
-				EDF729F3157F9B7DEF29A870EBF75FB2 /* CHIPageControl.debug.xcconfig */,
-				CF90C09E5BF490E7D6DD01BBB8FF11D4 /* CHIPageControl.release.xcconfig */,
+				448C6CFC8AD9F3F23945189DCEBEA688 /* CHIPageControl.modulemap */,
+				C308E9C64B42C3852945CCAB16923D72 /* CHIPageControl-dummy.m */,
+				8580DCFDD0AF9C0A5ECE3DB2AE481AE8 /* CHIPageControl-Info.plist */,
+				26687DF026E86425D266DF4DF5A3043C /* CHIPageControl-prefix.pch */,
+				6CB1B7D7BF144E7CCC3190F1419CA0EA /* CHIPageControl-umbrella.h */,
+				1B93A9025CDA5A4691B54B2924242868 /* CHIPageControl.debug.xcconfig */,
+				76C8CCC37E778CCAEE7FC0874B4BCF88 /* CHIPageControl.release.xcconfig */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/CHIPageControl";
@@ -184,6 +238,41 @@
 			path = "Target Support Files/Pods-Akariyoun";
 			sourceTree = "<group>";
 		};
+		45E010B80E023277069903911A9B406F /* CHIPageControl */ = {
+			isa = PBXGroup;
+			children = (
+				CBD18DCB03E5B21EA5CE525AB25B1110 /* CHIBasePageControl.swift */,
+				065D33B0EB9E954FAED203040EA34AAD /* CHILayer.swift */,
+				59AB5F82ABCBD7305105F23347CB6484 /* CHIPageControlAji.swift */,
+				E51FA530D84D15D471861BE6EC6BE91C /* CHIPageControlAleppo.swift */,
+				3B8429395FC2A0B1B2BF849F4109DD16 /* CHIPageControlChimayo.swift */,
+				B25E1EC1BC3516DD5B9DE3B37A91333D /* CHIPageControlFresno.swift */,
+				1C0EDB1F4E60C2C6E87D1959FA15D177 /* CHIPageControlJalapeno.swift */,
+				E976F051AB61A6C4807BED0429F47511 /* CHIPageControlJaloro.swift */,
+				069F151D90C867EFD3EF6CB9F04E91D2 /* CHIPageControllable.swift */,
+				CAA6B06AAFD61D3009D8B54D04C40EAE /* CHIPageControlPaprika.swift */,
+				4698BF45E574D555E5E43F4747C4FCF5 /* CHIPageControlPuya.swift */,
+				7D97D6FD3F2C958DB863EB45CAE02BD0 /* Aji */,
+				8DA87929A1195EA5E1DBC0F823E2DAB2 /* Aleppo */,
+				EE2971E8C0514C68B7931BF75AF08C6D /* Chimayo */,
+				7ADEB396D2306ED3A488BD8448CBE05C /* Fresno */,
+				14DAEC7C26CAD98218C95B98CBC5664D /* Jalapeno */,
+				E868D07DDE9E730343D9798E18CD04AA /* Jaloro */,
+				6399C64CF93EE93128A0B4F56074C074 /* Paprika */,
+				54C7901854CCD454D58A02715DDDD6F8 /* Puya */,
+				222D9A18C05744098AF320A58E1C4A1C /* Support Files */,
+			);
+			name = CHIPageControl;
+			path = CHIPageControl;
+			sourceTree = "<group>";
+		};
+		54C7901854CCD454D58A02715DDDD6F8 /* Puya */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Puya;
+			sourceTree = "<group>";
+		};
 		578452D2E740E91742655AC8F1636D1F /* iOS */ = {
 			isa = PBXGroup;
 			children = (
@@ -192,11 +281,18 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		7A59A47294D08A923D7ED34328D958C8 /* Aji */ = {
+		6399C64CF93EE93128A0B4F56074C074 /* Paprika */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			name = Aji;
+			name = Paprika;
+			sourceTree = "<group>";
+		};
+		7ADEB396D2306ED3A488BD8448CBE05C /* Fresno */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Fresno;
 			sourceTree = "<group>";
 		};
 		7CB0A37706BFF28860DEE0B6473E9D17 /* Pods-AkariyounTests */ = {
@@ -215,33 +311,39 @@
 			path = "Target Support Files/Pods-AkariyounTests";
 			sourceTree = "<group>";
 		};
-		A8BEA81C435B3551987AF77533101BEF /* Pods */ = {
+		7D97D6FD3F2C958DB863EB45CAE02BD0 /* Aji */ = {
 			isa = PBXGroup;
 			children = (
-				F4D242367B4FD2DACE66540F0A6E7B8A /* CHIPageControl */,
+			);
+			name = Aji;
+			sourceTree = "<group>";
+		};
+		8D7F6BFE7D4AA0CD53301B21A5B69E4B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4A90E991BC0CB35AB6D91E18C9490643 /* CHIPageControl */,
+				D433130E5270B10F1A4A124AB2A965DF /* KYDrawerController */,
+				2D65A7FB38C257817EB9DC1EB84A6F80 /* Pods-Akariyoun */,
+				23BD652286D9A53883DDAEDA6DAD4B3C /* Pods-Akariyoun-AkariyounUITests */,
+				089B4810A95DB4FAF902198617555065 /* Pods-AkariyounTests */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8DA87929A1195EA5E1DBC0F823E2DAB2 /* Aleppo */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Aleppo;
+			sourceTree = "<group>";
+		};
+		99F07398AD48EE2FDA03F71386A575EB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				45E010B80E023277069903911A9B406F /* CHIPageControl */,
+				E480FB3378726F6A097193F153FEDE0D /* KYDrawerController */,
 			);
 			name = Pods;
-			sourceTree = "<group>";
-		};
-		B9DD94BA96EFA7AFF45554F6124524A9 /* Fresno */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Fresno;
-			sourceTree = "<group>";
-		};
-		BB610A390D07E2FC753D3ACB19A5D25E /* Jalapeno */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Jalapeno;
-			sourceTree = "<group>";
-		};
-		BE1C069EE342E7C3E3EA99CBC5B5A6AC /* Puya */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Puya;
 			sourceTree = "<group>";
 		};
 		CEE713882F1426D40CFD7F03A184EABA /* Pods-Akariyoun-AkariyounUITests */ = {
@@ -266,8 +368,8 @@
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
-				A8BEA81C435B3551987AF77533101BEF /* Pods */,
-				D5CA18E1526B8FA007608E0DEF1C6312 /* Products */,
+				99F07398AD48EE2FDA03F71386A575EB /* Pods */,
+				8D7F6BFE7D4AA0CD53301B21A5B69E4B /* Products */,
 				EEADD3583EA1EC5FEA0BCB0161794259 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
@@ -280,22 +382,30 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		D342B6B2C98CCFB60029A1FDD327522B /* Chimayo */ = {
+		E480FB3378726F6A097193F153FEDE0D /* KYDrawerController */ = {
+			isa = PBXGroup;
+			children = (
+				B96EEC8D73BFF192142C1E80E63C2993 /* KYDrawerController.swift */,
+				CF4712600AD8E0E8F9725D8D6F1CCA53 /* KYEmbedDrawerControllerSegue.swift */,
+				7BD944820CB0FA3522E365F6468D6436 /* KYEmbedMainControllerSegue.swift */,
+				0B3F78D8F922FFBE03E9BBB82857D509 /* Support Files */,
+			);
+			name = KYDrawerController;
+			path = KYDrawerController;
+			sourceTree = "<group>";
+		};
+		E868D07DDE9E730343D9798E18CD04AA /* Jaloro */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Jaloro;
+			sourceTree = "<group>";
+		};
+		EE2971E8C0514C68B7931BF75AF08C6D /* Chimayo */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			name = Chimayo;
-			sourceTree = "<group>";
-		};
-		D5CA18E1526B8FA007608E0DEF1C6312 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				4A90E991BC0CB35AB6D91E18C9490643 /* CHIPageControl */,
-				2D65A7FB38C257817EB9DC1EB84A6F80 /* Pods-Akariyoun */,
-				23BD652286D9A53883DDAEDA6DAD4B3C /* Pods-Akariyoun-AkariyounUITests */,
-				089B4810A95DB4FAF902198617555065 /* Pods-AkariyounTests */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		EEADD3583EA1EC5FEA0BCB0161794259 /* Targets Support Files */ = {
@@ -306,48 +416,6 @@
 				7CB0A37706BFF28860DEE0B6473E9D17 /* Pods-AkariyounTests */,
 			);
 			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
-		F4D242367B4FD2DACE66540F0A6E7B8A /* CHIPageControl */ = {
-			isa = PBXGroup;
-			children = (
-				DFAC0E6F01297F9005BDF7629F7ED171 /* CHIBasePageControl.swift */,
-				5E3CDAB8786E308C521FC4E63278A750 /* CHILayer.swift */,
-				C48AE03B7FE80D198B0E14B6B03C576F /* CHIPageControlAji.swift */,
-				21DC6B34844F78CFADE8D2AB46D515B1 /* CHIPageControlAleppo.swift */,
-				CEFC8708B37E99ABA315EC0B14337CC4 /* CHIPageControlChimayo.swift */,
-				4F10CED426F150D67BCA0EA1CCF071D9 /* CHIPageControlFresno.swift */,
-				92810E5AABE24B861617C9F544D88D3A /* CHIPageControlJalapeno.swift */,
-				DCD72C56BF64F6C1DEC16B2043128894 /* CHIPageControlJaloro.swift */,
-				7538CA8DF0F3D487F838BE86A538994A /* CHIPageControllable.swift */,
-				CC3347B673F4917F2219D2D754E70094 /* CHIPageControlPaprika.swift */,
-				90E852AE87B33313CA0D404670D5F1C4 /* CHIPageControlPuya.swift */,
-				7A59A47294D08A923D7ED34328D958C8 /* Aji */,
-				0FB54850181AD0EE785BD641777B2D84 /* Aleppo */,
-				D342B6B2C98CCFB60029A1FDD327522B /* Chimayo */,
-				B9DD94BA96EFA7AFF45554F6124524A9 /* Fresno */,
-				BB610A390D07E2FC753D3ACB19A5D25E /* Jalapeno */,
-				F97C7FFA47FC515BE26F281F9BACB3CB /* Jaloro */,
-				FF692BF9ED60A191A81F5FBBA899E6B6 /* Paprika */,
-				BE1C069EE342E7C3E3EA99CBC5B5A6AC /* Puya */,
-				250A43C52BAFE2D5DA1B98C7F07FFD29 /* Support Files */,
-			);
-			name = CHIPageControl;
-			path = CHIPageControl;
-			sourceTree = "<group>";
-		};
-		F97C7FFA47FC515BE26F281F9BACB3CB /* Jaloro */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Jaloro;
-			sourceTree = "<group>";
-		};
-		FF692BF9ED60A191A81F5FBBA899E6B6 /* Paprika */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Paprika;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -361,11 +429,19 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7E0EA430116F7BAE2BC89D6366944481 /* Headers */ = {
+		59943B47312A4545F855932F22D4AB43 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8814934323559605043AC4C984999FFD /* Pods-Akariyoun-AkariyounUITests-umbrella.h in Headers */,
+				6D3B58FC4FC31426D485A6FC6A632C62 /* Pods-Akariyoun-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		64ECFCD277C3F03B032C67DF573C31EB /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F0053595B9CBAFAF0BF668D747FE02F7 /* KYDrawerController-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -377,17 +453,35 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E6B78E22DFE96E95ECFC08FA9CFAB793 /* Headers */ = {
+		DE27FF439D435AAE075C93FB616A6389 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9EBFB36A80060BA2A52FF58913BB2582 /* Pods-Akariyoun-umbrella.h in Headers */,
+				C875BDFC9A457372C38B9252A45CC9DD /* Pods-Akariyoun-AkariyounUITests-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		0BBCBDAFBA68F76840AC5B2B6F9A9628 /* KYDrawerController */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4F652DC10BD1950DE33F5DFB1B81FE60 /* Build configuration list for PBXNativeTarget "KYDrawerController" */;
+			buildPhases = (
+				64ECFCD277C3F03B032C67DF573C31EB /* Headers */,
+				B50264930668CD08080424D622493E65 /* Sources */,
+				93B05765BB5EB6AA801DA0773A723412 /* Frameworks */,
+				7D929406873AD29B268651D87992F1F6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KYDrawerController;
+			productName = KYDrawerController;
+			productReference = D433130E5270B10F1A4A124AB2A965DF /* KYDrawerController */;
+			productType = "com.apple.product-type.framework";
+		};
 		0FA1F4599D7318100850C3DC6A3EDBBD /* Pods-AkariyounTests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8C9A3366E7590E5FF441ABB018D1DC98 /* Build configuration list for PBXNativeTarget "Pods-AkariyounTests" */;
@@ -400,7 +494,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				9B9BDD449C7789F20AC145EC64C46CAD /* PBXTargetDependency */,
+				7D484CDDA06E3051ABDDB995634E98A2 /* PBXTargetDependency */,
 			);
 			name = "Pods-AkariyounTests";
 			productName = Pods_AkariyounTests;
@@ -427,17 +521,18 @@
 		};
 		6F4F5E3F2378AABEC6BEF5A95561B0CA /* Pods-Akariyoun-AkariyounUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E87713CFE6331040D171B1316FC4FC10 /* Build configuration list for PBXNativeTarget "Pods-Akariyoun-AkariyounUITests" */;
+			buildConfigurationList = 905DE54A04453469C78FBCB0FC5240EB /* Build configuration list for PBXNativeTarget "Pods-Akariyoun-AkariyounUITests" */;
 			buildPhases = (
-				7E0EA430116F7BAE2BC89D6366944481 /* Headers */,
-				A33CFF7173E961C5E2BE22C978348D7D /* Sources */,
-				31CADEFFBBD02C61910888F4F8C43142 /* Frameworks */,
-				7098E6294918BD0F844757A89417232B /* Resources */,
+				DE27FF439D435AAE075C93FB616A6389 /* Headers */,
+				AF0CBBA2008B3E3556FD5FD5F4B3EDB5 /* Sources */,
+				2217E402DAB384CBD45FF81F4DB81E67 /* Frameworks */,
+				F870C6364266014565E544D4F3D499B8 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				6BF29F71F507812DAB16605ABF837F13 /* PBXTargetDependency */,
+				F9F431BD606C50FB1D5A9EE294449FB1 /* PBXTargetDependency */,
+				1784C31782CFAB45AD6E5AAAD8ED4122 /* PBXTargetDependency */,
 			);
 			name = "Pods-Akariyoun-AkariyounUITests";
 			productName = Pods_Akariyoun_AkariyounUITests;
@@ -446,17 +541,18 @@
 		};
 		8A73B493681C9FE53EA184F7FABC3B73 /* Pods-Akariyoun */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A0578F71EFF20EC7C839959B28DAFF82 /* Build configuration list for PBXNativeTarget "Pods-Akariyoun" */;
+			buildConfigurationList = 05F6A31A81E769A748F94BA5282D7006 /* Build configuration list for PBXNativeTarget "Pods-Akariyoun" */;
 			buildPhases = (
-				E6B78E22DFE96E95ECFC08FA9CFAB793 /* Headers */,
-				BD8896E9DF5C0211B2A51C882867DBBA /* Sources */,
-				3BF6EF728076D50B2532D283C177338A /* Frameworks */,
-				142A896EBF3B960C7D245086363B5815 /* Resources */,
+				59943B47312A4545F855932F22D4AB43 /* Headers */,
+				F33C927CE42B59C24859FDD6F5C92CA9 /* Sources */,
+				0A9AEDC444907A92AB18E69D1B96F8CA /* Frameworks */,
+				AD7E8CD5103678545EF0D82A02FB9E3A /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				3065B41973170C461EACF92BF9CDC11F /* PBXTargetDependency */,
+				749B45D7AD3CDCE7FCADE0FD07E99FA0 /* PBXTargetDependency */,
+				1B4CD5631824C8D3BF5C979EF80E1C7B /* PBXTargetDependency */,
 			);
 			name = "Pods-Akariyoun";
 			productName = Pods_Akariyoun;
@@ -473,7 +569,7 @@
 				LastUpgradeCheck = 1240;
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 10.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -481,11 +577,12 @@
 				en,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = D5CA18E1526B8FA007608E0DEF1C6312 /* Products */;
+			productRefGroup = 8D7F6BFE7D4AA0CD53301B21A5B69E4B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				58A7AC722D45BA5EF49F00D98C86978B /* CHIPageControl */,
+				0BBCBDAFBA68F76840AC5B2B6F9A9628 /* KYDrawerController */,
 				8A73B493681C9FE53EA184F7FABC3B73 /* Pods-Akariyoun */,
 				6F4F5E3F2378AABEC6BEF5A95561B0CA /* Pods-Akariyoun-AkariyounUITests */,
 				0FA1F4599D7318100850C3DC6A3EDBBD /* Pods-AkariyounTests */,
@@ -494,13 +591,6 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		142A896EBF3B960C7D245086363B5815 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		42E556D635A478E12B5984562FC53190 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -508,7 +598,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7098E6294918BD0F844757A89417232B /* Resources */ = {
+		7D929406873AD29B268651D87992F1F6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AD7E8CD5103678545EF0D82A02FB9E3A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -516,6 +613,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		ADF8F9E916F35ED7CB6E5E25ECB16DA2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F870C6364266014565E544D4F3D499B8 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -533,19 +637,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A33CFF7173E961C5E2BE22C978348D7D /* Sources */ = {
+		AF0CBBA2008B3E3556FD5FD5F4B3EDB5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C9DECE4E661C5852243A60BD5160D1A4 /* Pods-Akariyoun-AkariyounUITests-dummy.m in Sources */,
+				BA6D3D5307CBA9B8959A5E950395972E /* Pods-Akariyoun-AkariyounUITests-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BD8896E9DF5C0211B2A51C882867DBBA /* Sources */ = {
+		B50264930668CD08080424D622493E65 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9650F256401D0E06CD7ED643CAA313CF /* Pods-Akariyoun-dummy.m in Sources */,
+				287AAFA05B0CA34DEBCC89F777918D96 /* KYDrawerController.swift in Sources */,
+				0F08E787CC3420902EBBE0803ADE704E /* KYDrawerController-dummy.m in Sources */,
+				D767A423B09360B012538E0F2938FDF6 /* KYEmbedDrawerControllerSegue.swift in Sources */,
+				5B317DC1470166C6D1DF0DD1A6EDE41D /* KYEmbedMainControllerSegue.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -568,30 +675,88 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F33C927CE42B59C24859FDD6F5C92CA9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				505639E46B32F125513B1194941C0B12 /* Pods-Akariyoun-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		3065B41973170C461EACF92BF9CDC11F /* PBXTargetDependency */ = {
+		1784C31782CFAB45AD6E5AAAD8ED4122 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = KYDrawerController;
+			target = 0BBCBDAFBA68F76840AC5B2B6F9A9628 /* KYDrawerController */;
+			targetProxy = 8DF0944B4A496DAA932FFE31FE9E42BD /* PBXContainerItemProxy */;
+		};
+		1B4CD5631824C8D3BF5C979EF80E1C7B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = KYDrawerController;
+			target = 0BBCBDAFBA68F76840AC5B2B6F9A9628 /* KYDrawerController */;
+			targetProxy = 0B5E6863F023E380F330CAF4A715D808 /* PBXContainerItemProxy */;
+		};
+		749B45D7AD3CDCE7FCADE0FD07E99FA0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = CHIPageControl;
 			target = 58A7AC722D45BA5EF49F00D98C86978B /* CHIPageControl */;
-			targetProxy = 7DD1EAB3839FBCC73FD05EE00E616BEA /* PBXContainerItemProxy */;
+			targetProxy = 608AF6AC9B01800FBFCADC4937DDD647 /* PBXContainerItemProxy */;
 		};
-		6BF29F71F507812DAB16605ABF837F13 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = CHIPageControl;
-			target = 58A7AC722D45BA5EF49F00D98C86978B /* CHIPageControl */;
-			targetProxy = CF6778CED7613478F5087ECE682077E6 /* PBXContainerItemProxy */;
-		};
-		9B9BDD449C7789F20AC145EC64C46CAD /* PBXTargetDependency */ = {
+		7D484CDDA06E3051ABDDB995634E98A2 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Pods-Akariyoun";
 			target = 8A73B493681C9FE53EA184F7FABC3B73 /* Pods-Akariyoun */;
-			targetProxy = 7800F8863BF80BD884798F338C897EE0 /* PBXContainerItemProxy */;
+			targetProxy = BA874DC4D025FEA1FBEE20D347D6D1B0 /* PBXContainerItemProxy */;
+		};
+		F9F431BD606C50FB1D5A9EE294449FB1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = CHIPageControl;
+			target = 58A7AC722D45BA5EF49F00D98C86978B /* CHIPageControl */;
+			targetProxy = 7BF507CAA77D3ABEBB60AD4E4ED23A9A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		17E60F161F4F0BC7F14FF4BBFC159128 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CBD053ABCE6ED6650B13727224D5B4D4 /* Pods-Akariyoun-AkariyounUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Akariyoun-AkariyounUITests/Pods-Akariyoun-AkariyounUITests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Akariyoun-AkariyounUITests/Pods-Akariyoun-AkariyounUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		1B88920AFC4EF364E943DFC427A92B28 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3949B617EADF3EFA4F2E157D2E193428 /* Pods-AkariyounTests.release.xcconfig */;
@@ -696,12 +861,10 @@
 			};
 			name = Debug;
 		};
-		34D39F25A2BCC6949469700A76E2853D /* Release */ = {
+		28EAA1E9C57EE815133EA28FCC506565 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CBD053ABCE6ED6650B13727224D5B4D4 /* Pods-Akariyoun-AkariyounUITests.release.xcconfig */;
+			baseConfigurationReference = E2CEA2F2963628FBAF70F32B451FE813 /* KYDrawerController.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -710,23 +873,22 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-Akariyoun-AkariyounUITests/Pods-Akariyoun-AkariyounUITests-Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/KYDrawerController/KYDrawerController-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/KYDrawerController/KYDrawerController-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-Akariyoun-AkariyounUITests/Pods-Akariyoun-AkariyounUITests.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				MODULEMAP_FILE = "Target Support Files/KYDrawerController/KYDrawerController.modulemap";
+				PRODUCT_MODULE_NAME = KYDrawerController;
+				PRODUCT_NAME = KYDrawerController;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -798,7 +960,7 @@
 		};
 		4D568990C76F9E9249BC1230D798E435 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EDF729F3157F9B7DEF29A870EBF75FB2 /* CHIPageControl.debug.xcconfig */;
+			baseConfigurationReference = 1B93A9025CDA5A4691B54B2924242868 /* CHIPageControl.debug.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -830,7 +992,7 @@
 			};
 			name = Debug;
 		};
-		6E20EC58FC575C4A530F6F3FEAC84B78 /* Debug */ = {
+		642F9E1259251BCB758CE49B36F16ED2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 39F6F091C3D924DBE7B2847ACFFA47EF /* Pods-Akariyoun.debug.xcconfig */;
 			buildSettings = {
@@ -867,7 +1029,7 @@
 			};
 			name = Debug;
 		};
-		6EE3E271C85242758AE9A6E2C274CFDF /* Release */ = {
+		6750183BE900E2B65039851CEFFCFCD0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 1213FAB27D33728548843E016E941FDC /* Pods-Akariyoun.release.xcconfig */;
 			buildSettings = {
@@ -942,7 +1104,7 @@
 			};
 			name = Debug;
 		};
-		9EC0FD2965EB9BBAAD75CA4A2212FE3F /* Debug */ = {
+		7C4DFD89F2474148683C004A24783401 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B5DBB6F9DE7AA68B260CF869A7EABEF9 /* Pods-Akariyoun-AkariyounUITests.debug.xcconfig */;
 			buildSettings = {
@@ -979,9 +1141,43 @@
 			};
 			name = Debug;
 		};
+		9A43CB38F3E6D2772AAC0F2CAE643D58 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EFEDA6D4F7BA3194833B1C05C148144B /* KYDrawerController.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/KYDrawerController/KYDrawerController-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/KYDrawerController/KYDrawerController-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/KYDrawerController/KYDrawerController.modulemap";
+				PRODUCT_MODULE_NAME = KYDrawerController;
+				PRODUCT_NAME = KYDrawerController;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 		A375B6EA69164680DF1542095EC2D090 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CF90C09E5BF490E7D6DD01BBB8FF11D4 /* CHIPageControl.release.xcconfig */;
+			baseConfigurationReference = 76C8CCC37E778CCAEE7FC0874B4BCF88 /* CHIPageControl.release.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -1017,6 +1213,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		05F6A31A81E769A748F94BA5282D7006 /* Build configuration list for PBXNativeTarget "Pods-Akariyoun" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				642F9E1259251BCB758CE49B36F16ED2 /* Debug */,
+				6750183BE900E2B65039851CEFFCFCD0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		1600C207C7D76BE3C3F71C5B46884F07 /* Build configuration list for PBXNativeTarget "CHIPageControl" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -1035,6 +1240,15 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		4F652DC10BD1950DE33F5DFB1B81FE60 /* Build configuration list for PBXNativeTarget "KYDrawerController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9A43CB38F3E6D2772AAC0F2CAE643D58 /* Debug */,
+				28EAA1E9C57EE815133EA28FCC506565 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		8C9A3366E7590E5FF441ABB018D1DC98 /* Build configuration list for PBXNativeTarget "Pods-AkariyounTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -1044,20 +1258,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A0578F71EFF20EC7C839959B28DAFF82 /* Build configuration list for PBXNativeTarget "Pods-Akariyoun" */ = {
+		905DE54A04453469C78FBCB0FC5240EB /* Build configuration list for PBXNativeTarget "Pods-Akariyoun-AkariyounUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				6E20EC58FC575C4A530F6F3FEAC84B78 /* Debug */,
-				6EE3E271C85242758AE9A6E2C274CFDF /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		E87713CFE6331040D171B1316FC4FC10 /* Build configuration list for PBXNativeTarget "Pods-Akariyoun-AkariyounUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				9EC0FD2965EB9BBAAD75CA4A2212FE3F /* Debug */,
-				34D39F25A2BCC6949469700A76E2853D /* Release */,
+				7C4DFD89F2474148683C004A24783401 /* Debug */,
+				17E60F161F4F0BC7F14FF4BBFC159128 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -8,10 +8,11 @@
 
 import UIKit
 import CHIPageControl
+import KYDrawerController
 
 class MainHomeScreenVC: UIViewController {
 
-    
+  
     @IBOutlet weak var mainScrollView: UIScrollView!
     @IBOutlet weak var mainTableHeightConst: NSLayoutConstraint!
     @IBOutlet weak var mainTableView: UITableView!
@@ -53,6 +54,18 @@ class MainHomeScreenVC: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    
+    @IBAction func drawerAction(_ sender: UIButton) {
+          DispatchQueue.main.async {
+                     if let drawerController = self.navigationController?.parent as? KYDrawerController {
+                         drawerController.drawerWidth = (kScreenWidth - 100)
+                        
+                         drawerController.drawerDirection = .left
+                         drawerController.setDrawerState(.opened, animated: true)
+                     }
+                 }
+      }
+      
     
     @IBAction func signinBtnActon(_ sender: UIButton) {
     guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "LoginVC" ) as? LoginVC  else { return }

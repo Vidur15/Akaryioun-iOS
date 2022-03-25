@@ -7,6 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0306037227EDBDE2005B0C9D /* SideMenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0306037127EDBDE2005B0C9D /* SideMenuVC.swift */; };
+		0306037527EDC4FE005B0C9D /* SideMenuTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0306037327EDC4FE005B0C9D /* SideMenuTVC.swift */; };
+		0306037627EDC4FE005B0C9D /* SideMenuTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0306037427EDC4FE005B0C9D /* SideMenuTVC.xib */; };
+		0306037827EDC7C1005B0C9D /* PropertyDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0306037727EDC7C1005B0C9D /* PropertyDetailsVC.swift */; };
+		0306037B27EDD0E5005B0C9D /* PropertyImagesCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0306037927EDD0E5005B0C9D /* PropertyImagesCVC.swift */; };
+		0306037C27EDD0E5005B0C9D /* PropertyImagesCVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0306037A27EDD0E5005B0C9D /* PropertyImagesCVC.xib */; };
+		035E8CD027ED87C700E19B9F /* ChooseMemberVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035E8CCF27ED87C700E19B9F /* ChooseMemberVC.swift */; };
+		035E8CD327ED893700E19B9F /* ChooseMemberTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035E8CD127ED893700E19B9F /* ChooseMemberTVC.swift */; };
+		035E8CD427ED893700E19B9F /* ChooseMemberTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 035E8CD227ED893700E19B9F /* ChooseMemberTVC.xib */; };
+		035E8CD627ED8BF600E19B9F /* AddRequestVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035E8CD527ED8BF600E19B9F /* AddRequestVC.swift */; };
+		035E8CD827ED965800E19B9F /* RequestDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035E8CD727ED965800E19B9F /* RequestDetailsVC.swift */; };
+		035E8CDA27ED9C1800E19B9F /* MessagePopVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035E8CD927ED9C1800E19B9F /* MessagePopVC.swift */; };
 		038E95BD27EC92920093440E /* VerifyOTPVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038E95BC27EC92920093440E /* VerifyOTPVC.swift */; };
 		03BE935027EC40D300795CF6 /* UserDefaultsExtended.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BE932C27EC40D300795CF6 /* UserDefaultsExtended.swift */; };
 		03BE935127EC40D300795CF6 /* UIButtonCornerRadius.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BE932E27EC40D300795CF6 /* UIButtonCornerRadius.swift */; };
@@ -91,6 +103,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0306037127EDBDE2005B0C9D /* SideMenuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuVC.swift; sourceTree = "<group>"; };
+		0306037327EDC4FE005B0C9D /* SideMenuTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuTVC.swift; sourceTree = "<group>"; };
+		0306037427EDC4FE005B0C9D /* SideMenuTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SideMenuTVC.xib; sourceTree = "<group>"; };
+		0306037727EDC7C1005B0C9D /* PropertyDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyDetailsVC.swift; sourceTree = "<group>"; };
+		0306037927EDD0E5005B0C9D /* PropertyImagesCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyImagesCVC.swift; sourceTree = "<group>"; };
+		0306037A27EDD0E5005B0C9D /* PropertyImagesCVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PropertyImagesCVC.xib; sourceTree = "<group>"; };
+		035E8CCF27ED87C700E19B9F /* ChooseMemberVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseMemberVC.swift; sourceTree = "<group>"; };
+		035E8CD127ED893700E19B9F /* ChooseMemberTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseMemberTVC.swift; sourceTree = "<group>"; };
+		035E8CD227ED893700E19B9F /* ChooseMemberTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChooseMemberTVC.xib; sourceTree = "<group>"; };
+		035E8CD527ED8BF600E19B9F /* AddRequestVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRequestVC.swift; sourceTree = "<group>"; };
+		035E8CD727ED965800E19B9F /* RequestDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestDetailsVC.swift; sourceTree = "<group>"; };
+		035E8CD927ED9C1800E19B9F /* MessagePopVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagePopVC.swift; sourceTree = "<group>"; };
 		038E95BC27EC92920093440E /* VerifyOTPVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyOTPVC.swift; sourceTree = "<group>"; };
 		03BE932C27EC40D300795CF6 /* UserDefaultsExtended.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsExtended.swift; sourceTree = "<group>"; };
 		03BE932E27EC40D300795CF6 /* UIButtonCornerRadius.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIButtonCornerRadius.swift; sourceTree = "<group>"; };
@@ -413,6 +437,12 @@
 				03BE939C27EC723800795CF6 /* RealEstateVC.swift */,
 				03BE93AE27EC839D00795CF6 /* LoginVC.swift */,
 				038E95BC27EC92920093440E /* VerifyOTPVC.swift */,
+				035E8CCF27ED87C700E19B9F /* ChooseMemberVC.swift */,
+				035E8CD527ED8BF600E19B9F /* AddRequestVC.swift */,
+				035E8CD727ED965800E19B9F /* RequestDetailsVC.swift */,
+				035E8CD927ED9C1800E19B9F /* MessagePopVC.swift */,
+				0306037127EDBDE2005B0C9D /* SideMenuVC.swift */,
+				0306037727EDC7C1005B0C9D /* PropertyDetailsVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -428,6 +458,12 @@
 				03BE93A327EC760700795CF6 /* RealEstateTVC.xib */,
 				03BE93AA27EC7B5000795CF6 /* RequestsTVC.swift */,
 				03BE93AB27EC7B5000795CF6 /* RequestsTVC.xib */,
+				035E8CD127ED893700E19B9F /* ChooseMemberTVC.swift */,
+				035E8CD227ED893700E19B9F /* ChooseMemberTVC.xib */,
+				0306037327EDC4FE005B0C9D /* SideMenuTVC.swift */,
+				0306037427EDC4FE005B0C9D /* SideMenuTVC.xib */,
+				0306037927EDD0E5005B0C9D /* PropertyImagesCVC.swift */,
+				0306037A27EDD0E5005B0C9D /* PropertyImagesCVC.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -568,9 +604,12 @@
 				03BE93A527EC760700795CF6 /* RealEstateTVC.xib in Resources */,
 				03D579A827C4C00200DADE0B /* LaunchScreen.storyboard in Resources */,
 				03BE938427EC422700795CF6 /* Poppins-Light.ttf in Resources */,
+				035E8CD427ED893700E19B9F /* ChooseMemberTVC.xib in Resources */,
 				03BE938C27EC422700795CF6 /* Poppins-Regular.ttf in Resources */,
+				0306037627EDC4FE005B0C9D /* SideMenuTVC.xib in Resources */,
 				03BE938927EC422700795CF6 /* Poppins-Italic.ttf in Resources */,
 				03BE938227EC422700795CF6 /* Poppins-SemiBoldItalic.ttf in Resources */,
+				0306037C27EDD0E5005B0C9D /* PropertyImagesCVC.xib in Resources */,
 				03BE938A27EC422700795CF6 /* Poppins-SemiBold.ttf in Resources */,
 				03BE93AD27EC7B5000795CF6 /* RequestsTVC.xib in Resources */,
 				03BE938127EC422700795CF6 /* Poppins-ExtraLightItalic.ttf in Resources */,
@@ -722,13 +761,19 @@
 				03BE935427EC40D300795CF6 /* UIButtonSublayerBorderWidthAndColor.swift in Sources */,
 				03BE935927EC40D300795CF6 /* UIImageViewBorderWidthAndColor.swift in Sources */,
 				03BE939A27EC61E800795CF6 /* ActivitiesTVC.swift in Sources */,
+				0306037827EDC7C1005B0C9D /* PropertyDetailsVC.swift in Sources */,
+				035E8CD327ED893700E19B9F /* ChooseMemberTVC.swift in Sources */,
+				035E8CD827ED965800E19B9F /* RequestDetailsVC.swift in Sources */,
 				03BE939127EC440E00795CF6 /* MainTabbarVC.swift in Sources */,
 				03BE936027EC40D300795CF6 /* MaxMinLength+UITextField.swift in Sources */,
 				03BE935827EC40D300795CF6 /* viewshadow.swift in Sources */,
 				03BE935327EC40D300795CF6 /* UIButtonBorderWidthAndColor.swift in Sources */,
+				035E8CD627ED8BF600E19B9F /* AddRequestVC.swift in Sources */,
 				03BE935D27EC40D300795CF6 /* String+Utilities.swift in Sources */,
+				0306037227EDBDE2005B0C9D /* SideMenuVC.swift in Sources */,
 				03BE93AF27EC839D00795CF6 /* LoginVC.swift in Sources */,
 				03BE935A27EC40D300795CF6 /* UIImageViewCornerRadius.swift in Sources */,
+				0306037527EDC4FE005B0C9D /* SideMenuTVC.swift in Sources */,
 				03BE935C27EC40D300795CF6 /* UIViewController.swift in Sources */,
 				03D5799D27C4C00000DADE0B /* ViewController.swift in Sources */,
 				03BE935127EC40D300795CF6 /* UIButtonCornerRadius.swift in Sources */,
@@ -738,6 +783,7 @@
 				03BE936B27EC40D300795CF6 /* AppConstant.swift in Sources */,
 				03BE939327EC509A00795CF6 /* MainHomeScreenVC.swift in Sources */,
 				03BE939D27EC723800795CF6 /* RealEstateVC.swift in Sources */,
+				0306037B27EDD0E5005B0C9D /* PropertyImagesCVC.swift in Sources */,
 				03BE93AC27EC7B5000795CF6 /* RequestsTVC.swift in Sources */,
 				03BE935F27EC40D300795CF6 /* UITextFieldBorderWidthAndColor.swift in Sources */,
 				03BE935527EC40D300795CF6 /* UIViewBorderWidthAndColor.swift in Sources */,
@@ -746,6 +792,8 @@
 				038E95BD27EC92920093440E /* VerifyOTPVC.swift in Sources */,
 				03D5799B27C4C00000DADE0B /* SceneDelegate.swift in Sources */,
 				03BE936A27EC40D300795CF6 /* CustomClass.swift in Sources */,
+				035E8CD027ED87C700E19B9F /* ChooseMemberVC.swift in Sources */,
+				035E8CDA27ED9C1800E19B9F /* MessagePopVC.swift in Sources */,
 				03BE935627EC40D300795CF6 /* UIView+Extensions.swift in Sources */,
 				03BE93A427EC760700795CF6 /* RealEstateTVC.swift in Sources */,
 				03BE936227EC40D300795CF6 /* UITextFieldExtended.swift in Sources */,
