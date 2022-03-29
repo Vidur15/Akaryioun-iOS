@@ -14,6 +14,7 @@ class SideMenuVC: UIViewController {
     @IBOutlet weak var mainTableView: UITableView!
     
     var menuArr = ["Real Estate","Members","Request","Who are we","Call Us","Language"]
+    var imageArr = ["1530085_building_business_city_commercial_company_icon (1)","79-users-1","pull-requests-1","8324228_ui_essential_app_question_help_icon","Phone","2135789_earth_language_planet_icon"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,7 +37,7 @@ extension SideMenuVC: UITableViewDelegate,UITableViewDataSource {
         guard let cell = self.mainTableView.dequeueReusableCell(withIdentifier: "SideMenuTVC", for: indexPath) as? SideMenuTVC else { return UITableViewCell() }
         cell.selectionStyle = .none
         cell.mainLbl.text = self.menuArr[indexPath.row]
-        
+        cell.mainImageView.image = UIImage.init(named: self.imageArr[indexPath.row])
         if indexPath.row == 5{
             cell.hideImageView.isHidden = true
         }else{

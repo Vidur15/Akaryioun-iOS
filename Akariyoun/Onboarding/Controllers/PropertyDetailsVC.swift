@@ -10,6 +10,7 @@ import UIKit
 
 class PropertyDetailsVC: UIViewController {
 
+    
     @IBOutlet weak var lengthLimitView: UIView!
     @IBOutlet weak var earthView: UIView!
     @IBOutlet weak var PriceView: UIView!
@@ -30,6 +31,16 @@ class PropertyDetailsVC: UIViewController {
                                 self.mainCollectionView.register(UINib(nibName: "PropertyImagesCVC", bundle: .main), forCellWithReuseIdentifier: "PropertyImagesCVC")
                          
         // Do any additional setup after loading the view.
+    }
+    
+    @IBAction func messageBtnAction(_ sender: UIButton) {
+    guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "MessagePopVC" ) as? MessagePopVC  else { return }
+       vc.modalPresentationStyle = .overFullScreen
+       vc.modalTransitionStyle = .coverVertical
+     //  vc.sender = self
+       
+       //  vc.meetUpModel = self.meetUpModel
+       self.present(vc, animated: true, completion: nil)
     }
     
     @IBAction func backAction(_ sender: UIButton) {

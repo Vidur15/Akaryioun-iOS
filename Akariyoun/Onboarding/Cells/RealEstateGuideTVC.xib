@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Poppins-Light.ttf">
+            <string>Poppins-Light</string>
+        </array>
+        <array key="Poppins-Medium.ttf">
+            <string>Poppins-Medium</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="RealEstateGuideTVC" rowHeight="263" id="KGk-i7-Jjw" customClass="RealEstateGuideTVC" customModule="Akariyoun" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="263"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="263"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eNC-vs-fY2">
+                        <rect key="frame" x="16" y="10" width="288" height="243"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ibrahim Al Qazlan Real Estate Investments Office" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V2o-N6-FkT">
+                                <rect key="frame" x="12" y="20" width="264" height="45"/>
+                                <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="16"/>
+                                <color key="textColor" red="0.058823529409999999" green="0.058823529409999999" blue="0.058823529409999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Real Estate Developers Corporation." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kf5-Up-opT">
+                                <rect key="frame" x="12" y="69" width="264" height="20"/>
+                                <fontDescription key="fontDescription" name="Poppins-Light" family="Poppins" pointSize="14"/>
+                                <color key="textColor" red="0.058823529409999999" green="0.058823529409999999" blue="0.058823529409999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.95686274510000002" green="0.95686274510000002" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="kf5-Up-opT" firstAttribute="top" secondItem="V2o-N6-FkT" secondAttribute="bottom" constant="4" id="LL9-h8-PZy"/>
+                            <constraint firstItem="V2o-N6-FkT" firstAttribute="leading" secondItem="eNC-vs-fY2" secondAttribute="leading" constant="12" id="S2j-JY-MAd"/>
+                            <constraint firstItem="kf5-Up-opT" firstAttribute="leading" secondItem="V2o-N6-FkT" secondAttribute="leading" id="Tyt-Dw-0GU"/>
+                            <constraint firstItem="V2o-N6-FkT" firstAttribute="top" secondItem="eNC-vs-fY2" secondAttribute="top" constant="20" id="YLY-Wi-vf2"/>
+                            <constraint firstItem="kf5-Up-opT" firstAttribute="trailing" secondItem="V2o-N6-FkT" secondAttribute="trailing" id="uaZ-R8-I6y"/>
+                            <constraint firstAttribute="trailing" secondItem="V2o-N6-FkT" secondAttribute="trailing" constant="12" id="uhR-PX-CmL"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="24"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="eNC-vs-fY2" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="0iI-nR-qXk"/>
+                    <constraint firstAttribute="bottom" secondItem="eNC-vs-fY2" secondAttribute="bottom" constant="10" id="Voa-XQ-q1H"/>
+                    <constraint firstAttribute="trailing" secondItem="eNC-vs-fY2" secondAttribute="trailing" constant="16" id="bpC-VY-DS8"/>
+                    <constraint firstItem="eNC-vs-fY2" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="wWD-eK-mCd"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <point key="canvasLocation" x="-606" y="1"/>
+        </tableViewCell>
+    </objects>
+</document>

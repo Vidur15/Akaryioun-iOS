@@ -10,6 +10,7 @@ import UIKit
 
 class SideMenuTVC: UITableViewCell {
 
+    @IBOutlet weak var mainImageView: UIImageView!
     @IBOutlet weak var hideImageView: UIImageView!
     @IBOutlet weak var mainLbl: UILabel!
     override func awakeFromNib() {

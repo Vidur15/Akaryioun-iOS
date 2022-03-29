@@ -42,14 +42,23 @@
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background png" translatesAutoresizingMaskIntoConstraints="NO" id="Xxv-W9-uXa">
+                                <rect key="frame" x="0.0" y="748" width="414" height="148"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="148" id="y8c-Ck-6Ku"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Xxv-W9-uXa" secondAttribute="trailing" id="1DH-FI-UMt"/>
                             <constraint firstItem="dIn-2n-CtH" firstAttribute="top" secondItem="Uib-qC-dYN" secondAttribute="bottom" constant="20" id="64b-gq-tPr"/>
                             <constraint firstItem="dIn-2n-CtH" firstAttribute="centerX" secondItem="Uib-qC-dYN" secondAttribute="centerX" id="BHy-bd-lS1"/>
                             <constraint firstItem="Uib-qC-dYN" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" constant="-50" id="IUd-Oz-hTX"/>
                             <constraint firstItem="csG-og-Toj" firstAttribute="top" secondItem="dIn-2n-CtH" secondAttribute="bottom" constant="10" id="WIR-i8-mMq"/>
                             <constraint firstItem="csG-og-Toj" firstAttribute="centerX" secondItem="dIn-2n-CtH" secondAttribute="centerX" id="l7N-Uu-iPR"/>
+                            <constraint firstAttribute="bottom" secondItem="Xxv-W9-uXa" secondAttribute="bottom" id="nL8-A1-nMY"/>
+                            <constraint firstItem="Xxv-W9-uXa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="pYO-GI-Zud"/>
                             <constraint firstItem="Uib-qC-dYN" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="tcX-w3-PGd"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -61,6 +70,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Background png" width="504" height="336"/>
         <image name="Logo" width="150" height="150"/>
     </resources>
 </document>

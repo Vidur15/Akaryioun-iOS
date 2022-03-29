@@ -11,6 +11,7 @@ import KYDrawerController
 
 class LoginVC: UIViewController {
 
+    @IBOutlet weak var mobileView: UIView!
     var sender : MainHomeScreenVC?
     
     override func viewDidLoad() {
@@ -19,6 +20,7 @@ class LoginVC: UIViewController {
         if let drawerController = navigationController?.parent as? KYDrawerController {
                    drawerController.screenEdgePanGestureEnabled = false
                }
+        self.mobileView.drawShadowwithCornerWithradius(radius: 22.5)
         // Do any additional setup after loading the view.
     }
     

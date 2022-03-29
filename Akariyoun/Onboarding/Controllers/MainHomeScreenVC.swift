@@ -156,4 +156,31 @@ extension MainHomeScreenVC: UICollectionViewDelegate, UICollectionViewDataSource
 //               control.progress = progress
 //           }
        }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.row == 1{
+            guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "SearchPropertyPopVC" ) as? SearchPropertyPopVC  else { return }
+               vc.modalPresentationStyle = .overFullScreen
+               vc.modalTransitionStyle = .coverVertical
+               vc.senderVc = self
+               
+               //  vc.meetUpModel = self.meetUpModel
+               self.present(vc, animated: true, completion: nil)
+        }
+       else if indexPath.row == 5{
+           guard let vc = self.storyboard?.instantiateViewController(withIdentifier:
+            "RealEstateGuideVC" ) as? RealEstateGuideVC  else { return }
+           self.navigationController?.pushViewController(vc, animated: true)
+        }
+        else if indexPath.row == 3{
+           guard let vc = self.storyboard?.instantiateViewController(withIdentifier:
+            "MembersVC" ) as? MembersVC  else { return }
+           self.navigationController?.pushViewController(vc, animated: true)
+        }
+        else if indexPath.row == 6{
+                  guard let vc = self.storyboard?.instantiateViewController(withIdentifier:
+                   "PropertyManagementVC" ) as? PropertyManagementVC  else { return }
+                  self.navigationController?.pushViewController(vc, animated: true)
+               }
+    }
 }
