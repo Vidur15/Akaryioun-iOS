@@ -10,27 +10,29 @@ import UIKit
 import KYDrawerController
 
 class SideMenuVC: UIViewController {
-
+    
     @IBOutlet weak var mainTableView: UITableView!
     
     var menuArr = ["Real Estate","Members","Request","Who are we","Call Us","Language"]
     var imageArr = ["1530085_building_business_city_commercial_company_icon (1)","79-users-1","pull-requests-1","8324228_ui_essential_app_question_help_icon","Phone","2135789_earth_language_planet_icon"]
     
+    var boolVal = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         self.setStatusBarColor()
         self.mainTableView.delegate = self
-                      self.mainTableView.dataSource = self
-                      let nib = UINib(nibName: "SideMenuTVC", bundle: Bundle.main)
-                      self.mainTableView.register(nib, forCellReuseIdentifier: "SideMenuTVC")
+        self.mainTableView.dataSource = self
+        let nib = UINib(nibName: "SideMenuTVC", bundle: Bundle.main)
+        self.mainTableView.register(nib, forCellReuseIdentifier: "SideMenuTVC")
         // Do any additional setup after loading the view.
     }
 }
 
 extension SideMenuVC: UITableViewDelegate,UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 6
+        return self.menuArr.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -38,10 +40,16 @@ extension SideMenuVC: UITableViewDelegate,UITableViewDataSource {
         cell.selectionStyle = .none
         cell.mainLbl.text = self.menuArr[indexPath.row]
         cell.mainImageView.image = UIImage.init(named: self.imageArr[indexPath.row])
-        if indexPath.row == 5{
+        if indexPath.row == (self.menuArr.count - 1){
             cell.hideImageView.isHidden = true
         }else{
             cell.hideImageView.isHidden = false
+        }
+        
+        if indexPath.row == 5{
+            cell.dropIcon.isHidden = false
+        }else{
+            cell.dropIcon.isHidden = true
         }
         
         return cell
@@ -49,5 +57,56 @@ extension SideMenuVC: UITableViewDelegate,UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 60
+    }
+    
+    private func pushToVC(identifierName : String, storyboard : UIStoryboard) {
+         if let drawerController = navigationController?.parent as? KYDrawerController {
+             drawerController.setDrawerState(.closed, animated: true)
+             let vc = storyboard.instantiateViewController(withIdentifier: identifierName)
+            
+            if let cont = vc as? RealEstateVC{
+                cont.isFrom = true
+            }
+            
+            if let cont = vc as? ViewController{
+                cont.isFrom = true
+            }
+            
+             if identifierName == "ChooseLanguageVC" {
+                 UserDefaults.standard.set("Menu", forKey: "CameFrom")
+                 UserDefaults.standard.synchronize()
+             }
+             if let navVC = drawerController.mainViewController as? UINavigationController {
+                 navVC.pushViewController(vc, animated: true)
+             }
+         }
+     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print(indexPath.row,"CHECK VIDUR")
+        if indexPath.row == 0{
+
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            pushToVC(identifierName: "RealEstateVC", storyboard: storyboard)
+        }
+        else if indexPath.row == 1{
+
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            pushToVC(identifierName: "MembersVC", storyboard: storyboard)
+        }
+        else if indexPath.row == 2{
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            pushToVC(identifierName: "ViewController", storyboard: storyboard)
+        }else if indexPath.row == 5{
+            self.boolVal = !self.boolVal
+            if self.boolVal{
+                self.menuArr = ["Real Estate","Members","Request","Who are we","Call Us","Language","English","Arabic"]
+                self.imageArr = ["1530085_building_business_city_commercial_company_icon (1)","79-users-1","pull-requests-1","8324228_ui_essential_app_question_help_icon","Phone","2135789_earth_language_planet_icon","2135789_earth_language_planet_icon","2135789_earth_language_planet_icon"]
+            }else{
+                self.menuArr = ["Real Estate","Members","Request","Who are we","Call Us","Language"]
+                self.imageArr = ["1530085_building_business_city_commercial_company_icon (1)","79-users-1","pull-requests-1","8324228_ui_essential_app_question_help_icon","Phone","2135789_earth_language_planet_icon"]
+            }
+            self.mainTableView.reloadData()
+        }
     }
 }

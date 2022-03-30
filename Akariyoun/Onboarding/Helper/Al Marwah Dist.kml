@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+<Document id="root_doc">
+<Schema name="riyadh" id="riyadh">
+	<SimpleField name="district_id" type="float"></SimpleField>
+	<SimpleField name="city_id" type="int"></SimpleField>
+	<SimpleField name="region_id" type="int"></SimpleField>
+	<SimpleField name="name_ar" type="string"></SimpleField>
+	<SimpleField name="name_en" type="string"></SimpleField>
+</Schema>
+<Folder><name>riyadh</name>
+ <Placemark>
+     <name>Al Marwah Dist.</name>
+     <arName>حي المروة</arName>
+   <Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+   <ExtendedData><SchemaData schemaUrl="#riyadh">
+       <SimpleData name="district_id">10100003064</SimpleData>
+       <SimpleData name="city_id">3</SimpleData>
+       <SimpleData name="region_id">1</SimpleData>
+       <SimpleData name="name_ar">حي المروة</SimpleData>
+       <SimpleData name="name_en">Al Marwah Dist.</SimpleData>
+   </SchemaData></ExtendedData>
+     <Polygon><outerBoundaryIs><LinearRing><coordinates>46.692667,24.54403 46.674722,24.556433 46.673878,24.555539 46.672586,24.554031 46.671648,24.552929 46.671427,24.552666 46.670617,24.551643 46.670309,24.551255 46.663182,24.542599 46.661434,24.540504 46.659095,24.537648 46.658812,24.537304 46.675534,24.525586 46.675852,24.525404 46.676086,24.525322 46.676266,24.525284 46.676493,24.525253 46.677477,24.525205 46.677557,24.525304 46.677575,24.525329 46.67759,24.525355 46.677596,24.525366 46.677603,24.525376 46.677612,24.525385 46.677621,24.525393 46.67764,24.525408 46.677657,24.525426 46.682963,24.531907 46.688195,24.538241 46.688235,24.538289 46.688269,24.538341 46.688298,24.538395 46.688321,24.538451 46.688338,24.53851 46.688348,24.538569 46.688377,24.538662 46.688411,24.538753 46.68845,24.538842 46.688495,24.53893 46.688545,24.539014 46.6886,24.539097 46.68866,24.539176 46.692667,24.54403</coordinates></LinearRing></outerBoundaryIs></Polygon>
+ </Placemark>
+  
+</Folder>
+</Document></kml>

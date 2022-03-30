@@ -32,7 +32,7 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Request" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LqO-FP-l18">
-                                <rect key="frame" x="81" y="195.5" width="69" height="24"/>
+                                <rect key="frame" x="81" y="197.5" width="63.5" height="20"/>
                                 <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="17"/>
                                 <color key="textColor" red="0.058823529409999999" green="0.058823529409999999" blue="0.058823529409999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -44,13 +44,22 @@
                                     <constraint firstAttribute="height" constant="1" id="1xy-xt-U8p"/>
                                 </constraints>
                             </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Group 14" translatesAutoresizingMaskIntoConstraints="NO" id="Znq-O9-KBT">
+                                <rect key="frame" x="401" y="195" width="25" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="DWy-Ht-nvs"/>
+                                    <constraint firstAttribute="width" constant="25" id="Tjm-2W-bt3"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="mLv-V7-xdK" secondAttribute="bottom" constant="2" id="7aY-zk-MBN"/>
                             <constraint firstItem="suY-fL-bCJ" firstAttribute="centerY" secondItem="5Gb-SV-ZIH" secondAttribute="centerY" id="9DY-mD-imA"/>
+                            <constraint firstItem="Znq-O9-KBT" firstAttribute="centerY" secondItem="5Gb-SV-ZIH" secondAttribute="centerY" id="OK3-VC-bKv"/>
                             <constraint firstItem="LqO-FP-l18" firstAttribute="leading" secondItem="suY-fL-bCJ" secondAttribute="trailing" constant="20" id="brC-C3-XPk"/>
                             <constraint firstItem="mLv-V7-xdK" firstAttribute="leading" secondItem="5Gb-SV-ZIH" secondAttribute="leading" id="ctt-FI-xVj"/>
+                            <constraint firstAttribute="trailing" secondItem="Znq-O9-KBT" secondAttribute="trailing" constant="8" id="e02-av-Yl1"/>
                             <constraint firstItem="LqO-FP-l18" firstAttribute="centerY" secondItem="suY-fL-bCJ" secondAttribute="centerY" id="gUr-A8-LFe"/>
                             <constraint firstAttribute="trailing" secondItem="mLv-V7-xdK" secondAttribute="trailing" id="j58-dg-7MR"/>
                             <constraint firstItem="suY-fL-bCJ" firstAttribute="leading" secondItem="5Gb-SV-ZIH" secondAttribute="leading" constant="16" id="spa-ki-I2l"/>
@@ -66,6 +75,7 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="dropIcon" destination="Znq-O9-KBT" id="dfm-eg-KNP"/>
                 <outlet property="hideImageView" destination="mLv-V7-xdK" id="HcZ-SO-Usp"/>
                 <outlet property="mainImageView" destination="suY-fL-bCJ" id="GXC-5n-mEd"/>
                 <outlet property="mainLbl" destination="LqO-FP-l18" id="X6O-pU-BS3"/>
@@ -74,6 +84,7 @@
         </tableViewCell>
     </objects>
     <resources>
+        <image name="Group 14" width="24" height="24"/>
         <image name="pull-requests-1" width="33" height="33"/>
     </resources>
 </document>

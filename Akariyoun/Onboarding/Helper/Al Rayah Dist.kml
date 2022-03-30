@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+<Document id="root_doc">
+<Schema name="riyadh" id="riyadh">
+	<SimpleField name="district_id" type="float"></SimpleField>
+	<SimpleField name="city_id" type="int"></SimpleField>
+	<SimpleField name="region_id" type="int"></SimpleField>
+	<SimpleField name="name_ar" type="string"></SimpleField>
+	<SimpleField name="name_en" type="string"></SimpleField>
+</Schema>
+<Folder><name>riyadh</name>
+ <Placemark>
+      <name>Al Rayah Dist.</name>
+      <arName>حي الراية</arName>
+    <Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+    <ExtendedData><SchemaData schemaUrl="#riyadh">
+        <SimpleData name="district_id">10100003186</SimpleData>
+        <SimpleData name="city_id">3</SimpleData>
+        <SimpleData name="region_id">1</SimpleData>
+        <SimpleData name="name_ar">حي الراية</SimpleData>
+        <SimpleData name="name_en">Al Rayah Dist.</SimpleData>
+    </SchemaData></ExtendedData>
+      <Polygon><outerBoundaryIs><LinearRing><coordinates>47.225397,25.026456 47.225053,25.02828 47.218945,25.060568 47.18148,25.053505 47.181651,25.034345 47.181672,25.032051 47.189476,25.034841 47.194437,25.023524 47.194589,25.023177 47.194596,25.023179 47.19472,25.023209 47.195292,25.023344 47.195866,25.023475 47.196441,25.023603 47.197138,25.023752 47.197837,25.023895 47.198537,25.024034 47.199238,25.024166 47.200145,25.024328 47.201054,25.024484 47.201964,25.024634 47.202875,25.024778 47.203787,25.024916 47.203999,25.024944 47.204758,25.02504 47.205518,25.02513 47.206279,25.025213 47.20704,25.02529 47.207803,25.025359 47.208566,25.025422 47.20933,25.025479 47.210094,25.025529 47.210859,25.025572 47.211624,25.025608 47.21239,25.025638 47.213156,25.025661 47.213922,25.025677 47.219153,25.025778 47.222736,25.026076 47.224124,25.026263 47.225149,25.026418 47.225397,25.026456</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  
+</Folder>
+</Document></kml>

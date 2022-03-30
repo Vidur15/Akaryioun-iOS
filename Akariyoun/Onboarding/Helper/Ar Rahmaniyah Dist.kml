@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+<Document id="root_doc">
+<Schema name="riyadh" id="riyadh">
+	<SimpleField name="district_id" type="float"></SimpleField>
+	<SimpleField name="city_id" type="int"></SimpleField>
+	<SimpleField name="region_id" type="int"></SimpleField>
+	<SimpleField name="name_ar" type="string"></SimpleField>
+	<SimpleField name="name_en" type="string"></SimpleField>
+</Schema>
+<Folder><name>riyadh</name>
+    <Placemark>
+        <name>Ar Rahmaniyah Dist.</name>
+        <arName>حي الرحمانية</arName>
+        <arName></arName>
+      <Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+      <ExtendedData><SchemaData schemaUrl="#riyadh">
+          <SimpleData name="district_id">10100003013</SimpleData>
+          <SimpleData name="city_id">3</SimpleData>
+          <SimpleData name="region_id">1</SimpleData>
+          <SimpleData name="name_ar">حي الرحمانية</SimpleData>
+          <SimpleData name="name_en">Ar Rahmaniyah Dist.</SimpleData>
+      </SchemaData></ExtendedData>
+        <Polygon><outerBoundaryIs><LinearRing><coordinates>46.664038,24.727769 46.664034,24.727777 46.647133,24.720628 46.646853,24.72051 46.647562,24.71908 46.647962,24.718235 46.64871,24.716766 46.649814,24.714615 46.650677,24.712924 46.650813,24.712654 46.650942,24.712381 46.651064,24.712105 46.65118,24.711827 46.65129,24.711547 46.651393,24.711265 46.651489,24.710981 46.651578,24.710695 46.652338,24.708315 46.652433,24.708017 46.652535,24.707721 46.652645,24.707427 46.652761,24.707136 46.652885,24.706846 46.653015,24.70656 46.654098,24.704404 46.663568,24.7084 46.663567,24.708402 46.66538,24.709174 46.667616,24.710124 46.670118,24.711184 46.670244,24.711237 46.670371,24.711288 46.670587,24.711387 46.6708,24.711491 46.671016,24.71161 46.671235,24.711725 46.671458,24.711834 46.671683,24.711938 46.671985,24.712063 46.671644,24.712733 46.671434,24.713147 46.669257,24.717454 46.664953,24.725956 46.664038,24.727769</coordinates></LinearRing></outerBoundaryIs></Polygon>
+    </Placemark>
+  
+</Folder>
+</Document></kml>

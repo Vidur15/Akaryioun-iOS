@@ -47,4 +47,10 @@ extension MembersVC: UITableViewDelegate,UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 120
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let vc = self.storyboard?.instantiateViewController(withIdentifier:
+                   "MemberDetailsMainVC" ) as? MemberDetailsMainVC  else { return }
+                  self.navigationController?.pushViewController(vc, animated: true)
+    }
 }

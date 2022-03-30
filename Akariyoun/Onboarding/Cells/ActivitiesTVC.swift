@@ -10,6 +10,7 @@ import UIKit
 
 class ActivitiesTVC: UITableViewCell {
 
+    @IBOutlet weak var dropIcon: UIImageView!
     @IBOutlet weak var descLbl: UILabel!
     @IBOutlet weak var headingLbl: UILabel!
     @IBOutlet weak var mainImageView: UIImageView!

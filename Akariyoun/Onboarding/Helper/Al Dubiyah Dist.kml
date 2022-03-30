@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+<Document id="root_doc">
+<Schema name="riyadh" id="riyadh">
+	<SimpleField name="district_id" type="float"></SimpleField>
+	<SimpleField name="city_id" type="int"></SimpleField>
+	<SimpleField name="region_id" type="int"></SimpleField>
+	<SimpleField name="name_ar" type="string"></SimpleField>
+	<SimpleField name="name_en" type="string"></SimpleField>
+</Schema>
+<Folder><name>riyadh</name>
+    <Placemark>
+         <name>Al Dubiyah Dist.</name>
+         <arName>حي الدوبية</arName>
+       <Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+       <ExtendedData><SchemaData schemaUrl="#riyadh">
+           <SimpleData name="district_id">10100003116</SimpleData>
+           <SimpleData name="city_id">3</SimpleData>
+           <SimpleData name="region_id">1</SimpleData>
+           <SimpleData name="name_ar">حي الدوبية</SimpleData>
+           <SimpleData name="name_en">Al Dubiyah Dist.</SimpleData>
+       </SchemaData></ExtendedData>
+         <Polygon><outerBoundaryIs><LinearRing><coordinates>46.710189,24.617027 46.710444,24.617135 46.710615,24.617216 46.710807,24.617323 46.711017,24.617422 46.711356,24.61758 46.711446,24.617609 46.71163,24.617676 46.711947,24.617817 46.712323,24.617993 46.712578,24.618104 46.712896,24.61826 46.713197,24.618412 46.713489,24.618554 46.713812,24.618712 46.714052,24.618825 46.714317,24.618945 46.714137,24.619437 46.713828,24.620468 46.713509,24.621528 46.713122,24.622853 46.712449,24.624974 46.711879,24.626617 46.711876,24.626625 46.711467,24.626416 46.711188,24.626259 46.711168,24.625875 46.711111,24.625323 46.710997,24.624481 46.71082,24.623135 46.710671,24.622069 46.710538,24.621201 46.710541,24.621135 46.710335,24.619618 46.710065,24.617513 46.710043,24.617207 46.710021,24.616977 46.710189,24.617027</coordinates></LinearRing></outerBoundaryIs></Polygon>
+     </Placemark>
+  
+</Folder>
+</Document></kml>

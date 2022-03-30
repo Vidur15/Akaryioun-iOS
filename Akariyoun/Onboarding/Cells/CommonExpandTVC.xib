@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Poppins-Bold.ttf">
+            <string>Poppins-Bold</string>
+        </array>
+        <array key="Poppins-Regular.ttf">
+            <string>Poppins-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CommonExpandTVC" rowHeight="518" id="KGk-i7-Jjw" customClass="CommonExpandTVC" customModule="Akariyoun" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="545" height="518"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="545" height="518"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xsI-Nq-eTF">
+                        <rect key="frame" x="7" y="10" width="531" height="498"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" text="3 months ago" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fjb-lN-Zrf">
+                                <rect key="frame" x="423.5" y="15" width="97.5" height="20"/>
+                                <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Required building for sale Salah - Al-Din neighbourhood" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TRc-58-uZd">
+                                <rect key="frame" x="10" y="15" width="403.5" height="50.5"/>
+                                <fontDescription key="fontDescription" name="Poppins-Bold" family="Poppins" pointSize="18"/>
+                                <color key="textColor" red="0.1137254902" green="0.38823529410000002" blue="0.64313725489999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Excellent hotel offer in Riyadh and in a lively area. Direct Contact - 056611778899" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iu1-md-5MH">
+                                <rect key="frame" x="10" y="75.5" width="403.5" height="412.5"/>
+                                <fontDescription key="fontDescription" name="Poppins-Bold" family="Poppins" pointSize="18"/>
+                                <color key="textColor" red="0.1843137255" green="0.1843137255" blue="0.1843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s6B-sS-Z68">
+                                <rect key="frame" x="0.0" y="0.0" width="531" height="498"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.95686274509803915" green="0.95686274509803915" blue="0.95686274509803915" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="Iu1-md-5MH" firstAttribute="top" secondItem="TRc-58-uZd" secondAttribute="bottom" constant="10" id="1pj-YL-RHM"/>
+                            <constraint firstItem="Fjb-lN-Zrf" firstAttribute="leading" secondItem="TRc-58-uZd" secondAttribute="trailing" constant="10" id="5kk-6f-OP1"/>
+                            <constraint firstItem="Iu1-md-5MH" firstAttribute="trailing" secondItem="TRc-58-uZd" secondAttribute="trailing" id="FEk-yC-Lur"/>
+                            <constraint firstItem="TRc-58-uZd" firstAttribute="leading" secondItem="xsI-Nq-eTF" secondAttribute="leading" constant="10" id="I0o-ZS-SIA"/>
+                            <constraint firstAttribute="trailing" secondItem="Fjb-lN-Zrf" secondAttribute="trailing" constant="10" id="QwM-Rf-kuY"/>
+                            <constraint firstItem="s6B-sS-Z68" firstAttribute="leading" secondItem="xsI-Nq-eTF" secondAttribute="leading" id="WXq-NT-gQv"/>
+                            <constraint firstItem="Iu1-md-5MH" firstAttribute="leading" secondItem="TRc-58-uZd" secondAttribute="leading" id="YCd-kf-HzT"/>
+                            <constraint firstAttribute="trailing" secondItem="s6B-sS-Z68" secondAttribute="trailing" id="ahC-ib-fcM"/>
+                            <constraint firstItem="TRc-58-uZd" firstAttribute="top" secondItem="xsI-Nq-eTF" secondAttribute="top" constant="15" id="cHm-a5-Vt9"/>
+                            <constraint firstItem="Fjb-lN-Zrf" firstAttribute="top" secondItem="xsI-Nq-eTF" secondAttribute="top" constant="15" id="ceD-Wa-ied"/>
+                            <constraint firstItem="s6B-sS-Z68" firstAttribute="top" secondItem="xsI-Nq-eTF" secondAttribute="top" id="dR0-T8-tlh"/>
+                            <constraint firstAttribute="bottom" secondItem="s6B-sS-Z68" secondAttribute="bottom" id="eSD-I5-Cls"/>
+                            <constraint firstAttribute="bottom" secondItem="Iu1-md-5MH" secondAttribute="bottom" constant="10" id="zPV-5z-74X"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="10"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="xsI-Nq-eTF" secondAttribute="trailing" constant="7" id="8IT-MP-q2T"/>
+                    <constraint firstItem="xsI-Nq-eTF" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="OZm-aF-KMu"/>
+                    <constraint firstAttribute="bottom" secondItem="xsI-Nq-eTF" secondAttribute="bottom" constant="10" id="ggU-uA-Sld"/>
+                    <constraint firstItem="xsI-Nq-eTF" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="7" id="otp-N2-nrJ"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <point key="canvasLocation" x="229.71014492753625" y="122.54464285714285"/>
+        </tableViewCell>
+    </objects>
+</document>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+<Document id="root_doc">
+<Schema name="riyadh" id="riyadh">
+	<SimpleField name="district_id" type="float"></SimpleField>
+	<SimpleField name="city_id" type="int"></SimpleField>
+	<SimpleField name="region_id" type="int"></SimpleField>
+	<SimpleField name="name_ar" type="string"></SimpleField>
+	<SimpleField name="name_en" type="string"></SimpleField>
+</Schema>
+<Folder><name>riyadh</name>
+    <Placemark>
+        <name>King Faisal Dist.</name>
+        <arName>حي الملك فيصل</arName>
+      <Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+      <ExtendedData><SchemaData schemaUrl="#riyadh">
+          <SimpleData name="district_id">10100003027</SimpleData>
+          <SimpleData name="city_id">3</SimpleData>
+          <SimpleData name="region_id">1</SimpleData>
+          <SimpleData name="name_ar">حي الملك فيصل</SimpleData>
+          <SimpleData name="name_en">King Faisal Dist.</SimpleData>
+      </SchemaData></ExtendedData>
+        <Polygon><outerBoundaryIs><LinearRing><coordinates>46.790228,24.756757 46.790223,24.756764 46.789044,24.758353 46.785819,24.762675 46.784767,24.764036 46.785356,24.764404 46.776496,24.776342 46.776296,24.776243 46.776098,24.776138 46.775904,24.776029 46.775713,24.775915 46.775526,24.775797 46.775341,24.775674 46.775022,24.775468 46.774699,24.775267 46.774373,24.775069 46.770265,24.772536 46.769917,24.77234 46.769566,24.772151 46.769212,24.771966 46.768854,24.771787 46.768493,24.771613 46.768129,24.771445 46.767762,24.771282 46.767392,24.771124 46.76702,24.770973 46.766644,24.770826 46.76581,24.770497 46.763357,24.769458 46.759115,24.76769 46.763681,24.761627 46.769186,24.754197 46.769979,24.753157 46.770118,24.752968 46.770333,24.752678 46.770708,24.75217 46.772727,24.749435 46.774515,24.747036 46.774519,24.74703 46.776815,24.74846 46.783997,24.7529 46.790228,24.756757</coordinates></LinearRing></outerBoundaryIs></Polygon>
+    </Placemark>
+  
+</Folder>
+</Document></kml>

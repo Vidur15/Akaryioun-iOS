@@ -6,6 +6,7 @@ target 'Akariyoun' do
   use_frameworks!
 pod 'CHIPageControl', '~> 0.1.3'
  pod 'KYDrawerController'
+ pod 'AEXML'
   # Pods for Akariyoun
 
   target 'AkariyounTests' do

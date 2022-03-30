@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+<Document id="root_doc">
+<Schema name="riyadh" id="riyadh">
+	<SimpleField name="district_id" type="float"></SimpleField>
+	<SimpleField name="city_id" type="int"></SimpleField>
+	<SimpleField name="region_id" type="int"></SimpleField>
+	<SimpleField name="name_ar" type="string"></SimpleField>
+	<SimpleField name="name_en" type="string"></SimpleField>
+</Schema>
+<Folder><name>riyadh</name>
+    <Placemark>
+         <name>Al Farooq Dist.</name>
+              <arName>حي الفاروق</arName>
+       <Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+       <ExtendedData><SchemaData schemaUrl="#riyadh">
+           <SimpleData name="district_id">10100003032</SimpleData>
+           <SimpleData name="city_id">3</SimpleData>
+           <SimpleData name="region_id">1</SimpleData>
+           <SimpleData name="name_ar">حي الفاروق</SimpleData>
+           <SimpleData name="name_en">Al Farooq Dist.</SimpleData>
+       </SchemaData></ExtendedData>
+         <Polygon><outerBoundaryIs><LinearRing><coordinates>46.791974,24.653497 46.787686,24.662053 46.787516,24.662403 46.787341,24.66275 46.787161,24.663095 46.786975,24.663438 46.786785,24.663779 46.78659,24.664117 46.786392,24.664439 46.786188,24.664759 46.785979,24.665075 46.785765,24.665389 46.785545,24.665699 46.78532,24.666006 46.78509,24.66631 46.784854,24.66661 46.784617,24.666915 46.782824,24.66616 46.777853,24.664069 46.773144,24.662093 46.765337,24.658818 46.754549,24.65414 46.754724,24.653782 46.754903,24.653426 46.755088,24.653072 46.75542,24.65244 46.755747,24.651805 46.756069,24.651168 46.756456,24.650425 46.756846,24.649684 46.75724,24.648944 46.757377,24.648689 46.757508,24.64843 46.757633,24.648169 46.757751,24.647906 46.757862,24.64764 46.757967,24.647371 46.758065,24.647101 46.758156,24.646829 46.758605,24.645352 46.759999,24.64062 46.760402,24.64067 46.760511,24.640693 46.760745,24.640748 46.760976,24.640808 46.761206,24.640874 46.761434,24.640945 46.761659,24.641022 46.761882,24.641104 46.762103,24.641192 46.76301,24.641566 46.76958,24.644262 46.776079,24.646947 46.785612,24.650871 46.791974,24.653497</coordinates></LinearRing></outerBoundaryIs></Polygon>
+     </Placemark>
+  
+</Folder>
+</Document></kml>

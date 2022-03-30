@@ -42,7 +42,7 @@
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background png" translatesAutoresizingMaskIntoConstraints="NO" id="Xxv-W9-uXa">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background png-1" translatesAutoresizingMaskIntoConstraints="NO" id="Xxv-W9-uXa">
                                 <rect key="frame" x="0.0" y="748" width="414" height="148"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="148" id="y8c-Ck-6Ku"/>
@@ -70,7 +70,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Background png" width="504" height="336"/>
+        <image name="Background png-1" width="504" height="336"/>
         <image name="Logo" width="150" height="150"/>
     </resources>
 </document>

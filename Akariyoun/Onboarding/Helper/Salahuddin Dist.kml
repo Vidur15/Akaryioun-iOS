@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+<Document id="root_doc">
+<Schema name="riyadh" id="riyadh">
+	<SimpleField name="district_id" type="float"></SimpleField>
+	<SimpleField name="city_id" type="int"></SimpleField>
+	<SimpleField name="region_id" type="int"></SimpleField>
+	<SimpleField name="name_ar" type="string"></SimpleField>
+	<SimpleField name="name_en" type="string"></SimpleField>
+</Schema>
+<Folder><name>riyadh</name>
+ <Placemark>
+     <name>Salahuddin Dist.</name>
+     <arName>حي صلاح الدين</arName>
+   <Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+   <ExtendedData><SchemaData schemaUrl="#riyadh">
+       <SimpleData name="district_id">10100003043</SimpleData>
+       <SimpleData name="city_id">3</SimpleData>
+       <SimpleData name="region_id">1</SimpleData>
+       <SimpleData name="name_ar">حي صلاح الدين</SimpleData>
+       <SimpleData name="name_en">Salahuddin Dist.</SimpleData>
+   </SchemaData></ExtendedData>
+     <Polygon><outerBoundaryIs><LinearRing><coordinates>46.708863,24.732913 46.703117,24.744221 46.703106,24.744243 46.700128,24.742999 46.694644,24.740693 46.689011,24.738305 46.685226,24.736711 46.685175,24.736689 46.692901,24.721401 46.69294,24.721325 46.694261,24.721865 46.694196,24.721983 46.693629,24.723018 46.693313,24.723596 46.692903,24.724346 46.692864,24.724413 46.692865,24.724415 46.692855,24.724433 46.693427,24.725414 46.693519,24.725572 46.693526,24.725585 46.694269,24.725246 46.694726,24.725037 46.694839,24.72508 46.695058,24.725174 46.696624,24.725769 46.697344,24.726042 46.698938,24.726648 46.699029,24.726603 46.699523,24.726362 46.701256,24.725514 46.701749,24.725272 46.701957,24.72517 46.702581,24.724863 46.70288,24.724715 46.703465,24.724427 46.704712,24.723812 46.706926,24.72954 46.707006,24.729723 46.707273,24.730186 46.708,24.73141 46.708675,24.732566 46.708863,24.732913</coordinates></LinearRing></outerBoundaryIs></Polygon>
+ </Placemark>
+  
+</Folder>
+</Document></kml>

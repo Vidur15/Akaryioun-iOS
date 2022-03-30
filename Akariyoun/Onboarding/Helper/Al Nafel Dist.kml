@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+<Document id="root_doc">
+<Schema name="riyadh" id="riyadh">
+	<SimpleField name="district_id" type="float"></SimpleField>
+	<SimpleField name="city_id" type="int"></SimpleField>
+	<SimpleField name="region_id" type="int"></SimpleField>
+	<SimpleField name="name_ar" type="string"></SimpleField>
+	<SimpleField name="name_en" type="string"></SimpleField>
+</Schema>
+<Folder><name>riyadh</name>
+  <Placemark>
+       <name>Al Nafel Dist.</name>
+       <arName>حي النفل</arName>
+     <Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+     <ExtendedData><SchemaData schemaUrl="#riyadh">
+         <SimpleData name="district_id">10100003083</SimpleData>
+         <SimpleData name="city_id">3</SimpleData>
+         <SimpleData name="region_id">1</SimpleData>
+         <SimpleData name="name_ar">حي النفل</SimpleData>
+         <SimpleData name="name_en">Al Nafel Dist.</SimpleData>
+     </SchemaData></ExtendedData>
+       <Polygon><outerBoundaryIs><LinearRing><coordinates>46.668376,24.769899 46.686384,24.777481 46.686322,24.777603 46.678116,24.793869 46.660214,24.786284 46.660215,24.786283 46.660347,24.786019 46.667456,24.771808 46.668052,24.770535 46.668376,24.769899</coordinates></LinearRing></outerBoundaryIs></Polygon>
+   </Placemark>
+  
+</Folder>
+</Document></kml>

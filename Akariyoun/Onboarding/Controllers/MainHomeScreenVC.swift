@@ -182,5 +182,22 @@ extension MainHomeScreenVC: UICollectionViewDelegate, UICollectionViewDataSource
                    "PropertyManagementVC" ) as? PropertyManagementVC  else { return }
                   self.navigationController?.pushViewController(vc, animated: true)
                }
+        else if indexPath.row == 2{
+                         guard let vc = self.storyboard?.instantiateViewController(withIdentifier:
+                          "RealEstateVC" ) as? RealEstateVC  else { return }
+            vc.isFrom = true
+                         self.navigationController?.pushViewController(vc, animated: true)
+                      }
+        else if indexPath.row == 4{
+                     guard let vc = self.storyboard?.instantiateViewController(withIdentifier:
+                      "ViewController" ) as? ViewController  else { return }
+        vc.isFrom = true
+                     self.navigationController?.pushViewController(vc, animated: true)
+                  }
+        else if indexPath.row == 0{
+                           guard let vc = self.storyboard?.instantiateViewController(withIdentifier:
+                            "SearchMapVC" ) as? SearchMapVC  else { return }
+                           self.navigationController?.pushViewController(vc, animated: true)
+                        }
     }
 }

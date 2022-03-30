@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+<Document id="root_doc">
+<Schema name="riyadh" id="riyadh">
+	<SimpleField name="district_id" type="float"></SimpleField>
+	<SimpleField name="city_id" type="int"></SimpleField>
+	<SimpleField name="region_id" type="int"></SimpleField>
+	<SimpleField name="name_ar" type="string"></SimpleField>
+	<SimpleField name="name_en" type="string"></SimpleField>
+</Schema>
+<Folder><name>riyadh</name>
+    <Placemark>
+        <name>Al Tadamun Dist.</name>
+        <arName>حي التضامن</arName>
+      <Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+      <ExtendedData><SchemaData schemaUrl="#riyadh">
+          <SimpleData name="district_id">10100003175</SimpleData>
+          <SimpleData name="city_id">3</SimpleData>
+          <SimpleData name="region_id">1</SimpleData>
+          <SimpleData name="name_ar">حي التضامن</SimpleData>
+          <SimpleData name="name_en">Al Tadamun Dist.</SimpleData>
+      </SchemaData></ExtendedData>
+        <Polygon><outerBoundaryIs><LinearRing><coordinates>47.126675,25.167917 47.099118,25.168699 47.098115,25.168755 47.095607,25.164766 47.094676,25.163286 47.09395,25.162257 47.080411,25.146183 47.060733,25.122849 47.060483,25.122556 47.06024,25.122259 47.060003,25.121957 47.059772,25.121652 47.059548,25.121343 47.05933,25.12103 47.059118,25.120714 47.058913,25.120394 47.058714,25.12007 47.058522,25.119744 47.058337,25.119414 47.058164,25.119092 47.057998,25.118767 47.057838,25.11844 47.057684,25.11811 47.057538,25.117778 47.057397,25.117443 47.057264,25.117106 47.057137,25.116767 47.057016,25.116426 47.056903,25.116083 47.056796,25.115738 47.048015,25.079961 47.047909,25.079526 47.04968,25.079796 47.073986,25.083503 47.07504,25.083664 47.103788,25.088043 47.104556,25.08816 47.126668,25.16789 47.126675,25.167917</coordinates></LinearRing></outerBoundaryIs></Polygon>
+    </Placemark>
+  
+</Folder>
+</Document></kml>

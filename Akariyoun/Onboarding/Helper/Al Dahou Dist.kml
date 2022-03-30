@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+<Document id="root_doc">
+<Schema name="riyadh" id="riyadh">
+	<SimpleField name="district_id" type="float"></SimpleField>
+	<SimpleField name="city_id" type="int"></SimpleField>
+	<SimpleField name="region_id" type="int"></SimpleField>
+	<SimpleField name="name_ar" type="string"></SimpleField>
+	<SimpleField name="name_en" type="string"></SimpleField>
+</Schema>
+<Folder><name>riyadh</name>
+    <Placemark>
+        <name>Al Dahou Dist.</name>
+        <arName>حي الدحو</arName>
+      <Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+      <ExtendedData><SchemaData schemaUrl="#riyadh">
+          <SimpleData name="district_id">10100003156</SimpleData>
+          <SimpleData name="city_id">3</SimpleData>
+          <SimpleData name="region_id">1</SimpleData>
+          <SimpleData name="name_ar">حي الدحو</SimpleData>
+          <SimpleData name="name_en">Al Dahou Dist.</SimpleData>
+      </SchemaData></ExtendedData>
+        <Polygon><outerBoundaryIs><LinearRing><coordinates>46.715883,24.63043 46.715832,24.63058 46.715656,24.631157 46.715495,24.631116 46.714665,24.630916 46.714644,24.630277 46.713966,24.630164 46.713693,24.630677 46.713673,24.630672 46.713149,24.630537 46.712719,24.630418 46.712291,24.630274 46.712253,24.630259 46.712218,24.630238 46.712187,24.630213 46.712161,24.630183 46.712141,24.63015 46.712126,24.630114 46.712119,24.630076 46.712118,24.630038 46.712124,24.630001 46.712136,24.629964 46.712155,24.62993 46.712179,24.629899 46.712843,24.629134 46.713958,24.627871 46.714099,24.627945 46.715137,24.628663 46.716126,24.629362 46.716255,24.629446 46.716185,24.629628 46.715883,24.63043</coordinates></LinearRing></outerBoundaryIs></Polygon>
+    </Placemark>
+  
+</Folder>
+</Document></kml>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+<Document id="root_doc">
+<Schema name="riyadh" id="riyadh">
+	<SimpleField name="district_id" type="float"></SimpleField>
+	<SimpleField name="city_id" type="int"></SimpleField>
+	<SimpleField name="region_id" type="int"></SimpleField>
+	<SimpleField name="name_ar" type="string"></SimpleField>
+	<SimpleField name="name_en" type="string"></SimpleField>
+</Schema>
+<Folder><name>riyadh</name>
+  <Placemark>
+      <name>Olaishah Dist.</name>
+      <arName>حي عليشة</arName>
+    <Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+    <ExtendedData><SchemaData schemaUrl="#riyadh">
+        <SimpleData name="district_id">10100003053</SimpleData>
+        <SimpleData name="city_id">3</SimpleData>
+        <SimpleData name="region_id">1</SimpleData>
+        <SimpleData name="name_ar">حي عليشة</SimpleData>
+        <SimpleData name="name_en">Olaishah Dist.</SimpleData>
+    </SchemaData></ExtendedData>
+      <Polygon><outerBoundaryIs><LinearRing><coordinates>46.692697,24.637024 46.692812,24.639008 46.692933,24.641433 46.688679,24.63984 46.687487,24.639371 46.686572,24.638973 46.685742,24.638583 46.684837,24.638126 46.684067,24.63775 46.682922,24.637182 46.681789,24.636629 46.680553,24.636017 46.676587,24.634018 46.676482,24.633964 46.676369,24.633924 46.676307,24.6339 46.676203,24.633874 46.676129,24.633856 46.67602,24.633833 46.67593,24.633821 46.675672,24.633806 46.675399,24.633779 46.675329,24.633772 46.675253,24.633764 46.675238,24.633763 46.676288,24.630512 46.676917,24.628423 46.676863,24.627274 46.676769,24.626277 46.676722,24.62608 46.676676,24.625664 46.676624,24.62527 46.67885,24.625319 46.68085,24.625363 46.681138,24.62537 46.68302,24.625414 46.686575,24.625465 46.686825,24.62547 46.687074,24.625471 46.687324,24.625467 46.687591,24.625455 46.687858,24.625451 46.688126,24.625452 46.688393,24.62546 46.68866,24.625474 46.689092,24.625621 46.689525,24.625766 46.689991,24.625914 46.690271,24.625999 46.690639,24.626117 46.690808,24.626174 46.690921,24.626217 46.691057,24.626276 46.69114,24.626315 46.691227,24.626365 46.691273,24.626395 46.691366,24.626462 46.691534,24.626589 46.691694,24.62671 46.691777,24.626772 46.691857,24.626837 46.691932,24.626907 46.692002,24.626981 46.692068,24.627059 46.692127,24.627141 46.692182,24.627225 46.69223,24.627313 46.692228,24.627471 46.692231,24.627629 46.692309,24.629202 46.692339,24.629799 46.692349,24.629993 46.692421,24.63147 46.692505,24.633051 46.692609,24.635252 46.692697,24.637024</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  
+</Folder>
+</Document></kml>
