@@ -10,6 +10,7 @@ import UIKit
 
 class PropertyImagesCVC: UICollectionViewCell {
 
+    @IBOutlet weak var mainImgView: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

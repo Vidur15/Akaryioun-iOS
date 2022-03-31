@@ -7,6 +7,14 @@ target 'Akariyoun' do
 pod 'CHIPageControl', '~> 0.1.3'
  pod 'KYDrawerController'
  pod 'AEXML'
+ 
+ 
+ pod 'IQKeyboardManagerSwift'
+  pod 'SVPinView', '~> 1.0'
+
+ pod 'Alamofire',' ~> 4.0'
+  pod 'FTIndicator'
+  pod 'SVProgressHUD'
   # Pods for Akariyoun
 
   target 'AkariyounTests' do

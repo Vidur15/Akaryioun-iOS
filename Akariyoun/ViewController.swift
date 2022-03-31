@@ -15,6 +15,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var mainTableView: UITableView!
     
     var isFrom = false
+    
+    var requestModel : RequestsModel?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setStatusBarColor()
@@ -31,8 +34,41 @@ class ViewController: UIViewController {
                    self.backBtnOut.setImage(UIImage.init(named: "Back arrow"), for: .normal)
                    self.backBtnOut.backgroundColor = #colorLiteral(red: 0.134485513, green: 0.4705364108, blue: 0.7034772038, alpha: 1)
                }
+        self.getRequestsList()
         // Do any additional setup after loading the view.
     }
+    
+    func getRequestsList(){
+       
+        TANetworkManager.sharedInstance.requestApi(withServiceName: ServiceName.requestList, requestMethod: .GET, requestParameters: [:], withProgressHUD: true) { (result: Any?, error: Error?, errorType: ErrorType, statusCode: Int?) in
+            
+            //guard self != nil else { return }
+            CommonUtils.showHudWithNoInteraction(show: false)
+            if errorType == .requestSuccess {
+                let dicResponse = kSharedInstance.getDictionary(result)
+                let statusCodes = Int.getInt(statusCode)
+                switch statusCodes {
+                case 200:
+                    if dicResponse["success"] as? Bool ?? false{
+                       self.requestModel = RequestsModel.init(dictionary: dicResponse as NSDictionary)
+//                     print(self.propertyModel?.data?.property?.data?.count,"COUNT")
+                        self.mainTableView.reloadData()
+                    }else{
+                        showAlertMessage.alert(message: String.getString(dicResponse["message"]))
+                    }
+                default:
+                    
+                    showAlertMessage.alert(message: String.getString(dicResponse["message"]))
+                }
+            } else if errorType == .noNetwork {
+                showAlertMessage.alert(message: kNoInternetMsg)
+                
+            } else {
+                showAlertMessage.alert(message: kDefaultErrorMsg)
+            }
+        }
+    }
+    
     
    @IBAction func addRequestAction(_ sender: UIButton) {
    guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "ChooseMemberVC" ) as? ChooseMemberVC  else { return }
@@ -57,13 +93,15 @@ class ViewController: UIViewController {
 
 extension ViewController: UITableViewDelegate,UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 7
+        return self.requestModel?.data?.requests?.data?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = self.mainTableView.dequeueReusableCell(withIdentifier: "RequestsTVC", for: indexPath) as? RequestsTVC else { return UITableViewCell() }
         cell.selectionStyle = .none
-        
+        cell.headingLbl.text = self.requestModel?.data?.requests?.data?[indexPath.row].title ?? ""
+        cell.descLbl.text = self.requestModel?.data?.requests?.data?[indexPath.row].description ?? ""
+        cell.daeLbl.text = "Posted on : \(self.requestModel?.data?.requests?.data?[indexPath.row].created_at ?? "")"
         return cell
     }
     

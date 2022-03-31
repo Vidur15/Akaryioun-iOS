@@ -1,4 +1,5 @@
 
+
 import UIKit
 
 class UITextFieldPaddingView: UITextField {
@@ -9,7 +10,7 @@ class UITextFieldPaddingView: UITextField {
       self.leftViewMode = .always
     }
   }
-
+    
   @IBInspectable var leftPaddingViewImage: UIImage? {
     didSet {
       if leftPaddingViewImage != nil {
@@ -23,7 +24,7 @@ class UITextFieldPaddingView: UITextField {
       }
     }
   }
-
+    
   @IBInspectable var rightPaddingViewImage: UIImage? {
     didSet {
       if rightPaddingViewImage != nil {

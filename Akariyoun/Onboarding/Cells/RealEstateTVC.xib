@@ -27,12 +27,17 @@
                     <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9mD-1v-gEm">
                         <rect key="frame" x="20" y="10" width="421" height="423"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="GyR-iI-CR4">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="GyR-iI-CR4">
                                 <rect key="frame" x="12" y="24" width="70" height="70"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="70" id="98J-oF-Cnj"/>
                                     <constraint firstAttribute="height" constant="70" id="V9W-qa-1GU"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius1">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Commercial apartments for sale - Sulaymaniah" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AZk-j5-lSP">
                                 <rect key="frame" x="96" y="24" width="311" height="39.5"/>
@@ -93,6 +98,12 @@
             </tableViewCellContentView>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="dateLbl" destination="9uN-7Z-DGt" id="B0J-OB-ncJ"/>
+                <outlet property="descLbl" destination="GmZ-Bs-REn" id="gpB-Bf-aHU"/>
+                <outlet property="headingLbl" destination="AZk-j5-lSP" id="xMv-GF-oZS"/>
+                <outlet property="mainImageView" destination="GyR-iI-CR4" id="1CH-7t-bK3"/>
+            </connections>
             <point key="canvasLocation" x="380.43478260869568" y="68.638392857142847"/>
         </tableViewCell>
     </objects>

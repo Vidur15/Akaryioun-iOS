@@ -86,6 +86,11 @@
             </tableViewCellContentView>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="daeLbl" destination="Eqg-wr-GYV" id="q9P-NQ-eFg"/>
+                <outlet property="descLbl" destination="SAb-W3-L2K" id="QDh-Jt-tDU"/>
+                <outlet property="headingLbl" destination="sTa-8m-UFS" id="yOs-a4-Lnu"/>
+            </connections>
             <point key="canvasLocation" x="123.91304347826087" y="51.897321428571423"/>
         </tableViewCell>
     </objects>

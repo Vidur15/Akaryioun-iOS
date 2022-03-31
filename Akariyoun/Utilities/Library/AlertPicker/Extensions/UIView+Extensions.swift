@@ -153,7 +153,7 @@ public extension UIView {
             self.height = newValue.height
         }
     }
-
+    
     /// Width of view.
     var width: CGFloat {
         get {
@@ -163,7 +163,7 @@ public extension UIView {
             self.frame.size.width = newValue
         }
     }
-
+    
     /// Height of view.
     var height: CGFloat {
         get {
@@ -176,11 +176,11 @@ public extension UIView {
 }
 
 extension UIView {
-
+    
     func superview<T>(of type: T.Type) -> T? {
         return superview as? T ?? superview.flatMap { $0.superview(of: T.self) }
     }
-
+    
     func addShadowWithBlurOnView(_ view: UIView?,
                                       spread: CGFloat,
                                       blur: CGFloat,
@@ -188,9 +188,9 @@ extension UIView {
                                       opacity: Float,
                                       OffsetX: CGFloat,
                                       OffsetY: CGFloat) {
-
+       
        guard let view = view else { return  }
-
+       
        view.layer.shadowOffset = CGSize(width: OffsetX, height: OffsetY)
        view.layer.shadowOpacity = opacity
        //Shadow Color
@@ -212,12 +212,12 @@ extension UIView {
        view.layer.masksToBounds = false
        view.clipsToBounds = false
    }
-
+    
     func applyGradient(isTopBottom: Bool, colorArray: [UIColor]) {
         if let sublayers = layer.sublayers {
             let _ = sublayers.filter({ $0 is CAGradientLayer }).map({ $0.removeFromSuperlayer() })
         }
-
+        
         let gradientLayer = CAGradientLayer()
         gradientLayer.colors = colorArray.map({ $0.cgColor })
         if isTopBottom {
@@ -227,42 +227,42 @@ extension UIView {
             gradientLayer.startPoint = CGPoint(x: 0, y: 0.5)// vertical gradient start
             gradientLayer.endPoint = CGPoint(x: 1.0, y: 0.5)
         }
-
+        
         backgroundColor = .clear
         gradientLayer.frame = bounds
         layer.insertSublayer(gradientLayer, at: 0)
     }
-
+    
 }
 
 
 // MARK: - Methods
 
 public extension UIView {
-
+    
     typealias Configuration = (UIView) -> Swift.Void
-
+    
     func config(configurate: Configuration?) {
         configurate?(self)
     }
-
+    
     /// Set some or all corners radiuses of view.
     ///
     /// - Parameters:
     ///   - corners: array of corners to change (example: [.bottomLeft, .topRight]).
     ///   - radius: radius for selected corners.
-
+    
     func roundCorners(_ corners: UIRectCorner, radius: CGFloat) {
         let shape = CAShapeLayer()
          let cgPath = UIBezierPath(roundedRect: UIScreen.main.bounds, byRoundingCorners: corners, cornerRadii: CGSize(width: radius, height: radius)).cgPath //1
         shape.path = cgPath
         layer.mask = shape
     }
-
+    
 }
 
 extension UIView {
-
+    
     func searchVisualEffectsSubview() -> UIVisualEffectView? {
         if let visualEffectView = self as? UIVisualEffectView {
             return visualEffectView
@@ -275,10 +275,10 @@ extension UIView {
         }
         return nil
     }
-
+    
     /// This is the function to get subViews of a view of a particular type
     /// https://stackoverflow.com/a/45297466/5321670
-
+    
     func subViews<T : UIView>(type : T.Type) -> [T] {
         var all = [T]()
         for view in self.subviews {
@@ -288,14 +288,14 @@ extension UIView {
         }
         return all
     }
-
-
+    
+    
     /// This is a function to get subViews of a particular type from view recursively. It would look recursively in all subviews and return back the subviews of the type T
     /// https://stackoverflow.com/a/45297466/5321670
-
+    
     func allSubViewsOf<T : UIView>(type : T.Type) -> [T] {
         var all = [T]()
-
+        
         func getSubview(view: UIView) {
             if let aView = view as? T {
                 all.append(aView)
@@ -305,14 +305,14 @@ extension UIView {
             }
             view.subviews.forEach { getSubview ( view: $0 ) }
         }
-
+        
         getSubview( view: self )
         return all
     }
-
+    
 }
 
-// To find device orientation
+// To find device orientation 
 extension UIDevice {
     var iPhoneX: Bool {
         return UIScreen.main.nativeBounds.height == 2436

@@ -10,6 +10,9 @@ import UIKit
 
 class RequestsTVC: UITableViewCell {
 
+    @IBOutlet weak var descLbl: UILabel!
+    @IBOutlet weak var daeLbl: UILabel!
+    @IBOutlet weak var headingLbl: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

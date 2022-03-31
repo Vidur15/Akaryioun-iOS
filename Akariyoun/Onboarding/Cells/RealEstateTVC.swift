@@ -10,6 +10,10 @@ import UIKit
 
 class RealEstateTVC: UITableViewCell {
 
+    @IBOutlet weak var descLbl: UILabel!
+    @IBOutlet weak var dateLbl: UILabel!
+    @IBOutlet weak var headingLbl: UILabel!
+    @IBOutlet weak var mainImageView: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

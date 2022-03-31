@@ -27,11 +27,16 @@
                     <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uxd-wR-oCo">
                         <rect key="frame" x="20" y="10" width="479" height="314"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="02y-hJ-fXP">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="02y-hJ-fXP">
                                 <rect key="frame" x="14" y="10" width="80" height="294"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="80" id="Ife-rW-1f4"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius1">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Intellectual Vision" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ecS-5d-Dki">
                                 <rect key="frame" x="108" y="136" width="357" height="22.5"/>
@@ -74,6 +79,11 @@
             </tableViewCellContentView>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="descLbl" destination="xlh-OS-Xfo" id="bwb-nZ-stu"/>
+                <outlet property="mainImageView" destination="02y-hJ-fXP" id="jao-tp-THH"/>
+                <outlet property="mainLbl" destination="ecS-5d-Dki" id="FNL-sw-rdd"/>
+            </connections>
             <point key="canvasLocation" x="306.52173913043481" y="92.410714285714278"/>
         </tableViewCell>
     </objects>

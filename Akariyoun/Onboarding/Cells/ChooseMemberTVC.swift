@@ -10,6 +10,9 @@ import UIKit
 
 class ChooseMemberTVC: UITableViewCell {
 
+    @IBOutlet weak var descLbl: UILabel!
+    @IBOutlet weak var mainLbl: UILabel!
+    @IBOutlet weak var mainImageView: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

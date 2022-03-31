@@ -11,7 +11,17 @@ import KYDrawerController
 
 class RequestDetailsVC: UIViewController {
 
+    @IBOutlet weak var contactLbl: UILabel!
+    @IBOutlet weak var requestDescLbl: UILabel!
+    @IBOutlet weak var requestTitleLbl: UILabel!
+    @IBOutlet weak var dateLbl: UILabel!
+    @IBOutlet weak var descLbl: UILabel!
+    @IBOutlet weak var nameLbl: UILabel!
+    @IBOutlet weak var mainImgView: UIImageView!
     @IBOutlet weak var cardView: UIView!
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setStatusBarColor()
