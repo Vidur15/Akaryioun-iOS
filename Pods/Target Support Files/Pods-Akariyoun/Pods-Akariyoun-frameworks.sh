@@ -182,6 +182,7 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/FTIndicator/FTIndicator.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/KYDrawerController/KYDrawerController.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/Pulsator/Pulsator.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/SVPinView/SVPinView.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework"
 fi
@@ -192,6 +193,7 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/FTIndicator/FTIndicator.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/KYDrawerController/KYDrawerController.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/Pulsator/Pulsator.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/SVPinView/SVPinView.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework"
 fi

@@ -15,6 +15,7 @@ pod 'CHIPageControl', '~> 0.1.3'
  pod 'Alamofire',' ~> 4.0'
   pod 'FTIndicator'
   pod 'SVProgressHUD'
+  pod "Pulsator"
   # Pods for Akariyoun
 
   target 'AkariyounTests' do

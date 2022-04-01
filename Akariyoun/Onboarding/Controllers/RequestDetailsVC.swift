@@ -20,7 +20,7 @@ class RequestDetailsVC: UIViewController {
     @IBOutlet weak var mainImgView: UIImageView!
     @IBOutlet weak var cardView: UIView!
     
-    
+    var obj : RequestMainDataModel?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,7 +30,19 @@ class RequestDetailsVC: UIViewController {
         if let drawerController = navigationController?.parent as? KYDrawerController {
             drawerController.screenEdgePanGestureEnabled = false
         }
+        
+        self.setData()
+        
         // Do any additional setup after loading the view.
+    }
+    
+    func setData(){
+        self.nameLbl.text = "\(self.obj?.user?.first_name ?? "") \(self.obj?.user?.last_name ?? "")"
+        self.mainImgView.downlodeImage(serviceurl: self.obj?.user?.profile_pic ?? "", placeHolder: UIImage.init(named: "2024644_login_user_avatar_person_users_icon"))
+        self.dateLbl.text = "Posted on : \(self.obj?.created_at ?? "")"
+        self.requestTitleLbl.text = self.obj?.title ?? ""
+        self.requestDescLbl.text = self.obj?.description ?? ""
+        self.contactLbl.text = self.obj?.user?.mobile_number ?? ""
     }
     
     @IBAction func backAction(_ sender: UIButton) {

@@ -8,6 +8,7 @@
 
 import UIKit
 import MapKit
+import Pulsator
 
 class SearchMapVC: UIViewController {
 
@@ -16,7 +17,7 @@ class SearchMapVC: UIViewController {
     var locationManager = CLLocationManager()
     
     var isFirstOverlayAdded = false
-    
+
     var kmlVal : KMLDocument?
     
     var docArr = [KMLDocument]()
@@ -290,7 +291,10 @@ class SearchMapVC: UIViewController {
                     circleRenderer?.fillColor = UIColor.black.withAlphaComponent(0.4)
                     circleRenderer?.lineWidth = 1
                     circleRenderer?.strokeColor = UIColor.black
-                  //  self.addAnnotations(coords: [location], title: self.docArr[overlay].name, subTitle: self.docArr[overlay].arName)
+                    
+                 
+                    
+        //    self.addAnnotations(lat: location.coordinate.latitude,long: location.coordinate.longitude)
                     
                     
                 }else{
@@ -315,6 +319,26 @@ class SearchMapVC: UIViewController {
 //        }
 //    }
     
+    
+    
+    private func addAnnotations(lat : CLLocationDegrees,long : CLLocationDegrees) {
+        print("CHECK VIDUR THIS",lat,long)
+           let point = MKPointAnnotation()
+           point.coordinate = CLLocationCoordinate2DMake(lat, long)
+           point.title = "TITLE"
+           point.subtitle = "Subtitle"
+        DispatchQueue.main.async {
+            self.appleMapView.addAnnotation(point)
+            self.appleMapView.showAnnotations(self.appleMapView.annotations, animated: true)
+        }
+       }
+    
+    
+
+       
+       // =========================================================================
+       // MARK: - MKMapViewDelegate
+       
     
     
     fileprivate func loadKml(_ path: String,isFirst : Bool) {
@@ -399,27 +423,40 @@ extension SearchMapVC: MKMapViewDelegate {
         return MKOverlayRenderer(overlay: overlay)
     }
     
+    
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
-        if !(annotation is MKUserLocation) {
-            let pinView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: String(annotation.hash))
-
-            pinView.image = UIImage.init(named: "newark_nj_1922")
-            let rightButton = UIButton(type: .contactAdd)
-            rightButton.tag = annotation.hash
-
-            pinView.animatesDrop = true
-            pinView.canShowCallout = true
-            pinView.rightCalloutAccessoryView = rightButton
-
-            return pinView
-        }
-        else {
-            return nil
-        }
+     print("here vidur in annotaion view")
+        guard !annotation.isKind(of: MKUserLocation.classForCoder()) else { return nil }
+        
+        return AnnotationView(annotation: annotation, reuseIdentifier: "PulsatorDemoAnnotation")
     }
+
 
     
     func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
         
+    }
+}
+class AnnotationView: MKAnnotationView {
+    
+    override init(annotation: MKAnnotation?, reuseIdentifier: String?) {
+        super.init(annotation: annotation, reuseIdentifier: reuseIdentifier)
+        
+        addHalo()
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    private func addHalo() {
+        let pulsator = Pulsator()
+        pulsator.position = center
+        pulsator.numPulse = 5
+        pulsator.radius = 15
+        pulsator.animationDuration = 3
+        pulsator.backgroundColor = #colorLiteral(red: 0.1137254902, green: 0.3882352941, blue: 0.6431372549, alpha: 1)
+        layer.addSublayer(pulsator)
+        pulsator.start()
     }
 }

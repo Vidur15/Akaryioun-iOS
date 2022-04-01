@@ -87,6 +87,7 @@ public class RequestMainDataModel {
     public var description_ar : String?
     public var created_at : String?
     public var updated_at : String?
+    public var user : User?
 
 
      public init(dictionary: [String : Any]) {
@@ -101,5 +102,40 @@ public class RequestMainDataModel {
         description_ar = dictionary["description_ar"] as? String
         created_at = dictionary["created_at"] as? String
         updated_at = dictionary["updated_at"] as? String
+        
+        if (dictionary["user"] != nil) { user = User(dictionary: dictionary["user"] as? [String : Any] ?? [:]) }
+    }
+}
+public class User {
+    public var id : String?
+    public var first_name : String?
+    public var first_name_ar : String?
+    public var last_name : String?
+    public var last_name_ar : String?
+    public var email : String?
+    public var mobile_number : String?
+    public var profile_pic : String?
+    public var cover_photo : String?
+    public var facebook_url : String?
+    public var twitter_url : String?
+    public var linkedin_url : String?
+    public var member_since : String?
+
+
+     public init(dictionary: [String : Any]) {
+
+        id = dictionary["id"] as? String
+        first_name = dictionary["first_name"] as? String
+        first_name_ar = dictionary["first_name_ar"] as? String
+        last_name = dictionary["last_name"] as? String
+        last_name_ar = dictionary["last_name_ar"] as? String
+        email = dictionary["email"] as? String
+        mobile_number = dictionary["mobile_number"] as? String
+        profile_pic = dictionary["profile_pic"] as? String
+        cover_photo = dictionary["cover_photo"] as? String
+        facebook_url = dictionary["facebook_url"] as? String
+        twitter_url = dictionary["twitter_url"] as? String
+        linkedin_url = dictionary["linkedin_url"] as? String
+        member_since = dictionary["member_since"] as? String
     }
 }

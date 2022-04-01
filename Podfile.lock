@@ -27,6 +27,7 @@ PODS:
   - FTIndicator/FTToastIndicator (1.2.9)
   - IQKeyboardManagerSwift (6.5.9)
   - KYDrawerController (2.1.0)
+  - Pulsator (0.6.0)
   - SVPinView (1.0.11)
   - SVProgressHUD (2.2.5)
 
@@ -37,6 +38,7 @@ DEPENDENCIES:
   - FTIndicator
   - IQKeyboardManagerSwift
   - KYDrawerController
+  - Pulsator
   - SVPinView (~> 1.0)
   - SVProgressHUD
 
@@ -48,6 +50,7 @@ SPEC REPOS:
     - FTIndicator
     - IQKeyboardManagerSwift
     - KYDrawerController
+    - Pulsator
     - SVPinView
     - SVProgressHUD
 
@@ -58,9 +61,10 @@ SPEC CHECKSUMS:
   FTIndicator: f7f071fd159e5befa1d040a9ef2e3ab53fa9322c
   IQKeyboardManagerSwift: 6e839c575c4aa1078d58a596e41244e77abe918f
   KYDrawerController: baad0e63b09c0cb564bd48f0f7f70f45d9176ebc
+  Pulsator: eb5a9f9be4bdcbd19903984c65deca6aabe50a17
   SVPinView: 9b538d0ba68cdb092afe4f0f67ec84cbed079466
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
 
-PODFILE CHECKSUM: 078ae33abc1b43b44c67838b7677ae32a62b6814
+PODFILE CHECKSUM: 5d2890d457cfbb862d506c97bfb9b8e5e06c078d
 
 COCOAPODS: 1.11.2

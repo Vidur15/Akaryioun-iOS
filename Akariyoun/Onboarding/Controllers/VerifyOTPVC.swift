@@ -147,9 +147,12 @@ class VerifyOTPVC: UIViewController {
                             kSharedUserDefaults.setUserLoggedIn(userLoggedIn: true)
                             kSharedUserDefaults.setLoggedInUserDetails(loggedInUserDetails: userDict)
                             
+                            self.sender?.signinView.isHidden = true
+                            self.sender?.loginView.isHidden = false
+                            
                             self.dismiss(animated: true, completion: nil)
                         }else{
-                             showAlertMessage.alert(message: String.getString(dicResponse["message"]))
+                            showAlertMessage.alert(message: String.getString(dicResponse["message"]))
                          }
                      default:
                          

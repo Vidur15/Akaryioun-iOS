@@ -12,7 +12,10 @@ import KYDrawerController
 
 class MainHomeScreenVC: UIViewController {
 
-  
+    
+    @IBOutlet weak var signinView: UIView!
+    
+    @IBOutlet weak var loginView: UIView!
     @IBOutlet weak var mainScrollView: UIScrollView!
     @IBOutlet weak var mainTableHeightConst: NSLayoutConstraint!
     @IBOutlet weak var mainTableView: UITableView!
@@ -51,8 +54,55 @@ class MainHomeScreenVC: UIViewController {
         
         self.timer = Timer.scheduledTimer(timeInterval: 3.5, target: self, selector: #selector(self.scrollAutomatically), userInfo: nil, repeats: true)
         
+        if kSharedUserDefaults.getLoggedInAccessToken() == ""{
+            self.signinView.isHidden = false
+            self.loginView.isHidden = true
+        }else{
+            self.signinView.isHidden = true
+            self.loginView.isHidden = false
+        }
+        
         // Do any additional setup after loading the view.
     }
+    
+    
+    @IBAction func logoutAction(_ sender: UIButton) {
+        self.hitLogoutApi()
+    }
+    
+    
+    func hitLogoutApi(){
+        TANetworkManager.sharedInstance.requestApi(withServiceName: ServiceName.logout, requestMethod: .GET, requestParameters: [:], withProgressHUD: true) { (result: Any?, error: Error?, errorType: ErrorType, statusCode: Int?) in
+               
+               //guard self != nil else { return }
+               CommonUtils.showHudWithNoInteraction(show: false)
+               if errorType == .requestSuccess {
+                   let dicResponse = kSharedInstance.getDictionary(result)
+                   let statusCodes = Int.getInt(statusCode)
+                   switch statusCodes {
+                   case 200:
+                       if dicResponse["success"] as? Bool ?? false{
+                           kSharedUserDefaults.setLoggedInAccessToken(loggedInAccessToken: "")
+                           kSharedUserDefaults.setUserLoggedIn(userLoggedIn: false)
+                        kSharedUserDefaults.setLoggedInUserDetails(loggedInUserDetails: [:])
+                        self.signinView.isHidden = false
+                        self.loginView.isHidden = true
+                       }else{
+                           showAlertMessage.alert(message: String.getString(dicResponse["message"]))
+                       }
+                   default:
+                       
+                       showAlertMessage.alert(message: String.getString(dicResponse["message"]))
+                   }
+               } else if errorType == .noNetwork {
+                   showAlertMessage.alert(message: kNoInternetMsg)
+                   
+               } else {
+                   showAlertMessage.alert(message: kDefaultErrorMsg)
+               }
+           }
+    }
+    
     
     
     @IBAction func drawerAction(_ sender: UIButton) {

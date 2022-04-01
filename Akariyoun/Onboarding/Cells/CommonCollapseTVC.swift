@@ -9,7 +9,9 @@
 import UIKit
 
 class CommonCollapseTVC: UITableViewCell {
-
+    @IBOutlet weak var timeLbl: UILabel!
+    
+    @IBOutlet weak var mainLbl: UILabel!
     @IBOutlet weak var expandBtn: UIButton!
     override func awakeFromNib() {
         super.awakeFromNib()

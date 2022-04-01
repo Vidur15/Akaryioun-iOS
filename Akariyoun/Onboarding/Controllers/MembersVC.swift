@@ -86,6 +86,7 @@ extension MembersVC: UITableViewDelegate,UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard let vc = self.storyboard?.instantiateViewController(withIdentifier:
                    "MemberDetailsMainVC" ) as? MemberDetailsMainVC  else { return }
+        vc.idToSend = self.memberModel?.data?.member?.data?[indexPath.row].id ?? ""
                   self.navigationController?.pushViewController(vc, animated: true)
     }
 }

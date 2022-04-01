@@ -62,6 +62,9 @@ struct ServiceName {
     static let requestList               = "/requestList"
     static let memberList               = "/member/list"
     static let propertyDetails               = "/property/detail"
+    static let logout               = "/customer/logout"
+    static let addRequest               = "/customer/Request/add"
+    static let memberDetails               = "/member/detail"
     
 }
 

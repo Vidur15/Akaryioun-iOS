@@ -34,8 +34,12 @@ class ViewController: UIViewController {
                    self.backBtnOut.setImage(UIImage.init(named: "Back arrow"), for: .normal)
                    self.backBtnOut.backgroundColor = #colorLiteral(red: 0.134485513, green: 0.4705364108, blue: 0.7034772038, alpha: 1)
                }
-        self.getRequestsList()
+        
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.getRequestsList()
     }
     
     func getRequestsList(){
@@ -71,8 +75,8 @@ class ViewController: UIViewController {
     
     
    @IBAction func addRequestAction(_ sender: UIButton) {
-   guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "ChooseMemberVC" ) as? ChooseMemberVC  else { return }
-   self.navigationController?.pushViewController(vc, animated: true)
+   guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "AddRequestVC" ) as? AddRequestVC  else { return }
+            self.navigationController?.pushViewController(vc, animated: true)
    }
     
     @IBAction func drawerAction(_ sender: UIButton) {
@@ -106,11 +110,13 @@ extension ViewController: UITableViewDelegate,UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 125
+        return UITableView.automaticDimension
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "RequestDetailsVC" ) as? RequestDetailsVC  else { return }
+        let obj = self.requestModel?.data?.requests?.data?[indexPath.row]
+        vc.obj = obj
         self.navigationController?.pushViewController(vc, animated: true)
     }
 }

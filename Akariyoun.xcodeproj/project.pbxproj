@@ -214,6 +214,9 @@
 		031209F127F4496C00782DDB /* Al Sahafah Dist.kml in Resources */ = {isa = PBXBuildFile; fileRef = 0312093227F4496B00782DDB /* Al Sahafah Dist.kml */; };
 		031209F227F4496C00782DDB /* Al Mansurah Dist.kml in Resources */ = {isa = PBXBuildFile; fileRef = 0312093327F4496B00782DDB /* Al Mansurah Dist.kml */; };
 		031209F327F4496C00782DDB /* Sultanah Dist.kml in Resources */ = {isa = PBXBuildFile; fileRef = 0312093427F4496C00782DDB /* Sultanah Dist.kml */; };
+		0341225327F6E0F200D2D5A4 /* MemberRealEstateTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0341225127F6E0F200D2D5A4 /* MemberRealEstateTVC.swift */; };
+		0341225427F6E0F200D2D5A4 /* MemberRealEstateTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0341225227F6E0F200D2D5A4 /* MemberRealEstateTVC.xib */; };
+		0341225627F6E49F00D2D5A4 /* MemberDetailsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0341225527F6E49F00D2D5A4 /* MemberDetailsModel.swift */; };
 		034F14FF27F58480006225AA /* NetworkUrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034F12F527F5847E006225AA /* NetworkUrl.swift */; };
 		034F150027F58480006225AA /* TANetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034F12F627F5847E006225AA /* TANetworkManager.swift */; };
 		034F150127F58480006225AA /* Array+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034F12FA27F5847E006225AA /* Array+Extensions.swift */; };
@@ -1003,6 +1006,9 @@
 		0312093227F4496B00782DDB /* Al Sahafah Dist.kml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "Al Sahafah Dist.kml"; sourceTree = "<group>"; };
 		0312093327F4496B00782DDB /* Al Mansurah Dist.kml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "Al Mansurah Dist.kml"; sourceTree = "<group>"; };
 		0312093427F4496C00782DDB /* Sultanah Dist.kml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "Sultanah Dist.kml"; sourceTree = "<group>"; };
+		0341225127F6E0F200D2D5A4 /* MemberRealEstateTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberRealEstateTVC.swift; sourceTree = "<group>"; };
+		0341225227F6E0F200D2D5A4 /* MemberRealEstateTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MemberRealEstateTVC.xib; sourceTree = "<group>"; };
+		0341225527F6E49F00D2D5A4 /* MemberDetailsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberDetailsModel.swift; sourceTree = "<group>"; };
 		034F12F527F5847E006225AA /* NetworkUrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkUrl.swift; sourceTree = "<group>"; };
 		034F12F627F5847E006225AA /* TANetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TANetworkManager.swift; sourceTree = "<group>"; };
 		034F12FA27F5847E006225AA /* Array+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Extensions.swift"; sourceTree = "<group>"; };
@@ -2653,6 +2659,8 @@
 				0312086527F42BD300782DDB /* CommonCollapseTVC.xib */,
 				0312086A27F4301F00782DDB /* CommonExpandTVC.swift */,
 				0312086B27F4301F00782DDB /* CommonExpandTVC.xib */,
+				0341225127F6E0F200D2D5A4 /* MemberRealEstateTVC.swift */,
+				0341225227F6E0F200D2D5A4 /* MemberRealEstateTVC.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -2663,6 +2671,7 @@
 				03E8304427F5A87200338109 /* PropertyListModel.swift */,
 				03E8304627F5B7A500338109 /* RequestsModel.swift */,
 				03E8304827F5BBA300338109 /* MemberModel.swift */,
+				0341225527F6E49F00D2D5A4 /* MemberDetailsModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -3330,6 +3339,7 @@
 				034F16BB27F58481006225AA /* MN.png in Resources */,
 				034F16AE27F58481006225AA /* TM.png in Resources */,
 				0312096427F4496C00782DDB /* Al Mahdiyah Dist.kml in Resources */,
+				0341225427F6E0F200D2D5A4 /* MemberRealEstateTVC.xib in Resources */,
 				034F15F027F58481006225AA /* CO.png in Resources */,
 				034F154F27F58480006225AA /* East-Timor.png in Resources */,
 				031209D527F4496C00782DDB /* Al Rawabi Dist.kml in Resources */,
@@ -3618,6 +3628,7 @@
 				0312086127F4252D00782DDB /* WhoWeAreVC.swift in Sources */,
 				034F151827F58480006225AA /* UITextFieldPaddingView.swift in Sources */,
 				034F151A27F58480006225AA /* MaxMinLength+UITextField.swift in Sources */,
+				0341225627F6E49F00D2D5A4 /* MemberDetailsModel.swift in Sources */,
 				035E8CD627ED8BF600E19B9F /* AddRequestVC.swift in Sources */,
 				03D4A78227F2F96900CBB35D /* SelectionTVC.swift in Sources */,
 				0312087427F4473D00782DDB /* SearchMapVC.swift in Sources */,
@@ -3658,6 +3669,7 @@
 				0306037B27EDD0E5005B0C9D /* PropertyImagesCVC.swift in Sources */,
 				03BE93AC27EC7B5000795CF6 /* RequestsTVC.swift in Sources */,
 				034F150127F58480006225AA /* Array+Extensions.swift in Sources */,
+				0341225327F6E0F200D2D5A4 /* MemberRealEstateTVC.swift in Sources */,
 				03D5799927C4C00000DADE0B /* AppDelegate.swift in Sources */,
 				0312085F27F41CEB00782DDB /* MemberDetailsMainVC.swift in Sources */,
 				038E95BD27EC92920093440E /* VerifyOTPVC.swift in Sources */,

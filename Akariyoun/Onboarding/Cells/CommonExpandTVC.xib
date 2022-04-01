@@ -80,6 +80,11 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="descLbl" destination="Iu1-md-5MH" id="hTp-mJ-Oa0"/>
+                <outlet property="headingLbl" destination="TRc-58-uZd" id="seR-ez-rwK"/>
+                <outlet property="timeLbl" destination="Fjb-lN-Zrf" id="AEM-K9-K8F"/>
+            </connections>
             <point key="canvasLocation" x="229.71014492753625" y="122.54464285714285"/>
         </tableViewCell>
     </objects>

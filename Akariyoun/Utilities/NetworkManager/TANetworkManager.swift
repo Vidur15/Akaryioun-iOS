@@ -540,7 +540,7 @@ public class TANetworkManager {
         var headers:[String: String] = [:]
         
         if String.getString(kSharedUserDefaults.getLoggedInAccessToken()) != "" {
-            headers["Authorization"] = "JWT" + " " + kSharedUserDefaults.getLoggedInAccessToken()
+            headers["Authorization"] = "Bearer" + " " + kSharedUserDefaults.getLoggedInAccessToken()
             headers["Content-Type"] = "application/json"
         }
         else {
@@ -558,7 +558,7 @@ public class TANetworkManager {
             var headers:[String: String] = [:]
             
             if String.getString(kSharedUserDefaults.getLoggedInAccessToken()) != "" {
-                headers["Authorization"] = "JWT" + " " + kSharedUserDefaults.getLoggedInAccessToken()
+                headers["Authorization"] = "Bearer" + " " + kSharedUserDefaults.getLoggedInAccessToken()
                 headers["Content-Type"] = "multipart/form-data"
             }
             else {

@@ -5,5 +5,6 @@ ${BUILT_PRODUCTS_DIR}/CHIPageControl/CHIPageControl.framework
 ${BUILT_PRODUCTS_DIR}/FTIndicator/FTIndicator.framework
 ${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework
 ${BUILT_PRODUCTS_DIR}/KYDrawerController/KYDrawerController.framework
+${BUILT_PRODUCTS_DIR}/Pulsator/Pulsator.framework
 ${BUILT_PRODUCTS_DIR}/SVPinView/SVPinView.framework
 ${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework

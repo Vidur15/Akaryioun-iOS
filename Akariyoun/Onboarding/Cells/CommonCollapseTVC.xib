@@ -68,6 +68,8 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="expandBtn" destination="TBr-63-f6t" id="syR-e2-E5T"/>
+                <outlet property="mainLbl" destination="SEC-hu-LFF" id="Ltm-SA-f6o"/>
+                <outlet property="timeLbl" destination="qnj-WA-xo4" id="Ikx-n8-kj9"/>
             </connections>
             <point key="canvasLocation" x="199.27536231884059" y="96.09375"/>
         </tableViewCell>

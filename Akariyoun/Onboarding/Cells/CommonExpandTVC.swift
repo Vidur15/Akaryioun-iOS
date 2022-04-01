@@ -10,6 +10,9 @@ import UIKit
 
 class CommonExpandTVC: UITableViewCell {
 
+    @IBOutlet weak var descLbl: UILabel!
+    @IBOutlet weak var headingLbl: UILabel!
+    @IBOutlet weak var timeLbl: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

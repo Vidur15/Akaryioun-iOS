@@ -89,7 +89,6 @@ extension ChooseMemberVC: UITableViewDelegate,UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "AddRequestVC" ) as? AddRequestVC  else { return }
-          self.navigationController?.pushViewController(vc, animated: true)
+       
     }
 }

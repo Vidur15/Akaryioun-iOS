@@ -15,6 +15,14 @@ class MemberDetailsMainVC: UIViewController {
     @IBOutlet var containerViewColl: [UIView]!
     
     @IBOutlet weak var animateView: UIView!
+    
+    var idToSend = ""
+    
+    var whoVC : WhoWeAreVC!
+    var realEstateVC : MemberCallUsVC!
+    var requestVC : MemberRequestsVC!
+    var offerVC : MemberOffersVC!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -45,5 +53,23 @@ class MemberDetailsMainVC: UIViewController {
             }
         }
     self.transformView(sender: sender)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    if segue.identifier == "who"{
+        self.whoVC = (segue.destination as? WhoWeAreVC)
+        self.whoVC.sender = self
+    }
+    else if segue.identifier == "real"{
+        self.realEstateVC = (segue.destination as? MemberCallUsVC)
+        self.realEstateVC.sender = self
+    }
+    else if segue.identifier == "request"{
+        self.requestVC = (segue.destination as? MemberRequestsVC)
+        self.requestVC.sender = self
+    }else if segue.identifier == "offer"{
+        self.offerVC = (segue.destination as? MemberOffersVC)
+        self.offerVC.sender = self
+    }
     }
 }
