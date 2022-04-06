@@ -24,9 +24,9 @@ class MainHomeScreenVC: UIViewController {
     
     let numberOfPages = 7
     
-    var headingArr = ["Search Map","Property Search","Realestate","Members","Requests","Realestate Guide","Property Management"]
-    var descArr = ["Find a site to offer for sale or rent","Find a site for sale or rent","Real estate Offers","Site Members","Search and request for a property that is not available","Find a nearby real estate office","The best way to manage your property"]
-    var imageArr = ["2703060_maker_map_flag_location_icon","search","8150379_retail_price_tag_price tag_label_icon","79-users","pull-requests-1","290138_document_extension_file_format_paper_icon","office-1"]
+    var headingArr = ["Search Map","Property Search","Realestate","Members","Requests","Realestate Guide","Property Management","News"]
+    var descArr = ["Find a site to offer for sale or rent","Find a site for sale or rent","Real estate Offers","Site Members","Search and request for a property that is not available","Find a nearby real estate office","The best way to manage your property","Find the latest Trending news around your area"]
+    var imageArr = ["2703060_maker_map_flag_location_icon","search","8150379_retail_price_tag_price tag_label_icon","79-users","pull-requests-1","290138_document_extension_file_format_paper_icon","office-1","290136_communication_internet_media_news_newspaper_icon"]
     
     var timer : Timer?
     
@@ -155,7 +155,7 @@ class MainHomeScreenVC: UIViewController {
 
 extension MainHomeScreenVC: UITableViewDelegate,UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 7
+        return 8
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -249,5 +249,10 @@ extension MainHomeScreenVC: UICollectionViewDelegate, UICollectionViewDataSource
                             "SearchMapVC" ) as? SearchMapVC  else { return }
                            self.navigationController?.pushViewController(vc, animated: true)
                         }
+        else if indexPath.row == 7{
+           guard let vc = self.storyboard?.instantiateViewController(withIdentifier:
+            "NewsVC" ) as? NewsVC  else { return }
+           self.navigationController?.pushViewController(vc, animated: true)
+        }
     }
 }

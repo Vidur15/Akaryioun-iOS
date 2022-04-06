@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Poppins-Regular.ttf">
+            <string>Poppins-Regular</string>
+        </array>
+        <array key="Poppins-SemiBold.ttf">
+            <string>Poppins-SemiBold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="NewsTVC" rowHeight="416" id="KGk-i7-Jjw" customClass="NewsTVC" customModule="Akariyoun" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="434" height="416"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="434" height="416"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ApN-YQ-FTH">
+                        <rect key="frame" x="20" y="10" width="394" height="396"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vqJ-3f-iNr">
+                                <rect key="frame" x="0.0" y="0.0" width="394" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="V8f-7i-tQ5"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Commercial apartments for sale - Sulaymaniah" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ADW-gm-yke">
+                                <rect key="frame" x="12" y="216" width="370" height="48"/>
+                                <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="17"/>
+                                <color key="textColor" red="0.058823529409999999" green="0.058823529409999999" blue="0.058823529409999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Al-Bakr-Real Estate Office" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="spU-5E-NMt">
+                                <rect key="frame" x="12" y="278" width="370" height="106"/>
+                                <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="14"/>
+                                <color key="textColor" red="0.058823529409999999" green="0.058823529409999999" blue="0.058823529409999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.95686274509803915" green="0.95686274509803915" blue="0.95686274509803915" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="spU-5E-NMt" firstAttribute="trailing" secondItem="ADW-gm-yke" secondAttribute="trailing" id="5WP-CO-FcE"/>
+                            <constraint firstItem="ADW-gm-yke" firstAttribute="top" secondItem="vqJ-3f-iNr" secondAttribute="bottom" constant="16" id="Cn5-24-jEU"/>
+                            <constraint firstItem="ADW-gm-yke" firstAttribute="leading" secondItem="ApN-YQ-FTH" secondAttribute="leading" constant="12" id="NCA-YY-gux"/>
+                            <constraint firstAttribute="trailing" secondItem="ADW-gm-yke" secondAttribute="trailing" constant="12" id="NHM-wh-RBe"/>
+                            <constraint firstAttribute="trailing" secondItem="vqJ-3f-iNr" secondAttribute="trailing" id="Pxf-xj-l0V"/>
+                            <constraint firstItem="vqJ-3f-iNr" firstAttribute="leading" secondItem="ApN-YQ-FTH" secondAttribute="leading" id="Sdx-F4-DB6"/>
+                            <constraint firstItem="spU-5E-NMt" firstAttribute="top" secondItem="ADW-gm-yke" secondAttribute="bottom" constant="14" id="hXL-dj-WHC"/>
+                            <constraint firstAttribute="bottom" secondItem="spU-5E-NMt" secondAttribute="bottom" constant="12" id="rXc-oU-FMF"/>
+                            <constraint firstItem="vqJ-3f-iNr" firstAttribute="top" secondItem="ApN-YQ-FTH" secondAttribute="top" id="uXv-xD-9AR"/>
+                            <constraint firstItem="spU-5E-NMt" firstAttribute="leading" secondItem="ADW-gm-yke" secondAttribute="leading" id="ukv-fV-JWk"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius1">
+                                <real key="value" value="24"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="ApN-YQ-FTH" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="2x7-iR-QfE"/>
+                    <constraint firstAttribute="bottom" secondItem="ApN-YQ-FTH" secondAttribute="bottom" constant="10" id="Qto-1O-FIc"/>
+                    <constraint firstItem="ApN-YQ-FTH" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="jcU-la-xPg"/>
+                    <constraint firstAttribute="trailing" secondItem="ApN-YQ-FTH" secondAttribute="trailing" constant="20" id="y6F-ko-V9X"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="descLbl" destination="spU-5E-NMt" id="TCc-oB-Opk"/>
+                <outlet property="headingLbl" destination="ADW-gm-yke" id="vrJ-uG-Fcv"/>
+                <outlet property="mainImageView" destination="vqJ-3f-iNr" id="XXI-Sr-my7"/>
+            </connections>
+            <point key="canvasLocation" x="223.18840579710147" y="76.339285714285708"/>
+        </tableViewCell>
+    </objects>
+</document>

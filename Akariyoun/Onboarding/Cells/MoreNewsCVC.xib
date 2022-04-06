@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Poppins-Regular.ttf">
+            <string>Poppins-Regular</string>
+        </array>
+        <array key="Poppins-SemiBold.ttf">
+            <string>Poppins-SemiBold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MoreNewsCVC" id="gTV-IL-0wX" customClass="MoreNewsCVC" customModule="Akariyoun" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="446" height="414"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="446" height="414"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BJN-cq-ZI2">
+                        <rect key="frame" x="0.0" y="56" width="434" height="312"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="TAo-yx-FRe">
+                                <rect key="frame" x="0.0" y="0.0" width="434" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="JIm-rm-Y4q"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Commercial apartments for sale - Sulaymaniah" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AOM-5t-gcK">
+                                <rect key="frame" x="12" y="216" width="410" height="48"/>
+                                <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="17"/>
+                                <color key="textColor" red="0.058823529409999999" green="0.058823529409999999" blue="0.058823529409999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Al-Bakr-Real Estate Office" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T2V-wN-K9b">
+                                <rect key="frame" x="12" y="278" width="410" height="22"/>
+                                <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="14"/>
+                                <color key="textColor" red="0.058823529409999999" green="0.058823529409999999" blue="0.058823529409999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.95686274510000002" green="0.95686274510000002" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="T2V-wN-K9b" firstAttribute="leading" secondItem="AOM-5t-gcK" secondAttribute="leading" id="EUt-es-pzA"/>
+                            <constraint firstItem="T2V-wN-K9b" firstAttribute="trailing" secondItem="AOM-5t-gcK" secondAttribute="trailing" id="H1i-yn-FDS"/>
+                            <constraint firstItem="T2V-wN-K9b" firstAttribute="top" secondItem="AOM-5t-gcK" secondAttribute="bottom" constant="14" id="IPy-3s-XFp"/>
+                            <constraint firstItem="TAo-yx-FRe" firstAttribute="top" secondItem="BJN-cq-ZI2" secondAttribute="top" id="OKj-gU-zZl"/>
+                            <constraint firstAttribute="bottom" secondItem="T2V-wN-K9b" secondAttribute="bottom" constant="12" id="Tvj-wS-QOA"/>
+                            <constraint firstItem="AOM-5t-gcK" firstAttribute="top" secondItem="TAo-yx-FRe" secondAttribute="bottom" constant="16" id="VYu-tu-Sqd"/>
+                            <constraint firstItem="TAo-yx-FRe" firstAttribute="leading" secondItem="BJN-cq-ZI2" secondAttribute="leading" id="YlX-yX-GJa"/>
+                            <constraint firstItem="AOM-5t-gcK" firstAttribute="leading" secondItem="BJN-cq-ZI2" secondAttribute="leading" constant="12" id="cNR-Q5-3Bl"/>
+                            <constraint firstAttribute="trailing" secondItem="TAo-yx-FRe" secondAttribute="trailing" id="iXd-d5-U4d"/>
+                            <constraint firstAttribute="trailing" secondItem="AOM-5t-gcK" secondAttribute="trailing" constant="12" id="ibT-Zi-7LC"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius1">
+                                <real key="value" value="24"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="BJN-cq-ZI2" firstAttribute="leading" secondItem="ZTg-uK-7eu" secondAttribute="leading" id="1LA-ye-Nfv"/>
+                <constraint firstItem="BJN-cq-ZI2" firstAttribute="trailing" secondItem="ZTg-uK-7eu" secondAttribute="trailing" constant="-12" id="IxG-BQ-iOw"/>
+                <constraint firstItem="ZTg-uK-7eu" firstAttribute="bottom" secondItem="BJN-cq-ZI2" secondAttribute="bottom" constant="12" id="kCI-Q7-wJk"/>
+                <constraint firstItem="ZTg-uK-7eu" firstAttribute="top" secondItem="BJN-cq-ZI2" secondAttribute="top" constant="-12" id="kGn-oL-tG5"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="446" height="414"/>
+            <connections>
+                <outlet property="descLbl" destination="T2V-wN-K9b" id="fiP-bn-9eV"/>
+                <outlet property="headingLbl" destination="AOM-5t-gcK" id="8wm-mJ-MfJ"/>
+                <outlet property="mainImageView" destination="TAo-yx-FRe" id="Wio-jN-Pud"/>
+            </connections>
+            <point key="canvasLocation" x="184.05797101449278" y="96.428571428571431"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="Logo" width="150" height="150"/>
+    </resources>
+</document>

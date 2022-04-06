@@ -48,6 +48,16 @@ extension UserDefaults {
            self.synchronize()
        }
     
+    func setLanguage(languageName: String) {
+         self.set(languageName, forKey: "Lang")
+         self.synchronize()
+       }
+       
+       func getLanguageName() -> String? {
+         let selectedName = self.string(forKey: "Lang")
+         return selectedName
+       }
+    
     func getContactsShown() -> Bool {
         return self.bool(forKey: "isContactsShown")
     }

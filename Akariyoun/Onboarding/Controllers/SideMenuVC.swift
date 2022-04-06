@@ -72,6 +72,10 @@ extension SideMenuVC: UITableViewDelegate,UITableViewDataSource {
                 cont.isFrom = true
             }
             
+            if let cont = vc as? TermsCondsVC{
+                cont.isfrom = "about"
+            }
+            
              if identifierName == "ChooseLanguageVC" {
                  UserDefaults.standard.set("Menu", forKey: "CameFrom")
                  UserDefaults.standard.synchronize()
@@ -97,7 +101,16 @@ extension SideMenuVC: UITableViewDelegate,UITableViewDataSource {
         else if indexPath.row == 2{
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             pushToVC(identifierName: "ViewController", storyboard: storyboard)
-        }else if indexPath.row == 5{
+        }
+        else if indexPath.row == 3{
+                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                pushToVC(identifierName: "TermsCondsVC", storyboard: storyboard)
+            }
+        else if indexPath.row == 4{
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            pushToVC(identifierName: "ContactUsVC", storyboard: storyboard)
+        }
+        else if indexPath.row == 5{
             self.boolVal = !self.boolVal
             if self.boolVal{
                 self.menuArr = ["Real Estate","Members","Request","Who are we","Call Us","Language","English","Arabic"]

@@ -251,6 +251,7 @@ public class Requests1 {
     public var description_ar : String?
     public var created_at : String?
     public var updated_at : String?
+     public var image : String?
 
 
      public init(dictionary: [String : Any]) {
@@ -265,5 +266,6 @@ public class Requests1 {
         description_ar = dictionary["description_ar"] as? String
         created_at = dictionary["created_at"] as? String
         updated_at = dictionary["updated_at"] as? String
+        image = dictionary["image"] as? String
     }
 }

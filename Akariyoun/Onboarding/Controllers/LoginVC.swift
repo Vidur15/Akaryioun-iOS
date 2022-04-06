@@ -11,6 +11,7 @@ import KYDrawerController
 
 class LoginVC: UIViewController {
 
+    
     @IBOutlet weak var mobileTextF: UITextField!
     @IBOutlet weak var signupLoginLbl: UILabel!
     @IBOutlet weak var signupBtnOut: UIButton!
@@ -48,6 +49,23 @@ class LoginVC: UIViewController {
             }
         }
     }
+    
+    @IBAction func privacyBtnAction(_ sender: UIButton) {
+        self.dismiss(animated: true, completion: nil)
+    guard let vc = self.storyboard?.instantiateViewController(withIdentifier:
+     "TermsCondsVC" ) as? TermsCondsVC  else { return }
+        vc.isfrom = "privacy"
+        self.sender?.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    @IBAction func termsConsAction(_ sender: UIButton) {
+        self.dismiss(animated: true, completion: nil)
+    guard let vc = self.storyboard?.instantiateViewController(withIdentifier:
+     "TermsCondsVC" ) as? TermsCondsVC  else { return }
+        vc.isfrom = "terms"
+        self.sender?.navigationController?.pushViewController(vc, animated: true)
+    }
+    
     
     func hitLoginApi(){
         let params : [String : Any] = ["mobile_number" : self.mobileTextF.text ?? ""]

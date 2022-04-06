@@ -66,6 +66,13 @@ struct ServiceName {
     static let addRequest               = "/customer/Request/add"
     static let memberDetails               = "/member/detail"
     
+    static let newsList               = "/news?limit=1000&page"
+     static let newsDetail               = "/newsdetail"
+     static let aboutUs               = "/aboutUs"
+    static let termsConditions               = "/termsConditions"
+    static let privacyPolicy               = "/privacyPolicy"
+    static let contactUs               = "/contactUs"
+    
 }
 
 struct ApiParameters {
