@@ -1,21 +1,19 @@
 //
-//  OffersCVC.swift
+//  LoanTVC.swift
 //  Akariyoun
 //
-//  Created by vidur on 24/03/22.
+//  Created by vidur on 07/04/22.
 //  Copyright © 2022 vidur. All rights reserved.
 //
 
 import UIKit
 
-class OffersCVC: UICollectionViewCell {
+class LoanTVC: UITableViewCell {
 
-    @IBOutlet weak var titleLbl: UILabel!
-    @IBOutlet weak var descLbl: UILabel!
     @IBOutlet weak var mainImageView: UIImageView!
+    @IBOutlet weak var openLinkBtnOut: UIButton!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
-
 }

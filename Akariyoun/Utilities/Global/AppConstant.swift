@@ -72,8 +72,15 @@ struct ServiceName {
     static let termsConditions               = "/termsConditions"
     static let privacyPolicy               = "/privacyPolicy"
     static let contactUs               = "/contactUs"
+
+    static let governmentLoans               = "/governmentLoans"
+    static let corporateLoans               = "/corporateLoans"
+    static let acountSettings               = "/customer/acountSettings"
+    static let profileDetails               = "/customer/profileDetails"
+    static let bannerImage               = "/property/bannerImage"
     
 }
+
 
 struct ApiParameters {
     static let providerType           = "provider_type"

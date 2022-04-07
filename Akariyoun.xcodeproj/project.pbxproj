@@ -214,6 +214,8 @@
 		031209F127F4496C00782DDB /* Al Sahafah Dist.kml in Resources */ = {isa = PBXBuildFile; fileRef = 0312093227F4496B00782DDB /* Al Sahafah Dist.kml */; };
 		031209F227F4496C00782DDB /* Al Mansurah Dist.kml in Resources */ = {isa = PBXBuildFile; fileRef = 0312093327F4496B00782DDB /* Al Mansurah Dist.kml */; };
 		031209F327F4496C00782DDB /* Sultanah Dist.kml in Resources */ = {isa = PBXBuildFile; fileRef = 0312093427F4496C00782DDB /* Sultanah Dist.kml */; };
+		0336029727FEC04100F58ED5 /* FinanceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0336029627FEC04100F58ED5 /* FinanceVC.swift */; };
+		0336029927FEC50A00F58ED5 /* LoanListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0336029827FEC50A00F58ED5 /* LoanListVC.swift */; };
 		0341225327F6E0F200D2D5A4 /* MemberRealEstateTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0341225127F6E0F200D2D5A4 /* MemberRealEstateTVC.swift */; };
 		0341225427F6E0F200D2D5A4 /* MemberRealEstateTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0341225227F6E0F200D2D5A4 /* MemberRealEstateTVC.xib */; };
 		0341225627F6E49F00D2D5A4 /* MemberDetailsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0341225527F6E49F00D2D5A4 /* MemberDetailsModel.swift */; };
@@ -756,6 +758,12 @@
 		03BE93AC27EC7B5000795CF6 /* RequestsTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BE93AA27EC7B5000795CF6 /* RequestsTVC.swift */; };
 		03BE93AD27EC7B5000795CF6 /* RequestsTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03BE93AB27EC7B5000795CF6 /* RequestsTVC.xib */; };
 		03BE93AF27EC839D00795CF6 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BE93AE27EC839D00795CF6 /* LoginVC.swift */; };
+		03D426F927FEC7A20079864E /* LoanTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D426F727FEC7A20079864E /* LoanTVC.swift */; };
+		03D426FA27FEC7A20079864E /* LoanTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03D426F827FEC7A20079864E /* LoanTVC.xib */; };
+		03D426FC27FEC9680079864E /* LoanModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D426FB27FEC9680079864E /* LoanModel.swift */; };
+		03D426FE27FEDDFA0079864E /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D426FD27FEDDFA0079864E /* SettingsVC.swift */; };
+		03D4270027FEE1520079864E /* AccountSettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D426FF27FEE1520079864E /* AccountSettingsVC.swift */; };
+		03D4270227FEF2570079864E /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D4270127FEF2570079864E /* ProfileVC.swift */; };
 		03D4A77D27F2EC7C00CBB35D /* SearchPropertyPopVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D4A77C27F2EC7C00CBB35D /* SearchPropertyPopVC.swift */; };
 		03D4A77F27F2F60B00CBB35D /* NeighbourhoodSelectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D4A77E27F2F60B00CBB35D /* NeighbourhoodSelectionVC.swift */; };
 		03D4A78227F2F96900CBB35D /* SelectionTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D4A78027F2F96900CBB35D /* SelectionTVC.swift */; };
@@ -1017,6 +1025,8 @@
 		0312093227F4496B00782DDB /* Al Sahafah Dist.kml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "Al Sahafah Dist.kml"; sourceTree = "<group>"; };
 		0312093327F4496B00782DDB /* Al Mansurah Dist.kml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "Al Mansurah Dist.kml"; sourceTree = "<group>"; };
 		0312093427F4496C00782DDB /* Sultanah Dist.kml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "Sultanah Dist.kml"; sourceTree = "<group>"; };
+		0336029627FEC04100F58ED5 /* FinanceVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinanceVC.swift; sourceTree = "<group>"; };
+		0336029827FEC50A00F58ED5 /* LoanListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoanListVC.swift; sourceTree = "<group>"; };
 		0341225127F6E0F200D2D5A4 /* MemberRealEstateTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberRealEstateTVC.swift; sourceTree = "<group>"; };
 		0341225227F6E0F200D2D5A4 /* MemberRealEstateTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MemberRealEstateTVC.xib; sourceTree = "<group>"; };
 		0341225527F6E49F00D2D5A4 /* MemberDetailsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberDetailsModel.swift; sourceTree = "<group>"; };
@@ -1559,6 +1569,12 @@
 		03BE93AA27EC7B5000795CF6 /* RequestsTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestsTVC.swift; sourceTree = "<group>"; };
 		03BE93AB27EC7B5000795CF6 /* RequestsTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RequestsTVC.xib; sourceTree = "<group>"; };
 		03BE93AE27EC839D00795CF6 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		03D426F727FEC7A20079864E /* LoanTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoanTVC.swift; sourceTree = "<group>"; };
+		03D426F827FEC7A20079864E /* LoanTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoanTVC.xib; sourceTree = "<group>"; };
+		03D426FB27FEC9680079864E /* LoanModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoanModel.swift; sourceTree = "<group>"; };
+		03D426FD27FEDDFA0079864E /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
+		03D426FF27FEE1520079864E /* AccountSettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSettingsVC.swift; sourceTree = "<group>"; };
+		03D4270127FEF2570079864E /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
 		03D4A77C27F2EC7C00CBB35D /* SearchPropertyPopVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPropertyPopVC.swift; sourceTree = "<group>"; };
 		03D4A77E27F2F60B00CBB35D /* NeighbourhoodSelectionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeighbourhoodSelectionVC.swift; sourceTree = "<group>"; };
 		03D4A78027F2F96900CBB35D /* SelectionTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionTVC.swift; sourceTree = "<group>"; };
@@ -2658,6 +2674,11 @@
 				03FA2DB727FD6EBA005039F6 /* NewsDetailsVC.swift */,
 				03FA2DC127FD8B33005039F6 /* TermsCondsVC.swift */,
 				03FA2DC327FD9611005039F6 /* ContactUsVC.swift */,
+				0336029627FEC04100F58ED5 /* FinanceVC.swift */,
+				0336029827FEC50A00F58ED5 /* LoanListVC.swift */,
+				03D426FD27FEDDFA0079864E /* SettingsVC.swift */,
+				03D426FF27FEE1520079864E /* AccountSettingsVC.swift */,
+				03D4270127FEF2570079864E /* ProfileVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -2693,6 +2714,8 @@
 				03FA2DB427FD65EB005039F6 /* NewsTVC.xib */,
 				03FA2DBB27FD7BB1005039F6 /* MoreNewsCVC.swift */,
 				03FA2DBC27FD7BB1005039F6 /* MoreNewsCVC.xib */,
+				03D426F727FEC7A20079864E /* LoanTVC.swift */,
+				03D426F827FEC7A20079864E /* LoanTVC.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -2706,6 +2729,7 @@
 				0341225527F6E49F00D2D5A4 /* MemberDetailsModel.swift */,
 				03FA2DB927FD743B005039F6 /* NewsModel.swift */,
 				03FA2DBF27FD8107005039F6 /* NewsDetailModel.swift */,
+				03D426FB27FEC9680079864E /* LoanModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -3502,6 +3526,7 @@
 				0312099127F4496C00782DDB /* Al Aqeeq Dist.kml in Resources */,
 				034F159A27F58481006225AA /* Mauritius.png in Resources */,
 				031209E627F4496C00782DDB /* Al Nasiriyah Dist.kml in Resources */,
+				03D426FA27FEC7A20079864E /* LoanTVC.xib in Resources */,
 				034F155127F58480006225AA /* Monaco.png in Resources */,
 				034F16C427F58481006225AA /* AI.png in Resources */,
 				034F15CE27F58481006225AA /* Niger.png in Resources */,
@@ -3670,9 +3695,12 @@
 				031209B027F4496C00782DDB /* KML.swift in Sources */,
 				034F16EE27F58481006225AA /* CustomClass.swift in Sources */,
 				034F14FF27F58480006225AA /* NetworkUrl.swift in Sources */,
+				03D426FE27FEDDFA0079864E /* SettingsVC.swift in Sources */,
 				03D4A77D27F2EC7C00CBB35D /* SearchPropertyPopVC.swift in Sources */,
 				0312086127F4252D00782DDB /* WhoWeAreVC.swift in Sources */,
 				034F151827F58480006225AA /* UITextFieldPaddingView.swift in Sources */,
+				03D426FC27FEC9680079864E /* LoanModel.swift in Sources */,
+				03D4270027FEE1520079864E /* AccountSettingsVC.swift in Sources */,
 				034F151A27F58480006225AA /* MaxMinLength+UITextField.swift in Sources */,
 				03FA2DC027FD8107005039F6 /* NewsDetailModel.swift in Sources */,
 				0341225627F6E49F00D2D5A4 /* MemberDetailsModel.swift in Sources */,
@@ -3712,6 +3740,7 @@
 				03BE939327EC509A00795CF6 /* MainHomeScreenVC.swift in Sources */,
 				0312086F27F4327400782DDB /* MemberOffersVC.swift in Sources */,
 				034F151627F58480006225AA /* UIApplication.swift in Sources */,
+				03D4270227FEF2570079864E /* ProfileVC.swift in Sources */,
 				03BE939D27EC723800795CF6 /* RealEstateVC.swift in Sources */,
 				034F151E27F58480006225AA /* AppsCountryPicker.swift in Sources */,
 				034F16F027F58481006225AA /* AppConstant.swift in Sources */,
@@ -3724,9 +3753,11 @@
 				03D5799927C4C00000DADE0B /* AppDelegate.swift in Sources */,
 				0312085F27F41CEB00782DDB /* MemberDetailsMainVC.swift in Sources */,
 				038E95BD27EC92920093440E /* VerifyOTPVC.swift in Sources */,
+				0336029727FEC04100F58ED5 /* FinanceVC.swift in Sources */,
 				034F151927F58480006225AA /* UITextFieldBorderWidthAndColor.swift in Sources */,
 				034F150D27F58480006225AA /* UIImageViewCornerRadius.swift in Sources */,
 				034F16EC27F58481006225AA /* NavigationController.swift in Sources */,
+				0336029927FEC50A00F58ED5 /* LoanListVC.swift in Sources */,
 				034F16F227F58481006225AA /* CommonUtils.swift in Sources */,
 				034F150627F58480006225AA /* UIButtonGradiant.swift in Sources */,
 				03D5799B27C4C00000DADE0B /* SceneDelegate.swift in Sources */,
@@ -3734,6 +3765,7 @@
 				035E8CD027ED87C700E19B9F /* ChooseMemberVC.swift in Sources */,
 				03D4A78527F2FB3000CBB35D /* RealEstateGuideVC.swift in Sources */,
 				034F151B27F58480006225AA /* UITextFieldSubLayerBorderWidthAndColor.swift in Sources */,
+				03D426F927FEC7A20079864E /* LoanTVC.swift in Sources */,
 				034F150A27F58480006225AA /* UIviewCornerRadius.swift in Sources */,
 				035E8CDA27ED9C1800E19B9F /* MessagePopVC.swift in Sources */,
 				034F150827F58480006225AA /* UIButtonSublayerBorderWidthAndColor.swift in Sources */,

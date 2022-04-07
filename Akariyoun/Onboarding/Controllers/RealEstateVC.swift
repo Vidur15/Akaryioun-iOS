@@ -32,7 +32,7 @@ class RealEstateVC: UIViewController {
             if let drawerController = navigationController?.parent as? KYDrawerController {
                 drawerController.screenEdgePanGestureEnabled = false
             }
-            self.backBtnOut.setImage(UIImage.init(named: "Back arrow"), for: .normal)
+            self.backBtnOut.setImage(UIImage.init(named: "arrow-back"), for: .normal)
             self.backBtnOut.backgroundColor = #colorLiteral(red: 0.134485513, green: 0.4705364108, blue: 0.7034772038, alpha: 1)
         }
         

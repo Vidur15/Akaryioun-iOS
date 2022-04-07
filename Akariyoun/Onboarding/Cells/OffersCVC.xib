@@ -63,6 +63,11 @@
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="555" height="599"/>
+            <connections>
+                <outlet property="descLbl" destination="845-iQ-JWH" id="gSO-LQ-qiM"/>
+                <outlet property="mainImageView" destination="WFD-WU-YYZ" id="FWP-zq-UGb"/>
+                <outlet property="titleLbl" destination="SpF-pk-VKg" id="EYB-yT-UEn"/>
+            </connections>
             <point key="canvasLocation" x="148.55072463768118" y="104.12946428571428"/>
         </collectionViewCell>
     </objects>

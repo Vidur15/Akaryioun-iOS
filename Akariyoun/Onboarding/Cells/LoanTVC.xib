@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="LoanTVC" rowHeight="430" id="KGk-i7-Jjw" customClass="LoanTVC" customModule="Akariyoun" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="459" height="430"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="459" height="430"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="vBF-t4-5Hq">
+                        <rect key="frame" x="20" y="10" width="419" height="410"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius1">
+                                <real key="value" value="20"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cKc-GH-wtc">
+                        <rect key="frame" x="20" y="10" width="419" height="410"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="vBF-t4-5Hq" secondAttribute="trailing" constant="20" id="9FI-AG-5mW"/>
+                    <constraint firstAttribute="bottom" secondItem="vBF-t4-5Hq" secondAttribute="bottom" constant="10" id="CWm-1p-4q6"/>
+                    <constraint firstItem="vBF-t4-5Hq" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="Jqd-Qy-IMU"/>
+                    <constraint firstItem="vBF-t4-5Hq" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="R3s-5P-oTg"/>
+                    <constraint firstItem="cKc-GH-wtc" firstAttribute="top" secondItem="vBF-t4-5Hq" secondAttribute="top" id="ZMv-0S-J4E"/>
+                    <constraint firstItem="cKc-GH-wtc" firstAttribute="trailing" secondItem="vBF-t4-5Hq" secondAttribute="trailing" id="lBA-IV-yDb"/>
+                    <constraint firstItem="cKc-GH-wtc" firstAttribute="leading" secondItem="vBF-t4-5Hq" secondAttribute="leading" id="pNl-Tf-uGh"/>
+                    <constraint firstItem="cKc-GH-wtc" firstAttribute="bottom" secondItem="vBF-t4-5Hq" secondAttribute="bottom" id="wer-9W-DTp"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="mainImageView" destination="vBF-t4-5Hq" id="MXo-Hh-q63"/>
+                <outlet property="openLinkBtnOut" destination="cKc-GH-wtc" id="UhB-wq-Yrp"/>
+            </connections>
+            <point key="canvasLocation" x="238.40579710144928" y="77.678571428571431"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="Logo" width="150" height="150"/>
+    </resources>
+</document>

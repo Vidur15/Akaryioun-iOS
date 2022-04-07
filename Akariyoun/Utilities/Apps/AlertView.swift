@@ -32,7 +32,17 @@ class AlertView :  UIViewController{
         }
         
         alert.addAction(action1)
-        UIApplication.shared.windows.first?.rootViewController?.present(alert , animated: true)
+        
+        if #available(iOS 13.0, *) {
+                      kSharedSceneDelegate?.window?.rootViewController?.present(alert , animated: true)
+                  } else {
+                      kSharedAppDelegate?.window?.rootViewController?.present(alert , animated: true)
+
+                      // Fallback on earlier versions
+                  }
+
+        
+       // UIApplication.shared.windows.first?.rootViewController?.present(alert , animated: true)
     }
     
     

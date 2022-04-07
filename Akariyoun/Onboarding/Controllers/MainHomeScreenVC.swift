@@ -22,13 +22,15 @@ class MainHomeScreenVC: UIViewController {
     @IBOutlet weak var mainPageControl: CHIPageControlJaloro!
     @IBOutlet weak var mainCollectionView: UICollectionView!
     
-    let numberOfPages = 7
+    var numberOfPages = 7
     
-    var headingArr = ["Search Map","Property Search","Realestate","Members","Requests","Realestate Guide","Property Management","News"]
-    var descArr = ["Find a site to offer for sale or rent","Find a site for sale or rent","Real estate Offers","Site Members","Search and request for a property that is not available","Find a nearby real estate office","The best way to manage your property","Find the latest Trending news around your area"]
-    var imageArr = ["2703060_maker_map_flag_location_icon","search","8150379_retail_price_tag_price tag_label_icon","79-users","pull-requests-1","290138_document_extension_file_format_paper_icon","office-1","290136_communication_internet_media_news_newspaper_icon"]
+    var headingArr = ["Search Map","Property Search","Realestate","Members","Requests","Realestate Guide","Property Management","News","Finance"]
+    var descArr = ["Find a site to offer for sale or rent","Find a site for sale or rent","Real estate Offers","Site Members","Search and request for a property that is not available","Find a nearby real estate office","The best way to manage your property","Find the latest Trending news around your area","Find the best loans from both government and private players"]
+    var imageArr = ["2703060_maker_map_flag_location_icon","search","8150379_retail_price_tag_price tag_label_icon","79-users","pull-requests-1","290138_document_extension_file_format_paper_icon","office-1","290136_communication_internet_media_news_newspaper_icon","290136_communication_internet_media_news_newspaper_icon"]
     
     var timer : Timer?
+    
+    var bannerArr = [MainDataModel]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -62,7 +64,44 @@ class MainHomeScreenVC: UIViewController {
             self.loginView.isHidden = false
         }
         
+        self.getBannerImages()
         // Do any additional setup after loading the view.
+    }
+    
+    
+    func getBannerImages(){
+        TANetworkManager.sharedInstance.requestApi(withServiceName: ServiceName.bannerImage, requestMethod: .GET, requestParameters: [:], withProgressHUD: true) { (result: Any?, error: Error?, errorType: ErrorType, statusCode: Int?) in
+                       
+                       //guard self != nil else { return }
+                       CommonUtils.showHudWithNoInteraction(show: false)
+                       if errorType == .requestSuccess {
+                           let dicResponse = kSharedInstance.getDictionary(result)
+                           let statusCodes = Int.getInt(statusCode)
+                           switch statusCodes {
+                           case 200:
+                               if dicResponse["success"] as? Bool ?? false{
+                                let dataDict = kSharedInstance.getDictionary(dicResponse["data"])
+                                let propDict = kSharedInstance.getDictionaryArray(withDictionary: (dataDict["property"]))
+                                
+                            //    let abc3 = dictionary["data"] as? [[String:Any]] ?? []
+                                self.bannerArr =  propDict.map({MainDataModel.init(dictionary: $0)})
+                                self.numberOfPages = self.bannerArr.count
+                                self.mainPageControl.numberOfPages = self.bannerArr.count
+                                self.mainCollectionView.reloadData()
+                               }else{
+                                   showAlertMessage.alert(message: String.getString(dicResponse["message"]))
+                               }
+                           default:
+                               
+                               showAlertMessage.alert(message: String.getString(dicResponse["message"]))
+                           }
+                       } else if errorType == .noNetwork {
+                           showAlertMessage.alert(message: kNoInternetMsg)
+                           
+                       } else {
+                           showAlertMessage.alert(message: kDefaultErrorMsg)
+                       }
+                   }
     }
     
     
@@ -87,6 +126,7 @@ class MainHomeScreenVC: UIViewController {
                         kSharedUserDefaults.setLoggedInUserDetails(loggedInUserDetails: [:])
                         self.signinView.isHidden = false
                         self.loginView.isHidden = true
+                        
                        }else{
                            showAlertMessage.alert(message: String.getString(dicResponse["message"]))
                        }
@@ -133,7 +173,7 @@ class MainHomeScreenVC: UIViewController {
         if let coll  = self.mainCollectionView {
             for cell in coll.visibleCells {
                 let indexPath: IndexPath? = coll.indexPath(for: cell)
-                if ((indexPath?.row)!  < 6){
+                if ((indexPath?.row)!  < (self.bannerArr.count - 1)){
                     let indexPath1: IndexPath?
                     indexPath1 = IndexPath.init(row: (indexPath?.row)! + 1, section: (indexPath?.section)!)
                     
@@ -155,7 +195,7 @@ class MainHomeScreenVC: UIViewController {
 
 extension MainHomeScreenVC: UITableViewDelegate,UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 8
+        return 9
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -176,15 +216,19 @@ extension MainHomeScreenVC: UICollectionViewDelegate, UICollectionViewDataSource
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
-            return 7
+        return self.bannerArr.count
         
         
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "OffersCVC", for: indexPath) as! OffersCVC
-    //    cell.mainIMageView.image = UIImage.init(named: "animation")
-            
+      //  cell.mainIMageView.image = UIImage.init(named: "animation")
+        if self.bannerArr[indexPath.item].images?.count > 0{
+            cell.mainImageView.downlodeImage(serviceurl: self.bannerArr[indexPath.item].images?[0].name ?? "", placeHolder: UIImage.init(named: "Logo"))
+        }
+        cell.titleLbl.text = self.bannerArr[indexPath.item].title ?? ""
+        cell.descLbl.text = self.bannerArr[indexPath.item].description ?? ""
         return cell
     }
     
@@ -252,6 +296,11 @@ extension MainHomeScreenVC: UICollectionViewDelegate, UICollectionViewDataSource
         else if indexPath.row == 7{
            guard let vc = self.storyboard?.instantiateViewController(withIdentifier:
             "NewsVC" ) as? NewsVC  else { return }
+           self.navigationController?.pushViewController(vc, animated: true)
+        }
+        else if indexPath.row == 8{
+           guard let vc = self.storyboard?.instantiateViewController(withIdentifier:
+            "FinanceVC" ) as? FinanceVC  else { return }
            self.navigationController?.pushViewController(vc, animated: true)
         }
     }

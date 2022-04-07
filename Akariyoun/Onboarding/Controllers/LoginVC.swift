@@ -11,7 +11,10 @@ import KYDrawerController
 
 class LoginVC: UIViewController {
 
+    @IBOutlet weak var iAgreeLbl: UILabel!
+    @IBOutlet weak var termsCondsBtnOut: UIButton!
     
+    @IBOutlet weak var privacyBtnOut: UIButton!
     @IBOutlet weak var mobileTextF: UITextField!
     @IBOutlet weak var signupLoginLbl: UILabel!
     @IBOutlet weak var signupBtnOut: UIButton!
@@ -29,6 +32,9 @@ class LoginVC: UIViewController {
                    drawerController.screenEdgePanGestureEnabled = false
                }
         self.mobileView.drawShadowwithCornerWithradius(radius: 22.5)
+        self.privacyBtnOut.isHidden = true
+        self.termsCondsBtnOut.isHidden = true
+        self.iAgreeLbl.isHidden = true
         // Do any additional setup after loading the view.
     }
     
@@ -151,11 +157,17 @@ class LoginVC: UIViewController {
             self.changeTextBtn.setTitle("Already have an account? Log In", for: .normal)
             self.signupBtnOut.setTitle("Signup", for: .normal)
              self.selected = "signup"
+            self.privacyBtnOut.isHidden = false
+            self.termsCondsBtnOut.isHidden = false
+            self.iAgreeLbl.isHidden = false
         }else{
             self.selected = "login"
             self.signupLoginLbl.text = "Log In"
             self.changeTextBtn.setTitle("Don't have an account? Sign Up", for: .normal)
             self.signupBtnOut.setTitle("Log In", for: .normal)
+            self.privacyBtnOut.isHidden = true
+            self.termsCondsBtnOut.isHidden = true
+            self.iAgreeLbl.isHidden = true
         }
         self.changeTextBtn.setTitleColor(#colorLiteral(red: 0.134485513, green: 0.4705364108, blue: 0.7034772038, alpha: 1), for: .normal)
     }
