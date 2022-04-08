@@ -758,6 +758,7 @@
 		03BE93AC27EC7B5000795CF6 /* RequestsTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BE93AA27EC7B5000795CF6 /* RequestsTVC.swift */; };
 		03BE93AD27EC7B5000795CF6 /* RequestsTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03BE93AB27EC7B5000795CF6 /* RequestsTVC.xib */; };
 		03BE93AF27EC839D00795CF6 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BE93AE27EC839D00795CF6 /* LoginVC.swift */; };
+		03C43E5628005691005FE7F2 /* DirectoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C43E5528005691005FE7F2 /* DirectoryModel.swift */; };
 		03D426F927FEC7A20079864E /* LoanTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D426F727FEC7A20079864E /* LoanTVC.swift */; };
 		03D426FA27FEC7A20079864E /* LoanTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03D426F827FEC7A20079864E /* LoanTVC.xib */; };
 		03D426FC27FEC9680079864E /* LoanModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D426FB27FEC9680079864E /* LoanModel.swift */; };
@@ -1569,6 +1570,7 @@
 		03BE93AA27EC7B5000795CF6 /* RequestsTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestsTVC.swift; sourceTree = "<group>"; };
 		03BE93AB27EC7B5000795CF6 /* RequestsTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RequestsTVC.xib; sourceTree = "<group>"; };
 		03BE93AE27EC839D00795CF6 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		03C43E5528005691005FE7F2 /* DirectoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectoryModel.swift; sourceTree = "<group>"; };
 		03D426F727FEC7A20079864E /* LoanTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoanTVC.swift; sourceTree = "<group>"; };
 		03D426F827FEC7A20079864E /* LoanTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoanTVC.xib; sourceTree = "<group>"; };
 		03D426FB27FEC9680079864E /* LoanModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoanModel.swift; sourceTree = "<group>"; };
@@ -2730,6 +2732,7 @@
 				03FA2DB927FD743B005039F6 /* NewsModel.swift */,
 				03FA2DBF27FD8107005039F6 /* NewsDetailModel.swift */,
 				03D426FB27FEC9680079864E /* LoanModel.swift */,
+				03C43E5528005691005FE7F2 /* DirectoryModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -3713,6 +3716,7 @@
 				03FA2DB827FD6EBA005039F6 /* NewsDetailsVC.swift in Sources */,
 				034F16E827F58481006225AA /* CameraConfiguration.swift in Sources */,
 				03BE93AF27EC839D00795CF6 /* LoginVC.swift in Sources */,
+				03C43E5628005691005FE7F2 /* DirectoryModel.swift in Sources */,
 				034F16EA27F58481006225AA /* VideoPickerHelper.swift in Sources */,
 				03E8304927F5BBA300338109 /* MemberModel.swift in Sources */,
 				034F16EF27F58481006225AA /* GlobalConst.swift in Sources */,

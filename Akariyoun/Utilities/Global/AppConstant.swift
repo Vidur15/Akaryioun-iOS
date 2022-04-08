@@ -79,6 +79,12 @@ struct ServiceName {
     static let profileDetails               = "/customer/profileDetails"
     static let bannerImage               = "/property/bannerImage"
     
+     static let updateCoverPhoto               = "/customer/updateCoverPhoto"
+    static let updateProfilePic               = "/customer/updateProfilePic"
+     static let updateInfo               = "/customer/updateInfo"
+    static let directories               = "/directories?limit=1000&page"
+    
+    
 }
 
 

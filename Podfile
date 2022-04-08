@@ -8,7 +8,7 @@ pod 'CHIPageControl', '~> 0.1.3'
  pod 'KYDrawerController'
  pod 'AEXML'
  
- 
+ pod 'AWSS3'
  pod 'IQKeyboardManagerSwift'
   pod 'SVPinView', '~> 1.0'
 

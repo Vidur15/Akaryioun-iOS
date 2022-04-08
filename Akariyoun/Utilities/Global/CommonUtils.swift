@@ -177,8 +177,8 @@ class CommonUtils {
         if show {
             SVProgressHUD.setDefaultMaskType(.clear)
             SVProgressHUD.setDefaultStyle(.custom)
-            SVProgressHUD.setForegroundColor(#colorLiteral(red: 0, green: 0.5098039216, blue: 0.5882352941, alpha: 1))
-            SVProgressHUD.setBackgroundColor(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 0).withAlphaComponent(0))
+            SVProgressHUD.setForegroundColor(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1))
+            SVProgressHUD.setBackgroundColor(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 0).withAlphaComponent(40))
             SVProgressHUD.show()
         } else {
             SVProgressHUD.dismiss()

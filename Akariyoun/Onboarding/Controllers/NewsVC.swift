@@ -59,7 +59,7 @@ class NewsVC: UIViewController,UITextFieldDelegate{
     func getNewsListApi(){
        var url = ""
         if self.isSearch{
-           url = (ServiceName.newsList + "?search=\(self.searchTextF.text ?? "")").addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
+           url = (ServiceName.newsList + "&search=\(self.searchTextF.text ?? "")").addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
         }else{
             url = ServiceName.newsList
         }

@@ -10,6 +10,8 @@ import UIKit
 
 class RealEstateGuideTVC: UITableViewCell {
 
+    @IBOutlet weak var locationLbl: UILabel!
+    @IBOutlet weak var areaNameLbl: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

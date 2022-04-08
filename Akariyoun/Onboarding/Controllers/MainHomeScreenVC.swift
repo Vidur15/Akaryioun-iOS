@@ -24,7 +24,7 @@ class MainHomeScreenVC: UIViewController {
     
     var numberOfPages = 7
     
-    var headingArr = ["Search Map","Property Search","Realestate","Members","Requests","Realestate Guide","Property Management","News","Finance"]
+    var headingArr = ["Search Map","Property Search","Realestate","Members","Requests","Directory","Property Management","News","Finance"]
     var descArr = ["Find a site to offer for sale or rent","Find a site for sale or rent","Real estate Offers","Site Members","Search and request for a property that is not available","Find a nearby real estate office","The best way to manage your property","Find the latest Trending news around your area","Find the best loans from both government and private players"]
     var imageArr = ["2703060_maker_map_flag_location_icon","search","8150379_retail_price_tag_price tag_label_icon","79-users","pull-requests-1","290138_document_extension_file_format_paper_icon","office-1","290136_communication_internet_media_news_newspaper_icon","290136_communication_internet_media_news_newspaper_icon"]
     

@@ -10,6 +10,7 @@ import UIKit
 import CoreData
 import IQKeyboardManagerSwift
 import KYDrawerController
+import AWSS3
 
 var App = UIApplication.shared.delegate as! AppDelegate
 
@@ -33,11 +34,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 navigationController.isNavigationBarHidden = true
                 self.window?.rootViewController = navigationController
                self.window?.makeKeyAndVisible()
-        
+        self.initializeS3()
         UIApplication.shared.statusBarStyle = .lightContent
         // Override point for customization after application launch.
         return true
     }
+    
+    
+    func initializeS3() {
+        
+        let accessKey = "AKIA6LSDBEL3U2HOJWLW"
+        let secretKey = "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"
+        
+        let credentialsProvider = AWSStaticCredentialsProvider(accessKey: accessKey, secretKey: secretKey)
+        let configuration = AWSServiceConfiguration(region:AWSRegionType.USEast2, credentialsProvider:credentialsProvider)
+        
+        AWSServiceManager.default().defaultServiceConfiguration = configuration
+    }
+
     
     // MARK: UISceneSession Lifecycle
     
