@@ -18,7 +18,9 @@ class SettingsVC: UIViewController {
     }
     
     @IBAction func deleteAccountAction(_ sender: UIButton) {
-    
+    guard let vc = self.storyboard?.instantiateViewController(withIdentifier:
+     "DeleteAccountVC" ) as? DeleteAccountVC  else { return }
+    self.navigationController?.pushViewController(vc, animated: true)
     }
     
     @IBAction func settingsBtnAction(_ sender: UIButton) {

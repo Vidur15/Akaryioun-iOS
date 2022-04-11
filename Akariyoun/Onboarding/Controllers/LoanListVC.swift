@@ -108,7 +108,6 @@ extension LoanListVC: UITableViewDelegate,UITableViewDataSource {
         }else{
             return self.loanModel?.data?.corporate_loans?.data?.count ?? 0
         }
-        
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

@@ -27,19 +27,17 @@ class SideMenuVC: UIViewController {
         let nib = UINib(nibName: "SideMenuTVC", bundle: Bundle.main)
         self.mainTableView.register(nib, forCellReuseIdentifier: "SideMenuTVC")
         
-        
-        
         // Do any additional setup after loading the view.
     }
     
     override func viewWillAppear(_ animated: Bool) {
         print("check vidur side menu")
         if kSharedUserDefaults.getLoggedInAccessToken() == ""{
-            self.menuArr = ["Real Estate","Members","Request","Who are we","Call Us","Language"]
-            self.imageArr = ["1530085_building_business_city_commercial_company_icon (1)","79-users-1","pull-requests-1","8324228_ui_essential_app_question_help_icon","Phone","2135789_earth_language_planet_icon"]
+            self.menuArr = ["Real Estate","Members","Request","Who are we","Call Us","Other Services","Carrers","Language"]
+            self.imageArr = ["1530085_building_business_city_commercial_company_icon (1)","79-users-1","pull-requests-1","8324228_ui_essential_app_question_help_icon","Phone","Other Services","career","2135789_earth_language_planet_icon"]
         }else{
-            self.menuArr = ["Real Estate","Members","Request","Who are we","Call Us","Profile","Settings","Language"]
-            self.imageArr = ["1530085_building_business_city_commercial_company_icon (1)","79-users-1","pull-requests-1","8324228_ui_essential_app_question_help_icon","Phone","Profile","Setting","2135789_earth_language_planet_icon"]
+            self.menuArr = ["Real Estate","Members","Request","Who are we","Call Us","Other Services","Carrers","Profile","Settings","Language"]
+            self.imageArr = ["1530085_building_business_city_commercial_company_icon (1)","79-users-1","pull-requests-1","8324228_ui_essential_app_question_help_icon","Phone","Other Services","career","Profile","Setting","2135789_earth_language_planet_icon"]
         }
         self.mainTableView.reloadData()
     }
@@ -65,13 +63,13 @@ extension SideMenuVC: UITableViewDelegate,UITableViewDataSource {
         }
         
         if kSharedUserDefaults.getLoggedInAccessToken() == ""{
-            if indexPath.row == 5{
+            if indexPath.row == 7{
                        cell.dropIcon.isHidden = false
                    }else{
                        cell.dropIcon.isHidden = true
                    }
         }else{
-            if indexPath.row == 7{
+            if indexPath.row == 9{
                        cell.dropIcon.isHidden = false
                    }else{
                        cell.dropIcon.isHidden = true
@@ -113,7 +111,7 @@ extension SideMenuVC: UITableViewDelegate,UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print(indexPath.row,"CHECK VIDUR")
-        let checkVal = kSharedUserDefaults.getLoggedInAccessToken() == "" ? 5 : 7
+        let checkVal = kSharedUserDefaults.getLoggedInAccessToken() == "" ? 7 : 9
         if indexPath.row == 0{
             
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
@@ -136,32 +134,40 @@ extension SideMenuVC: UITableViewDelegate,UITableViewDataSource {
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             pushToVC(identifierName: "ContactUsVC", storyboard: storyboard)
         }
+            else if indexPath.row == 5{
+                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                pushToVC(identifierName: "OtherServicesVC", storyboard: storyboard)
+            }
+            else if indexPath.row == 6{
+                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                pushToVC(identifierName: "CarrersVC", storyboard: storyboard)
+            }
         else if indexPath.row == checkVal{
             self.boolVal = !self.boolVal
             if self.boolVal{
                 if kSharedUserDefaults.getLoggedInAccessToken() == ""{
-                    self.menuArr = ["Real Estate","Members","Request","Who are we","Call Us","Language","English","Arabic"]
-                    self.imageArr = ["1530085_building_business_city_commercial_company_icon (1)","79-users-1","pull-requests-1","8324228_ui_essential_app_question_help_icon","Phone","2135789_earth_language_planet_icon","2135789_earth_language_planet_icon","2135789_earth_language_planet_icon"]
+                    self.menuArr = ["Real Estate","Members","Request","Who are we","Call Us","Other Services","Carrers","Language","English","Arabic"]
+                    self.imageArr = ["1530085_building_business_city_commercial_company_icon (1)","79-users-1","pull-requests-1","8324228_ui_essential_app_question_help_icon","Phone","Other Services","career","2135789_earth_language_planet_icon","2135789_earth_language_planet_icon","2135789_earth_language_planet_icon"]
                 }else{
-                    self.menuArr = ["Real Estate","Members","Request","Who are we","Call Us","Profile","Settings","Language","English","Arabic"]
-                    self.imageArr = ["1530085_building_business_city_commercial_company_icon (1)","79-users-1","pull-requests-1","8324228_ui_essential_app_question_help_icon","Phone","Profile","Setting","2135789_earth_language_planet_icon","2135789_earth_language_planet_icon","2135789_earth_language_planet_icon"]
+                    self.menuArr = ["Real Estate","Members","Request","Who are we","Call Us","Other Services","Carrers","Profile","Settings","Language","English","Arabic"]
+                    self.imageArr = ["1530085_building_business_city_commercial_company_icon (1)","79-users-1","pull-requests-1","8324228_ui_essential_app_question_help_icon","Phone","Other Services","career","Profile","Setting","2135789_earth_language_planet_icon","2135789_earth_language_planet_icon","2135789_earth_language_planet_icon"]
                 }
             }else{
                 if kSharedUserDefaults.getLoggedInAccessToken() == ""{
-                    self.menuArr = ["Real Estate","Members","Request","Who are we","Call Us","Language"]
-                    self.imageArr = ["1530085_building_business_city_commercial_company_icon (1)","79-users-1","pull-requests-1","8324228_ui_essential_app_question_help_icon","Phone","2135789_earth_language_planet_icon"]
+                    self.menuArr = ["Real Estate","Members","Request","Who are we","Call Us","Other Services","Carrers","Language"]
+                    self.imageArr = ["1530085_building_business_city_commercial_company_icon (1)","79-users-1","pull-requests-1","8324228_ui_essential_app_question_help_icon","Phone","Other Services","career","2135789_earth_language_planet_icon"]
                 }else{
-                    self.menuArr = ["Real Estate","Members","Request","Who are we","Call Us","Profile","Settings","Language"]
-                    self.imageArr = ["1530085_building_business_city_commercial_company_icon (1)","79-users-1","pull-requests-1","8324228_ui_essential_app_question_help_icon","Phone","Profile","Setting","2135789_earth_language_planet_icon"]
+                    self.menuArr = ["Real Estate","Members","Request","Who are we","Call Us","Other Services","Carrers","Profile","Settings","Language"]
+                    self.imageArr = ["1530085_building_business_city_commercial_company_icon (1)","79-users-1","pull-requests-1","8324228_ui_essential_app_question_help_icon","Phone","Other Services","career","Profile","Setting","2135789_earth_language_planet_icon"]
                 }
             }
             self.mainTableView.reloadData()
         }
-        if checkVal == 7{
-            if indexPath.row == 5{
+        if checkVal == 9{
+            if indexPath.row == 7{
                 let storyboard = UIStoryboard(name: "Main", bundle: nil)
                 pushToVC(identifierName: "ProfileVC", storyboard: storyboard)
-            }else if indexPath.row == 6{
+            }else if indexPath.row == 8{
                 let storyboard = UIStoryboard(name: "Main", bundle: nil)
                 pushToVC(identifierName: "SettingsVC", storyboard: storyboard)
             }

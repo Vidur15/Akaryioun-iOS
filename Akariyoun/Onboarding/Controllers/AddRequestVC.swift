@@ -11,12 +11,18 @@ import KYDrawerController
 
 class AddRequestVC: UIViewController {
     
+    @IBOutlet weak var topDescLnl: UILabel!
     
+    @IBOutlet weak var topRequestLbl: UILabel!
+    @IBOutlet weak var topLvl: UILabel!
     @IBOutlet weak var descTextView: UITextView!
     @IBOutlet weak var titleTextField: UITextField!
     @IBOutlet weak var sendRequestView: UIView!
     
     @IBOutlet weak var firstView: UIView!
+    
+    var isFrom = 1
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setStatusBarColor()
@@ -29,6 +35,17 @@ class AddRequestVC: UIViewController {
         }
         self.titleTextField.setLeftPaddingPoints(16)
         self.descTextView.addPadding(to: self.descTextView)
+        
+        if self.isFrom == 1{
+            self.topLvl.text = "Add Request"
+            self.topDescLnl.text = "Request Description"
+            self.topRequestLbl.text = "Request Title"
+        }else{
+            self.topLvl.text = "Add Offer"
+            self.topDescLnl.text = "Offer Description"
+            self.topRequestLbl.text = "Offer Title"
+        }
+        
         // Do any additional setup after loading the view.
     }
     
@@ -49,7 +66,7 @@ class AddRequestVC: UIViewController {
     }
     
     func hitAddrequestApi(){
-        let params : [String : Any] = ["type" : "1","title" : self.titleTextField.text ?? "","description" : self.descTextView.text ?? ""]
+        let params : [String : Any] = ["type" : self.isFrom,"title" : self.titleTextField.text ?? "","description" : self.descTextView.text ?? ""]
         
         TANetworkManager.sharedInstance.requestApi(withServiceName: ServiceName.addRequest, requestMethod: .POST, requestParameters: params, withProgressHUD: true) { (result: Any?, error: Error?, errorType: ErrorType, statusCode: Int?) in
             

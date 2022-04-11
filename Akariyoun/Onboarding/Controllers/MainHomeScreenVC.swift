@@ -56,6 +56,13 @@ class MainHomeScreenVC: UIViewController {
         
         self.timer = Timer.scheduledTimer(timeInterval: 3.5, target: self, selector: #selector(self.scrollAutomatically), userInfo: nil, repeats: true)
         
+        
+        self.getBannerImages()
+        // Do any additional setup after loading the view.
+    }
+    
+    
+    override func viewWillAppear(_ animated: Bool) {
         if kSharedUserDefaults.getLoggedInAccessToken() == ""{
             self.signinView.isHidden = false
             self.loginView.isHidden = true
@@ -63,9 +70,6 @@ class MainHomeScreenVC: UIViewController {
             self.signinView.isHidden = true
             self.loginView.isHidden = false
         }
-        
-        self.getBannerImages()
-        // Do any additional setup after loading the view.
     }
     
     
@@ -215,10 +219,7 @@ extension MainHomeScreenVC: UITableViewDelegate,UITableViewDataSource {
 extension MainHomeScreenVC: UICollectionViewDelegate, UICollectionViewDataSource,UICollectionViewDelegateFlowLayout{
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        
         return self.bannerArr.count
-        
-        
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -235,7 +236,6 @@ extension MainHomeScreenVC: UICollectionViewDelegate, UICollectionViewDataSource
    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: collectionView.frame.width, height: (collectionView.frame.height))
-     
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
@@ -246,9 +246,7 @@ extension MainHomeScreenVC: UICollectionViewDelegate, UICollectionViewDataSource
            let progress = percent * Double(self.numberOfPages - 1)
            
         self.mainPageControl.progress = progress
-//           (self.pageControls + self.coloredPageControls).forEach { (control) in
-//               control.progress = progress
-//           }
+
        }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

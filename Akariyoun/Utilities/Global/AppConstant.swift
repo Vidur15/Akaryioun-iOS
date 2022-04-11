@@ -84,6 +84,11 @@ struct ServiceName {
      static let updateInfo               = "/customer/updateInfo"
     static let directories               = "/directories?limit=1000&page"
     
+    static let careers               = "/careers"
+    static let otherServices               = "/otherServices?limit=1000&page"
+    static let deleteAccountOtp               = "/customer/deleteAccountOtp"
+    static let deleteAccount               = "/customer/deleteAccount"
+    static let postcontactUs               = "/customer/contactUs"
     
 }
 

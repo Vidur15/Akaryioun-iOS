@@ -76,6 +76,7 @@ class ViewController: UIViewController {
     
    @IBAction func addRequestAction(_ sender: UIButton) {
    guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "AddRequestVC" ) as? AddRequestVC  else { return }
+    vc.isFrom = 1
             self.navigationController?.pushViewController(vc, animated: true)
    }
     

@@ -93,8 +93,39 @@ class ContactUsVC: UIViewController {
             CommonUtils.showToast(message: "Please enter message")
                        return
         }else{
-            
+            self.hitContactUsApi()
         }
+    }
+    
+    func hitContactUsApi(){
+        let params : [String : Any] = ["name" : self.nameTextF.text ?? "","email" : self.emailTextF.text ?? "","mobile" : self.mobileTextF.text ?? "","subject" : self.subjectTextF.text ?? "","message" : self.messageTextView.text ?? ""]
+                    
+                    TANetworkManager.sharedInstance.requestApi(withServiceName: ServiceName.postcontactUs, requestMethod: .POST, requestParameters: params, withProgressHUD: true) { (result: Any?, error: Error?, errorType: ErrorType, statusCode: Int?) in
+                        
+                        //guard self != nil else { return }
+                        CommonUtils.showHudWithNoInteraction(show: false)
+                        if errorType == .requestSuccess {
+                            let dicResponse = kSharedInstance.getDictionary(result)
+                            let statusCodes = Int.getInt(statusCode)
+                            switch statusCodes {
+                            case 200:
+                                if dicResponse["success"] as? Bool ?? false{
+                                  showAlertMessage.alert1(message: "Query Submitted", sender: self)
+                               //     self.navigationController?.popViewController(animated: true)
+                                }else{
+                                    showAlertMessage.alert(message: String.getString(dicResponse["message"]))
+                                }
+                            default:
+                                
+                                showAlertMessage.alert(message: String.getString(dicResponse["message"]))
+                            }
+                        } else if errorType == .noNetwork {
+                            showAlertMessage.alert(message: kNoInternetMsg)
+                            
+                        } else {
+                            showAlertMessage.alert(message: kDefaultErrorMsg)
+                        }
+                    }
     }
     
     

@@ -85,7 +85,7 @@ extension MemberRequestsVC: UITableViewDelegate,UITableViewDataSource {
            
             
             let dateCal = self.dateF.date(from: self.memberDetailsModel?.data?.member?.requests?[indexPath.row].created_at ?? "") ?? Date()
-            print(dateCal,"CHECK VIDUR")
+            
             let str = self.months(from: dateCal)
             print(str)
              cell.timeLbl.text = "\(str) months ago"
@@ -98,7 +98,7 @@ extension MemberRequestsVC: UITableViewDelegate,UITableViewDataSource {
       //  cell.descLbl.text = self.memberDetailsModel?.data?.member?.requests?[indexPath.row].description ?? ""
             
             let dateCal = self.dateF.date(from: self.memberDetailsModel?.data?.member?.requests?[indexPath.row].created_at ?? "") ?? Date()
-            print(dateCal,"CHECK VIDUR")
+            
             let str = self.months(from: dateCal)
             print(str)
              cell.timeLbl.text = "\(str) months ago"

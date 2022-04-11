@@ -10,7 +10,11 @@ import UIKit
 
 class ProfileVC: UIViewController {
     
+    @IBOutlet weak var emailLbl: UILabel!
+    @IBOutlet weak var mobileNumLbl: UILabel!
+    @IBOutlet weak var nameLbl: UILabel!
     @IBOutlet weak var mainTextVew: UITextView!
+    
     
     @IBOutlet  var mainTableBottomCont: NSLayoutConstraint!
     @IBOutlet  var whoWeAreBottomConst: NSLayoutConstraint!
@@ -31,6 +35,10 @@ class ProfileVC: UIViewController {
     var coverUrl = ""
     var profileUrl = ""
     
+    var profileDetailModel : MemberDetailsModel?
+    
+    var dateF = DateFormatter()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -45,20 +53,78 @@ class ProfileVC: UIViewController {
         let nib1 = UINib(nibName: "CommonExpandTVC", bundle: Bundle.main)
         self.mainTableView.register(nib1, forCellReuseIdentifier: "CommonExpandTVC")
         
+        let nib3 = UINib(nibName: "AddRequestOfferTVC", bundle: Bundle.main)
+        self.mainTableView.register(nib3, forCellReuseIdentifier: "AddRequestOfferTVC")
+        
+        
         UIView.animate(withDuration: 1.0) {
             self.mainTableBottomCont.isActive = false
             self.whoWeAreBottomConst.isActive = true
             self.mainTableView.isHidden = true
             self.whoWeAreView.isHidden = false
+            
+         
+            
+            
                    self.mainTableViewHeightConst.constant = CGFloat.greatestFiniteMagnitude
                    self.mainTableView.reloadData()
+            self.mainTableView.reloadSections([0], with: .automatic)
                    self.mainTableView.layoutIfNeeded()
                    self.mainTableViewHeightConst.constant = self.mainTableView.contentSize.height
                    self.mainScrollView.layoutIfNeeded()
                }
-
+        
+        self.dateF.dateFormat = "dd MMM, yyyy hh:mm a"
+        
+        self.getUserDetails()
         // Do any additional setup after loading the view.
     }
+    
+    
+    func getUserDetails(){
+        TANetworkManager.sharedInstance.requestApi(withServiceName: ServiceName.profileDetails, requestMethod: .GET, requestParameters: [:], withProgressHUD: true) { (result: Any?, error: Error?, errorType: ErrorType, statusCode: Int?) in
+                   
+                   //guard self != nil else { return }
+                   CommonUtils.showHudWithNoInteraction(show: false)
+                   if errorType == .requestSuccess {
+                       let dicResponse = kSharedInstance.getDictionary(result)
+                       let statusCodes = Int.getInt(statusCode)
+                       switch statusCodes {
+                       case 200:
+                           if dicResponse["success"] as? Bool ?? false{
+                          //  let dataDict = kSharedInstance.getDictionary(dicResponse["data"])
+                         //   let userDict = kSharedInstance.getDictionary(dataDict["profileDetail"])
+                        //    self.userNameTextF.text = userDict["mobile_number"] as? String ?? ""
+                            self.profileDetailModel = MemberDetailsModel.init(dictionary: dicResponse as NSDictionary)
+                            self.setData()
+                           }else{
+                               showAlertMessage.alert(message: String.getString(dicResponse["message"]))
+                           }
+                       default:
+                           
+                           showAlertMessage.alert(message: String.getString(dicResponse["message"]))
+                       }
+                   } else if errorType == .noNetwork {
+                       showAlertMessage.alert(message: kNoInternetMsg)
+                       
+                   } else {
+                       showAlertMessage.alert(message: kDefaultErrorMsg)
+                   }
+               }
+    }
+    
+    func setData(){
+        self.coverImageView.downlodeImage(serviceurl: self.profileDetailModel?.data?.profileDetail?.cover_photo ?? "", placeHolder: UIImage.init(named: "upload"))
+        self.coverUrl = self.profileDetailModel?.data?.profileDetail?.cover_photo ?? ""
+        self.profileUrl = self.profileDetailModel?.data?.profileDetail?.profile_pic ?? ""
+        self.profileImgView.downlodeImage(serviceurl: self.profileDetailModel?.data?.profileDetail?.profile_pic ?? "", placeHolder: UIImage.init(named: ""))
+        self.nameLbl.text = "\(self.profileDetailModel?.data?.profileDetail?.first_name ?? "") \(self.profileDetailModel?.data?.profileDetail?.last_name ?? "")"
+        self.mobileNumLbl.text = "Phone - \(self.profileDetailModel?.data?.profileDetail?.mobile_number ?? "")"
+        self.emailLbl.text = "Email - \(self.profileDetailModel?.data?.profileDetail?.email ?? "")"
+        self.mainTextVew.text = self.profileDetailModel?.data?.profileDetail?.info?.who_we_are ?? ""
+    }
+
+    
     
     @IBAction func chooseCoverImgAction(_ sender: UIButton) {
            ImagePickerHelper.shared.showPickerController(reference: self) { (image,str) -> (Void) in
@@ -193,6 +259,7 @@ class ProfileVC: UIViewController {
             self.whoWeAreView.isHidden = true
                    self.mainTableViewHeightConst.constant = CGFloat.greatestFiniteMagnitude
                    self.mainTableView.reloadData()
+            self.mainTableView.reloadSections([0], with: .automatic)
                    self.mainTableView.layoutIfNeeded()
                    self.mainTableViewHeightConst.constant = self.mainTableView.contentSize.height
                    self.mainScrollView.layoutIfNeeded()
@@ -225,7 +292,7 @@ class ProfileVC: UIViewController {
                             switch statusCodes {
                             case 200:
                                 if dicResponse["success"] as? Bool ?? false{
-                                  showAlertMessage.alert(message: "Account Details Updated")
+                                  showAlertMessage.alert(message: "Profile Details Updated")
                                //     self.navigationController?.popViewController(animated: true)
                                 }else{
                                     showAlertMessage.alert(message: String.getString(dicResponse["message"]))
@@ -252,13 +319,31 @@ class ProfileVC: UIViewController {
 
 
 extension ProfileVC: UITableViewDelegate,UITableViewDataSource {
+    
+//    @objc func addOfferAction(sender : UIButton){
+       
+//    }
+    
+    @objc func addRequestAction(sender : UIButton){
+        if sender.tag == 0{
+            guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "AddRequestVC" ) as? AddRequestVC  else { return }
+            vc.isFrom = 1
+            self.navigationController?.pushViewController(vc, animated: true)
+        }else{
+            guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "AddRequestVC" ) as? AddRequestVC  else { return }
+                   vc.isFrom = 2
+                   self.navigationController?.pushViewController(vc, animated: true)
+        }
+    }
+    
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if self.selection == 1{
-            return 10
+            return self.profileDetailModel?.data?.profileDetail?.real_state?.count ?? 0
         }else if self.selection == 2{
-            return 10
+            return ((self.profileDetailModel?.data?.profileDetail?.requests?.count ?? 0) + 1)
         }else{
-            return 10
+            return ((self.profileDetailModel?.data?.profileDetail?.offers?.count ?? 0) + 1)
         }
     }
     
@@ -266,37 +351,103 @@ extension ProfileVC: UITableViewDelegate,UITableViewDataSource {
         if self.selection == 1{
             guard let cell = self.mainTableView.dequeueReusableCell(withIdentifier: "MemberRealEstateTVC",
                                                                     for: indexPath) as? MemberRealEstateTVC else { return UITableViewCell() }
+                  cell.headingLbl.text = self.profileDetailModel?.data?.profileDetail?.real_state?[indexPath.row].title ?? ""
+            //        cell.descLbl.text = self.propertyModel?.data?.property?.data?[indexPath.row].description ?? ""
+                   if self.self.profileDetailModel?.data?.profileDetail?.real_state?[indexPath.row].images?.count > 0{
+                        cell.mainImageView.downlodeImage(serviceurl: self.profileDetailModel?.data?.profileDetail?.real_state?[indexPath.row].images?[0].name ?? "", placeHolder: UIImage.init(named: "Logo"))
+                    }
+                    
+                    cell.priceBtnOut.setTitle("Asking for \( self.profileDetailModel?.data?.profileDetail?.real_state?[indexPath.row].price ?? 0) SAR", for: .normal)
             cell.selectionStyle = .none
             return cell
         }else if self.selection == 2{
+            if indexPath.row == self.profileDetailModel?.data?.profileDetail?.requests?.count{
+                 guard let cell = self.mainTableView.dequeueReusableCell(withIdentifier: "AddRequestOfferTVC", for: indexPath) as? AddRequestOfferTVC else { return UITableViewCell() }
+                cell.addBtnOut.addTarget(self, action: #selector(addRequestAction(sender:)), for: .touchUpInside)
+                cell.addBtnOut.setTitle("+ Add New Request", for: .normal)
+                cell.addBtnOut.tag = 0
+                return cell
+            }else{
             if indexPath.row == self.requestSelect{
                 guard let cell = self.mainTableView.dequeueReusableCell(withIdentifier: "CommonExpandTVC", for: indexPath) as? CommonExpandTVC else { return UITableViewCell() }
                 cell.selectionStyle = .none
+                cell.headingLbl.text = self.profileDetailModel?.data?.profileDetail?.requests?[indexPath.row].title ?? ""
+                 cell.descLbl.text = self.profileDetailModel?.data?.profileDetail?.requests?[indexPath.row].description ?? ""
+                
+                 
+                 let dateCal = self.dateF.date(from: self.profileDetailModel?.data?.profileDetail?.requests?[indexPath.row].created_at ?? "") ?? Date()
+                 let str = self.months(from: dateCal)
+                 print(str)
+                  cell.timeLbl.text = "\(str) months ago"
                 
                 return cell
             }else{
                 guard let cell = self.mainTableView.dequeueReusableCell(withIdentifier: "CommonCollapseTVC", for: indexPath) as? CommonCollapseTVC else { return UITableViewCell() }
                 cell.selectionStyle = .none
-                
+                cell.mainLbl.text = self.profileDetailModel?.data?.profileDetail?.requests?[indexPath.row].title ?? ""
+                //  cell.descLbl.text = self.memberDetailsModel?.data?.member?.requests?[indexPath.row].description ?? ""
+                      
+                      let dateCal = self.dateF.date(from: self.profileDetailModel?.data?.profileDetail?.requests?[indexPath.row].created_at ?? "") ?? Date()
+                      let str = self.months(from: dateCal)
+                      print(str)
+                       cell.timeLbl.text = "\(str) months ago"
                 return cell
             }
+            }
         }else{
+            if indexPath.row == self.profileDetailModel?.data?.profileDetail?.offers?.count{
+            guard let cell = self.mainTableView.dequeueReusableCell(withIdentifier: "AddRequestOfferTVC", for: indexPath) as? AddRequestOfferTVC else { return UITableViewCell() }
+                cell.addBtnOut.tag = 1
+                cell.addBtnOut.addTarget(self, action: #selector(addRequestAction(sender:)), for: .touchUpInside)
+                cell.addBtnOut.setTitle("+ Add New Offer", for: .normal)
+                return cell
+            }else{
             if indexPath.row == self.offerselect{
                 guard let cell = self.mainTableView.dequeueReusableCell(withIdentifier: "CommonExpandTVC", for: indexPath) as? CommonExpandTVC else { return UITableViewCell() }
                 cell.selectionStyle = .none
+                cell.headingLbl.text = self.profileDetailModel?.data?.profileDetail?.offers?[indexPath.row].title ?? ""
+                cell.descLbl.text = self.profileDetailModel?.data?.profileDetail?.offers?[indexPath.row].description ?? ""
+                
+                let dateCal = self.dateF.date(from: self.profileDetailModel?.data?.profileDetail?.offers?[indexPath.row].created_at ?? "") ?? Date()
+                let str = self.months(from: dateCal)
+                print(str)
+                 cell.timeLbl.text = "\(str) months ago"
                 
                 return cell
             }else{
                 guard let cell = self.mainTableView.dequeueReusableCell(withIdentifier: "CommonCollapseTVC", for: indexPath) as? CommonCollapseTVC else { return UITableViewCell() }
                 cell.selectionStyle = .none
-                
+                cell.mainLbl.text = self.profileDetailModel?.data?.profileDetail?.offers?[indexPath.row].title ?? ""
+                //  cell.descLbl.text = self.memberDetailsModel?.data?.member?.requests?[indexPath.row].description ?? ""
+                      
+                      let dateCal = self.dateF.date(from: self.profileDetailModel?.data?.profileDetail?.offers?[indexPath.row].created_at ?? "") ?? Date()
+                      let str = self.months(from: dateCal)
+                      print(str)
+                       cell.timeLbl.text = "\(str) months ago"
                 return cell
+            }
             }
         }
 }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        if self.selection == 2 {
+            if indexPath.row == self.profileDetailModel?.data?.profileDetail?.requests?.count {
+                return 70
+            }else{
+                return UITableView.automaticDimension
+            }
+        }
+        else if self.selection == 3{
+            if indexPath.row == self.profileDetailModel?.data?.profileDetail?.offers?.count{
+                return 70
+            }else{
+                return UITableView.automaticDimension
+            }
+        }
+        else{
         return UITableView.automaticDimension
+        }
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -305,6 +456,22 @@ extension ProfileVC: UITableViewDelegate,UITableViewDataSource {
         }else if self.selection == 3{
             self.offerselect = indexPath.row
         }
-        self.mainTableView.reloadData()
+     //   self.mainTableView.reloadData()
+        UIView.animate(withDuration: 1.0) {
+                 self.mainTableBottomCont.isActive = true
+                 self.whoWeAreBottomConst.isActive = false
+                 self.mainTableView.isHidden = false
+                 self.whoWeAreView.isHidden = true
+                        self.mainTableViewHeightConst.constant = CGFloat.greatestFiniteMagnitude
+                        self.mainTableView.reloadData()
+            self.mainTableView.reloadSections([0], with: .automatic)
+                        self.mainTableView.layoutIfNeeded()
+                        self.mainTableViewHeightConst.constant = self.mainTableView.contentSize.height
+                        self.mainScrollView.layoutIfNeeded()
+                    }
     }
+    
+    func months(from date: Date) -> Int {
+              return Calendar.current.dateComponents([.month], from: date, to: Date()).month ?? 0
+          }
 }

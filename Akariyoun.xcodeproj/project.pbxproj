@@ -743,6 +743,13 @@
 		035E8CD627ED8BF600E19B9F /* AddRequestVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035E8CD527ED8BF600E19B9F /* AddRequestVC.swift */; };
 		035E8CD827ED965800E19B9F /* RequestDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035E8CD727ED965800E19B9F /* RequestDetailsVC.swift */; };
 		035E8CDA27ED9C1800E19B9F /* MessagePopVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035E8CD927ED9C1800E19B9F /* MessagePopVC.swift */; };
+		0368FAFA2804052D00AD790B /* CarrersVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0368FAF92804052D00AD790B /* CarrersVC.swift */; };
+		0368FAFC2804053F00AD790B /* OtherServicesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0368FAFB2804053F00AD790B /* OtherServicesVC.swift */; };
+		0387CFE628040F1C00D2A2C8 /* OtherServicesTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0387CFE428040F1C00D2A2C8 /* OtherServicesTVC.swift */; };
+		0387CFE728040F1C00D2A2C8 /* OtherServicesTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0387CFE528040F1C00D2A2C8 /* OtherServicesTVC.xib */; };
+		0387CFEC2804166700D2A2C8 /* AddRequestOfferTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0387CFEA2804166700D2A2C8 /* AddRequestOfferTVC.swift */; };
+		0387CFED2804166700D2A2C8 /* AddRequestOfferTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0387CFEB2804166700D2A2C8 /* AddRequestOfferTVC.xib */; };
+		0387CFEF280440ED00D2A2C8 /* DeleteAccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0387CFEE280440ED00D2A2C8 /* DeleteAccountVC.swift */; };
 		038E95BD27EC92920093440E /* VerifyOTPVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038E95BC27EC92920093440E /* VerifyOTPVC.swift */; };
 		03B2584C27F307BF006D7BAE /* MembersVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B2584B27F307BF006D7BAE /* MembersVC.swift */; };
 		03B2584E27F30938006D7BAE /* PropertyManagementVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B2584D27F30938006D7BAE /* PropertyManagementVC.swift */; };
@@ -1555,6 +1562,13 @@
 		035E8CD527ED8BF600E19B9F /* AddRequestVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRequestVC.swift; sourceTree = "<group>"; };
 		035E8CD727ED965800E19B9F /* RequestDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestDetailsVC.swift; sourceTree = "<group>"; };
 		035E8CD927ED9C1800E19B9F /* MessagePopVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagePopVC.swift; sourceTree = "<group>"; };
+		0368FAF92804052D00AD790B /* CarrersVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarrersVC.swift; sourceTree = "<group>"; };
+		0368FAFB2804053F00AD790B /* OtherServicesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherServicesVC.swift; sourceTree = "<group>"; };
+		0387CFE428040F1C00D2A2C8 /* OtherServicesTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherServicesTVC.swift; sourceTree = "<group>"; };
+		0387CFE528040F1C00D2A2C8 /* OtherServicesTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OtherServicesTVC.xib; sourceTree = "<group>"; };
+		0387CFEA2804166700D2A2C8 /* AddRequestOfferTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRequestOfferTVC.swift; sourceTree = "<group>"; };
+		0387CFEB2804166700D2A2C8 /* AddRequestOfferTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddRequestOfferTVC.xib; sourceTree = "<group>"; };
+		0387CFEE280440ED00D2A2C8 /* DeleteAccountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteAccountVC.swift; sourceTree = "<group>"; };
 		038E95BC27EC92920093440E /* VerifyOTPVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyOTPVC.swift; sourceTree = "<group>"; };
 		03B2584B27F307BF006D7BAE /* MembersVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MembersVC.swift; sourceTree = "<group>"; };
 		03B2584D27F30938006D7BAE /* PropertyManagementVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyManagementVC.swift; sourceTree = "<group>"; };
@@ -2681,6 +2695,9 @@
 				03D426FD27FEDDFA0079864E /* SettingsVC.swift */,
 				03D426FF27FEE1520079864E /* AccountSettingsVC.swift */,
 				03D4270127FEF2570079864E /* ProfileVC.swift */,
+				0368FAF92804052D00AD790B /* CarrersVC.swift */,
+				0368FAFB2804053F00AD790B /* OtherServicesVC.swift */,
+				0387CFEE280440ED00D2A2C8 /* DeleteAccountVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -2718,6 +2735,10 @@
 				03FA2DBC27FD7BB1005039F6 /* MoreNewsCVC.xib */,
 				03D426F727FEC7A20079864E /* LoanTVC.swift */,
 				03D426F827FEC7A20079864E /* LoanTVC.xib */,
+				0387CFE428040F1C00D2A2C8 /* OtherServicesTVC.swift */,
+				0387CFE528040F1C00D2A2C8 /* OtherServicesTVC.xib */,
+				0387CFEA2804166700D2A2C8 /* AddRequestOfferTVC.swift */,
+				0387CFEB2804166700D2A2C8 /* AddRequestOfferTVC.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -2978,6 +2999,7 @@
 				034F168927F58481006225AA /* KI.png in Resources */,
 				034F168827F58481006225AA /* HR.png in Resources */,
 				034F159827F58481006225AA /* Myanmar.png in Resources */,
+				0387CFE728040F1C00D2A2C8 /* OtherServicesTVC.xib in Resources */,
 				034F163627F58481006225AA /* HK.png in Resources */,
 				034F167B27F58481006225AA /* FJ.png in Resources */,
 				034F168127F58481006225AA /* KZ.png in Resources */,
@@ -3155,6 +3177,7 @@
 				0312097D27F4496C00782DDB /* Al Muruj Dist.kml in Resources */,
 				034F16D427F58481006225AA /* ZW.png in Resources */,
 				034F16D927F58481006225AA /* BF.png in Resources */,
+				0387CFED2804166700D2A2C8 /* AddRequestOfferTVC.xib in Resources */,
 				031209C827F4496C00782DDB /* Al Woroud Dist.kml in Resources */,
 				031209A527F4496C00782DDB /* Al Hazm Dist.kml in Resources */,
 				034F15FB27F58481006225AA /* MF.png in Resources */,
@@ -3710,6 +3733,7 @@
 				035E8CD627ED8BF600E19B9F /* AddRequestVC.swift in Sources */,
 				03D4A78227F2F96900CBB35D /* SelectionTVC.swift in Sources */,
 				0312087427F4473D00782DDB /* SearchMapVC.swift in Sources */,
+				0387CFEF280440ED00D2A2C8 /* DeleteAccountVC.swift in Sources */,
 				0306037227EDBDE2005B0C9D /* SideMenuVC.swift in Sources */,
 				034F151327F58480006225AA /* UITabBarExtension.swift in Sources */,
 				034F16E627F58481006225AA /* GradientSlider.swift in Sources */,
@@ -3729,10 +3753,12 @@
 				03FA2DB527FD65EB005039F6 /* NewsTVC.swift in Sources */,
 				034F150027F58480006225AA /* TANetworkManager.swift in Sources */,
 				034F151227F58480006225AA /* DoubleExtended.swift in Sources */,
+				0387CFE628040F1C00D2A2C8 /* OtherServicesTVC.swift in Sources */,
 				03D4A77F27F2F60B00CBB35D /* NeighbourhoodSelectionVC.swift in Sources */,
 				034F16ED27F58481006225AA /* Keys.swift in Sources */,
 				03D5799D27C4C00000DADE0B /* ViewController.swift in Sources */,
 				03D4A78827F2FCB200CBB35D /* RealEstateGuideTVC.swift in Sources */,
+				0368FAFC2804053F00AD790B /* OtherServicesVC.swift in Sources */,
 				034F151427F58480006225AA /* String+Utilities.swift in Sources */,
 				034F150227F58480006225AA /* UIView+Extensions.swift in Sources */,
 				0312086C27F4301F00782DDB /* CommonExpandTVC.swift in Sources */,
@@ -3742,10 +3768,12 @@
 				03D579A327C4C00000DADE0B /* Akariyoun.xcdatamodeld in Sources */,
 				034F150527F58480006225AA /* UIButtonCornerRadius.swift in Sources */,
 				03BE939327EC509A00795CF6 /* MainHomeScreenVC.swift in Sources */,
+				0387CFEC2804166700D2A2C8 /* AddRequestOfferTVC.swift in Sources */,
 				0312086F27F4327400782DDB /* MemberOffersVC.swift in Sources */,
 				034F151627F58480006225AA /* UIApplication.swift in Sources */,
 				03D4270227FEF2570079864E /* ProfileVC.swift in Sources */,
 				03BE939D27EC723800795CF6 /* RealEstateVC.swift in Sources */,
+				0368FAFA2804052D00AD790B /* CarrersVC.swift in Sources */,
 				034F151E27F58480006225AA /* AppsCountryPicker.swift in Sources */,
 				034F16F027F58481006225AA /* AppConstant.swift in Sources */,
 				0312086327F4297200782DDB /* MemberCallUsVC.swift in Sources */,

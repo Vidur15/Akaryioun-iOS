@@ -26,11 +26,12 @@ public class MemberDetailsModel {
 
 public class MemberDetailsDataModel {
     public var member : Member2?
-
+    public var profileDetail : Member2?
 
      public init(dictionary: [String : Any]) {
 
         if (dictionary["member"] != nil) { member = Member2(dictionary: dictionary["member"] as? [String : Any] ?? [:]) }
+         if (dictionary["profileDetail"] != nil) { profileDetail = Member2(dictionary: dictionary["profileDetail"] as? [String : Any] ?? [:]) }
     }
 }
 

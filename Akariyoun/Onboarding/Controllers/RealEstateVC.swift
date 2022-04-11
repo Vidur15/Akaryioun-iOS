@@ -54,7 +54,6 @@ class RealEstateVC: UIViewController {
                 case 200:
                     if dicResponse["success"] as? Bool ?? false{
                         self.propertyModel = PropertyListModel.init(dictionary: dicResponse as NSDictionary)
-                     print(self.propertyModel?.data?.property?.data?.count,"COUNT")
                         self.mainTableView.reloadData()
                     }else{
                         showAlertMessage.alert(message: String.getString(dicResponse["message"]))
