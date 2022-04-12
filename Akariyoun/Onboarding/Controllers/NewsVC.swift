@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import KYDrawerController
 
 class NewsVC: UIViewController,UITextFieldDelegate{
     
@@ -31,7 +32,12 @@ class NewsVC: UIViewController,UITextFieldDelegate{
         self.searchTextF.delegate = self
         self.searchTextF.returnKeyType = .search
         self.searchTextF.setLeftPaddingPoints(16)
+        self.searchTextF.textAlignment = kSharedUserDefaults.getLanguageName() == "en" ? .left : .right
         self.getNewsListApi()
+        
+        if let drawerController = navigationController?.parent as? KYDrawerController {
+                   drawerController.screenEdgePanGestureEnabled = false
+               }
         // Do any additional setup after loading the view.
     }
     
@@ -104,8 +110,8 @@ extension NewsVC: UITableViewDelegate,UITableViewDataSource {
         cell.selectionStyle = .none
         
         cell.mainImageView.downlodeImage(serviceurl: self.newsModel?.data?.news?.data?[indexPath.row].image ?? "", placeHolder: UIImage.init(named: "Logo"))
-        cell.headingLbl.text = self.newsModel?.data?.news?.data?[indexPath.row].title ?? ""
-        cell.descLbl.text = self.newsModel?.data?.news?.data?[indexPath.row].description ?? ""
+        cell.headingLbl.text = kSharedUserDefaults.getLanguageName() == "en" ?  self.newsModel?.data?.news?.data?[indexPath.row].title ?? "" : self.newsModel?.data?.news?.data?[indexPath.row].title_ar ?? ""
+        cell.descLbl.text = kSharedUserDefaults.getLanguageName() == "en" ?  self.newsModel?.data?.news?.data?[indexPath.row].description ?? "" : self.newsModel?.data?.news?.data?[indexPath.row].description_ar ?? ""
         return cell
     }
     

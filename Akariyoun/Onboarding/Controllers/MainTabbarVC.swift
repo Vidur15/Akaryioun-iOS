@@ -17,13 +17,20 @@ class MainTabbarVC: UITabBarController{
       //  self.tabBar.selectedItem = UIColor.white.withAlphaComponent(0.5)
       //  self.tabBar.sizeThatFits(CGSize.init(width: view.frame.width, height: 240))
         
+     //   self.tabBarItem.title?.localized()
+        
        print("CHECK VIUR")
        
-        
+//        self.tabBar.items?.enumerated().forEach({ (arg0) in
+//
+//            let (offset, element) = arg0
+//            print(offset,"CHECK OFFSET")
+//            print(element.title,"CHECK TITLE")
+//        })
         // Do any additional setup after loading the view.
     }
     
-    
+   
     
     
     override func viewWillAppear(_ animated: Bool) {

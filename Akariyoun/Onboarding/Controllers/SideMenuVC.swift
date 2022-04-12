@@ -33,10 +33,10 @@ class SideMenuVC: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         print("check vidur side menu")
         if kSharedUserDefaults.getLoggedInAccessToken() == ""{
-            self.menuArr = ["Real Estate","Members","Request","Who are we","Call Us","Other Services","Carrers","Language"]
+            self.menuArr = ["Real Estate".localized(),"Members".localized(),"Request".localized(),"Who are we".localized(),"Call Us".localized(),"Other Services".localized(),"Carrers".localized(),"Language".localized()]
             self.imageArr = ["1530085_building_business_city_commercial_company_icon (1)","79-users-1","pull-requests-1","8324228_ui_essential_app_question_help_icon","Phone","Other Services","career","2135789_earth_language_planet_icon"]
         }else{
-            self.menuArr = ["Real Estate","Members","Request","Who are we","Call Us","Other Services","Carrers","Profile","Settings","Language"]
+            self.menuArr = ["Real Estate".localized(),"Members".localized(),"Request".localized(),"Who are we".localized(),"Call Us".localized(),"Other Services".localized(),"Carrers".localized(),"Profile".localized(),"Settings".localized(),"Language".localized()]
             self.imageArr = ["1530085_building_business_city_commercial_company_icon (1)","79-users-1","pull-requests-1","8324228_ui_essential_app_question_help_icon","Phone","Other Services","career","Profile","Setting","2135789_earth_language_planet_icon"]
         }
         self.mainTableView.reloadData()
@@ -142,22 +142,24 @@ extension SideMenuVC: UITableViewDelegate,UITableViewDataSource {
                 let storyboard = UIStoryboard(name: "Main", bundle: nil)
                 pushToVC(identifierName: "CarrersVC", storyboard: storyboard)
             }
+           
+            
         else if indexPath.row == checkVal{
             self.boolVal = !self.boolVal
             if self.boolVal{
                 if kSharedUserDefaults.getLoggedInAccessToken() == ""{
-                    self.menuArr = ["Real Estate","Members","Request","Who are we","Call Us","Other Services","Carrers","Language","English","Arabic"]
+                    self.menuArr = ["Real Estate".localized(),"Members".localized(),"Request".localized(),"Who are we".localized(),"Call Us".localized(),"Other Services".localized(),"Carrers".localized(),"Language".localized(),"English".localized(),"Arabic".localized()]
                     self.imageArr = ["1530085_building_business_city_commercial_company_icon (1)","79-users-1","pull-requests-1","8324228_ui_essential_app_question_help_icon","Phone","Other Services","career","2135789_earth_language_planet_icon","2135789_earth_language_planet_icon","2135789_earth_language_planet_icon"]
                 }else{
-                    self.menuArr = ["Real Estate","Members","Request","Who are we","Call Us","Other Services","Carrers","Profile","Settings","Language","English","Arabic"]
+                    self.menuArr = ["Real Estate".localized(),"Members".localized(),"Request".localized(),"Who are we".localized(),"Call Us".localized(),"Other Services".localized(),"Carrers".localized(),"Profile".localized(),"Settings".localized(),"Language".localized(),"English".localized(),"Arabic".localized()]
                     self.imageArr = ["1530085_building_business_city_commercial_company_icon (1)","79-users-1","pull-requests-1","8324228_ui_essential_app_question_help_icon","Phone","Other Services","career","Profile","Setting","2135789_earth_language_planet_icon","2135789_earth_language_planet_icon","2135789_earth_language_planet_icon"]
                 }
             }else{
                 if kSharedUserDefaults.getLoggedInAccessToken() == ""{
-                    self.menuArr = ["Real Estate","Members","Request","Who are we","Call Us","Other Services","Carrers","Language"]
+                    self.menuArr = ["Real Estate".localized(),"Members".localized(),"Request".localized(),"Who are we".localized(),"Call Us".localized(),"Other Services".localized(),"Carrers".localized(),"Language".localized()]
                     self.imageArr = ["1530085_building_business_city_commercial_company_icon (1)","79-users-1","pull-requests-1","8324228_ui_essential_app_question_help_icon","Phone","Other Services","career","2135789_earth_language_planet_icon"]
                 }else{
-                    self.menuArr = ["Real Estate","Members","Request","Who are we","Call Us","Other Services","Carrers","Profile","Settings","Language"]
+                    self.menuArr = ["Real Estate".localized(),"Members".localized(),"Request".localized(),"Who are we".localized(),"Call Us".localized(),"Other Services".localized(),"Carrers".localized(),"Profile".localized(),"Settings".localized(),"Language".localized()]
                     self.imageArr = ["1530085_building_business_city_commercial_company_icon (1)","79-users-1","pull-requests-1","8324228_ui_essential_app_question_help_icon","Phone","Other Services","career","Profile","Setting","2135789_earth_language_planet_icon"]
                 }
             }
@@ -167,10 +169,35 @@ extension SideMenuVC: UITableViewDelegate,UITableViewDataSource {
             if indexPath.row == 7{
                 let storyboard = UIStoryboard(name: "Main", bundle: nil)
                 pushToVC(identifierName: "ProfileVC", storyboard: storyboard)
-            }else if indexPath.row == 8{
+            }
+            else if indexPath.row == 8{
                 let storyboard = UIStoryboard(name: "Main", bundle: nil)
                 pushToVC(identifierName: "SettingsVC", storyboard: storyboard)
             }
+            else if indexPath.row == 10{
+                kSharedUserDefaults.setLanguage(languageName: "en")
+                kSharedAppDelegate?.setSemanticContentAttribute()
+                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                pushToVC(identifierName: "KYDrawerController", storyboard: storyboard)
+            }else if indexPath.row == 11{
+                kSharedUserDefaults.setLanguage(languageName: "ar")
+                kSharedAppDelegate?.setSemanticContentAttribute()
+                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                pushToVC(identifierName: "KYDrawerController", storyboard: storyboard)
+            }
+        }else{
+             if indexPath.row == 8{
+               kSharedUserDefaults.setLanguage(languageName: "en")
+               kSharedAppDelegate?.setSemanticContentAttribute()
+               let storyboard = UIStoryboard(name: "Main", bundle: nil)
+               pushToVC(identifierName: "KYDrawerController", storyboard: storyboard)
+            }else if indexPath.row == 9{
+                kSharedUserDefaults.setLanguage(languageName: "ar")
+                              kSharedAppDelegate?.setSemanticContentAttribute()
+                              let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                              pushToVC(identifierName: "KYDrawerController", storyboard: storyboard)
+            }
         }
+        
     }
 }

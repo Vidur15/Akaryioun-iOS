@@ -14,6 +14,8 @@ class MemberDetailsMainVC: UIViewController {
     @IBOutlet weak var backBtnOut: UIButton!
     @IBOutlet var containerViewColl: [UIView]!
     
+    @IBOutlet var btnSelectOutColl: [UIButton]!
+    
     @IBOutlet weak var animateView: UIView!
     
     var idToSend = ""
@@ -40,7 +42,7 @@ class MemberDetailsMainVC: UIViewController {
     func transformView(sender:UIView) {
            UIView.animate(withDuration: 0.5) {
                print(sender.frame.origin.x,"X POSITION")
-               self.animateView.transform = CGAffineTransform(translationX: sender.frame.origin.x, y: 0)
+              self.animateView.transform = kSharedUserDefaults.getLanguageName() == "en" ?  CGAffineTransform(translationX: sender.frame.origin.x, y: 0) : CGAffineTransform(translationX: -(sender.frame.origin.x), y: 0)
            }
        }
     
@@ -52,7 +54,15 @@ class MemberDetailsMainVC: UIViewController {
                 self.containerViewColl[i].alpha = 0
             }
         }
-    self.transformView(sender: sender)
+        if kSharedUserDefaults.getLanguageName() == "en"{
+            self.transformView(sender: sender)
+        }else{
+            print(sender.tag)
+            let abc = (self.btnSelectOutColl.count - 1)
+            print(abc - sender.tag,"checggg")
+            self.transformView(sender: self.btnSelectOutColl[abc - sender.tag])
+        }
+  //  self.transformView(sender: sender)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

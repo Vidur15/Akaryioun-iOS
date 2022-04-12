@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import KYDrawerController
 
 class SettingsVC: UIViewController {
 
@@ -14,6 +15,9 @@ class SettingsVC: UIViewController {
         super.viewDidLoad()
 
         self.setStatusBarColor()
+        if let drawerController = navigationController?.parent as? KYDrawerController {
+                   drawerController.screenEdgePanGestureEnabled = false
+               }
         // Do any additional setup after loading the view.
     }
     

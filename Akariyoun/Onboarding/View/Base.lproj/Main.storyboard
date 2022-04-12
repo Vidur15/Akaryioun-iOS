@@ -55,6 +55,9 @@
                                         <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="Member Detail"/>
+                                        </userDefinedRuntimeAttributes>
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" red="0.1137254902" green="0.38823529410000002" blue="0.64313725489999995" alpha="1" colorSpace="calibratedRGB"/>
@@ -103,6 +106,9 @@
                                                 <state key="normal" title="Who are we">
                                                     <color key="titleColor" red="0.1843137255" green="0.1843137255" blue="0.1843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="Who are we"/>
+                                                </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <action selector="selectionAction:" destination="ady-Qf-S9l" eventType="touchUpInside" id="Zol-H8-hQA"/>
                                                 </connections>
@@ -113,6 +119,9 @@
                                                 <state key="normal" title="Real Estate">
                                                     <color key="titleColor" red="0.1843137255" green="0.1843137255" blue="0.1843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="Real Estate"/>
+                                                </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <action selector="selectionAction:" destination="ady-Qf-S9l" eventType="touchUpInside" id="PmO-fe-0Fk"/>
                                                 </connections>
@@ -123,6 +132,9 @@
                                                 <state key="normal" title="Requests">
                                                     <color key="titleColor" red="0.1843137255" green="0.1843137255" blue="0.1843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="Requests"/>
+                                                </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <action selector="selectionAction:" destination="ady-Qf-S9l" eventType="touchUpInside" id="afI-7i-1oC"/>
                                                 </connections>
@@ -133,6 +145,9 @@
                                                 <state key="normal" title="Offers">
                                                     <color key="titleColor" red="0.1843137255" green="0.1843137255" blue="0.1843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="Offers"/>
+                                                </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <action selector="selectionAction:" destination="ady-Qf-S9l" eventType="touchUpInside" id="mYO-4l-qYb"/>
                                                 </connections>
@@ -216,6 +231,10 @@
                         <outletCollection property="containerViewColl" destination="ys4-tT-v5U" collectionClass="NSMutableArray" id="z5b-Ab-WHk"/>
                         <outletCollection property="containerViewColl" destination="pb8-ST-jma" collectionClass="NSMutableArray" id="3WL-Zp-VmU"/>
                         <outletCollection property="containerViewColl" destination="Tbh-oz-nYY" collectionClass="NSMutableArray" id="tT2-43-ob9"/>
+                        <outletCollection property="btnSelectOutColl" destination="3qu-Rn-qDC" collectionClass="NSMutableArray" id="NU0-Z5-aoh"/>
+                        <outletCollection property="btnSelectOutColl" destination="Wjs-lY-RQx" collectionClass="NSMutableArray" id="GK3-IO-cwN"/>
+                        <outletCollection property="btnSelectOutColl" destination="tt6-YA-mRK" collectionClass="NSMutableArray" id="bp2-ic-yJs"/>
+                        <outletCollection property="btnSelectOutColl" destination="Q08-x8-37E" collectionClass="NSMutableArray" id="IA3-5g-rGJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qdz-5q-SRZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -256,6 +275,9 @@
                                         <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="Message"/>
+                                        </userDefinedRuntimeAttributes>
                                     </label>
                                     <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vzz-fU-3oV">
                                         <rect key="frame" x="78.5" y="339" width="257" height="55"/>
@@ -272,6 +294,7 @@
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                 <real key="value" value="22.5"/>
                                             </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="Send"/>
                                         </userDefinedRuntimeAttributes>
                                     </button>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C6N-NW-jxR">
@@ -358,6 +381,9 @@
                                         <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="Property Management"/>
+                                        </userDefinedRuntimeAttributes>
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" red="0.1137254902" green="0.38823529410000002" blue="0.64313725489999995" alpha="1" colorSpace="calibratedRGB"/>
@@ -446,6 +472,9 @@
                                         <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="18"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="Search"/>
+                                        </userDefinedRuntimeAttributes>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pIM-d7-qwR">
                                         <rect key="frame" x="348" y="8" width="46" height="45"/>
@@ -483,6 +512,9 @@
                                                         <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="13"/>
                                                         <color key="textColor" red="0.1137254902" green="0.38823529410000002" blue="0.64313725489999995" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="Everyone"/>
+                                                        </userDefinedRuntimeAttributes>
                                                     </label>
                                                 </subviews>
                                                 <color key="backgroundColor" red="0.92941176469999998" green="0.96470588239999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -503,6 +535,9 @@
                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
                                                 <color key="textColor" red="0.18431372549019609" green="0.18431372549019609" blue="0.18431372549019609" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="Neighborhood selection"/>
+                                                </userDefinedRuntimeAttributes>
                                             </label>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -561,6 +596,9 @@
                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
                                                 <color key="textColor" red="0.1843137255" green="0.1843137255" blue="0.1843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="Property Type"/>
+                                                </userDefinedRuntimeAttributes>
                                             </label>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -619,6 +657,9 @@
                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
                                                 <color key="textColor" red="0.1843137255" green="0.1843137255" blue="0.1843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="Real estate adjective"/>
+                                                </userDefinedRuntimeAttributes>
                                             </label>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -677,6 +718,9 @@
                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
                                                 <color key="textColor" red="0.1843137255" green="0.1843137255" blue="0.1843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="Display type"/>
+                                                </userDefinedRuntimeAttributes>
                                             </label>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -706,6 +750,7 @@
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                 <real key="value" value="22.5"/>
                                             </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="Search"/>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="searchBtnAction:" destination="QIC-Xc-5nq" eventType="touchUpInside" id="cbU-DV-O3X"/>
@@ -726,6 +771,7 @@
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                 <real key="value" value="22.5"/>
                                             </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="Re"/>
                                         </userDefinedRuntimeAttributes>
                                     </button>
                                     <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0ZG-U6-U8U">
@@ -749,6 +795,7 @@
                                             <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
                                                 <real key="value" value="1"/>
                                             </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="Cancellation"/>
                                         </userDefinedRuntimeAttributes>
                                     </button>
                                 </subviews>
@@ -824,6 +871,9 @@
                                         <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="Other Services"/>
+                                        </userDefinedRuntimeAttributes>
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" red="0.1137254902" green="0.38823529410000002" blue="0.64313725489999995" alpha="1" colorSpace="calibratedRGB"/>
@@ -888,6 +938,9 @@
                                         <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="Carrers"/>
+                                        </userDefinedRuntimeAttributes>
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" red="0.1137254902" green="0.38823529410000002" blue="0.64313725489999995" alpha="1" colorSpace="calibratedRGB"/>
@@ -976,10 +1029,13 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Delete Account" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lNI-XV-zdx">
-                                        <rect key="frame" x="138.5" y="23.5" width="137.5" height="23.5"/>
+                                        <rect key="frame" x="129.5" y="21" width="155" height="28"/>
                                         <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="Delete Account"/>
+                                        </userDefinedRuntimeAttributes>
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" red="0.1137254902" green="0.38823529410000002" blue="0.64313725489999995" alpha="1" colorSpace="calibratedRGB"/>
@@ -992,14 +1048,19 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oNY-r6-2uv">
-                                <rect key="frame" x="18" y="134" width="378" height="75"/>
+                                <rect key="frame" x="18" y="134" width="378" height="90"/>
                                 <string key="text">Are you sure you want to delete your account? This will erase all your account data from the site. To delete your account, enter the OTP Code recieved on your mobile number below</string>
                                 <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey">
+                                        <string key="value">Are you sure you want to delete your account? This will erase all your account data from the site. To delete your account, enter the OTP Code recieved on your mobile number below</string>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </label>
                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VXU-fI-Qqw" customClass="SVPinView" customModule="SVPinView">
-                                <rect key="frame" x="18" y="233" width="378" height="55"/>
+                                <rect key="frame" x="18" y="248" width="378" height="55"/>
                                 <color key="backgroundColor" red="0.98404484790000002" green="0.98764570500000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="55" id="gNW-Cc-wj6"/>
@@ -1036,7 +1097,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rGX-6Q-B73">
-                                <rect key="frame" x="18" y="318" width="378" height="55"/>
+                                <rect key="frame" x="18" y="333" width="378" height="55"/>
                                 <color key="backgroundColor" red="0.1137254902" green="0.38823529410000002" blue="0.64313725489999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="55" id="jhh-Qu-Oxe"/>
@@ -1049,6 +1110,7 @@
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                         <real key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="Delete Account"/>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="deleteAccountAction:" destination="2tf-4Q-HyT" eventType="touchUpInside" id="1aG-WH-2Zl"/>
@@ -1108,6 +1170,9 @@
                                         <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="My Profile"/>
+                                        </userDefinedRuntimeAttributes>
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" red="0.1137254902" green="0.38823529410000002" blue="0.64313725489999995" alpha="1" colorSpace="calibratedRGB"/>
@@ -1202,6 +1267,9 @@
                                                 <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="KEEP IN TOUCH"/>
+                                                </userDefinedRuntimeAttributes>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zOZ-vc-ZA4">
                                                 <rect key="frame" x="134" y="512" width="146" height="30"/>
@@ -1356,6 +1424,9 @@
                                                                 <state key="normal" title="Who are we">
                                                                     <color key="titleColor" red="0.1843137255" green="0.1843137255" blue="0.1843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 </state>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="Who are we"/>
+                                                                </userDefinedRuntimeAttributes>
                                                                 <connections>
                                                                     <action selector="selectionAction:" destination="oOA-4J-eG4" eventType="touchUpInside" id="YIT-jW-P04"/>
                                                                     <action selector="selectionAction:" destination="ady-Qf-S9l" eventType="touchUpInside" id="hbm-vt-Cqt"/>
@@ -1367,6 +1438,9 @@
                                                                 <state key="normal" title="Real Estate">
                                                                     <color key="titleColor" red="0.1843137255" green="0.1843137255" blue="0.1843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 </state>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="Real Estate"/>
+                                                                </userDefinedRuntimeAttributes>
                                                                 <connections>
                                                                     <action selector="selectionAction:" destination="oOA-4J-eG4" eventType="touchUpInside" id="ICL-Vt-kGO"/>
                                                                     <action selector="selectionAction:" destination="ady-Qf-S9l" eventType="touchUpInside" id="tFn-NL-Epv"/>
@@ -1378,6 +1452,9 @@
                                                                 <state key="normal" title="Requests">
                                                                     <color key="titleColor" red="0.1843137255" green="0.1843137255" blue="0.1843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 </state>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="Requests"/>
+                                                                </userDefinedRuntimeAttributes>
                                                                 <connections>
                                                                     <action selector="selectionAction:" destination="ady-Qf-S9l" eventType="touchUpInside" id="24K-jM-7fe"/>
                                                                     <action selector="selectionAction:" destination="oOA-4J-eG4" eventType="touchUpInside" id="aJw-r2-YBX"/>
@@ -1389,6 +1466,9 @@
                                                                 <state key="normal" title="Offers">
                                                                     <color key="titleColor" red="0.1843137255" green="0.1843137255" blue="0.1843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 </state>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="Offers"/>
+                                                                </userDefinedRuntimeAttributes>
                                                                 <connections>
                                                                     <action selector="selectionAction:" destination="oOA-4J-eG4" eventType="touchUpInside" id="HDK-mx-hn4"/>
                                                                     <action selector="selectionAction:" destination="ady-Qf-S9l" eventType="touchUpInside" id="RP6-Ph-u4e"/>
@@ -1441,6 +1521,7 @@
                                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                                 <real key="value" value="10"/>
                                                             </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="Save"/>
                                                         </userDefinedRuntimeAttributes>
                                                         <connections>
                                                             <action selector="entryBtnAction:" destination="jme-J9-vN2" eventType="touchUpInside" id="bTg-q6-gLz"/>
@@ -1549,6 +1630,10 @@
                         <outlet property="profileImgView" destination="S8t-ro-1k1" id="nhl-WZ-VG7"/>
                         <outlet property="whoWeAreBottomConst" destination="bg3-rY-AAR" id="B0H-bo-Swb"/>
                         <outlet property="whoWeAreView" destination="1hK-im-dWG" id="BLa-g5-95S"/>
+                        <outletCollection property="btnSelectOutColl" destination="yaH-IT-dMe" collectionClass="NSMutableArray" id="291-Mz-4iH"/>
+                        <outletCollection property="btnSelectOutColl" destination="1hL-Wm-XGI" collectionClass="NSMutableArray" id="IBU-XX-EZz"/>
+                        <outletCollection property="btnSelectOutColl" destination="xL5-it-ipt" collectionClass="NSMutableArray" id="F0P-go-GOj"/>
+                        <outletCollection property="btnSelectOutColl" destination="hHC-tv-iOW" collectionClass="NSMutableArray" id="ilf-D8-Fzu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tg6-th-0me" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1583,6 +1668,9 @@
                                         <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="Account Settings"/>
+                                        </userDefinedRuntimeAttributes>
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" red="0.1137254902" green="0.38823529410000002" blue="0.64313725489999995" alpha="1" colorSpace="calibratedRGB"/>
@@ -1608,6 +1696,9 @@
                                                         <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="16"/>
                                                         <color key="textColor" red="0.27450980390000002" green="0.27450980390000002" blue="0.27450980390000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="Username"/>
+                                                        </userDefinedRuntimeAttributes>
                                                     </label>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B4T-om-Pfd">
                                                         <rect key="frame" x="20" y="46.5" width="374" height="55"/>
@@ -1647,6 +1738,9 @@
                                                         <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="16"/>
                                                         <color key="textColor" red="0.27450980390000002" green="0.27450980390000002" blue="0.27450980390000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="Email"/>
+                                                        </userDefinedRuntimeAttributes>
                                                     </label>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fdf-ZI-0vt">
                                                         <rect key="frame" x="20" y="46.5" width="374" height="55"/>
@@ -1686,6 +1780,9 @@
                                                         <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="16"/>
                                                         <color key="textColor" red="0.27450980390000002" green="0.27450980390000002" blue="0.27450980390000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="First Name"/>
+                                                        </userDefinedRuntimeAttributes>
                                                     </label>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2oz-a6-LRD">
                                                         <rect key="frame" x="20" y="46.5" width="374" height="55"/>
@@ -1725,6 +1822,9 @@
                                                         <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="16"/>
                                                         <color key="textColor" red="0.27450980390000002" green="0.27450980390000002" blue="0.27450980390000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="Last Name"/>
+                                                        </userDefinedRuntimeAttributes>
                                                     </label>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fUi-HQ-BVq">
                                                         <rect key="frame" x="20" y="46.5" width="374" height="55"/>
@@ -1764,6 +1864,9 @@
                                                         <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="16"/>
                                                         <color key="textColor" red="0.27450980390000002" green="0.27450980390000002" blue="0.27450980390000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="Facebook"/>
+                                                        </userDefinedRuntimeAttributes>
                                                     </label>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2te-Fp-fiB">
                                                         <rect key="frame" x="20" y="46.5" width="374" height="55"/>
@@ -1803,6 +1906,9 @@
                                                         <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="16"/>
                                                         <color key="textColor" red="0.27450980390000002" green="0.27450980390000002" blue="0.27450980390000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="Twitter"/>
+                                                        </userDefinedRuntimeAttributes>
                                                     </label>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gs5-sJ-nzV">
                                                         <rect key="frame" x="20" y="46.5" width="374" height="55"/>
@@ -1842,6 +1948,9 @@
                                                         <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="16"/>
                                                         <color key="textColor" red="0.27450980390000002" green="0.27450980390000002" blue="0.27450980390000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="LinkedIn"/>
+                                                        </userDefinedRuntimeAttributes>
                                                     </label>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sSM-de-QUF">
                                                         <rect key="frame" x="20" y="46.5" width="374" height="55"/>
@@ -1887,6 +1996,7 @@
                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                         <real key="value" value="10"/>
                                                     </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="Update"/>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <action selector="entryBtnAction:" destination="jme-J9-vN2" eventType="touchUpInside" id="sD1-iV-ziv"/>
@@ -1997,6 +2107,9 @@
                                         <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="Account Settings"/>
+                                        </userDefinedRuntimeAttributes>
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" red="0.1137254902" green="0.38823529410000002" blue="0.64313725489999995" alpha="1" colorSpace="calibratedRGB"/>
@@ -2031,6 +2144,9 @@
                                         <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="Account"/>
+                                        </userDefinedRuntimeAttributes>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qr3-tx-1ZI">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="60"/>
@@ -2082,6 +2198,9 @@
                                         <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="Delete Account"/>
+                                        </userDefinedRuntimeAttributes>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vz9-ax-31R">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="60"/>
@@ -2158,6 +2277,9 @@
                                         <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="Government Loans"/>
+                                        </userDefinedRuntimeAttributes>
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" red="0.1137254902" green="0.38823529410000002" blue="0.64313725489999995" alpha="1" colorSpace="calibratedRGB"/>
@@ -2223,6 +2345,9 @@
                                         <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="Neighborhood selection"/>
+                                        </userDefinedRuntimeAttributes>
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" red="0.1137254902" green="0.38823529410000002" blue="0.64313725489999995" alpha="1" colorSpace="calibratedRGB"/>
@@ -2318,6 +2443,9 @@
                                         <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="Directory"/>
+                                        </userDefinedRuntimeAttributes>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dxL-wu-oWI">
                                         <rect key="frame" x="356" y="12" width="46" height="46"/>
@@ -2613,6 +2741,9 @@
                                                 <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="18"/>
                                                 <color key="textColor" red="0.1843137255" green="0.1843137255" blue="0.1843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="Get Navigation directions"/>
+                                                </userDefinedRuntimeAttributes>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v5s-Qs-zag">
                                                 <rect key="frame" x="0.0" y="0.0" width="390" height="45"/>
@@ -2709,6 +2840,9 @@
                                         <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="Terms &amp; Conditions"/>
+                                        </userDefinedRuntimeAttributes>
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" red="0.1137254902" green="0.38823529410000002" blue="0.64313725489999995" alpha="1" colorSpace="calibratedRGB"/>
@@ -2802,6 +2936,9 @@
                                         <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="News Details"/>
+                                        </userDefinedRuntimeAttributes>
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" red="0.1137254902" green="0.38823529410000002" blue="0.64313725489999995" alpha="1" colorSpace="calibratedRGB"/>
@@ -2873,6 +3010,9 @@
                                                 <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="22"/>
                                                 <color key="textColor" red="0.1843137255" green="0.1843137255" blue="0.1843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="More News"/>
+                                                </userDefinedRuntimeAttributes>
                                             </label>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -2960,6 +3100,9 @@
                                         <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="Members"/>
+                                        </userDefinedRuntimeAttributes>
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" red="0.1137254902" green="0.38823529410000002" blue="0.64313725489999995" alpha="1" colorSpace="calibratedRGB"/>
@@ -3024,6 +3167,9 @@
                                         <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="News"/>
+                                        </userDefinedRuntimeAttributes>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GwZ-pH-do8">
                                         <rect key="frame" x="358" y="12" width="46" height="46"/>
@@ -3149,6 +3295,9 @@
                                         <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="Finance"/>
+                                        </userDefinedRuntimeAttributes>
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" red="0.1137254902" green="0.38823529410000002" blue="0.64313725489999995" alpha="1" colorSpace="calibratedRGB"/>
@@ -3168,6 +3317,9 @@
                                         <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="Government Loans"/>
+                                        </userDefinedRuntimeAttributes>
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="352468_arrow_right_icon (1)" translatesAutoresizingMaskIntoConstraints="NO" id="AVa-8m-XFQ">
                                         <rect key="frame" x="339" y="17.5" width="25" height="25"/>
@@ -3209,6 +3361,9 @@
                                         <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="Private Loans"/>
+                                        </userDefinedRuntimeAttributes>
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="352468_arrow_right_icon (1)" translatesAutoresizingMaskIntoConstraints="NO" id="4Rx-Ka-L6v">
                                         <rect key="frame" x="339" y="17.5" width="25" height="25"/>
@@ -3292,6 +3447,9 @@
                                         <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="Request Details"/>
+                                        </userDefinedRuntimeAttributes>
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" red="0.1137254902" green="0.38823529410000002" blue="0.64313725489999995" alpha="1" colorSpace="calibratedRGB"/>
@@ -3432,6 +3590,9 @@
                                         <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="Add Request"/>
+                                        </userDefinedRuntimeAttributes>
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" red="0.1137254902" green="0.38823529410000002" blue="0.64313725489999995" alpha="1" colorSpace="calibratedRGB"/>
@@ -3457,6 +3618,9 @@
                                                         <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="16"/>
                                                         <color key="textColor" red="0.27450980392156865" green="0.27450980392156865" blue="0.27450980392156865" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="Request Title"/>
+                                                        </userDefinedRuntimeAttributes>
                                                     </label>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jbu-sI-Axv">
                                                         <rect key="frame" x="20" y="46.5" width="374" height="55"/>
@@ -3496,6 +3660,9 @@
                                                         <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="16"/>
                                                         <color key="textColor" red="0.27450980390000002" green="0.27450980390000002" blue="0.27450980390000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="Request Description"/>
+                                                        </userDefinedRuntimeAttributes>
                                                     </label>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rn8-le-L9V">
                                                         <rect key="frame" x="20" y="46.5" width="374" height="155"/>
@@ -3543,6 +3710,7 @@
                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                         <real key="value" value="22.5"/>
                                                     </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="Add Request"/>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <action selector="addRequestAction:" destination="p6n-Rg-wT5" eventType="touchUpInside" id="shU-b1-Tl3"/>
@@ -3630,6 +3798,9 @@
                                         <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="Add Request"/>
+                                        </userDefinedRuntimeAttributes>
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" red="0.1137254902" green="0.38823529410000002" blue="0.64313725489999995" alpha="1" colorSpace="calibratedRGB"/>
@@ -3646,6 +3817,9 @@
                                 <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="16"/>
                                 <color key="textColor" red="0.058823529409999999" green="0.058823529409999999" blue="0.058823529409999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="Choose a member to submit a request"/>
+                                </userDefinedRuntimeAttributes>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="0Sc-Dk-SMx">
                                 <rect key="frame" x="0.0" y="174.5" width="414" height="687.5"/>
@@ -3708,6 +3882,9 @@
                                         <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="REQUESTS"/>
+                                        </userDefinedRuntimeAttributes>
                                     </label>
                                     <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RcT-Yn-eY0">
                                         <rect key="frame" x="317.5" y="12.5" width="86.5" height="45"/>
@@ -3725,6 +3902,9 @@
                                                 <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="18"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="Add"/>
+                                                </userDefinedRuntimeAttributes>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MgP-o3-dlo">
                                                 <rect key="frame" x="0.0" y="0.0" width="86.5" height="45"/>
@@ -3870,6 +4050,9 @@
                                         <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="Property Detail"/>
+                                        </userDefinedRuntimeAttributes>
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" red="0.1137254902" green="0.38823529410000002" blue="0.64313725489999995" alpha="1" colorSpace="calibratedRGB"/>
@@ -3901,6 +4084,9 @@
                                                         <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="14"/>
                                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="Author Info"/>
+                                                        </userDefinedRuntimeAttributes>
                                                     </label>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="IYd-V5-ZIV">
                                                         <rect key="frame" x="10" y="46" width="55" height="55"/>
@@ -3985,6 +4171,9 @@
                                                         <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="15"/>
                                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="Message"/>
+                                                        </userDefinedRuntimeAttributes>
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nSf-Oe-hUl">
                                                         <rect key="frame" x="0.0" y="0.0" width="138.5" height="45"/>
@@ -4029,6 +4218,9 @@
                                                         <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="15"/>
                                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="Participate"/>
+                                                        </userDefinedRuntimeAttributes>
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HP3-8y-OhU">
                                                         <rect key="frame" x="0.0" y="0.0" width="152.5" height="45"/>
@@ -4076,6 +4268,9 @@
                                                 <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="16"/>
                                                 <color key="textColor" red="0.1137254902" green="0.38823529410000002" blue="0.64313725489999995" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="Property Information"/>
+                                                </userDefinedRuntimeAttributes>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Call : 053335666" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="euG-iG-R7F">
                                                 <rect key="frame" x="20" y="593" width="124" height="21"/>
@@ -4173,6 +4368,9 @@
                                                 <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="16"/>
                                                 <color key="textColor" red="0.1137254902" green="0.38823529410000002" blue="0.64313725489999995" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="Earth Information"/>
+                                                </userDefinedRuntimeAttributes>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GZV-gn-ueK">
                                                 <rect key="frame" x="20" y="779.5" width="374" height="95"/>
@@ -4188,18 +4386,27 @@
                                                                         <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="13"/>
                                                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <nil key="highlightedColor"/>
+                                                                        <userDefinedRuntimeAttributes>
+                                                                            <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="Post Number"/>
+                                                                        </userDefinedRuntimeAttributes>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Block Number" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OUE-j9-WHD">
                                                                         <rect key="frame" x="124.5" y="0.0" width="125" height="43"/>
                                                                         <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="13"/>
                                                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <nil key="highlightedColor"/>
+                                                                        <userDefinedRuntimeAttributes>
+                                                                            <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="Block Number"/>
+                                                                        </userDefinedRuntimeAttributes>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No. Planned" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7An-SH-t7c">
                                                                         <rect key="frame" x="249.5" y="0.0" width="124.5" height="43"/>
                                                                         <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="13"/>
                                                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <nil key="highlightedColor"/>
+                                                                        <userDefinedRuntimeAttributes>
+                                                                            <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="No. Planned"/>
+                                                                        </userDefinedRuntimeAttributes>
                                                                     </label>
                                                                 </subviews>
                                                             </stackView>
@@ -4276,6 +4483,9 @@
                                                 <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="16"/>
                                                 <color key="textColor" red="0.1137254902" green="0.38823529410000002" blue="0.64313725489999995" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="Length and Limits"/>
+                                                </userDefinedRuntimeAttributes>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zmT-oa-J9Z">
                                                 <rect key="frame" x="20" y="929" width="374" height="245"/>
@@ -4291,18 +4501,27 @@
                                                                         <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="13"/>
                                                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <nil key="highlightedColor"/>
+                                                                        <userDefinedRuntimeAttributes>
+                                                                            <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="Parties"/>
+                                                                        </userDefinedRuntimeAttributes>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Border" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c3j-24-f79">
                                                                         <rect key="frame" x="124.5" y="0.0" width="125" height="43"/>
                                                                         <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="13"/>
                                                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <nil key="highlightedColor"/>
+                                                                        <userDefinedRuntimeAttributes>
+                                                                            <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="The Border"/>
+                                                                        </userDefinedRuntimeAttributes>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lengths" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UhF-qK-4bK">
                                                                         <rect key="frame" x="249.5" y="0.0" width="124.5" height="43"/>
                                                                         <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="13"/>
                                                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <nil key="highlightedColor"/>
+                                                                        <userDefinedRuntimeAttributes>
+                                                                            <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="Lengths"/>
+                                                                        </userDefinedRuntimeAttributes>
                                                                     </label>
                                                                 </subviews>
                                                             </stackView>
@@ -4337,12 +4556,18 @@
                                                                         <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="13"/>
                                                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <nil key="highlightedColor"/>
+                                                                        <userDefinedRuntimeAttributes>
+                                                                            <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="North"/>
+                                                                        </userDefinedRuntimeAttributes>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Neighbour" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mj3-yM-fe0">
                                                                         <rect key="frame" x="124.5" y="0.0" width="125" height="45"/>
                                                                         <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="13"/>
                                                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <nil key="highlightedColor"/>
+                                                                        <userDefinedRuntimeAttributes>
+                                                                            <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="Neighbour"/>
+                                                                        </userDefinedRuntimeAttributes>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pm 29" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Ck-Bl-sah">
                                                                         <rect key="frame" x="249.5" y="0.0" width="124.5" height="45"/>
@@ -4383,12 +4608,18 @@
                                                                         <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="13"/>
                                                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <nil key="highlightedColor"/>
+                                                                        <userDefinedRuntimeAttributes>
+                                                                            <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="South"/>
+                                                                        </userDefinedRuntimeAttributes>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Neighbour" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VwO-Bp-9vI">
                                                                         <rect key="frame" x="124.5" y="0.0" width="125" height="45"/>
                                                                         <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="13"/>
                                                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <nil key="highlightedColor"/>
+                                                                        <userDefinedRuntimeAttributes>
+                                                                            <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="Neighbour"/>
+                                                                        </userDefinedRuntimeAttributes>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pm 29" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bGZ-Uc-21E">
                                                                         <rect key="frame" x="249.5" y="0.0" width="124.5" height="45"/>
@@ -4429,6 +4660,9 @@
                                                                         <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="13"/>
                                                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <nil key="highlightedColor"/>
+                                                                        <userDefinedRuntimeAttributes>
+                                                                            <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="East"/>
+                                                                        </userDefinedRuntimeAttributes>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Street 2.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ElU-73-Z45">
                                                                         <rect key="frame" x="124.5" y="0.0" width="125" height="45"/>
@@ -4475,6 +4709,9 @@
                                                                         <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="13"/>
                                                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <nil key="highlightedColor"/>
+                                                                        <userDefinedRuntimeAttributes>
+                                                                            <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="West"/>
+                                                                        </userDefinedRuntimeAttributes>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Street 1.5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2JX-94-3rY">
                                                                         <rect key="frame" x="124.5" y="0.0" width="125" height="45"/>
@@ -4650,6 +4887,9 @@
                                         <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="Interactive Map"/>
+                                        </userDefinedRuntimeAttributes>
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" red="0.1137254902" green="0.38823529410000002" blue="0.64313725489999995" alpha="1" colorSpace="calibratedRGB"/>
@@ -4750,6 +4990,9 @@
                                         <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="REAL ESTATE"/>
+                                        </userDefinedRuntimeAttributes>
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="search-2" translatesAutoresizingMaskIntoConstraints="NO" id="WCn-rJ-vR8">
                                         <rect key="frame" x="364" y="15" width="40" height="40"/>
@@ -4852,6 +5095,9 @@
                                         <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="OTP Verification"/>
+                                        </userDefinedRuntimeAttributes>
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" red="0.1137254902" green="0.38823529410000002" blue="0.64313725489999995" alpha="1" colorSpace="calibratedRGB"/>
@@ -4880,6 +5126,9 @@
                                                 <fontDescription key="fontDescription" name="Poppins-Light" family="Poppins" pointSize="17"/>
                                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="Please enter 6 digits code which has been sent to your registered mobile number"/>
+                                                </userDefinedRuntimeAttributes>
                                             </label>
                                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BaJ-m9-C7k" customClass="SVPinView" customModule="SVPinView">
                                                 <rect key="frame" x="20" y="388" width="374" height="55"/>
@@ -4939,6 +5188,7 @@
                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                         <real key="value" value="22.5"/>
                                                     </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="Verify"/>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <action selector="verifyBtnAction:" destination="0KG-aq-PUw" eventType="touchUpInside" id="95J-tt-atV"/>
@@ -4959,6 +5209,7 @@
                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                         <real key="value" value="22.5"/>
                                                     </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="Resend Code"/>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <action selector="resendBtnAction:" destination="0KG-aq-PUw" eventType="touchUpInside" id="AQ0-HG-udu"/>
@@ -5063,6 +5314,9 @@
                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="Sign in"/>
+                                                </userDefinedRuntimeAttributes>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sQd-1x-6gk">
                                                 <rect key="frame" x="0.0" y="0.0" width="128.5" height="50"/>
@@ -5105,6 +5359,9 @@
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="20"/>
                                                 <color key="textColor" red="0.1137254902" green="0.38823529410000002" blue="0.64313725489999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="Logout"/>
+                                                </userDefinedRuntimeAttributes>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w4C-QS-K9D">
                                                 <rect key="frame" x="0.0" y="0.0" width="128.5" height="50"/>
@@ -5201,6 +5458,9 @@
                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
                                                 <color key="textColor" red="0.23137254901960785" green="0.23137254901960785" blue="0.23137254901960785" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="Licenced By Rent"/>
+                                                </userDefinedRuntimeAttributes>
                                             </label>
                                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Nec-DI-hDq">
                                                 <rect key="frame" x="0.0" y="384" width="414" height="349"/>
@@ -5317,12 +5577,18 @@
                                 <fontDescription key="fontDescription" name="Poppins-Bold" family="Poppins" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="Log In"/>
+                                </userDefinedRuntimeAttributes>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mobile Number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iKO-Rj-ipk">
                                 <rect key="frame" x="138" y="327" width="138.5" height="25.5"/>
                                 <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="18"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="Mobile Number"/>
+                                </userDefinedRuntimeAttributes>
                             </label>
                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Bp-DL-kYD">
                                 <rect key="frame" x="20" y="376.5" width="374" height="55"/>
@@ -5372,6 +5638,7 @@
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                         <real key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="Sign In"/>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="entryBtnAction:" destination="jme-J9-vN2" eventType="touchUpInside" id="IcC-QV-Sm1"/>
@@ -5390,6 +5657,9 @@
                                 <state key="selected" title="Already have an account? Log In">
                                     <color key="titleColor" red="0.11372549019607843" green="0.38823529411764707" blue="0.64313725490196072" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="Don't have an account? Sign up"/>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="signupBtnAction:" destination="jme-J9-vN2" eventType="touchUpInside" id="hL6-BU-2gl"/>
                                 </connections>
@@ -5399,6 +5669,9 @@
                                 <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="17"/>
                                 <color key="textColor" red="0.1137254902" green="0.38823529410000002" blue="0.64313725489999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="I Agree to "/>
+                                </userDefinedRuntimeAttributes>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="meB-VC-5sd">
                                 <rect key="frame" x="141" y="591" width="207" height="25"/>
@@ -5409,6 +5682,9 @@
                                 <state key="normal" title="Terms &amp; Conditions and">
                                     <color key="titleColor" red="0.1137254902" green="0.38823529410000002" blue="0.64313725489999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="Terms &amp; Conditions and"/>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="termsConsAction:" destination="jme-J9-vN2" eventType="touchUpInside" id="m55-NS-zFl"/>
                                 </connections>
@@ -5422,6 +5698,9 @@
                                 <state key="normal" title="Privacy Policy">
                                     <color key="titleColor" red="0.1137254902" green="0.38823529410000002" blue="0.64313725489999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="Privacy Policy"/>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="privacyBtnAction:" destination="jme-J9-vN2" eventType="touchUpInside" id="Lx4-ME-pmR"/>
                                 </connections>
@@ -5498,6 +5777,9 @@
                                         <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="Contact Us"/>
+                                        </userDefinedRuntimeAttributes>
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" red="0.1137254902" green="0.38823529410000002" blue="0.64313725489999995" alpha="1" colorSpace="calibratedRGB"/>
@@ -5523,6 +5805,9 @@
                                                         <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="16"/>
                                                         <color key="textColor" red="0.27450980390000002" green="0.27450980390000002" blue="0.27450980390000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="Your Name"/>
+                                                        </userDefinedRuntimeAttributes>
                                                     </label>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MKt-kJ-G9v">
                                                         <rect key="frame" x="20" y="46.5" width="374" height="55"/>
@@ -5562,6 +5847,9 @@
                                                         <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="16"/>
                                                         <color key="textColor" red="0.27450980390000002" green="0.27450980390000002" blue="0.27450980390000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="Your Email"/>
+                                                        </userDefinedRuntimeAttributes>
                                                     </label>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KfG-zO-iL9">
                                                         <rect key="frame" x="20" y="46.5" width="374" height="55"/>
@@ -5601,6 +5889,9 @@
                                                         <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="16"/>
                                                         <color key="textColor" red="0.27450980390000002" green="0.27450980390000002" blue="0.27450980390000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="Phone Number"/>
+                                                        </userDefinedRuntimeAttributes>
                                                     </label>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xwE-LE-Ubi">
                                                         <rect key="frame" x="20" y="46.5" width="374" height="55"/>
@@ -5640,6 +5931,9 @@
                                                         <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="16"/>
                                                         <color key="textColor" red="0.27450980390000002" green="0.27450980390000002" blue="0.27450980390000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="Subject"/>
+                                                        </userDefinedRuntimeAttributes>
                                                     </label>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gBS-Dv-Phx">
                                                         <rect key="frame" x="20" y="46.5" width="374" height="55"/>
@@ -5679,6 +5973,9 @@
                                                         <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="16"/>
                                                         <color key="textColor" red="0.27450980390000002" green="0.27450980390000002" blue="0.27450980390000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="Message"/>
+                                                        </userDefinedRuntimeAttributes>
                                                     </label>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e02-oQ-BbH">
                                                         <rect key="frame" x="20" y="46.5" width="374" height="155"/>
@@ -5725,6 +6022,7 @@
                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                         <real key="value" value="10"/>
                                                     </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="Send"/>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <action selector="entryBtnAction:" destination="jme-J9-vN2" eventType="touchUpInside" id="ueC-M8-ygP"/>
@@ -5736,6 +6034,9 @@
                                                 <fontDescription key="fontDescription" name="Poppins-Bold" family="Poppins" pointSize="24"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="Locate Us"/>
+                                                </userDefinedRuntimeAttributes>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Realtors" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6jE-GQ-L1I">
                                                 <rect key="frame" x="20" y="861" width="382" height="25.5"/>

@@ -37,15 +37,17 @@ class AddRequestVC: UIViewController {
         self.descTextView.addPadding(to: self.descTextView)
         
         if self.isFrom == 1{
-            self.topLvl.text = "Add Request"
-            self.topDescLnl.text = "Request Description"
-            self.topRequestLbl.text = "Request Title"
+            self.topLvl.text = "Add Request".localized()
+            self.topDescLnl.text = "Request Description".localized()
+            self.topRequestLbl.text = "Request Title".localized()
         }else{
-            self.topLvl.text = "Add Offer"
-            self.topDescLnl.text = "Offer Description"
-            self.topRequestLbl.text = "Offer Title"
+            self.topLvl.text = "Add Offer".localized()
+            self.topDescLnl.text = "Offer Description".localized()
+            self.topRequestLbl.text = "Offer Title".localized()
         }
         
+        self.titleTextField.textAlignment = kSharedUserDefaults.getLanguageName() == "en" ? .left : .right
+        self.descTextView.textAlignment = kSharedUserDefaults.getLanguageName() == "en" ? .left : .right
         // Do any additional setup after loading the view.
     }
     
@@ -55,10 +57,10 @@ class AddRequestVC: UIViewController {
     
     @IBAction func addRequestAction(_ sender: UIButton) {
         if self.titleTextField.text?.count == 0{
-            CommonUtils.showToast(message: "Please enter title")
+            CommonUtils.showToast(message: "Please enter title".localized())
             return
         }else if self.descTextView.text.count == 0{
-            CommonUtils.showToast(message: "Please enter description")
+            CommonUtils.showToast(message: "Please enter description".localized())
             return
         }else{
             self.hitAddrequestApi()

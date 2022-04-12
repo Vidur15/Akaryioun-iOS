@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import KYDrawerController
 
 class FinanceVC: UIViewController {
 
@@ -15,6 +16,10 @@ class FinanceVC: UIViewController {
         super.viewDidLoad()
         
         self.setStatusBarColor()
+        
+        if let drawerController = navigationController?.parent as? KYDrawerController {
+                   drawerController.screenEdgePanGestureEnabled = false
+               }
         // Do any additional setup after loading the view.
     }
     

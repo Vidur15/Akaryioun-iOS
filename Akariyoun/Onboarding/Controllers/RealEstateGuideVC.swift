@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import KYDrawerController
 
 class RealEstateGuideVC: UIViewController,UITextFieldDelegate{
 
@@ -31,8 +32,12 @@ class RealEstateGuideVC: UIViewController,UITextFieldDelegate{
         self.searchTextF.delegate = self
         self.searchTextF.returnKeyType = .search
         self.searchTextF.setLeftPaddingPoints(16)
-        
+        self.searchTextF.textAlignment = kSharedUserDefaults.getLanguageName() == "en" ? .left : .right
         self.getDirectoryList()
+        
+        if let drawerController = navigationController?.parent as? KYDrawerController {
+                   drawerController.screenEdgePanGestureEnabled = false
+               }
         // Do any additional setup after loading the view.
     }
     
@@ -101,8 +106,9 @@ extension RealEstateGuideVC: UITableViewDelegate,UITableViewDataSource {
         guard let cell = self.mainTableView.dequeueReusableCell(withIdentifier: "RealEstateGuideTVC",
                 for: indexPath) as? RealEstateGuideTVC else { return UITableViewCell() }
         cell.selectionStyle = .none
-        cell.locationLbl.text = self.directoryModel?.data?.directories?.data?[indexPath.row].office_location ?? ""
-        cell.areaNameLbl.text = self.directoryModel?.data?.directories?.data?[indexPath.row].office_area_name ?? ""
+        cell.locationLbl.text = kSharedUserDefaults.getLanguageName() == "en" ? self.directoryModel?.data?.directories?.data?[indexPath.row].office_location ?? "" : self.directoryModel?.data?.directories?.data?[indexPath.row].office_location ?? ""
+        cell.areaNameLbl.text =
+            kSharedUserDefaults.getLanguageName() == "en" ? self.directoryModel?.data?.directories?.data?[indexPath.row].office_area_name ?? "" : self.directoryModel?.data?.directories?.data?[indexPath.row].office_area_name_ar ?? ""
         return cell
     }
     

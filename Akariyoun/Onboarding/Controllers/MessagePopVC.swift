@@ -24,6 +24,9 @@ class MessagePopVC: UIViewController {
         if let drawerController = navigationController?.parent as? KYDrawerController {
             drawerController.screenEdgePanGestureEnabled = false
         }
+//        self.mainTextView.addPadding(to: self.mainTextView)
+//        self.mainTextView.textAlignment = kSharedUserDefaults.getLanguageName() == "en" ? .left : .right
+       
         // Do any additional setup after loading the view.
     }
     

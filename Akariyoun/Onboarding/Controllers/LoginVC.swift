@@ -35,6 +35,8 @@ class LoginVC: UIViewController {
         self.privacyBtnOut.isHidden = true
         self.termsCondsBtnOut.isHidden = true
         self.iAgreeLbl.isHidden = true
+        
+        self.mobileTextF.setLeftPaddingPoints(16)
         // Do any additional setup after loading the view.
     }
     
@@ -45,7 +47,7 @@ class LoginVC: UIViewController {
     @IBAction func entryBtnAction(_ sender: UIButton) {
         
         if self.mobileTextF.text?.count == 0{
-            CommonUtils.showToast(message: "Please enter mobile number")
+            CommonUtils.showToast(message: "Please enter mobile number".localized())
             return
         }else{
             if self.selected == "login"{
@@ -153,17 +155,17 @@ class LoginVC: UIViewController {
     @IBAction func signupBtnAction(_ sender: UIButton) {
         sender.isSelected = !sender.isSelected
         if sender.isSelected{
-            self.signupLoginLbl.text = "Sign Up"
-            self.changeTextBtn.setTitle("Already have an account? Log In", for: .normal)
-            self.signupBtnOut.setTitle("Signup", for: .normal)
+            self.signupLoginLbl.text = "Sign Up".localized()
+            self.changeTextBtn.setTitle("Already have an account? Log In".localized(), for: .normal)
+            self.signupBtnOut.setTitle("Signup".localized(), for: .normal)
              self.selected = "signup"
             self.privacyBtnOut.isHidden = false
             self.termsCondsBtnOut.isHidden = false
             self.iAgreeLbl.isHidden = false
         }else{
-            self.selected = "login"
-            self.signupLoginLbl.text = "Log In"
-            self.changeTextBtn.setTitle("Don't have an account? Sign Up", for: .normal)
+            self.selected = "login".localized()
+            self.signupLoginLbl.text = "Log In".localized()
+            self.changeTextBtn.setTitle("Don't have an account? Sign Up".localized(), for: .normal)
             self.signupBtnOut.setTitle("Log In", for: .normal)
             self.privacyBtnOut.isHidden = true
             self.termsCondsBtnOut.isHidden = true

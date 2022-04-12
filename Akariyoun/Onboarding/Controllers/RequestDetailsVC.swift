@@ -39,9 +39,9 @@ class RequestDetailsVC: UIViewController {
     func setData(){
         self.nameLbl.text = "\(self.obj?.user?.first_name ?? "") \(self.obj?.user?.last_name ?? "")"
         self.mainImgView.downlodeImage(serviceurl: self.obj?.user?.profile_pic ?? "", placeHolder: UIImage.init(named: "2024644_login_user_avatar_person_users_icon"))
-        self.dateLbl.text = "Posted on : \(self.obj?.created_at ?? "")"
-        self.requestTitleLbl.text = self.obj?.title ?? ""
-        self.requestDescLbl.text = self.obj?.description ?? ""
+        self.dateLbl.text = "Posted on :".localized() + "\(self.obj?.created_at ?? "")"
+        self.requestTitleLbl.text = kSharedUserDefaults.getLanguageName() == "en" ? self.obj?.title ?? "" : self.obj?.title_ar ?? ""
+        self.requestDescLbl.text = kSharedUserDefaults.getLanguageName() == "en" ? self.obj?.description ?? "" : self.obj?.description_ar ?? ""
         self.contactLbl.text = self.obj?.user?.mobile_number ?? ""
     }
     

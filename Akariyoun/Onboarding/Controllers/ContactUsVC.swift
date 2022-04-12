@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import KYDrawerController
 
 class ContactUsVC: UIViewController {
 
@@ -38,8 +39,19 @@ class ContactUsVC: UIViewController {
         self.subjectTextF.setLeftPaddingPoints(16)
         self.messageTextView.addPadding(to: self.messageTextView)
         
+        
+        self.nameTextF.textAlignment = kSharedUserDefaults.getLanguageName() == "en" ? .left : .right
+        self.emailTextF.textAlignment = kSharedUserDefaults.getLanguageName() == "en" ? .left : .right
+        self.mobileTextF.textAlignment = kSharedUserDefaults.getLanguageName() == "en" ? .left : .right
+        self.subjectTextF.textAlignment = kSharedUserDefaults.getLanguageName() == "en" ? .left : .right
+        self.messageTextView.textAlignment = kSharedUserDefaults.getLanguageName() == "en" ? .left : .right
+        
         self.setStatusBarColor()
         self.getContactUsApi()
+        
+        if let drawerController = navigationController?.parent as? KYDrawerController {
+                   drawerController.screenEdgePanGestureEnabled = false
+               }
         // Do any additional setup after loading the view.
     }
     
@@ -57,7 +69,7 @@ class ContactUsVC: UIViewController {
                          if dicResponse["success"] as? Bool ?? false{
                             let dataDict = kSharedInstance.getDictionary(dicResponse["data"])
                             let privacyDict = kSharedInstance.getDictionary(dataDict["contactus"])
-                            self.addressLbl.text = privacyDict["address"] as? String ?? ""
+                            self.addressLbl.text = kSharedUserDefaults.getLanguageName() == "en" ?  privacyDict["address"] as? String ?? "" : privacyDict["address_ar"] as? String ?? ""
                          }else{
                              showAlertMessage.alert(message: String.getString(dicResponse["message"]))
                          }
@@ -78,19 +90,19 @@ class ContactUsVC: UIViewController {
     
     @IBAction func sendBtnAction(_ sender: UIButton) {
         if self.nameTextF.text?.count == 0{
-            CommonUtils.showToast(message: "Please enter name")
+            CommonUtils.showToast(message: "Please enter name".localized())
             return
         }else if self.emailTextF.text?.count == 0{
-            CommonUtils.showToast(message: "Please enter email")
+            CommonUtils.showToast(message: "Please enter email".localized())
                        return
         }else if self.mobileTextF.text?.count == 0{
-            CommonUtils.showToast(message: "Please enter mobile number")
+            CommonUtils.showToast(message: "Please enter mobile number".localized())
                        return
         }else if self.subjectTextF.text?.count == 0{
-            CommonUtils.showToast(message: "Please enter subject")
+            CommonUtils.showToast(message: "Please enter subject".localized())
                        return
         }else if self.messageTextView.text.count == 0{
-            CommonUtils.showToast(message: "Please enter message")
+            CommonUtils.showToast(message: "Please enter message".localized())
                        return
         }else{
             self.hitContactUsApi()
@@ -110,7 +122,7 @@ class ContactUsVC: UIViewController {
                             switch statusCodes {
                             case 200:
                                 if dicResponse["success"] as? Bool ?? false{
-                                  showAlertMessage.alert1(message: "Query Submitted", sender: self)
+                                  showAlertMessage.alert1(message: "Query Submitted".localized(), sender: self)
                                //     self.navigationController?.popViewController(animated: true)
                                 }else{
                                     showAlertMessage.alert(message: String.getString(dicResponse["message"]))

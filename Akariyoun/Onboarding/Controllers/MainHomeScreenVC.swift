@@ -24,8 +24,8 @@ class MainHomeScreenVC: UIViewController {
     
     var numberOfPages = 7
     
-    var headingArr = ["Search Map","Property Search","Realestate","Members","Requests","Directory","Property Management","News","Finance"]
-    var descArr = ["Find a site to offer for sale or rent","Find a site for sale or rent","Real estate Offers","Site Members","Search and request for a property that is not available","Find a nearby real estate office","The best way to manage your property","Find the latest Trending news around your area","Find the best loans from both government and private players"]
+    var headingArr = ["Search Map".localized(),"Property Search".localized(),"Realestate".localized(),"Members".localized(),"Requests".localized(),"Directory".localized(),"Property Management".localized(),"News".localized(),"Finance".localized()]
+    var descArr = ["Find a site to offer for sale or rent".localized(),"Find a site for sale or rent".localized(),"Real estate Offers".localized(),"Site Members".localized(),"Search and request for a property that is not available".localized(),"Find a nearby real estate office".localized(),"The best way to manage your property".localized(),"Find the latest Trending news around your area".localized(),"Find the best loans from both government and private players".localized()]
     var imageArr = ["2703060_maker_map_flag_location_icon","search","8150379_retail_price_tag_price tag_label_icon","79-users","pull-requests-1","290138_document_extension_file_format_paper_icon","office-1","290136_communication_internet_media_news_newspaper_icon","290136_communication_internet_media_news_newspaper_icon"]
     
     var timer : Timer?
@@ -60,6 +60,13 @@ class MainHomeScreenVC: UIViewController {
         self.getBannerImages()
         // Do any additional setup after loading the view.
     }
+    
+    override func awakeFromNib() {
+             super.awakeFromNib()
+             
+             tabBarItem.title = "Main".localized()
+         }
+      
     
     
     override func viewWillAppear(_ animated: Bool) {
@@ -154,7 +161,7 @@ class MainHomeScreenVC: UIViewController {
                      if let drawerController = self.navigationController?.parent as? KYDrawerController {
                          drawerController.drawerWidth = (kScreenWidth - 100)
                         
-                         drawerController.drawerDirection = .left
+                         drawerController.drawerDirection = kSharedUserDefaults.getLanguageName() == "en" ? .left : .right
                          drawerController.setDrawerState(.opened, animated: true)
                      }
                  }
@@ -228,8 +235,8 @@ extension MainHomeScreenVC: UICollectionViewDelegate, UICollectionViewDataSource
         if self.bannerArr[indexPath.item].images?.count > 0{
             cell.mainImageView.downlodeImage(serviceurl: self.bannerArr[indexPath.item].images?[0].name ?? "", placeHolder: UIImage.init(named: "Logo"))
         }
-        cell.titleLbl.text = self.bannerArr[indexPath.item].title ?? ""
-        cell.descLbl.text = self.bannerArr[indexPath.item].description ?? ""
+        cell.titleLbl.text = kSharedUserDefaults.getLanguageName() == "en" ? self.bannerArr[indexPath.item].title ?? "" : self.bannerArr[indexPath.item].title_ar ?? ""
+        cell.descLbl.text = kSharedUserDefaults.getLanguageName() == "en" ? self.bannerArr[indexPath.item].description ?? "" : self.bannerArr[indexPath.item].description_ar ?? ""
         return cell
     }
     

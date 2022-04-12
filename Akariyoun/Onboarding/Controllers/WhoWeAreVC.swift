@@ -36,7 +36,7 @@ class WhoWeAreVC: UIViewController {
                             if dicResponse["success"] as? Bool ?? false{
                                self.memberDetailsModel = MemberDetailsModel.init(dictionary: dicResponse as NSDictionary)
                                 
-                                self.mainLbl.text = self.memberDetailsModel?.data?.member?.info?.who_we_are ?? ""
+                                self.mainLbl.text = kSharedUserDefaults.getLanguageName() == "en" ? self.memberDetailsModel?.data?.member?.info?.who_we_are ?? "" : self.memberDetailsModel?.data?.member?.info?.who_we_are_ar ?? ""
         //                     print(self.propertyModel?.data?.property?.data?.count,"COUNT")
                           //      self.mainTableView.reloadData()
                             }else{

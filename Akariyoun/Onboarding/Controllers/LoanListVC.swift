@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import KYDrawerController
 
 class LoanListVC: UIViewController {
     
@@ -22,10 +23,10 @@ class LoanListVC: UIViewController {
         
         self.setStatusBarColor()
         if self.isFrom == "govt"{
-            self.topLbl.text = "Government Loans"
+            self.topLbl.text = "Government Loans".localized()
             self.getNewsListApi()
         }else{
-            self.topLbl.text = "Private Loans"
+            self.topLbl.text = "Private Loans".localized()
             self.getPrivateLoanList()
         }
         
@@ -33,6 +34,10 @@ class LoanListVC: UIViewController {
         self.mainTableView.dataSource = self
         let nib = UINib(nibName: "LoanTVC", bundle: Bundle.main)
         self.mainTableView.register(nib, forCellReuseIdentifier: "LoanTVC")
+        
+        if let drawerController = navigationController?.parent as? KYDrawerController {
+                   drawerController.screenEdgePanGestureEnabled = false
+               }
         // Do any additional setup after loading the view.
     }
     

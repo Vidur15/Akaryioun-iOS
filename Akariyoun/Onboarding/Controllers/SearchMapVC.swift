@@ -9,6 +9,7 @@
 import UIKit
 import MapKit
 import Pulsator
+import KYDrawerController
 
 class SearchMapVC: UIViewController {
 
@@ -33,7 +34,9 @@ class SearchMapVC: UIViewController {
         let lpgr = UITapGestureRecognizer(target: self, action: #selector(self.handleLongPress(gestureReconizer:)))
         self.appleMapView.addGestureRecognizer(lpgr)
         self.appleMapView.delegate = self
-        
+        if let drawerController = navigationController?.parent as? KYDrawerController {
+                   drawerController.screenEdgePanGestureEnabled = false
+               }
     
         self.appleMapView.showsPointsOfInterest = false
      self.appleMapView.mapType = .mutedStandard

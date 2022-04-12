@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import KYDrawerController
 
 class RealEstateContactVC: UIViewController {
 
@@ -17,6 +18,9 @@ class RealEstateContactVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.roundCornerView.roundCorners([.topLeft,.topRight], radius: 40)
+        if let drawerController = navigationController?.parent as? KYDrawerController {
+                   drawerController.screenEdgePanGestureEnabled = false
+               }
         // Do any additional setup after loading the view.
     }
 }

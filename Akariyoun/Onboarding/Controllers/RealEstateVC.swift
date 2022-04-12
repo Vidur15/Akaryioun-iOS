@@ -40,6 +40,13 @@ class RealEstateVC: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    override func awakeFromNib() {
+             super.awakeFromNib()
+             
+             tabBarItem.title = "Real estate".localized()
+         }
+      
+    
     
     func getPropertyListApi(){
        
@@ -80,7 +87,7 @@ class RealEstateVC: UIViewController {
                 if let drawerController = self.navigationController?.parent as? KYDrawerController {
                     drawerController.drawerWidth = (kScreenWidth - 100)
                     
-                    drawerController.drawerDirection = .left
+                    drawerController.drawerDirection = kSharedUserDefaults.getLanguageName() == "en" ? .left : .right
                     drawerController.setDrawerState(.opened, animated: true)
                 }
             }
@@ -96,9 +103,12 @@ extension RealEstateVC: UITableViewDelegate,UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = self.mainTableView.dequeueReusableCell(withIdentifier: "RealEstateTVC", for: indexPath) as? RealEstateTVC else { return UITableViewCell() }
         cell.selectionStyle = .none
-        cell.dateLbl.text = "Posted on : \(self.propertyModel?.data?.property?.data?[indexPath.row].created_at ?? "")"
-        cell.headingLbl.text = self.propertyModel?.data?.property?.data?[indexPath.row].title ?? ""
-        cell.descLbl.text = self.propertyModel?.data?.property?.data?[indexPath.row].description ?? ""
+        cell.dateLbl.text = "Posted on :".localized() + "\(self.propertyModel?.data?.property?.data?[indexPath.row].created_at ?? "")"
+        
+        cell.headingLbl.text = kSharedUserDefaults.getLanguageName() == "en" ? self.propertyModel?.data?.property?.data?[indexPath.row].title ?? "" : self.propertyModel?.data?.property?.data?[indexPath.row].title_ar ?? ""
+        
+        cell.descLbl.text = kSharedUserDefaults.getLanguageName() == "en" ? self.propertyModel?.data?.property?.data?[indexPath.row].description ?? "" : self.propertyModel?.data?.property?.data?[indexPath.row].description_ar ?? ""
+        
         if self.propertyModel?.data?.property?.data?[indexPath.row].images?.count > 0{
             cell.mainImageView.downlodeImage(serviceurl: self.propertyModel?.data?.property?.data?[indexPath.row].images?[0].name ?? "", placeHolder: UIImage.init(named: "Logo"))
         }

@@ -29,12 +29,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window = UIWindow(frame: UIScreen.main.bounds)
         
         let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-                let viewControlller = storyBoard.instantiateViewController(withIdentifier: "KYDrawerController") as? KYDrawerController ?? UIViewController()
-                let navigationController = UINavigationController(rootViewController: viewControlller)
+        let viewControlller = storyBoard.instantiateViewController(withIdentifier: "KYDrawerController") as? KYDrawerController ?? UIViewController()
+        let navigationController = UINavigationController(rootViewController: viewControlller)
                 navigationController.isNavigationBarHidden = true
                 self.window?.rootViewController = navigationController
                self.window?.makeKeyAndVisible()
         self.initializeS3()
+        
+        if kSharedUserDefaults.getLanguageName() == nil {
+        kSharedUserDefaults.setLanguage(languageName: "en")
+        }
+        self.setSemanticContentAttribute()
+        
         UIApplication.shared.statusBarStyle = .lightContent
         // Override point for customization after application launch.
         return true
@@ -114,3 +120,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
 }
 
+extension AppDelegate {
+    //MARK: localized func
+    public func setSemanticContentAttribute() {
+        
+        if kSharedUserDefaults.getLanguageName() == "ar" {
+            UIView.appearance().semanticContentAttribute            = UISemanticContentAttribute.forceRightToLeft
+            UITableView.appearance().semanticContentAttribute       = UISemanticContentAttribute.forceRightToLeft
+            UITextField.appearance().semanticContentAttribute       = UISemanticContentAttribute.forceRightToLeft
+            UICollectionView.appearance().semanticContentAttribute       = UISemanticContentAttribute.forceRightToLeft
+            UITextView.appearance().semanticContentAttribute = UISemanticContentAttribute.forceRightToLeft
+            
+        } else {
+            
+            UIView.appearance().semanticContentAttribute            = UISemanticContentAttribute.forceLeftToRight
+            UITableView.appearance().semanticContentAttribute       = UISemanticContentAttribute.forceLeftToRight
+            UITextField.appearance().semanticContentAttribute       = UISemanticContentAttribute.forceLeftToRight
+            UICollectionView.appearance().semanticContentAttribute   = UISemanticContentAttribute.forceLeftToRight
+            
+            UITextView.appearance().semanticContentAttribute = UISemanticContentAttribute.forceLeftToRight
+        }
+    }
+}

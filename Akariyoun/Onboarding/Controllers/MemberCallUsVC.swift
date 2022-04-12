@@ -69,8 +69,8 @@ extension MemberCallUsVC: UITableViewDelegate,UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = self.mainTableView.dequeueReusableCell(withIdentifier: "MemberRealEstateTVC", for: indexPath) as? MemberRealEstateTVC else { return UITableViewCell() }
         cell.selectionStyle = .none
-//        cell.dateLbl.text = "Posted on : \(self.propertyModel?.data?.property?.data?[indexPath.row].created_at ?? "")"
-       cell.headingLbl.text = self.memberDetailsModel?.data?.member?.real_state?[indexPath.row].title ?? ""
+
+        cell.headingLbl.text = kSharedUserDefaults.getLanguageName() == "en" ? self.memberDetailsModel?.data?.member?.real_state?[indexPath.row].title ?? "" : self.memberDetailsModel?.data?.member?.real_state?[indexPath.row].title_ar ?? ""
 //        cell.descLbl.text = self.propertyModel?.data?.property?.data?[indexPath.row].description ?? ""
        if self.memberDetailsModel?.data?.member?.real_state?[indexPath.row].images?.count > 0{
             cell.mainImageView.downlodeImage(serviceurl: self.memberDetailsModel?.data?.member?.real_state?[indexPath.row].images?[0].name ?? "", placeHolder: UIImage.init(named: "Logo"))

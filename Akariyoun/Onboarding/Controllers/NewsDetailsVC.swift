@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import KYDrawerController
 
 class NewsDetailsVC: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout{
     
@@ -27,6 +28,10 @@ class NewsDetailsVC: UIViewController,UICollectionViewDelegate,UICollectionViewD
         self.mainColelctionView.register(UINib(nibName: "MoreNewsCVC", bundle: .main), forCellWithReuseIdentifier: "MoreNewsCVC")
         
         self.getNewsDetailsApi()
+        
+        if let drawerController = navigationController?.parent as? KYDrawerController {
+                   drawerController.screenEdgePanGestureEnabled = false
+               }
         // Do any additional setup after loading the view.
     }
     
@@ -79,8 +84,8 @@ class NewsDetailsVC: UIViewController,UICollectionViewDelegate,UICollectionViewD
          let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MoreNewsCVC", for: indexPath) as! MoreNewsCVC
      //    cell.mainIMageView.image = UIImage.init(named: "animation")
         cell.mainImageView.downlodeImage(serviceurl: self.newsDetailModel?.data?.related_news?[indexPath.item].image ?? "", placeHolder: UIImage.init(named: "Logo"))
-        cell.headingLbl.text = self.newsDetailModel?.data?.related_news?[indexPath.item].title ?? ""
-        cell.descLbl.text = self.newsDetailModel?.data?.related_news?[indexPath.item].description ?? ""
+        cell.headingLbl.text = kSharedUserDefaults.getLanguageName() == "en" ?  self.newsDetailModel?.data?.related_news?[indexPath.item].title ?? "" : self.newsDetailModel?.data?.related_news?[indexPath.item].title_ar ?? ""
+        cell.descLbl.text = kSharedUserDefaults.getLanguageName() == "en" ?  self.newsDetailModel?.data?.related_news?[indexPath.item].description ?? "" : self.newsDetailModel?.data?.related_news?[indexPath.item].description_ar ?? ""
          return cell
      }
      

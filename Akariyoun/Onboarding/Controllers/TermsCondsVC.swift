@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import KYDrawerController
 
 class TermsCondsVC: UIViewController {
 
@@ -21,15 +22,19 @@ class TermsCondsVC: UIViewController {
         self.setStatusBarColor()
         
         if self.isfrom == "terms"{
-            self.topLbl.text = "Terms & Conditions"
+            self.topLbl.text = "Terms & Conditions".localized()
             self.getTermsConds()
         }else if self.isfrom == "privacy"{
-            self.topLbl.text = "Privacy Policy"
+            self.topLbl.text = "Privacy Policy".localized()
             self.getPrivacyPolicy()
         }else if self.isfrom == "about"{
-            self.topLbl.text = "About Us"
+            self.topLbl.text = "About Us".localized()
             self.getAboutUs()
         }
+        
+        if let drawerController = navigationController?.parent as? KYDrawerController {
+                   drawerController.screenEdgePanGestureEnabled = false
+               }
         // Do any additional setup after loading the view.
     }
     
@@ -46,7 +51,8 @@ class TermsCondsVC: UIViewController {
                          if dicResponse["success"] as? Bool ?? false{
                             let dataDict = kSharedInstance.getDictionary(dicResponse["data"])
                             let privacyDict = kSharedInstance.getDictionary(dataDict["privacy"])
-                            self.mainLbl.text = privacyDict["content"] as? String ?? ""
+                            self.mainLbl.text = kSharedUserDefaults.getLanguageName() == "en" ?  privacyDict["content"] as? String ?? "" : privacyDict["content_ar"] as? String ?? ""
+                            
                          }else{
                              showAlertMessage.alert(message: String.getString(dicResponse["message"]))
                          }
@@ -76,7 +82,7 @@ class TermsCondsVC: UIViewController {
                          if dicResponse["success"] as? Bool ?? false{
                             let dataDict = kSharedInstance.getDictionary(dicResponse["data"])
                             let privacyDict = kSharedInstance.getDictionary(dataDict["terms"])
-                            self.mainLbl.text = privacyDict["content"] as? String ?? ""
+                            self.mainLbl.text = kSharedUserDefaults.getLanguageName() == "en" ?  privacyDict["content"] as? String ?? "" : privacyDict["content_ar"] as? String ?? ""
                          }else{
                              showAlertMessage.alert(message: String.getString(dicResponse["message"]))
                          }
@@ -106,7 +112,7 @@ class TermsCondsVC: UIViewController {
                           if dicResponse["success"] as? Bool ?? false{
                              let dataDict = kSharedInstance.getDictionary(dicResponse["data"])
                              let privacyDict = kSharedInstance.getDictionary(dataDict["about"])
-                             self.mainLbl.text = privacyDict["content"] as? String ?? ""
+                             self.mainLbl.text = kSharedUserDefaults.getLanguageName() == "en" ?  privacyDict["content"] as? String ?? "" : privacyDict["content_ar"] as? String ?? ""
                           }else{
                               showAlertMessage.alert(message: String.getString(dicResponse["message"]))
                           }

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import KYDrawerController
 
 class CarrersVC: UIViewController {
 
@@ -16,6 +17,10 @@ class CarrersVC: UIViewController {
         
         self.setStatusBarColor()
         self.getCarrers()
+        
+        if let drawerController = navigationController?.parent as? KYDrawerController {
+                   drawerController.screenEdgePanGestureEnabled = false
+               }
         // Do any additional setup after loading the view.
     }
     
@@ -36,7 +41,7 @@ class CarrersVC: UIViewController {
                          if dicResponse["success"] as? Bool ?? false{
                             let dataDict = kSharedInstance.getDictionary(dicResponse["data"])
                             let privacyDict = kSharedInstance.getDictionary(dataDict["careers"])
-                            self.mainLbl.text = privacyDict["content"] as? String ?? ""
+                            self.mainLbl.text = kSharedUserDefaults.getLanguageName() == "en" ?  privacyDict["content"] as? String ?? "" : privacyDict["content_ar"] as? String ?? ""
                          }else{
                              showAlertMessage.alert(message: String.getString(dicResponse["message"]))
                          }

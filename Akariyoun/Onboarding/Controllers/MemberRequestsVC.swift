@@ -80,28 +80,28 @@ extension MemberRequestsVC: UITableViewDelegate,UITableViewDataSource {
         if indexPath.row == self.select{
             guard let cell = self.mainTabkeView.dequeueReusableCell(withIdentifier: "CommonExpandTVC", for: indexPath) as? CommonExpandTVC else { return UITableViewCell() }
             cell.selectionStyle = .none
-            cell.headingLbl.text = self.memberDetailsModel?.data?.member?.requests?[indexPath.row].title ?? ""
-            cell.descLbl.text = self.memberDetailsModel?.data?.member?.requests?[indexPath.row].description ?? ""
+            cell.headingLbl.text = kSharedUserDefaults.getLanguageName() == "en" ? self.memberDetailsModel?.data?.member?.requests?[indexPath.row].title ?? "" : self.memberDetailsModel?.data?.member?.requests?[indexPath.row].title_ar ?? ""
+            cell.descLbl.text = kSharedUserDefaults.getLanguageName() == "en" ? self.memberDetailsModel?.data?.member?.requests?[indexPath.row].description ?? "" : self.memberDetailsModel?.data?.member?.requests?[indexPath.row].description_ar ?? ""
            
             
             let dateCal = self.dateF.date(from: self.memberDetailsModel?.data?.member?.requests?[indexPath.row].created_at ?? "") ?? Date()
             
             let str = self.months(from: dateCal)
             print(str)
-             cell.timeLbl.text = "\(str) months ago"
+            cell.timeLbl.text = "\(str) " + "months ago".localized()
             
             return cell
         }else{
         guard let cell = self.mainTabkeView.dequeueReusableCell(withIdentifier: "CommonCollapseTVC", for: indexPath) as? CommonCollapseTVC else { return UITableViewCell() }
         cell.selectionStyle = .none
-        cell.mainLbl.text = self.memberDetailsModel?.data?.member?.requests?[indexPath.row].title ?? ""
+            cell.mainLbl.text = kSharedUserDefaults.getLanguageName() == "en" ? self.memberDetailsModel?.data?.member?.requests?[indexPath.row].title ?? "" : self.memberDetailsModel?.data?.member?.requests?[indexPath.row].title_ar ?? ""
       //  cell.descLbl.text = self.memberDetailsModel?.data?.member?.requests?[indexPath.row].description ?? ""
             
             let dateCal = self.dateF.date(from: self.memberDetailsModel?.data?.member?.requests?[indexPath.row].created_at ?? "") ?? Date()
             
             let str = self.months(from: dateCal)
             print(str)
-             cell.timeLbl.text = "\(str) months ago"
+             cell.timeLbl.text = "\(str) " + "months ago".localized()
             
      //   cell.timeLbl.text = self.memberDetailsModel?.data?.member?.requests?[indexPath.row].created_at ?? ""
         return cell

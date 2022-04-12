@@ -7,9 +7,11 @@
 //
 
 import UIKit
+import KYDrawerController
 
 class ProfileVC: UIViewController {
     
+    @IBOutlet var btnSelectOutColl: [UIButton]!
     @IBOutlet weak var emailLbl: UILabel!
     @IBOutlet weak var mobileNumLbl: UILabel!
     @IBOutlet weak var nameLbl: UILabel!
@@ -56,6 +58,10 @@ class ProfileVC: UIViewController {
         let nib3 = UINib(nibName: "AddRequestOfferTVC", bundle: Bundle.main)
         self.mainTableView.register(nib3, forCellReuseIdentifier: "AddRequestOfferTVC")
         
+        if let drawerController = navigationController?.parent as? KYDrawerController {
+                   drawerController.screenEdgePanGestureEnabled = false
+               }
+        
         
         UIView.animate(withDuration: 1.0) {
             self.mainTableBottomCont.isActive = false
@@ -73,6 +79,9 @@ class ProfileVC: UIViewController {
                    self.mainTableViewHeightConst.constant = self.mainTableView.contentSize.height
                    self.mainScrollView.layoutIfNeeded()
                }
+        
+        self.mainTextVew.addPadding(to: self.mainTextVew)
+         self.mainTextVew.textAlignment = kSharedUserDefaults.getLanguageName() == "en" ? .left : .right
         
         self.dateF.dateFormat = "dd MMM, yyyy hh:mm a"
         
@@ -119,8 +128,8 @@ class ProfileVC: UIViewController {
         self.profileUrl = self.profileDetailModel?.data?.profileDetail?.profile_pic ?? ""
         self.profileImgView.downlodeImage(serviceurl: self.profileDetailModel?.data?.profileDetail?.profile_pic ?? "", placeHolder: UIImage.init(named: ""))
         self.nameLbl.text = "\(self.profileDetailModel?.data?.profileDetail?.first_name ?? "") \(self.profileDetailModel?.data?.profileDetail?.last_name ?? "")"
-        self.mobileNumLbl.text = "Phone - \(self.profileDetailModel?.data?.profileDetail?.mobile_number ?? "")"
-        self.emailLbl.text = "Email - \(self.profileDetailModel?.data?.profileDetail?.email ?? "")"
+        self.mobileNumLbl.text = "Phone - ".localized() + "\(self.profileDetailModel?.data?.profileDetail?.mobile_number ?? "")"
+        self.emailLbl.text = "Email - ".localized() + "\(self.profileDetailModel?.data?.profileDetail?.email ?? "")"
         self.mainTextVew.text = self.profileDetailModel?.data?.profileDetail?.info?.who_we_are ?? ""
     }
 
@@ -228,14 +237,23 @@ class ProfileVC: UIViewController {
     func transformView(sender:UIView) {
         UIView.animate(withDuration: 0.5) {
             print(sender.frame.origin.x,"X POSITION")
-            self.animateView.transform = CGAffineTransform(translationX: sender.frame.origin.x, y: 0)
+           // self.animateView.transform = CGAffineTransform(translationX: sender.frame.origin.x, y: 0)
+            self.animateView.transform = kSharedUserDefaults.getLanguageName() == "en" ?  CGAffineTransform(translationX: sender.frame.origin.x, y: 0) : CGAffineTransform(translationX: -(sender.frame.origin.x), y: 0)
         }
     }
     
     @IBAction func selectionAction(_ sender: UIButton) {
-        self.transformView(sender: sender)
+        if kSharedUserDefaults.getLanguageName() == "en"{
+            self.transformView(sender: sender)
+        }else{
+            print(sender.tag)
+            let abc = (self.btnSelectOutColl.count - 1)
+            print(abc - sender.tag,"checggg")
+            self.transformView(sender: self.btnSelectOutColl[abc - sender.tag])
+        }
+        
         self.selection = sender.tag
-        print(self.selection,"CHECK")
+       
      
         if selection == 0{
             UIView.animate(withDuration: 1.0) {
@@ -270,7 +288,7 @@ class ProfileVC: UIViewController {
     
     @IBAction func saveWhoWeAreAction(_ sender: UIButton) {
         if self.mainTextVew.text.count == 0{
-            CommonUtils.showToast(message: "Please enter details about yourself")
+            CommonUtils.showToast(message: "Please enter details about yourself".localized())
             return
         }else{
             self.hitUpdateWhoWeAreApi()
@@ -292,7 +310,7 @@ class ProfileVC: UIViewController {
                             switch statusCodes {
                             case 200:
                                 if dicResponse["success"] as? Bool ?? false{
-                                  showAlertMessage.alert(message: "Profile Details Updated")
+                                  showAlertMessage.alert(message: "Profile Details Updated".localized())
                                //     self.navigationController?.popViewController(animated: true)
                                 }else{
                                     showAlertMessage.alert(message: String.getString(dicResponse["message"]))
@@ -351,46 +369,46 @@ extension ProfileVC: UITableViewDelegate,UITableViewDataSource {
         if self.selection == 1{
             guard let cell = self.mainTableView.dequeueReusableCell(withIdentifier: "MemberRealEstateTVC",
                                                                     for: indexPath) as? MemberRealEstateTVC else { return UITableViewCell() }
-                  cell.headingLbl.text = self.profileDetailModel?.data?.profileDetail?.real_state?[indexPath.row].title ?? ""
+            cell.headingLbl.text = kSharedUserDefaults.getLanguageName() == "en" ?  self.profileDetailModel?.data?.profileDetail?.real_state?[indexPath.row].title ?? "" : self.profileDetailModel?.data?.profileDetail?.real_state?[indexPath.row].title_ar ?? ""
             //        cell.descLbl.text = self.propertyModel?.data?.property?.data?[indexPath.row].description ?? ""
                    if self.self.profileDetailModel?.data?.profileDetail?.real_state?[indexPath.row].images?.count > 0{
                         cell.mainImageView.downlodeImage(serviceurl: self.profileDetailModel?.data?.profileDetail?.real_state?[indexPath.row].images?[0].name ?? "", placeHolder: UIImage.init(named: "Logo"))
                     }
                     
-                    cell.priceBtnOut.setTitle("Asking for \( self.profileDetailModel?.data?.profileDetail?.real_state?[indexPath.row].price ?? 0) SAR", for: .normal)
+                    cell.priceBtnOut.setTitle("Asking for ".localized() + "\( self.profileDetailModel?.data?.profileDetail?.real_state?[indexPath.row].price ?? 0) SAR", for: .normal)
             cell.selectionStyle = .none
             return cell
         }else if self.selection == 2{
             if indexPath.row == self.profileDetailModel?.data?.profileDetail?.requests?.count{
                  guard let cell = self.mainTableView.dequeueReusableCell(withIdentifier: "AddRequestOfferTVC", for: indexPath) as? AddRequestOfferTVC else { return UITableViewCell() }
                 cell.addBtnOut.addTarget(self, action: #selector(addRequestAction(sender:)), for: .touchUpInside)
-                cell.addBtnOut.setTitle("+ Add New Request", for: .normal)
+                cell.addBtnOut.setTitle("+ Add New Request".localized(), for: .normal)
                 cell.addBtnOut.tag = 0
                 return cell
             }else{
             if indexPath.row == self.requestSelect{
                 guard let cell = self.mainTableView.dequeueReusableCell(withIdentifier: "CommonExpandTVC", for: indexPath) as? CommonExpandTVC else { return UITableViewCell() }
                 cell.selectionStyle = .none
-                cell.headingLbl.text = self.profileDetailModel?.data?.profileDetail?.requests?[indexPath.row].title ?? ""
-                 cell.descLbl.text = self.profileDetailModel?.data?.profileDetail?.requests?[indexPath.row].description ?? ""
+                cell.headingLbl.text = kSharedUserDefaults.getLanguageName() == "en" ?  self.profileDetailModel?.data?.profileDetail?.requests?[indexPath.row].title ?? "" : self.profileDetailModel?.data?.profileDetail?.requests?[indexPath.row].title_ar ?? ""
+                cell.descLbl.text = kSharedUserDefaults.getLanguageName() == "en" ?  self.profileDetailModel?.data?.profileDetail?.requests?[indexPath.row].description ?? "" : self.profileDetailModel?.data?.profileDetail?.requests?[indexPath.row].description_ar ?? ""
                 
                  
                  let dateCal = self.dateF.date(from: self.profileDetailModel?.data?.profileDetail?.requests?[indexPath.row].created_at ?? "") ?? Date()
                  let str = self.months(from: dateCal)
                  print(str)
-                  cell.timeLbl.text = "\(str) months ago"
+                  cell.timeLbl.text = "\(str) " + "months ago".localized()
                 
                 return cell
             }else{
                 guard let cell = self.mainTableView.dequeueReusableCell(withIdentifier: "CommonCollapseTVC", for: indexPath) as? CommonCollapseTVC else { return UITableViewCell() }
                 cell.selectionStyle = .none
-                cell.mainLbl.text = self.profileDetailModel?.data?.profileDetail?.requests?[indexPath.row].title ?? ""
+                cell.mainLbl.text = kSharedUserDefaults.getLanguageName() == "en" ?  self.profileDetailModel?.data?.profileDetail?.requests?[indexPath.row].title ?? "" : self.profileDetailModel?.data?.profileDetail?.requests?[indexPath.row].title_ar ?? ""
                 //  cell.descLbl.text = self.memberDetailsModel?.data?.member?.requests?[indexPath.row].description ?? ""
                       
                       let dateCal = self.dateF.date(from: self.profileDetailModel?.data?.profileDetail?.requests?[indexPath.row].created_at ?? "") ?? Date()
                       let str = self.months(from: dateCal)
                       print(str)
-                       cell.timeLbl.text = "\(str) months ago"
+                       cell.timeLbl.text = "\(str) " + "months ago".localized()
                 return cell
             }
             }
@@ -399,31 +417,31 @@ extension ProfileVC: UITableViewDelegate,UITableViewDataSource {
             guard let cell = self.mainTableView.dequeueReusableCell(withIdentifier: "AddRequestOfferTVC", for: indexPath) as? AddRequestOfferTVC else { return UITableViewCell() }
                 cell.addBtnOut.tag = 1
                 cell.addBtnOut.addTarget(self, action: #selector(addRequestAction(sender:)), for: .touchUpInside)
-                cell.addBtnOut.setTitle("+ Add New Offer", for: .normal)
+                cell.addBtnOut.setTitle("+ Add New Offer".localized(), for: .normal)
                 return cell
             }else{
             if indexPath.row == self.offerselect{
                 guard let cell = self.mainTableView.dequeueReusableCell(withIdentifier: "CommonExpandTVC", for: indexPath) as? CommonExpandTVC else { return UITableViewCell() }
                 cell.selectionStyle = .none
-                cell.headingLbl.text = self.profileDetailModel?.data?.profileDetail?.offers?[indexPath.row].title ?? ""
-                cell.descLbl.text = self.profileDetailModel?.data?.profileDetail?.offers?[indexPath.row].description ?? ""
+                cell.headingLbl.text = kSharedUserDefaults.getLanguageName() == "en" ?  self.profileDetailModel?.data?.profileDetail?.offers?[indexPath.row].title ?? "" : self.profileDetailModel?.data?.profileDetail?.offers?[indexPath.row].title_ar ?? ""
+                cell.descLbl.text = kSharedUserDefaults.getLanguageName() == "en" ?  self.profileDetailModel?.data?.profileDetail?.offers?[indexPath.row].description ?? "" : self.profileDetailModel?.data?.profileDetail?.offers?[indexPath.row].description_ar ?? ""
                 
                 let dateCal = self.dateF.date(from: self.profileDetailModel?.data?.profileDetail?.offers?[indexPath.row].created_at ?? "") ?? Date()
                 let str = self.months(from: dateCal)
                 print(str)
-                 cell.timeLbl.text = "\(str) months ago"
+                 cell.timeLbl.text = "\(str) " + "months ago".localized()
                 
                 return cell
             }else{
                 guard let cell = self.mainTableView.dequeueReusableCell(withIdentifier: "CommonCollapseTVC", for: indexPath) as? CommonCollapseTVC else { return UITableViewCell() }
                 cell.selectionStyle = .none
-                cell.mainLbl.text = self.profileDetailModel?.data?.profileDetail?.offers?[indexPath.row].title ?? ""
+                cell.mainLbl.text = kSharedUserDefaults.getLanguageName() == "en" ?  self.profileDetailModel?.data?.profileDetail?.offers?[indexPath.row].title ?? "" : self.profileDetailModel?.data?.profileDetail?.offers?[indexPath.row].title_ar ?? ""
                 //  cell.descLbl.text = self.memberDetailsModel?.data?.member?.requests?[indexPath.row].description ?? ""
                       
                       let dateCal = self.dateF.date(from: self.profileDetailModel?.data?.profileDetail?.offers?[indexPath.row].created_at ?? "") ?? Date()
                       let str = self.months(from: dateCal)
                       print(str)
-                       cell.timeLbl.text = "\(str) months ago"
+                       cell.timeLbl.text = "\(str) " + "months ago".localized()
                 return cell
             }
             }

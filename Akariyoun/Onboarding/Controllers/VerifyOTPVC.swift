@@ -83,7 +83,7 @@ class VerifyOTPVC: UIViewController {
     @IBAction func verifyBtnAction(_ sender: UIButton) {
     self.otpString = String.getString(self.pinView.getPin())
     if Int.getInt(otpString.count) != 6 {
-        CommonUtils.showToast(message: "Please enter otp")
+        CommonUtils.showToast(message: "Please enter otp".localized())
         return
     }else{
         self.hitVerifyOtpApi()

@@ -93,6 +93,8 @@ public class MemberMainDataModel {
     public var facebook_url : String?
     public var twitter_url : String?
     public var linkedin_url : String?
+    public var member_since : String?
+    
 
      public init(dictionary: [String : Any]) {
 
@@ -111,5 +113,6 @@ public class MemberMainDataModel {
         facebook_url = dictionary["facebook_url"] as? String
         twitter_url = dictionary["twitter_url"] as? String
         linkedin_url = dictionary["linkedin_url"] as? String
+        member_since = dictionary["member_since"] as? String
     }
 }

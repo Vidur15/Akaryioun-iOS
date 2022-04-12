@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import KYDrawerController
 
 class AccountSettingsVC: UIViewController {
     
@@ -48,31 +49,45 @@ class AccountSettingsVC: UIViewController {
         self.facebookTextF.setLeftPaddingPoints(16)
         self.twitterTextF.setLeftPaddingPoints(16)
         self.linkedinTextF.setLeftPaddingPoints(16)
+        
+        
+        self.userNameTextF.textAlignment = kSharedUserDefaults.getLanguageName() == "en" ? .left : .right
+        self.emailTextF.textAlignment = kSharedUserDefaults.getLanguageName() == "en" ? .left : .right
+        self.firstNameTextF.textAlignment = kSharedUserDefaults.getLanguageName() == "en" ? .left : .right
+        self.lastNameTextF.textAlignment = kSharedUserDefaults.getLanguageName() == "en" ? .left : .right
+        self.facebookTextF.textAlignment = kSharedUserDefaults.getLanguageName() == "en" ? .left : .right
+        self.twitterTextF.textAlignment = kSharedUserDefaults.getLanguageName() == "en" ? .left : .right
+        self.linkedinTextF.textAlignment = kSharedUserDefaults.getLanguageName() == "en" ? .left : .right
+        
         self.getUserDetails()
+        
+        if let drawerController = navigationController?.parent as? KYDrawerController {
+                   drawerController.screenEdgePanGestureEnabled = false
+               }
         // Do any additional setup after loading the view.
     }
     
     @IBAction func updateBtnAction(_ sender: UIButton) {
         if self.userNameTextF.text?.count == 0{
-            CommonUtils.showToast(message: "Please enter username")
+            CommonUtils.showToast(message: "Please enter username".localized())
             return
         }else if !(self.emailTextF.text?.isEmail() ?? false){
-            CommonUtils.showToast(message: "Please enter email")
+            CommonUtils.showToast(message: "Please enter email".localized())
                        return
         }else if self.firstNameTextF.text?.count == 0{
-            CommonUtils.showToast(message: "Please enter first name")
+            CommonUtils.showToast(message: "Please enter first name".localized())
                        return
         }else if self.lastNameTextF.text?.count == 0{
-            CommonUtils.showToast(message: "Please enter last name")
+            CommonUtils.showToast(message: "Please enter last name".localized())
                        return
         }else if self.facebookTextF.text?.count == 0{
-            CommonUtils.showToast(message: "Please enter facebook id")
+            CommonUtils.showToast(message: "Please enter facebook id".localized())
                        return
         }else if self.twitterTextF.text?.count == 0{
-            CommonUtils.showToast(message: "Please enter twitter id")
+            CommonUtils.showToast(message: "Please enter twitter id".localized())
                        return
         }else if self.linkedinTextF.text?.count == 0{
-            CommonUtils.showToast(message: "Please enter linkedin id")
+            CommonUtils.showToast(message: "Please enter linkedin id".localized())
                        return
         }else{
             hitUpdateAccountApi()
@@ -123,7 +138,7 @@ class AccountSettingsVC: UIViewController {
                       switch statusCodes {
                       case 200:
                           if dicResponse["success"] as? Bool ?? false{
-                            showAlertMessage.alert1(message: "Account Details Updated", sender: self)
+                            showAlertMessage.alert1(message: "Account Details Updated".localized(), sender: self)
                          //     self.navigationController?.popViewController(animated: true)
                           }else{
                               showAlertMessage.alert(message: String.getString(dicResponse["message"]))

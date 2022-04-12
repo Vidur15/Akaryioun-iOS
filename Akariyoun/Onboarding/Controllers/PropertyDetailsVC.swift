@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import KYDrawerController
 
 class PropertyDetailsVC: UIViewController {
 
@@ -27,7 +28,11 @@ class PropertyDetailsVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        
+        if let drawerController = navigationController?.parent as? KYDrawerController {
+                   drawerController.screenEdgePanGestureEnabled = false
+               }
         self.setStatusBarColor()
        self.userView.drawShadowwithCorner()
         self.PriceView.drawShadowwithCorner()
@@ -79,7 +84,7 @@ class PropertyDetailsVC: UIViewController {
     
     
     func setData(){
-        self.topHeadingLbl.text = self.propertyModel?.title ?? ""
+        self.topHeadingLbl.text = kSharedUserDefaults.getLanguageName() == "en" ? self.propertyModel?.title ?? "" : self.propertyModel?.title_ar ?? ""
         self.authorNameLbl.text = "\(self.propertyModel?.member?.first_name ?? "") \(self.propertyModel?.member?.last_name ?? "")"
         self.authorNumberLbl.text = self.propertyModel?.member?.mobile_number ?? ""
         self.authorImgView.downlodeImage(serviceurl: self.propertyModel?.member?.profile_pic ?? "", placeHolder: UIImage.init(named: "Logo"))

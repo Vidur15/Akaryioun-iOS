@@ -8,6 +8,7 @@
 
 import UIKit
 import SVPinView
+import KYDrawerController
 
 class DeleteAccountVC: UIViewController {
 
@@ -20,6 +21,10 @@ class DeleteAccountVC: UIViewController {
          self.pinView.style = .box
         self.setStatusBarColor()
         self.getOtpOnPhone()
+        
+        if let drawerController = navigationController?.parent as? KYDrawerController {
+                   drawerController.screenEdgePanGestureEnabled = false
+               }
         // Do any additional setup after loading the view.
     }
     
@@ -37,7 +42,7 @@ class DeleteAccountVC: UIViewController {
                          if dicResponse["success"] as? Bool ?? false{
                             let dataDict = kSharedInstance.getDictionary(dicResponse["data"])
                             let str = dataDict["mobile_number"] as? String ?? ""
-                            showAlertMessage.alert(message: "OTP Sent On this mobile number \(str)")
+                            showAlertMessage.alert(message: "OTP Sent On this mobile number".localized() + " \(str)")
                         //     self.navigationController?.popViewController(animated: true)
                          }else{
                              showAlertMessage.alert(message: String.getString(dicResponse["message"]))
@@ -62,7 +67,7 @@ class DeleteAccountVC: UIViewController {
     @IBAction func deleteAccountAction(_ sender: UIButton) {
     self.otpString = String.getString(self.pinView.getPin())
     if Int.getInt(otpString.count) != 6 {
-        CommonUtils.showToast(message: "Please enter otp")
+        CommonUtils.showToast(message: "Please enter otp".localized())
         return
     }else{
         self.hitDeleteAccountApi()
@@ -87,7 +92,7 @@ class DeleteAccountVC: UIViewController {
                                 kSharedUserDefaults.setLoggedInAccessToken(loggedInAccessToken: "")
                                    kSharedUserDefaults.setUserLoggedIn(userLoggedIn: false)
                                 kSharedUserDefaults.setLoggedInUserDetails(loggedInUserDetails: [:])
-                                showAlertMessage.alert1(message: "Account has been deleted", sender: self)
+                                showAlertMessage.alert1(message: "Account has been deleted".localized(), sender: self)
                                 
                              //     self.navigationController?.popViewController(animated: true)
                               }else{

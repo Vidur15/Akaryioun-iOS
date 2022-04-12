@@ -79,7 +79,7 @@ extension ChooseMemberVC: UITableViewDelegate,UITableViewDataSource {
         guard let cell = self.mainTableView.dequeueReusableCell(withIdentifier: "ChooseMemberTVC", for: indexPath) as? ChooseMemberTVC else { return UITableViewCell() }
         cell.selectionStyle = .none
         cell.mainLbl.text = "\(self.memberModel?.data?.member?.data?[indexPath.row].first_name ?? "") \(self.memberModel?.data?.member?.data?[indexPath.row].last_name ?? "")"
-        cell.descLbl.text = "Member Since : "
+        cell.descLbl.text = "Member Since :".localized() + "\(self.memberModel?.data?.member?.data?[indexPath.row].member_since ?? "")"
         cell.mainImageView.downlodeImage(serviceurl: self.memberModel?.data?.member?.data?[indexPath.row].profile_pic ?? "", placeHolder: UIImage.init(named: "Logo"))
         return cell
     }

@@ -35,6 +35,7 @@
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius1">
                                         <real key="value" value="14"/>
                                     </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="+ Add New Request"/>
                                 </userDefinedRuntimeAttributes>
                             </button>
                         </subviews>

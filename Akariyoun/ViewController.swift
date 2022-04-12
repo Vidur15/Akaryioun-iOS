@@ -38,6 +38,12 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    override func awakeFromNib() {
+           super.awakeFromNib()
+           
+           tabBarItem.title = "Requests".localized()
+       }
+    
     override func viewWillAppear(_ animated: Bool) {
         self.getRequestsList()
     }
@@ -88,7 +94,7 @@ class ViewController: UIViewController {
                      if let drawerController = self.navigationController?.parent as? KYDrawerController {
                          drawerController.drawerWidth = (kScreenWidth - 100)
                         
-                         drawerController.drawerDirection = .left
+                         drawerController.drawerDirection = kSharedUserDefaults.getLanguageName() == "en" ? .left : .right
                          drawerController.setDrawerState(.opened, animated: true)
                      }
                  }
@@ -104,9 +110,9 @@ extension ViewController: UITableViewDelegate,UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = self.mainTableView.dequeueReusableCell(withIdentifier: "RequestsTVC", for: indexPath) as? RequestsTVC else { return UITableViewCell() }
         cell.selectionStyle = .none
-        cell.headingLbl.text = self.requestModel?.data?.requests?.data?[indexPath.row].title ?? ""
-        cell.descLbl.text = self.requestModel?.data?.requests?.data?[indexPath.row].description ?? ""
-        cell.daeLbl.text = "Posted on : \(self.requestModel?.data?.requests?.data?[indexPath.row].created_at ?? "")"
+        cell.headingLbl.text =  self.requestModel?.data?.requests?.data?[indexPath.row].title ?? ""
+        cell.descLbl.text =  self.requestModel?.data?.requests?.data?[indexPath.row].description ?? ""
+        cell.daeLbl.text = "Posted on :".localized() + "\(self.requestModel?.data?.requests?.data?[indexPath.row].created_at ?? "")"
         return cell
     }
     

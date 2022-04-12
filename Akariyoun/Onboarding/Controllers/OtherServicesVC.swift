@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import KYDrawerController
 
 class OtherServicesVC: UIViewController {
 
@@ -25,6 +26,10 @@ class OtherServicesVC: UIViewController {
                              self.mainTableView.register(nib, forCellReuseIdentifier: "OtherServicesTVC")
         
         self.getOtherServices()
+        
+        if let drawerController = navigationController?.parent as? KYDrawerController {
+                   drawerController.screenEdgePanGestureEnabled = false
+               }
         // Do any additional setup after loading the view.
     }
     
