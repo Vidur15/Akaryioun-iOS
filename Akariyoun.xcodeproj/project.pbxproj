@@ -792,6 +792,9 @@
 		03E8304527F5A87200338109 /* PropertyListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E8304427F5A87200338109 /* PropertyListModel.swift */; };
 		03E8304727F5B7A500338109 /* RequestsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E8304627F5B7A500338109 /* RequestsModel.swift */; };
 		03E8304927F5BBA300338109 /* MemberModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E8304827F5BBA300338109 /* MemberModel.swift */; };
+		03EF8753280ED10E00B4F9AD /* PropertyDetailsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03EF8752280ED10E00B4F9AD /* PropertyDetailsModel.swift */; };
+		03EF876A280EDA4F00B4F9AD /* EarthInfoTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03EF8768280EDA4F00B4F9AD /* EarthInfoTVC.swift */; };
+		03EF876B280EDA4F00B4F9AD /* EarthInfoTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03EF8769280EDA4F00B4F9AD /* EarthInfoTVC.xib */; };
 		03FA2DB227FD64D5005039F6 /* NewsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FA2DB127FD64D5005039F6 /* NewsVC.swift */; };
 		03FA2DB527FD65EB005039F6 /* NewsTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FA2DB327FD65EB005039F6 /* NewsTVC.swift */; };
 		03FA2DB627FD65EB005039F6 /* NewsTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03FA2DB427FD65EB005039F6 /* NewsTVC.xib */; };
@@ -1617,6 +1620,9 @@
 		03E8304427F5A87200338109 /* PropertyListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyListModel.swift; sourceTree = "<group>"; };
 		03E8304627F5B7A500338109 /* RequestsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestsModel.swift; sourceTree = "<group>"; };
 		03E8304827F5BBA300338109 /* MemberModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberModel.swift; sourceTree = "<group>"; };
+		03EF8752280ED10E00B4F9AD /* PropertyDetailsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyDetailsModel.swift; sourceTree = "<group>"; };
+		03EF8768280EDA4F00B4F9AD /* EarthInfoTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EarthInfoTVC.swift; sourceTree = "<group>"; };
+		03EF8769280EDA4F00B4F9AD /* EarthInfoTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EarthInfoTVC.xib; sourceTree = "<group>"; };
 		03FA2DB127FD64D5005039F6 /* NewsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsVC.swift; sourceTree = "<group>"; };
 		03FA2DB327FD65EB005039F6 /* NewsTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTVC.swift; sourceTree = "<group>"; };
 		03FA2DB427FD65EB005039F6 /* NewsTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsTVC.xib; sourceTree = "<group>"; };
@@ -2739,6 +2745,8 @@
 				0387CFE528040F1C00D2A2C8 /* OtherServicesTVC.xib */,
 				0387CFEA2804166700D2A2C8 /* AddRequestOfferTVC.swift */,
 				0387CFEB2804166700D2A2C8 /* AddRequestOfferTVC.xib */,
+				03EF8768280EDA4F00B4F9AD /* EarthInfoTVC.swift */,
+				03EF8769280EDA4F00B4F9AD /* EarthInfoTVC.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -2754,6 +2762,7 @@
 				03FA2DBF27FD8107005039F6 /* NewsDetailModel.swift */,
 				03D426FB27FEC9680079864E /* LoanModel.swift */,
 				03C43E5528005691005FE7F2 /* DirectoryModel.swift */,
+				03EF8752280ED10E00B4F9AD /* PropertyDetailsModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -3114,6 +3123,7 @@
 				0312099B27F4496C00782DDB /* Al Yamamah Dist.kml in Resources */,
 				034F16B927F58481006225AA /* AZ.png in Resources */,
 				034F169C27F58481006225AA /* SM.png in Resources */,
+				03EF876B280EDA4F00B4F9AD /* EarthInfoTVC.xib in Resources */,
 				0312094827F4496C00782DDB /* Salam Park.kml in Resources */,
 				034F15B327F58481006225AA /* Palau.png in Resources */,
 				034F15B427F58481006225AA /* Czech Republic.png in Resources */,
@@ -3725,6 +3735,7 @@
 				03D4A77D27F2EC7C00CBB35D /* SearchPropertyPopVC.swift in Sources */,
 				0312086127F4252D00782DDB /* WhoWeAreVC.swift in Sources */,
 				034F151827F58480006225AA /* UITextFieldPaddingView.swift in Sources */,
+				03EF8753280ED10E00B4F9AD /* PropertyDetailsModel.swift in Sources */,
 				03D426FC27FEC9680079864E /* LoanModel.swift in Sources */,
 				03D4270027FEE1520079864E /* AccountSettingsVC.swift in Sources */,
 				034F151A27F58480006225AA /* MaxMinLength+UITextField.swift in Sources */,
@@ -3767,6 +3778,7 @@
 				03D4A78B27F3035A00CBB35D /* RealEstateContactVC.swift in Sources */,
 				03D579A327C4C00000DADE0B /* Akariyoun.xcdatamodeld in Sources */,
 				034F150527F58480006225AA /* UIButtonCornerRadius.swift in Sources */,
+				03EF876A280EDA4F00B4F9AD /* EarthInfoTVC.swift in Sources */,
 				03BE939327EC509A00795CF6 /* MainHomeScreenVC.swift in Sources */,
 				0387CFEC2804166700D2A2C8 /* AddRequestOfferTVC.swift in Sources */,
 				0312086F27F4327400782DDB /* MemberOffersVC.swift in Sources */,

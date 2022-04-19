@@ -215,6 +215,7 @@ extension MainHomeScreenVC: UITableViewDelegate,UITableViewDataSource {
         cell.mainImageView.image = UIImage.init(named: self.imageArr[indexPath.row])
         cell.headingLbl.text = self.headingArr[indexPath.row]
         cell.descLbl.text = self.descArr[indexPath.row]
+        cell.descLbl.textAlignment = kSharedUserDefaults.getLanguageName() == "en" ? .left : .right
         return cell
     }
     
