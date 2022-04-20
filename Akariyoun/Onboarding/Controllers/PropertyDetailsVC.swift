@@ -8,9 +8,15 @@
 
 import UIKit
 import KYDrawerController
+import SVGKit
+import WebKit
+import ISVImageScrollView
 
-class PropertyDetailsVC: UIViewController {
+class PropertyDetailsVC: UIViewController,UIScrollViewDelegate{
 
+@IBOutlet weak var mainImageScrollView: ISVImageScrollView!
+    @IBOutlet weak var mainWebView: WKWebView!
+    @IBOutlet weak var propertyDetailsMainImgView: UIImageView!
     @IBOutlet weak var mainScrollView: UIScrollView!
     
     @IBOutlet weak var earthViewHeightConst: NSLayoutConstraint!
@@ -47,6 +53,8 @@ class PropertyDetailsVC: UIViewController {
     var idToSend = 0
     
     var propertyModel : PropertyDetailsModel?
+    
+  //  private var imageView: UIImageView?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -128,6 +136,64 @@ class PropertyDetailsVC: UIViewController {
         self.westLengthLbl.text = self.propertyModel?.data?.property?.land_m_west ?? ""
         
         
+     //   self.mainWebView.scrollView.delegate = self
+        self.propertyDetailsMainImgView.isHidden = false
+        let svg = URL(string: self.propertyModel?.data?.svg_url ?? "")!
+
+     //   var request: NSURLRequest = NSURLRequest(url: svg)
+   //     self.mainWebView.load(request as URLRequest)
+     //   self.mainWebView.loadhtm
+        
+        
+      //  let image = UIImage(named: "Photo.jpg")
+     //   self.imageView = UIImageView(image: image)
+        
+//        self.mainImageScrollView.imageView = self.propertyDetailsMainImgView
+////        self.mainImageScrollView.minimumZoomScale = 0.0
+////        self.mainImageScrollView.maximumZoomScale = 2.0
+// //       self.mainImageScrollView.setZoomScale(0, animated: true)
+//        self.mainImageScrollView.delegate = self
+      
+//     //   self.mainImageScrollView.addSubview(self.propertyDetailsMainImgView)
+        
+        
+        
+        self.propertyDetailsMainImgView.downloadedsvg(from: svg)
+        var vWidth = (self.view.frame.width - 40)
+            var vHeight = 550
+
+            var scrollImg: UIScrollView = UIScrollView()
+            scrollImg.delegate = self
+        scrollImg.frame = CGRect(x: self.mainImageScrollView.frame.origin.x
+                                 , y: self.mainImageScrollView.frame.origin.y, width: vWidth, height: CGFloat(vHeight))
+            scrollImg.backgroundColor = UIColor(red: 90, green: 90, blue: 90, alpha: 0.90)
+            scrollImg.alwaysBounceVertical = false
+            scrollImg.alwaysBounceHorizontal = false
+            scrollImg.showsVerticalScrollIndicator = true
+            scrollImg.flashScrollIndicators()
+
+//        scrollImg.translatesAutoresizingMaskIntoConstraints = false
+//        self.propertyDetailsMainImgView.translatesAutoresizingMaskIntoConstraints = false
+        
+            scrollImg.minimumZoomScale = 0.0
+        scrollImg.maximumZoomScale = 10.0
+        
+        scrollImg.isScrollEnabled = true
+
+        scrollImg.pinchGestureRecognizer?.isEnabled = true
+      //  scrollImg.setZoomScale(2.0, animated: true)
+        self.mainScrollView.addSubview(scrollImg)
+
+      //  propertyDetailsMainImgView!.layer.cornerRadius = 11.0
+        propertyDetailsMainImgView!.clipsToBounds = false
+            scrollImg.addSubview(propertyDetailsMainImgView!)
+        
+        
+        self.propertyDetailsMainImgView.layoutIfNeeded()
+        scrollImg.layoutIfNeeded()
+        
+        
+        self.propertyDetailsMainImgView.isUserInteractionEnabled = true
         if self.propertyModel?.data?.property?.property_land_info?.count == 0{
             self.earthViewHeightConst.constant = 0
             self.earthView.isHidden = true
@@ -145,8 +211,78 @@ class PropertyDetailsVC: UIViewController {
                }
         }
         
+//        for i in self.propertyModel?.data?.imagemap ?? []{
+//            let lbl = UILabel.init(frame: CGRect.init(x: Double.getDouble(i.x1), y: Double.getDouble(i.y1), width: Double.getDouble(i.w), height: Double.getDouble(i.h)))
+//            lbl.text = i.land_num ?? ""
+//            self.propertyDetailsMainImgView.addSubview(lbl)
+//            lbl.textColor = .black
+//            lbl.textAlignment = .center
+//            lbl.numberOfLines = 0
+//       //     lbl.backgroundColor = .green
+//        }
+        
+        var str = self.propertyModel?.data?.street_data?[0].style_attr?.replacingOccurrences(of: ";", with: ",")
+        print(str,"STR")
+       var check = str?.replacingOccurrences(of: ",", with: "")
+        print(check,"check")
+       var test = check?.replacingOccurrences(of:"\"", with: "")
+        print(test,"test")
+        let arr = test?.components(separatedBy: ":")
+        
+       var strArr = [String]()
+        
+        for i in arr ?? []{
+            strArr.append(String.getString(i))
+        }
+        
+        print(strArr,"StrArr")
+        
+        str = ("{" + (str ?? ""))
+        str?.removeLast()
+        str! += "}"
+        
+           // ("{" +  + "}")
+        let convertedSTR =  self.convertToDictionary(text: str ?? "")
+        
+        
+        
+        print(str ?? "","STR")
+        print(convertedSTR,"CHECK THIS VIDUR")
+        
     //    self.postNumberLbl.text = self.propertyModel?.property
     }
+    
+    func convertToDictionary(text: String) -> [String: Any]? {
+        if let data = text.data(using: .utf8) {
+            do {
+                return try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any]
+            } catch {
+                print(error.localizedDescription)
+            }
+        }
+        return nil
+    }
+
+    
+    func scrollViewDidZoom(_ scrollView: UIScrollView) {
+        if scrollView.zoomScale > scrollView.maximumZoomScale {
+            scrollView.zoomScale = scrollView.maximumZoomScale
+        } else if scrollView.zoomScale < scrollView.minimumZoomScale {
+            scrollView.zoomScale = scrollView.minimumZoomScale
+        }
+    }
+        
+    func viewForZooming(in scrollView: UIScrollView) -> UIView? {
+      return self.propertyDetailsMainImgView
+    }
+    
+//    func scrollViewWillBeginZooming(_ scrollView: UIScrollView, with view: UIView?) {
+//       scrollView.pinchGestureRecognizer?.isEnabled = true
+//    }
+//
+//    extension MyViewController: UIScrollViewDelegate {
+//
+//    }
     
     
     @IBAction func messageBtnAction(_ sender: UIButton) {
@@ -209,3 +345,39 @@ extension PropertyDetailsVC: UITableViewDelegate,UITableViewDataSource {
        
     }
 }
+
+
+//export function translateStyle(stringStyle) {
+//  if (stringStyle && typeof stringStyle === "string") {
+//    let newString = stringStyle;
+//    newString = '{"' + newString;
+//
+//    if (newString.includes("-moz")) {
+//      newString = newString + "}";
+//      newString = newString.replaceAll(":", '":"');
+//      newString = newString.replaceAll(";", '","');
+//      newString = newString.replaceAll(',"}', "}");
+//      newString = newString.replaceAll("-moz-transform", "MozTransform");
+//      newString = newString.replaceAll(
+//        "-moz-transform-origin",
+//        "MozTransformOrigin"
+//      );
+//    } else {
+//      newString = newString + '"}';
+//      newString = newString.replaceAll(": ", '": "');
+//      newString = newString.replaceAll("; ", '", "');
+//    }
+//    newString = newString.replaceAll(";", "");
+//    newString = newString.replaceAll("font-size", "fontSize");
+//    newString = newString.replaceAll("transform-origin", "transformOrigin");
+//    newString = newString.replaceAll("-webkit-transform", "WebkitTransform");
+//    newString = newString.replaceAll(
+//      "-webkit-transform-origin",
+//      "WebkitTransformOrigin"
+//    );
+//
+//    return JSON.parse(newString);
+//  }
+//
+//  return {};
+//}

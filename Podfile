@@ -16,6 +16,8 @@ pod 'CHIPageControl', '~> 0.1.3'
   pod 'FTIndicator'
   pod 'SVProgressHUD'
   pod "Pulsator"
+  pod 'SVGKit'
+  pod 'ISVImageScrollView'
   # Pods for Akariyoun
 
   target 'AkariyounTests' do
