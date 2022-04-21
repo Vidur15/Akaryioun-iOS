@@ -292,7 +292,7 @@ class PropertyDetailsVC: UIViewController,UIScrollViewDelegate{
                 if rotate == " rotate(0deg)"{
                     lbl1.transform = CGAffineTransform.init(rotationAngle: 0)
                 }else if rotate == " rotate(-90deg)"{
-                    lbl1.transform = CGAffineTransform(rotationAngle: -CGFloat.pi / 2).concatenating(CGAffineTransform(translationX: -16, y: -16))
+                    lbl1.transform = CGAffineTransform(rotationAngle: -CGFloat.pi / 2).concatenating(CGAffineTransform(translationX: -50, y: -100))
                    // lbl1.transform = CGAffineTransform.init(translationX: -16, y: -16)
                 }
                 
