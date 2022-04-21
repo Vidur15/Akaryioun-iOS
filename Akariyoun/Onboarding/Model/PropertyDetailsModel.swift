@@ -268,7 +268,7 @@ public class Street_data {
     public var st_id : String?
     public var style_attr : String?
     public var area : Int?
-
+    public var style_attr_mobille : [String]?
 
      public init(dictionary: [String : Any]) {
 
@@ -279,6 +279,29 @@ public class Street_data {
         st_id = dictionary["st_id"] as? String
         style_attr = dictionary["style_attr"] as? String
         area = dictionary["area"] as? Int
+        
+    if (dictionary["style_attr_mobille"] != nil) { style_attr_mobille = dictionary["style_attr_mobille"] as? [String] ?? [] }
     }
 
+}
+
+public class StyleAttrMobile {
+    public var df : Array<Array<String>>?
+    public var dff : Array<Array<String>>?
+    public var dfff : Array<Array<String>>?
+    public var dffff : Array<Array<String>>?
+    public var dfffff : Array<Array<String>>?
+    public var dffffff : Array<Array<String>>?
+    public var dfffffff : Array<Array<String>>?
+
+     public init(dictionary: [String : Any]) {
+
+//        if (dictionary["0"] != nil) { 0 = 0.modelsFromDictionaryArray(dictionary["0"] as! NSArray) }
+//        if (dictionary["1"] != nil) { 1 = 1.modelsFromDictionaryArray(dictionary["1"] as! NSArray) }
+//        if (dictionary["2"] != nil) { 2 = 2.modelsFromDictionaryArray(dictionary["2"] as! NSArray) }
+//        if (dictionary["3"] != nil) { 3 = 3.modelsFromDictionaryArray(dictionary["3"] as! NSArray) }
+//        if (dictionary["4"] != nil) { 4 = 4.modelsFromDictionaryArray(dictionary["4"] as! NSArray) }
+//        if (dictionary["5"] != nil) { 5 = 5.modelsFromDictionaryArray(dictionary["5"] as! NSArray) }
+//        if (dictionary["6"] != nil) { 6 = 6.modelsFromDictionaryArray(dictionary["6"] as! NSArray) }
+    }
 }

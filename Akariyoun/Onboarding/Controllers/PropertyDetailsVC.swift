@@ -54,6 +54,8 @@ class PropertyDetailsVC: UIViewController,UIScrollViewDelegate{
     
     var propertyModel : PropertyDetailsModel?
     
+    var scrollImg: UIScrollView = UIScrollView()
+    
   //  private var imageView: UIImageView?
     
     override func viewDidLoad() {
@@ -157,43 +159,54 @@ class PropertyDetailsVC: UIViewController,UIScrollViewDelegate{
 //     //   self.mainImageScrollView.addSubview(self.propertyDetailsMainImgView)
         
         
-        
-        self.propertyDetailsMainImgView.downloadedsvg(from: svg)
-        var vWidth = (self.view.frame.width - 40)
-            var vHeight = 550
+      
+        self.propertyDetailsMainImgView.downloadedsvg(from: svg){ [weak self] value in
+            var vWidth = self?.propertyDetailsMainImgView.frame.size.width ?? 0
+            var vHeight = self?.propertyDetailsMainImgView.frame.size.height ?? 0
+            print(self?.propertyDetailsMainImgView.image?.size.height ?? 0,"CHECH HEIGHT")
+            print(self?.propertyDetailsMainImgView.image?.size.width ?? 0,"CHECH WIDth")
+               
+            self?.scrollImg.delegate = self
+           
+            self?.scrollImg.frame = CGRect.init(x: self?.mainImageScrollView.frame.origin.x ?? 0
+                                                , y: self?.mainImageScrollView.frame.origin.y ?? 0, width: vWidth, height: vHeight)
+                
+            
+            self?.scrollImg.backgroundColor = UIColor(red: 90, green: 90, blue: 90, alpha: 0.90)
+            self?.scrollImg.alwaysBounceVertical = false
+            self?.scrollImg.alwaysBounceHorizontal = false
+            self?.scrollImg.showsVerticalScrollIndicator = true
+            self?.scrollImg.flashScrollIndicators()
 
-            var scrollImg: UIScrollView = UIScrollView()
-            scrollImg.delegate = self
-        scrollImg.frame = CGRect(x: self.mainImageScrollView.frame.origin.x
-                                 , y: self.mainImageScrollView.frame.origin.y, width: vWidth, height: CGFloat(vHeight))
-            scrollImg.backgroundColor = UIColor(red: 90, green: 90, blue: 90, alpha: 0.90)
-            scrollImg.alwaysBounceVertical = false
-            scrollImg.alwaysBounceHorizontal = false
-            scrollImg.showsVerticalScrollIndicator = true
-            scrollImg.flashScrollIndicators()
+     //   self?.scrollImg.translatesAutoresizingMaskIntoConstraints = true
+    //        self.propertyDetailsMainImgView.translatesAutoresizingMaskIntoConstraints = false
+            
+            self?.scrollImg.minimumZoomScale = 0.0
+            self?.scrollImg.maximumZoomScale = 10.0
+            
+            self?.scrollImg.isScrollEnabled = true
 
-//        scrollImg.translatesAutoresizingMaskIntoConstraints = false
-//        self.propertyDetailsMainImgView.translatesAutoresizingMaskIntoConstraints = false
-        
-            scrollImg.minimumZoomScale = 0.0
-        scrollImg.maximumZoomScale = 10.0
-        
-        scrollImg.isScrollEnabled = true
-
-        scrollImg.pinchGestureRecognizer?.isEnabled = true
-      //  scrollImg.setZoomScale(2.0, animated: true)
-        self.mainScrollView.addSubview(scrollImg)
-
-      //  propertyDetailsMainImgView!.layer.cornerRadius = 11.0
-        propertyDetailsMainImgView!.clipsToBounds = false
-            scrollImg.addSubview(propertyDetailsMainImgView!)
-        
-        
-        self.propertyDetailsMainImgView.layoutIfNeeded()
-        scrollImg.layoutIfNeeded()
+            self?.scrollImg.pinchGestureRecognizer?.isEnabled = true
+          //  scrollImg.setZoomScale(2.0, animated: true)
+            
+            self?.mainImageScrollView.isUserInteractionEnabled = false
+            
+          //  propertyDetailsMainImgView!.layer.cornerRadius = 11.0
+            self?.propertyDetailsMainImgView!.clipsToBounds = true
+            self?.propertyDetailsMainImgView.isUserInteractionEnabled = true
+            self?.scrollImg.addSubview((self?.propertyDetailsMainImgView!)!)
+            self?.mainScrollView.addSubview(self?.scrollImg ?? UIScrollView())
+            
+           self?.scrollImg.contentSize = (self?.propertyDetailsMainImgView.image?.size)!
+            self?.propertyDetailsMainImgView.layoutIfNeeded()
+            self?.scrollImg.layoutIfNeeded()
+            self?.propertyDetailsMainImgView.isUserInteractionEnabled = true
+            print(self?.scrollImg.contentSize,"CHECK SCROLL BEFORE")
+        }
         
         
-        self.propertyDetailsMainImgView.isUserInteractionEnabled = true
+        
+        
         if self.propertyModel?.data?.property?.property_land_info?.count == 0{
             self.earthViewHeightConst.constant = 0
             self.earthView.isHidden = true
@@ -211,48 +224,120 @@ class PropertyDetailsVC: UIViewController,UIScrollViewDelegate{
                }
         }
         
-//        for i in self.propertyModel?.data?.imagemap ?? []{
-//            let lbl = UILabel.init(frame: CGRect.init(x: Double.getDouble(i.x1), y: Double.getDouble(i.y1), width: Double.getDouble(i.w), height: Double.getDouble(i.h)))
-//            lbl.text = i.land_num ?? ""
-//            self.propertyDetailsMainImgView.addSubview(lbl)
-//            lbl.textColor = .black
-//            lbl.textAlignment = .center
-//            lbl.numberOfLines = 0
-//       //     lbl.backgroundColor = .green
-//        }
-        
-        var str = self.propertyModel?.data?.street_data?[0].style_attr?.replacingOccurrences(of: ";", with: ",")
-        print(str,"STR")
-       var check = str?.replacingOccurrences(of: ",", with: "")
-        print(check,"check")
-       var test = check?.replacingOccurrences(of:"\"", with: "")
-        print(test,"test")
-        let arr = test?.components(separatedBy: ":")
-        
-       var strArr = [String]()
-        
-        for i in arr ?? []{
-            strArr.append(String.getString(i))
+        for i in self.propertyModel?.data?.imagemap ?? []{
+            let lbl = UILabel.init(frame: CGRect.init(x: Double.getDouble(i.x1), y: Double.getDouble(i.y1), width: Double.getDouble(i.w), height: Double.getDouble(i.h)))
+            lbl.text = i.land_num ?? ""
+            self.propertyDetailsMainImgView.addSubview(lbl)
+            lbl.textColor = .black
+            lbl.textAlignment = .center
+            lbl.numberOfLines = 0
+            
+            
+            
+       //     lbl.backgroundColor = .green
         }
         
-        print(strArr,"StrArr")
         
-        str = ("{" + (str ?? ""))
-        str?.removeLast()
-        str! += "}"
+        var newx : Double = 0.0
+        var newy : Double = 0.0
+        var newWidth : Double = 0.0
+        var rotate = ""
         
-           // ("{" +  + "}")
-        let convertedSTR =  self.convertToDictionary(text: str ?? "")
+        for i in self.propertyModel?.data?.street_data ?? []{
+   //     let width = i.st_name_en?.widthOfString(usingFont: UIFont.init(name: UIFont.systemFont(ofSize: 16))
+      //      let width = i.st_name_en?.widthOfString(usingFont: UIFont.systemFont(ofSize: 16))
+            if i.style_attr_mobille?.count > 1{
+             //   print(i.style_attr_mobille,"CHECK DATA VIDUR")
+               
+                
+                for j in 0..<(i.style_attr_mobille?.count ?? 0){
+                    print(i.style_attr_mobille?[j],"CHECK PRINTED")
+                    switch i.style_attr_mobille?[j] {
+                    case "width":
+                        let width = i.style_attr_mobille?[j + 1]
+                       let acb = width?.dropLast(2)
+                          let bcd = acb?.replacingOccurrences(of: " ", with: "")
+                         newWidth = Double.getDouble(bcd)
+                        print("default")
+                    case " left":
+                        let x = i.style_attr_mobille?[j + 1]
+                       let acb1 = x?.dropLast(2)
+                          let bcd1 = acb1?.replacingOccurrences(of: " ", with: "")
+                         newx = Double.getDouble(bcd1)
+                        print("default")
+                    case " top":
+                        let y = i.style_attr_mobille?[j + 1]
+                       let acb2 = y?.dropLast(2)
+                          let bcd2 = acb2?.replacingOccurrences(of: " ", with: "")
+                         newy = Double.getDouble(bcd2)
+                    case " transform":
+                        rotate = i.style_attr_mobille?[j + 1] ?? ""
+                        print("default")
+                    default:
+                        print("default")
+                    }
+            }
+                print(newx,newy,newWidth,"CHECK ALL THESE VIDUR")
+                
+                let lbl1 = UILabel.init(frame: CGRect.init(x: newx, y: newy, width: newWidth, height: 45))
+                lbl1.text = i.st_name_en ?? ""
+                self.propertyDetailsMainImgView.addSubview(lbl1)
+                lbl1.textColor = .black
+            lbl1.textAlignment = .center
+                lbl1.numberOfLines = 0
+                lbl1.sizeToFit()
+                lbl1.layoutIfNeeded()
+                lbl1.transform = CGAffineTransform.init(rotationAngle: 0)
+                
+                if rotate == " rotate(0deg)"{
+                    lbl1.transform = CGAffineTransform.init(rotationAngle: 0)
+                }else if rotate == " rotate(-90deg)"{
+                    lbl1.transform = CGAffineTransform(rotationAngle: -CGFloat.pi / 2).concatenating(CGAffineTransform(translationX: -16, y: -16))
+                   // lbl1.transform = CGAffineTransform.init(translationX: -16, y: -16)
+                }
+                
+            }
+}
         
         
         
-        print(str ?? "","STR")
-        print(convertedSTR,"CHECK THIS VIDUR")
+        
+//        var str = self.propertyModel?.data?.street_data?[0].style_attr?.replacingOccurrences(of: ";", with: ",")
+//        print(str,"STR")
+//       var check = str?.replacingOccurrences(of: ",", with: "")
+//        print(check,"check")
+//       var test = check?.replacingOccurrences(of:"\"", with: "")
+//        print(test,"test")
+//        let arr = test?.components(separatedBy: ":")
+//
+//       var strArr = [String]()
+//
+//        for i in arr ?? []{
+//            strArr.append(String.getString(i))
+//        }
+//
+//        print(strArr,"StrArr")
+//
+//      //  str = ("[" + (str ?? ""))
+//        str?.removeLast()
+//      //  str! += "]"
+//
+//           // ("{" +  + "}")
+//        let convertedSTR =  self.convertToDictionary(text: str ?? "")
+
+  //      let dummySTR = ["width": "292.8140000000003px", "top": "2738.805419921875px", "left": "2435.749267578125px", "-webkit-transform-origin": "0% 0%", "-webkit-transform": "rotate(0deg)", "font-size": "14px"]
+        
+        
+      //  print(str ?? "","STR")
+        
         
     //    self.postNumberLbl.text = self.propertyModel?.property
     }
     
+    
+    
     func convertToDictionary(text: String) -> [String: Any]? {
+        
         if let data = text.data(using: .utf8) {
             do {
                 return try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any]
@@ -265,6 +350,7 @@ class PropertyDetailsVC: UIViewController,UIScrollViewDelegate{
 
     
     func scrollViewDidZoom(_ scrollView: UIScrollView) {
+        print(scrollImg.contentSize,"CHECK SCROLL AFTER")
         if scrollView.zoomScale > scrollView.maximumZoomScale {
             scrollView.zoomScale = scrollView.maximumZoomScale
         } else if scrollView.zoomScale < scrollView.minimumZoomScale {
@@ -381,3 +467,10 @@ extension PropertyDetailsVC: UITableViewDelegate,UITableViewDataSource {
 //
 //  return {};
 //}
+extension String{
+    func widthOfString(usingFont font: UIFont) -> CGFloat {
+        let fontAttributes = [NSAttributedString.Key.font: font]
+        let size = self.size(withAttributes: fontAttributes)
+        return size.width
+    }
+}

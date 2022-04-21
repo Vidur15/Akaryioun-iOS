@@ -6493,11 +6493,6 @@ A building of three floors and an extension on Tahlesah Street, north east, west
             <point key="canvasLocation" x="-4491" y="-654"/>
         </scene>
     </scenes>
-    <designables>
-        <designable name="Jdd-4K-gb9">
-            <size key="intrinsicContentSize" width="170" height="3"/>
-        </designable>
-    </designables>
     <resources>
         <image name="134216_menu_lines_hamburger_icon" width="28" height="20"/>
         <image name="1530085_building_business_city_commercial_company_icon (1)" width="21" height="20"/>
