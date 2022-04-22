@@ -242,6 +242,7 @@ class PropertyDetailsVC: UIViewController,UIScrollViewDelegate{
         var newy : Double = 0.0
         var newWidth : Double = 0.0
         var rotate = ""
+        var webkit = false
         
         for i in self.propertyModel?.data?.street_data ?? []{
    //     let width = i.st_name_en?.widthOfString(usingFont: UIFont.init(name: UIFont.systemFont(ofSize: 16))
@@ -251,20 +252,18 @@ class PropertyDetailsVC: UIViewController,UIScrollViewDelegate{
                
                 
                 for j in 0..<(i.style_attr_mobille?.count ?? 0){
-                    print(i.style_attr_mobille?[j],"CHECK PRINTED")
+                    
                     switch i.style_attr_mobille?[j] {
                     case "width":
                         let width = i.style_attr_mobille?[j + 1]
                        let acb = width?.dropLast(2)
                           let bcd = acb?.replacingOccurrences(of: " ", with: "")
                          newWidth = Double.getDouble(bcd)
-                        print("default")
                     case " left":
                         let x = i.style_attr_mobille?[j + 1]
                        let acb1 = x?.dropLast(2)
                           let bcd1 = acb1?.replacingOccurrences(of: " ", with: "")
                          newx = Double.getDouble(bcd1)
-                        print("default")
                     case " top":
                         let y = i.style_attr_mobille?[j + 1]
                        let acb2 = y?.dropLast(2)
@@ -272,15 +271,20 @@ class PropertyDetailsVC: UIViewController,UIScrollViewDelegate{
                          newy = Double.getDouble(bcd2)
                     case " transform":
                         rotate = i.style_attr_mobille?[j + 1] ?? ""
-                        print("default")
+                        webkit = false
+                    case " -webkit-transform":
+                        rotate = i.style_attr_mobille?[j + 1] ?? ""
+                        webkit = true
+                        
                     default:
                         print("default")
                     }
             }
-                print(newx,newy,newWidth,"CHECK ALL THESE VIDUR")
                 
                 let lbl1 = UILabel.init(frame: CGRect.init(x: newx, y: newy, width: newWidth, height: 45))
-                lbl1.text = i.st_name_en ?? ""
+               
+                lbl1.text = (i.st_name_en ?? "").capitalized
+                
                 self.propertyDetailsMainImgView.addSubview(lbl1)
                 lbl1.textColor = .black
             lbl1.textAlignment = .center
@@ -288,18 +292,35 @@ class PropertyDetailsVC: UIViewController,UIScrollViewDelegate{
                 lbl1.sizeToFit()
                 lbl1.layoutIfNeeded()
                 lbl1.transform = CGAffineTransform.init(rotationAngle: 0)
+                lbl1.font = UIFont.systemFont(ofSize: 14)
+                
+              //  lbl1.transform = CGAffineTransform(a: 0, b: tan(0), c: 0.0, d: 0.0, tx: 0.0, ty: 0.0)
                 
                 if rotate == " rotate(0deg)"{
                     lbl1.transform = CGAffineTransform.init(rotationAngle: 0)
                 }else if rotate == " rotate(-90deg)"{
-                    lbl1.transform = CGAffineTransform(rotationAngle: -CGFloat.pi / 2).concatenating(CGAffineTransform(translationX: -50, y: -100))
+                    if webkit == false{
+                      //  lbl1.backgroundColor = .red
+                        lbl1.transform = CGAffineTransform(rotationAngle: -CGFloat.pi / 2).concatenating(CGAffineTransform(translationX: -50, y: -100))
+                    }else{
+                        print("here inside webkit")
+                     //   lbl1.backgroundColor = .green
+                        lbl1.transform = CGAffineTransform(rotationAngle: -CGFloat.pi / 2).concatenating(CGAffineTransform(translationX: -75, y: -100))
+                    }
+                    
                    // lbl1.transform = CGAffineTransform.init(translationX: -16, y: -16)
                 }
+                
                 
             }
 }
         
+        //
         
+        //
+        
+        
+        //
         
         
 //        var str = self.propertyModel?.data?.street_data?[0].style_attr?.replacingOccurrences(of: ";", with: ",")

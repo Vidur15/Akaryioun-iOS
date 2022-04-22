@@ -15,7 +15,7 @@ class UIImageViewBorderWidthAndColor: UIImageView {
     }
 }
 extension UIImageView {
-func downloadedsvg(from url: URL, contentMode mode: UIView.ContentMode = .scaleAspectFit, completion: @escaping (Bool)->()) {
+func downloadedsvg(from url: URL, contentMode mode: UIView.ContentMode = .scaleAspectFill, completion: @escaping (Bool)->()) {
     contentMode = mode
     URLSession.shared.dataTask(with: url) { data, response, error in
         guard
