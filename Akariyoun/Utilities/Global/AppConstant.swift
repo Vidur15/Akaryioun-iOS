@@ -89,6 +89,8 @@ struct ServiceName {
     static let deleteAccountOtp               = "/customer/deleteAccountOtp"
     static let deleteAccount               = "/customer/deleteAccount"
     static let postcontactUs               = "/customer/contactUs"
+    static let homeMap               = "/homeMap"
+    
     
 }
 

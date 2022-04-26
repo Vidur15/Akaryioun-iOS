@@ -795,6 +795,8 @@
 		03EF8753280ED10E00B4F9AD /* PropertyDetailsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03EF8752280ED10E00B4F9AD /* PropertyDetailsModel.swift */; };
 		03EF876A280EDA4F00B4F9AD /* EarthInfoTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03EF8768280EDA4F00B4F9AD /* EarthInfoTVC.swift */; };
 		03EF876B280EDA4F00B4F9AD /* EarthInfoTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03EF8769280EDA4F00B4F9AD /* EarthInfoTVC.xib */; };
+		03F61D612817EFCF006A17B0 /* HomeDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F61D602817EFCF006A17B0 /* HomeDataModel.swift */; };
+		03F61D7E281815CF006A17B0 /* Geo.json in Resources */ = {isa = PBXBuildFile; fileRef = 03F61D7D281815CF006A17B0 /* Geo.json */; };
 		03FA2DB227FD64D5005039F6 /* NewsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FA2DB127FD64D5005039F6 /* NewsVC.swift */; };
 		03FA2DB527FD65EB005039F6 /* NewsTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FA2DB327FD65EB005039F6 /* NewsTVC.swift */; };
 		03FA2DB627FD65EB005039F6 /* NewsTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03FA2DB427FD65EB005039F6 /* NewsTVC.xib */; };
@@ -1623,6 +1625,8 @@
 		03EF8752280ED10E00B4F9AD /* PropertyDetailsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyDetailsModel.swift; sourceTree = "<group>"; };
 		03EF8768280EDA4F00B4F9AD /* EarthInfoTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EarthInfoTVC.swift; sourceTree = "<group>"; };
 		03EF8769280EDA4F00B4F9AD /* EarthInfoTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EarthInfoTVC.xib; sourceTree = "<group>"; };
+		03F61D602817EFCF006A17B0 /* HomeDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDataModel.swift; sourceTree = "<group>"; };
+		03F61D7D281815CF006A17B0 /* Geo.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Geo.json; sourceTree = "<group>"; };
 		03FA2DB127FD64D5005039F6 /* NewsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsVC.swift; sourceTree = "<group>"; };
 		03FA2DB327FD65EB005039F6 /* NewsTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTVC.swift; sourceTree = "<group>"; };
 		03FA2DB427FD65EB005039F6 /* NewsTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsTVC.xib; sourceTree = "<group>"; };
@@ -1868,6 +1872,7 @@
 				0312091127F4496400782DDB /* West Oraija Dist.kml */,
 				031208E027F4495B00782DDB /* West Suwaidi Dist.kml */,
 				0312092E27F4496A00782DDB /* West Umm Al Hamam Dist.kml */,
+				03F61D7D281815CF006A17B0 /* Geo.json */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -2763,6 +2768,7 @@
 				03D426FB27FEC9680079864E /* LoanModel.swift */,
 				03C43E5528005691005FE7F2 /* DirectoryModel.swift */,
 				03EF8752280ED10E00B4F9AD /* PropertyDetailsModel.swift */,
+				03F61D602817EFCF006A17B0 /* HomeDataModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -3178,6 +3184,7 @@
 				034F155827F58480006225AA /* Sweden.png in Resources */,
 				034F15EE27F58481006225AA /* AQ.png in Resources */,
 				034F165C27F58481006225AA /* GA.png in Resources */,
+				03F61D7E281815CF006A17B0 /* Geo.json in Resources */,
 				034F16A127F58481006225AA /* AO.png in Resources */,
 				031209B827F4496C00782DDB /* Al Khaleej Dist.kml in Resources */,
 				034F16B527F58481006225AA /* BW.png in Resources */,
@@ -3744,6 +3751,7 @@
 				035E8CD627ED8BF600E19B9F /* AddRequestVC.swift in Sources */,
 				03D4A78227F2F96900CBB35D /* SelectionTVC.swift in Sources */,
 				0312087427F4473D00782DDB /* SearchMapVC.swift in Sources */,
+				03F61D612817EFCF006A17B0 /* HomeDataModel.swift in Sources */,
 				0387CFEF280440ED00D2A2C8 /* DeleteAccountVC.swift in Sources */,
 				0306037227EDBDE2005B0C9D /* SideMenuVC.swift in Sources */,
 				034F151327F58480006225AA /* UITabBarExtension.swift in Sources */,
@@ -4016,7 +4024,7 @@
 			baseConfigurationReference = 3FC190D3DA759E76AE0AB784 /* Pods-Akariyoun.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 2LYR8LJ6EY;
 				INFOPLIST_FILE = Akariyoun/Info.plist;
@@ -4026,9 +4034,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.appsinvo.Akariyoun;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = AkariyounProv;
+				PROVISIONING_PROFILE_SPECIFIER = AkariyounDistribution;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -4037,7 +4045,7 @@
 			baseConfigurationReference = 88EEA6BAA21F6A593C30BB18 /* Pods-Akariyoun.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 2LYR8LJ6EY;
 				INFOPLIST_FILE = Akariyoun/Info.plist;
@@ -4047,9 +4055,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.appsinvo.Akariyoun;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = AkariyounProv;
+				PROVISIONING_PROFILE_SPECIFIER = AkariyounDistribution;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

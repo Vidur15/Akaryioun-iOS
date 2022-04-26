@@ -20,6 +20,8 @@ class NewsVC: UIViewController,UITextFieldDelegate{
     
     var isSearch = false
     
+    var geo : Geometry?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setStatusBarColor()
@@ -38,6 +40,7 @@ class NewsVC: UIViewController,UITextFieldDelegate{
         if let drawerController = navigationController?.parent as? KYDrawerController {
                    drawerController.screenEdgePanGestureEnabled = false
                }
+      
         // Do any additional setup after loading the view.
     }
     
