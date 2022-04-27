@@ -246,59 +246,96 @@ class SearchMapVC: UIViewController {
 //        self.loadKml("West Umm Al Hamam Dist", isFirst: true)
         
         self.getHomeData()
-        self.fetchJson()
+  //      self.fetchJson()
         // Do any additional setup after loading the view.
     }
     
     
     
-    
-    private func fetchJson() {
-        guard let geoJsonFileUrl = Bundle.main.url(forResource: "Geo", withExtension: "json"),
-            let geoJsonData = try? Data.init(contentsOf: geoJsonFileUrl) else {
-                fatalError("Failure to fetch the file.")
-        }
-        /*
-         1. geoJsonData is data type
-         **/
-        guard let objs = try? MKGeoJSONDecoder().decode(geoJsonData) as? [MKGeoJSONFeature] else {
-            fatalError("Wrong format")
-        }
+    func plotDataOnMap(){
+        var point1 = [CLLocationCoordinate2D]()
         
-        
-        // Parse the objects
-        objs.forEach { (feature) in
-            guard let geometry = feature.geometry.first,
-                let propData = feature.properties else {
-                return;
+        var overlaysArr = [MKOverlay]()
+        for i in self.homeModel?.features ?? []{
+            if i.type == "Point"{
+                
+            }else{
+                point1 = [CLLocationCoordinate2D]()
+                for j in i.geometry?.coordinates?[0] ?? []{
+                    let point = CLLocationCoordinate2D.init(latitude: j[1], longitude: j[0])
+                    point1.append(point)
+                }
+                let polygon = MKPolygon(coordinates: &point1, count: point1.count)
+               
+                if point1.count == 0 || point1.count == 1{
+                    
+                }else{
+                    overlaysArr.append(polygon)
+                }
+                print(point1,"CHECK POINT VIDUR")
+             //   point1 = [CLLocationCoordinate2D]()
             }
-            print(objs.count,"CHECK FEATURE COUNT VIDUR")
-            
-            // Check if it is MKPolygon
-//            if let polygon = geometry as? MKPolygon {
-//                let polygonInfo = try? JSONDecoder.init().decode(PolygonInfo.self, from: propData)
-//                self.view?.render(overlay: polygon,
-//                                  info: polygonInfo)
-//            }
-//
-//            // Check if it is MKPolyline
-//            if let polyline = geometry as? MKPolyline {
-//                let polylineInfo = try? JSONDecoder.init().decode(PolylineInfo.self, from: propData)
-//                self.view?.render(overlay: polyline,
-//                                  info: polylineInfo)
-//            }
-//
-//            // Check if it is MKPointAnnotation
-//            if let annotation = geometry as? MKPointAnnotation {
-//                let info = try? JSONDecoder.init().decode(Info.self, from: propData)
-//                let storeAnnotation = StoreAnnotation.init(title: info?.name,
-//                                                           subtitle: info?.subTitle,
-//                                                           website: info?.website,
-//                                                           coordinate: annotation.coordinate)
-//                self.view?.setAnnotations(annotations: [storeAnnotation])
-//            }
+        }
+        
+        DispatchQueue.main.async {
+            print(overlaysArr.count,"CHECK THIS VIDUR")
+            self.appleMapView.removeOverlays(self.appleMapView.overlays)
+            self.appleMapView.addOverlays(overlaysArr)
+            self.appleMapView.layoutIfNeeded()
+            self.appleMapView.setNeedsLayout()
         }
     }
+    
+    
+    
+//    private func fetchJson() {
+//        guard let geoJsonFileUrl = Bundle.main.url(forResource: "Geo", withExtension: "json"),
+//            let geoJsonData = try? Data.init(contentsOf: geoJsonFileUrl) else {
+//                fatalError("Failure to fetch the file.")
+//        }
+//        /*
+//         1. geoJsonData is data type
+//         **/
+//        guard let objs = try? MKGeoJSONDecoder().decode(geoJsonData) as? [MKGeoJSONFeature] else {
+////            fatalError().localizedDescription
+////            fatalError("Wrong format")
+//            return
+//        }
+//
+//        // Parse the objects
+//        objs.forEach { (feature) in
+//            guard let geometry = feature.geometry.first,
+//                let propData = feature.properties else {
+//                return;
+//            }
+//            print(objs.count,"CHECK FEATURE COUNT VIDUR")
+//
+//            // Check if it is MKPolygon
+//
+////            if let polygon = geometry as? MKPolygon {
+////                let polygonInfo = try? JSONDecoder.init().decode(PolygonInfo.self, from: propData)
+////                self.view?.render(overlay: polygon,
+////                                  info: polygonInfo)
+////            }
+////
+////            // Check if it is MKPolyline
+////            if let polyline = geometry as? MKPolyline {
+////                let polylineInfo = try? JSONDecoder.init().decode(PolylineInfo.self, from: propData)
+////                self.view?.render(overlay: polyline,
+////                                  info: polylineInfo)
+////            }
+////
+////            // Check if it is MKPointAnnotation
+////            if let annotation = geometry as? MKPointAnnotation {
+////                let info = try? JSONDecoder.init().decode(Info.self, from: propData)
+////                let storeAnnotation = StoreAnnotation.init(title: info?.name,
+////                                                           subtitle: info?.subTitle,
+////                                                           website: info?.website,
+////                                                           coordinate: annotation.coordinate)
+////                self.view?.setAnnotations(annotations: [storeAnnotation])
+////            }
+//        }
+//    }
     
     func getHomeData(){
        
@@ -313,6 +350,7 @@ class SearchMapVC: UIViewController {
                 case 200:
                       self.homeModel = HomeDataModel.init(dictionary: dicResponse as NSDictionary)
                         
+                    self.plotDataOnMap()
                 print(self.homeModel?.features?[0].geometry?.coordinates?[0][0].count,"CHECK VIDUR COUNT")
 
                 default:
@@ -425,7 +463,7 @@ class SearchMapVC: UIViewController {
        // MARK: - MKMapViewDelegate
        
     
-//
+
 //    fileprivate func loadKml(_ path: String,isFirst : Bool) {
 //        let url = Bundle.main.url(forResource: path, withExtension: "kml")
 //        KMLDocument.parse(url: url!, isFirst: isFirst, callback:
@@ -494,16 +532,18 @@ class SearchMapVC: UIViewController {
 extension SearchMapVC: MKMapViewDelegate {
     
     func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
-        if let overlayPolyline = overlay as? KMLOverlayPolyline {
-            // return MKPolylineRenderer
-            return overlayPolyline.renderer()
-        }
-        if let overlayPolygon = overlay as? KMLOverlayPolygon {
-            // return MKPolygonRenderer
-            return overlayPolygon.renderer()
-        }
-        return MKOverlayRenderer(overlay: overlay)
-    }
+          if overlay is MKPolyline {
+              let polylineRenderer = MKPolylineRenderer(overlay: overlay)
+              polylineRenderer.strokeColor = .orange
+              polylineRenderer.lineWidth = 5
+              return polylineRenderer
+          } else if overlay is MKPolygon {
+              let polygonView = MKPolygonRenderer(overlay: overlay)
+              polygonView.fillColor = .magenta
+              return polygonView
+          }
+          return MKPolylineRenderer(overlay: overlay)
+      }
     
     
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {

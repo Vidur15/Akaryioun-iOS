@@ -41,6 +41,7 @@ public class Features {
 public class Geometry {
     public var type : String?
     public var coordinates : Array<Array<Array<Double>>>?
+    public var coordinates1 : Array<Double>?
 
 
     required public init?(dictionary: NSDictionary) {
@@ -48,6 +49,7 @@ public class Geometry {
         type = dictionary["type"] as? String
         
         coordinates = dictionary["coordinates"] as? [[[Double]]] ?? [[]]
+        coordinates1 = dictionary["coordinates"] as? [Double] ?? []
         
     //    if (dictionary["coordinates"] != nil) { coordinates = Coordinates.modelsFromDictionaryArray(dictionary["coordinates"] as! NSArray) }
     }
