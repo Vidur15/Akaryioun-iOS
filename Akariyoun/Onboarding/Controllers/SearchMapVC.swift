@@ -29,6 +29,8 @@ class SearchMapVC: UIViewController {
     
     var homeModel : HomeDataModel?
     
+    var overlayColorDict = [[String : Any]]()
+    
     //  @IBOutlet weak var mapView: GMSMapView!
     
     override func viewDidLoad() {
@@ -265,11 +267,15 @@ class SearchMapVC: UIViewController {
                     let point = CLLocationCoordinate2D.init(latitude: j[1], longitude: j[0])
                     point1.append(point)
                 }
-                let polygon = MKPolygon(coordinates: &point1, count: point1.count)
+                let polygon = CustomPolygon(coordinates: &point1, count: point1.count)
                
                 if point1.count == 0 || point1.count == 1{
                     
                 }else{
+                 //   polygon.identifier = i.pr
+                 //   self.appleMapView.renderer(for: <#T##MKOverlay#>)
+                    polygon.identifier = "green"
+                    polygon.color = i.properties?.color
                     overlaysArr.append(polygon)
                 }
                 print(point1,"CHECK POINT VIDUR")
@@ -284,6 +290,49 @@ class SearchMapVC: UIViewController {
             self.appleMapView.layoutIfNeeded()
             self.appleMapView.setNeedsLayout()
         }
+    }
+    
+    
+    func configureColor(of renderer: MKPolygonRenderer, for overlay: MKOverlay) {
+        let baseColor: UIColor
+        if let polygon = overlay as? CustomPolygon {
+            baseColor = self.hexStringToUIColor(hex: polygon.color ?? "")
+        } else {
+            baseColor = .red
+        }
+      //  renderer.strokeColor = baseColor.withAlphaComponent(0.75)
+        renderer.fillColor = baseColor.withAlphaComponent(0.55)
+    }
+    
+    
+    func updateColors() {
+        for overlay in self.appleMapView.overlays {
+            if let renderer = appleMapView.renderer(for: overlay) as? MKPolygonRenderer {
+                configureColor(of: renderer, for: overlay)
+            }
+        }
+    }
+    
+    func hexStringToUIColor (hex:String) -> UIColor {
+        var cString:String = hex.trimmingCharacters(in: .whitespacesAndNewlines).uppercased()
+
+        if (cString.hasPrefix("#")) {
+            cString.remove(at: cString.startIndex)
+        }
+
+        if ((cString.count) != 6) {
+            return UIColor.gray
+        }
+
+        var rgbValue:UInt64 = 0
+        Scanner(string: cString).scanHexInt64(&rgbValue)
+
+        return UIColor(
+            red: CGFloat((rgbValue & 0xFF0000) >> 16) / 255.0,
+            green: CGFloat((rgbValue & 0x00FF00) >> 8) / 255.0,
+            blue: CGFloat(rgbValue & 0x0000FF) / 255.0,
+            alpha: CGFloat(1.0)
+        )
     }
     
     
@@ -539,11 +588,14 @@ extension SearchMapVC: MKMapViewDelegate {
               return polylineRenderer
           } else if overlay is MKPolygon {
               let polygonView = MKPolygonRenderer(overlay: overlay)
-              polygonView.fillColor = .magenta
+            //  polygonView.fillColor = .magenta
+            configureColor(of: polygonView, for: overlay)
               return polygonView
           }
           return MKPolylineRenderer(overlay: overlay)
       }
+    
+    
     
     
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
@@ -582,4 +634,8 @@ class AnnotationView: MKAnnotationView {
         layer.addSublayer(pulsator)
         pulsator.start()
     }
+}
+class CustomPolygon: MKPolygon {
+    var identifier: String? = nil
+    var color : String? = nil
 }
