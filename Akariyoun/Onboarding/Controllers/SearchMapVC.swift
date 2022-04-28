@@ -43,7 +43,9 @@ class SearchMapVC: UIViewController {
                }
     
         self.appleMapView.showsPointsOfInterest = false
-     self.appleMapView.mapType = .mutedStandard
+     self.appleMapView.mapType = .hybrid
+        
+        
         
         // 23.8859 saudi latitude
         //45.0792 saudi longitude
@@ -54,7 +56,7 @@ class SearchMapVC: UIViewController {
             SearchMapVC.self.colorsArr.append(color)
         }
         
-        self.animateCamera(coord: CLLocationCoordinate2D.init(latitude: 24.7136, longitude: 46.6753))
+       
         
         //   self.loadKml("riyadh", isFirst: true)
         
@@ -259,7 +261,14 @@ class SearchMapVC: UIViewController {
         
         var overlaysArr = [MKOverlay]()
         for i in self.homeModel?.features ?? []{
-            if i.type == "Point"{
+            if i.geometry?.type == "Point"{
+                print(i.geometry?.coordinates1 ?? [],"CHECK COORDINATES VIDUR")
+                
+                if i.geometry?.coordinates1?[0] == 0.0 || i.geometry?.coordinates1?[1] == 0.0{
+                    
+                }else{
+                    self.addAnnotations(lat: i.geometry?.coordinates1?[1] ?? 0.0,long: i.geometry?.coordinates1?[0] ?? 0.0)
+                }
                 
             }else{
                 point1 = [CLLocationCoordinate2D]()
@@ -274,34 +283,54 @@ class SearchMapVC: UIViewController {
                 }else{
                  //   polygon.identifier = i.pr
                  //   self.appleMapView.renderer(for: <#T##MKOverlay#>)
+                    
+//                    if i.properties?.color == "#ffffff"{
+//                        polygon.identifier = "green"
+//                        polygon.color = self.randomHexColorCode()
+//                    }else{
                     polygon.identifier = "green"
                     polygon.color = i.properties?.color
+                    
                     overlaysArr.append(polygon)
                 }
-                print(point1,"CHECK POINT VIDUR")
+                
              //   point1 = [CLLocationCoordinate2D]()
             }
         }
         
         DispatchQueue.main.async {
-            print(overlaysArr.count,"CHECK THIS VIDUR")
+            
             self.appleMapView.removeOverlays(self.appleMapView.overlays)
             self.appleMapView.addOverlays(overlaysArr)
             self.appleMapView.layoutIfNeeded()
             self.appleMapView.setNeedsLayout()
+            self.animateCamera(coord: CLLocationCoordinate2D.init(latitude: 24.7136, longitude: 46.6753))
         }
     }
     
+//    func randomHexColorCode() -> String{
+//        let a = ["1","2","3","4","5","6","7","8","9","a","b","c","d","e","f"];
+//        print("#".appending(a[Int.random(in:0..<15)]).appending(a[Int.random(in:0..<15)]).appending(a[Int.random(in:0..<15)]),"CHECK COLOR VIUDT")
+//        return "#".appending(a[Int.random(in:0..<15)]).appending(a[Int.random(in:0..<15)]).appending(a[Int.random(in:0..<15)])
+//    }
+    
     
     func configureColor(of renderer: MKPolygonRenderer, for overlay: MKOverlay) {
-        let baseColor: UIColor
+        var baseColor: UIColor
         if let polygon = overlay as? CustomPolygon {
+           
+            if polygon.color == "#ffffff"{
+                baseColor = UIColor.random().withAlphaComponent(0.25)
+            }else{
             baseColor = self.hexStringToUIColor(hex: polygon.color ?? "")
+            }
         } else {
             baseColor = .red
         }
       //  renderer.strokeColor = baseColor.withAlphaComponent(0.75)
-        renderer.fillColor = baseColor.withAlphaComponent(0.55)
+        renderer.fillColor = baseColor.withAlphaComponent(0.25)
+        renderer.strokeColor = baseColor.withAlphaComponent(0.65)
+        renderer.lineWidth = 2
     }
     
     
@@ -334,57 +363,7 @@ class SearchMapVC: UIViewController {
             alpha: CGFloat(1.0)
         )
     }
-    
-    
-    
-//    private func fetchJson() {
-//        guard let geoJsonFileUrl = Bundle.main.url(forResource: "Geo", withExtension: "json"),
-//            let geoJsonData = try? Data.init(contentsOf: geoJsonFileUrl) else {
-//                fatalError("Failure to fetch the file.")
-//        }
-//        /*
-//         1. geoJsonData is data type
-//         **/
-//        guard let objs = try? MKGeoJSONDecoder().decode(geoJsonData) as? [MKGeoJSONFeature] else {
-////            fatalError().localizedDescription
-////            fatalError("Wrong format")
-//            return
-//        }
-//
-//        // Parse the objects
-//        objs.forEach { (feature) in
-//            guard let geometry = feature.geometry.first,
-//                let propData = feature.properties else {
-//                return;
-//            }
-//            print(objs.count,"CHECK FEATURE COUNT VIDUR")
-//
-//            // Check if it is MKPolygon
-//
-////            if let polygon = geometry as? MKPolygon {
-////                let polygonInfo = try? JSONDecoder.init().decode(PolygonInfo.self, from: propData)
-////                self.view?.render(overlay: polygon,
-////                                  info: polygonInfo)
-////            }
-////
-////            // Check if it is MKPolyline
-////            if let polyline = geometry as? MKPolyline {
-////                let polylineInfo = try? JSONDecoder.init().decode(PolylineInfo.self, from: propData)
-////                self.view?.render(overlay: polyline,
-////                                  info: polylineInfo)
-////            }
-////
-////            // Check if it is MKPointAnnotation
-////            if let annotation = geometry as? MKPointAnnotation {
-////                let info = try? JSONDecoder.init().decode(Info.self, from: propData)
-////                let storeAnnotation = StoreAnnotation.init(title: info?.name,
-////                                                           subtitle: info?.subTitle,
-////                                                           website: info?.website,
-////                                                           coordinate: annotation.coordinate)
-////                self.view?.setAnnotations(annotations: [storeAnnotation])
-////            }
-//        }
-//    }
+ 
     
     func getHomeData(){
        
@@ -399,7 +378,7 @@ class SearchMapVC: UIViewController {
                 case 200:
                       self.homeModel = HomeDataModel.init(dictionary: dicResponse as NSDictionary)
                         
-                    self.plotDataOnMap()
+                //    self.plotDataOnMap()
                 print(self.homeModel?.features?[0].geometry?.coordinates?[0][0].count,"CHECK VIDUR COUNT")
 
                 default:
@@ -429,8 +408,13 @@ class SearchMapVC: UIViewController {
             
             
             let location = coord
-            let region = MKCoordinateRegion(center: location, latitudinalMeters: CLLocationDistance(exactly: 60000)!, longitudinalMeters: CLLocationDistance(exactly: 60000)!)
+            let region = MKCoordinateRegion(center: location, latitudinalMeters: CLLocationDistance(exactly: 8500)!, longitudinalMeters: CLLocationDistance(exactly: 8500)!)
             self.appleMapView.setRegion(self.appleMapView.regionThatFits(region), animated: true)
+            
+//            let span = MKCoordinateSpanMake(0.0275, 0.0275)
+//            self.appleMapView.setVisibleMapRect(self.appleMapView.visibleMapRect, edgePadding: UIEdgeInsets(top: 40.0, left: 20.0, bottom: 20, right: 20.0), animated: true)
+//            self.appleMapView.setRegion(MKCoordinateRegionForMapRect(rect), animated: true)
+
         }
     }
     
@@ -584,7 +568,7 @@ extension SearchMapVC: MKMapViewDelegate {
           if overlay is MKPolyline {
               let polylineRenderer = MKPolylineRenderer(overlay: overlay)
               polylineRenderer.strokeColor = .orange
-              polylineRenderer.lineWidth = 5
+              polylineRenderer.lineWidth = 1
               return polylineRenderer
           } else if overlay is MKPolygon {
               let polygonView = MKPolygonRenderer(overlay: overlay)
@@ -630,9 +614,10 @@ class AnnotationView: MKAnnotationView {
         pulsator.numPulse = 5
         pulsator.radius = 15
         pulsator.animationDuration = 3
-        pulsator.backgroundColor = #colorLiteral(red: 0.1137254902, green: 0.3882352941, blue: 0.6431372549, alpha: 1)
+        pulsator.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
         layer.addSublayer(pulsator)
         pulsator.start()
+        // #colorLiteral(red: 0.1137254902, green: 0.3882352941, blue: 0.6431372549, alpha: 1)
     }
 }
 class CustomPolygon: MKPolygon {
