@@ -68,7 +68,8 @@ public class Properties {
     public var west_area : String?
     public var color : String?
     public var city_id : Int?
-
+    public var active_property : Bool?
+    
 
     required public init?(dictionary: NSDictionary) {
 
@@ -84,6 +85,6 @@ public class Properties {
         west_area = dictionary["west_area"] as? String
         color = dictionary["color"] as? String
         city_id = dictionary["city_id"] as? Int
+        active_property = dictionary["active_property"] as? Bool
     }
-
 }

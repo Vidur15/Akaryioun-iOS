@@ -41,6 +41,7 @@ class NewsVC: UIViewController,UITextFieldDelegate{
                    drawerController.screenEdgePanGestureEnabled = false
                }
       
+      //  self.searchTextF.textAlignment = kSharedUserDefaults.getLanguageName() == "en"
         // Do any additional setup after loading the view.
     }
     

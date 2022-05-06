@@ -231,8 +231,7 @@ class PropertyDetailsVC: UIViewController,UIScrollViewDelegate{
             lbl.textColor = .black
             lbl.textAlignment = .center
             lbl.numberOfLines = 0
-            
-            
+            lbl.font = UIFont.systemFont(ofSize: 13)
             
        //     lbl.backgroundColor = .green
         }
@@ -277,7 +276,8 @@ class PropertyDetailsVC: UIViewController,UIScrollViewDelegate{
                         webkit = true
                         
                     default:
-                        print("default")
+                        let a = 5
+                       // print("default")
                     }
             }
                 
@@ -307,11 +307,8 @@ class PropertyDetailsVC: UIViewController,UIScrollViewDelegate{
                      //   lbl1.backgroundColor = .green
                         lbl1.transform = CGAffineTransform(rotationAngle: -CGFloat.pi / 2).concatenating(CGAffineTransform(translationX: -75, y: -100))
                     }
-                    
                    // lbl1.transform = CGAffineTransform.init(translationX: -16, y: -16)
                 }
-                
-                
             }
 }
         

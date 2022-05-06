@@ -63,14 +63,13 @@ class SearchMapVC: UIViewController {
         
         for i in self.homeModel?.features ?? []{
             if i.geometry?.type == "Point"{
-                print(i.geometry?.coordinates1 ?? [],"CHECK COORDINATES VIDUR")
-                
                 if i.geometry?.coordinates1?[0] == 0.0 || i.geometry?.coordinates1?[1] == 0.0{
                     
                 }else{
+                    if i.properties?.active_property ?? false{
                     self.addAnnotations(lat: i.geometry?.coordinates1?[1] ?? 0.0,long: i.geometry?.coordinates1?[0] ?? 0.0)
+                    }
                 }
-                
             }else{
                 point1 = [CLLocationCoordinate2D]()
                 for j in i.geometry?.coordinates?[0] ?? []{
