@@ -4024,9 +4024,9 @@
 			baseConfigurationReference = 3FC190D3DA759E76AE0AB784 /* Pods-Akariyoun.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = 2LYR8LJ6EY;
 				INFOPLIST_FILE = Akariyoun/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -4035,7 +4035,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.appsinvo.Akariyoun;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = AkariyounDistribution;
+				PROVISIONING_PROFILE_SPECIFIER = AkariyounProv;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -4048,7 +4048,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = 2LYR8LJ6EY;
 				INFOPLIST_FILE = Akariyoun/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (

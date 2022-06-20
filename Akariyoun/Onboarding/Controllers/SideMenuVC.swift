@@ -14,7 +14,7 @@ class SideMenuVC: UIViewController {
     @IBOutlet weak var mainTableView: UITableView!
     
     var menuArr = ["Real Estate","Members","Request","Who are we","Call Us","Language"]
-    var imageArr = ["1530085_building_business_city_commercial_company_icon (1)","79-users-1","pull-requests-1","8324228_ui_essential_app_question_help_icon","Phone","2135789_earth_language_planet_icon"]
+    var imageArr = ["property","members","Requests","who are we","Call","2135789_earth_language_planet_icon"]
     
     var boolVal = false
     
@@ -34,10 +34,10 @@ class SideMenuVC: UIViewController {
         print("check vidur side menu")
         if kSharedUserDefaults.getLoggedInAccessToken() == ""{
             self.menuArr = ["Real Estate".localized(),"Members".localized(),"Request".localized(),"Who are we".localized(),"Call Us".localized(),"Other Services".localized(),"Carrers".localized(),"Language".localized()]
-            self.imageArr = ["1530085_building_business_city_commercial_company_icon (1)","79-users-1","pull-requests-1","8324228_ui_essential_app_question_help_icon","Phone","Other Services","career","2135789_earth_language_planet_icon"]
+            self.imageArr = ["property","members","Requests","who are we","Call","Other Services","career","2135789_earth_language_planet_icon"]
         }else{
             self.menuArr = ["Real Estate".localized(),"Members".localized(),"Request".localized(),"Who are we".localized(),"Call Us".localized(),"Other Services".localized(),"Carrers".localized(),"Profile".localized(),"Settings".localized(),"Language".localized()]
-            self.imageArr = ["1530085_building_business_city_commercial_company_icon (1)","79-users-1","pull-requests-1","8324228_ui_essential_app_question_help_icon","Phone","Other Services","career","Profile","Setting","2135789_earth_language_planet_icon"]
+            self.imageArr = ["property","members","Requests","who are we","Call","Other Services","career","Profile","Setting","2135789_earth_language_planet_icon"]
         }
         self.mainTableView.reloadData()
     }
@@ -149,18 +149,18 @@ extension SideMenuVC: UITableViewDelegate,UITableViewDataSource {
             if self.boolVal{
                 if kSharedUserDefaults.getLoggedInAccessToken() == ""{
                     self.menuArr = ["Real Estate".localized(),"Members".localized(),"Request".localized(),"Who are we".localized(),"Call Us".localized(),"Other Services".localized(),"Carrers".localized(),"Language".localized(),"English".localized(),"Arabic".localized()]
-                    self.imageArr = ["1530085_building_business_city_commercial_company_icon (1)","79-users-1","pull-requests-1","8324228_ui_essential_app_question_help_icon","Phone","Other Services","career","2135789_earth_language_planet_icon","2135789_earth_language_planet_icon","2135789_earth_language_planet_icon"]
+                    self.imageArr = ["property","members","Requests","who are we","Call","Other Services","career","2135789_earth_language_planet_icon","2135789_earth_language_planet_icon","2135789_earth_language_planet_icon"]
                 }else{
                     self.menuArr = ["Real Estate".localized(),"Members".localized(),"Request".localized(),"Who are we".localized(),"Call Us".localized(),"Other Services".localized(),"Carrers".localized(),"Profile".localized(),"Settings".localized(),"Language".localized(),"English".localized(),"Arabic".localized()]
-                    self.imageArr = ["1530085_building_business_city_commercial_company_icon (1)","79-users-1","pull-requests-1","8324228_ui_essential_app_question_help_icon","Phone","Other Services","career","Profile","Setting","2135789_earth_language_planet_icon","2135789_earth_language_planet_icon","2135789_earth_language_planet_icon"]
+                    self.imageArr = ["property","members","Requests","who are we","Call","Other Services","career","Profile","Setting","2135789_earth_language_planet_icon","2135789_earth_language_planet_icon","2135789_earth_language_planet_icon"]
                 }
             }else{
                 if kSharedUserDefaults.getLoggedInAccessToken() == ""{
                     self.menuArr = ["Real Estate".localized(),"Members".localized(),"Request".localized(),"Who are we".localized(),"Call Us".localized(),"Other Services".localized(),"Carrers".localized(),"Language".localized()]
-                    self.imageArr = ["1530085_building_business_city_commercial_company_icon (1)","79-users-1","pull-requests-1","8324228_ui_essential_app_question_help_icon","Phone","Other Services","career","2135789_earth_language_planet_icon"]
+                    self.imageArr = ["property","members","Requests","who are we","Call","Other Services","career","2135789_earth_language_planet_icon"]
                 }else{
                     self.menuArr = ["Real Estate".localized(),"Members".localized(),"Request".localized(),"Who are we".localized(),"Call Us".localized(),"Other Services".localized(),"Carrers".localized(),"Profile".localized(),"Settings".localized(),"Language".localized()]
-                    self.imageArr = ["1530085_building_business_city_commercial_company_icon (1)","79-users-1","pull-requests-1","8324228_ui_essential_app_question_help_icon","Phone","Other Services","career","Profile","Setting","2135789_earth_language_planet_icon"]
+                    self.imageArr = ["property","members","Requests","who are we","Call","Other Services","career","Profile","Setting","2135789_earth_language_planet_icon"]
                 }
             }
             self.mainTableView.reloadData()

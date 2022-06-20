@@ -46,7 +46,7 @@ class RealEstateVC: UIViewController {
              tabBarItem.title = "Real estate".localized()
          }
       
-    
+    // lh fs jdfsd flskd flksjd flksjd flsdj flksdj flksdj flksdj flksdj flskdj flksdj fsldhf kjshdf kjsdhf kjsdhf kjshdf kshf kjsdf sdf jsdf sjdhf ksjdfsdf
     
     func getPropertyListApi(){
        

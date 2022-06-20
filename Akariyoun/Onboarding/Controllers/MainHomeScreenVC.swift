@@ -25,8 +25,10 @@ class MainHomeScreenVC: UIViewController {
     var numberOfPages = 7
     
     var headingArr = ["Search Map".localized(),"Property Search".localized(),"Realestate".localized(),"Members".localized(),"Requests".localized(),"Directory".localized(),"Property Management".localized(),"News".localized(),"Finance".localized()]
+    
     var descArr = ["Find a site to offer for sale or rent".localized(),"Find a site for sale or rent".localized(),"Real estate Offers".localized(),"Site Members".localized(),"Search and request for a property that is not available".localized(),"Find a nearby real estate office".localized(),"The best way to manage your property".localized(),"Find the latest Trending news around your area".localized(),"Find the best loans from both government and private players".localized()]
-    var imageArr = ["2703060_maker_map_flag_location_icon","search","8150379_retail_price_tag_price tag_label_icon","79-users","pull-requests-1","290138_document_extension_file_format_paper_icon","office-1","290136_communication_internet_media_news_newspaper_icon","290136_communication_internet_media_news_newspaper_icon"]
+    
+    var imageArr = ["map-1","search","Realestate","members","Requests","directory","property","news","Finance"]
     
     var timer : Timer?
     

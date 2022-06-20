@@ -32,7 +32,7 @@ class ChooseMemberVC: UIViewController {
         self.getMemberList()
         // Do any additional setup after loading the view.
     }
-    
+    // k hfksjdhf sdhf kjshfjk sjshfj shf sdfsdfsdf sdfsdf
     
         func getMemberList(){
            
