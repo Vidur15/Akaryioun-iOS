@@ -22,6 +22,7 @@ class NewsVC: UIViewController,UITextFieldDelegate{
     
     var geo : Geometry?
     
+    @IBOutlet weak var backBtnOut: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setStatusBarColor()
@@ -40,6 +41,7 @@ class NewsVC: UIViewController,UITextFieldDelegate{
         if let drawerController = navigationController?.parent as? KYDrawerController {
                    drawerController.screenEdgePanGestureEnabled = false
                }
+        self.backBtnOut.setImage(kSharedUserDefaults.getLanguageName() == "en" ? UIImage.init(named: "arrow-back") : UIImage.init(named: "Back arrow"), for: .normal)
       
       //  self.searchTextF.textAlignment = kSharedUserDefaults.getLanguageName() == "en"
         // Do any additional setup after loading the view.

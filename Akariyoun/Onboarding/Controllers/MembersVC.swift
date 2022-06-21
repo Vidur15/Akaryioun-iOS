@@ -11,9 +11,11 @@ import KYDrawerController
 
 class MembersVC: UIViewController {
 
+    @IBOutlet weak var backBTnOut: UIButton!
     @IBOutlet weak var mainTableView: UITableView!
     
     var memberModel : MemberModel?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setStatusBarColor()
@@ -26,6 +28,7 @@ class MembersVC: UIViewController {
                    drawerController.screenEdgePanGestureEnabled = false
                }
         self.getMemberList()
+        self.backBTnOut.setImage(kSharedUserDefaults.getLanguageName() == "en" ? UIImage.init(named: "arrow-back") : UIImage.init(named: "Back arrow"), for: .normal)
         // Do any additional setup after loading the view.
     }
     

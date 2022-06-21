@@ -11,6 +11,7 @@ import KYDrawerController
 
 class AddRequestVC: UIViewController {
     
+    @IBOutlet weak var backBtnOut: UIButton!
     @IBOutlet weak var topDescLnl: UILabel!
     
     @IBOutlet weak var topRequestLbl: UILabel!
@@ -48,6 +49,7 @@ class AddRequestVC: UIViewController {
         
         self.titleTextField.textAlignment = kSharedUserDefaults.getLanguageName() == "en" ? .left : .right
         self.descTextView.textAlignment = kSharedUserDefaults.getLanguageName() == "en" ? .left : .right
+        self.backBtnOut.setImage(kSharedUserDefaults.getLanguageName() == "en" ? UIImage.init(named: "arrow-back") : UIImage.init(named: "Back arrow"), for: .normal)
         // Do any additional setup after loading the view.
     }
     

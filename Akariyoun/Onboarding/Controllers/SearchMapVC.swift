@@ -13,6 +13,7 @@ import KYDrawerController
 
 class SearchMapVC: UIViewController {
 
+    @IBOutlet weak var backBtnOut: UIButton!
     
     @IBOutlet weak var appleMapView: MKMapView!
     var locationManager = CLLocationManager()
@@ -52,6 +53,7 @@ class SearchMapVC: UIViewController {
         }
        
         self.getHomeData()
+        self.backBtnOut.setImage(kSharedUserDefaults.getLanguageName() == "en" ? UIImage.init(named: "arrow-back") : UIImage.init(named: "Back arrow"), for: .normal)
         // Do any additional setup after loading the view.
     }
     

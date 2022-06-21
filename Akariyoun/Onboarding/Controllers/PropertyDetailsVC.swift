@@ -14,7 +14,11 @@ import ISVImageScrollView
 
 class PropertyDetailsVC: UIViewController,UIScrollViewDelegate{
 
-@IBOutlet weak var mainImageScrollView: ISVImageScrollView!
+   
+    @IBOutlet weak var mainImageScrollView: ISVImageScrollView!
+    
+    @IBOutlet weak var mainActivityIndicator: UIActivityIndicatorView!
+    
     @IBOutlet weak var mainWebView: WKWebView!
     @IBOutlet weak var propertyDetailsMainImgView: UIImageView!
     @IBOutlet weak var mainScrollView: UIScrollView!
@@ -23,6 +27,7 @@ class PropertyDetailsVC: UIViewController,UIScrollViewDelegate{
     @IBOutlet weak var mainTableHeightConst: NSLayoutConstraint!
     @IBOutlet weak var mainTableView: UITableView!
     
+    @IBOutlet weak var backBtnOut: UIButton!
     
     @IBOutlet weak var secondMobileLbl: UILabel!
     @IBOutlet weak var westLengthLbl: UILabel!
@@ -81,9 +86,33 @@ class PropertyDetailsVC: UIViewController,UIScrollViewDelegate{
                self.mainTableView.register(nib, forCellReuseIdentifier: "EarthInfoTVC")
                          
         self.getPropertyDetails()
+        self.backBtnOut.setImage(kSharedUserDefaults.getLanguageName() == "en" ? UIImage.init(named: "arrow-back") : UIImage.init(named: "Back arrow"), for: .normal)
+        self.mainActivityIndicator.startAnimating()
+        self.mainActivityIndicator.style = .large
         // Do any additional setup after loading the view.
     }
     
+    
+    
+    @IBAction func sharePropertyAction(_ sender: UIButton) {
+        if let name = URL(string: "https://itunes.apple.com/us/app/myapp/idxxxxxxxx?ls=1&mt=8"), !name.absoluteString.isEmpty {
+          let objectsToShare = [name]
+          let activityVC = UIActivityViewController(activityItems: objectsToShare, applicationActivities: nil)
+          self.present(activityVC, animated: true, completion: nil)
+        } else {
+          // show alert for not available
+        }
+    }
+    
+    @IBAction func openDialerAction(_ sender: UIButton) {
+        
+            if let url = URL(string: "tel://\(self.propertyModel?.data?.property?.member?.mobile_number ?? "")"),
+            UIApplication.shared.canOpenURL(url) {
+            UIApplication.shared.open(url, options: [:], completionHandler: nil)
+        
+        }
+    }
+  
     
     func getPropertyDetails(){
         TANetworkManager.sharedInstance.requestApi(withServiceName: ServiceName.propertyDetails + "?id=\(self.idToSend)", requestMethod: .GET, requestParameters: [:], withProgressHUD: true) { (result: Any?, error: Error?, errorType: ErrorType, statusCode: Int?) in
@@ -139,6 +168,8 @@ class PropertyDetailsVC: UIViewController,UIScrollViewDelegate{
         
         
      //   self.mainWebView.scrollView.delegate = self
+        
+     //   CommonUtils.showHudWithNoInteraction(show: true)
         self.propertyDetailsMainImgView.isHidden = false
         let svg = URL(string: self.propertyModel?.data?.svg_url ?? "")!
 
@@ -161,6 +192,9 @@ class PropertyDetailsVC: UIViewController,UIScrollViewDelegate{
         
       
         self.propertyDetailsMainImgView.downloadedsvg(from: svg){ [weak self] value in
+          //  CommonUtils.showHudWithNoInteraction(show: false)
+            self?.mainActivityIndicator.stopAnimating()
+            self?.mainActivityIndicator.isHidden = true
             var vWidth = self?.propertyDetailsMainImgView.frame.size.width ?? 0
             var vHeight = self?.propertyDetailsMainImgView.frame.size.height ?? 0
             print(self?.propertyDetailsMainImgView.image?.size.height ?? 0,"CHECH HEIGHT")

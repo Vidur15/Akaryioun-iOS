@@ -18,6 +18,7 @@ class NewsDetailsVC: UIViewController,UICollectionViewDelegate,UICollectionViewD
     @IBOutlet weak var mainImageView: UIImageView!
     var idToSend = -1
     
+    @IBOutlet weak var backBtnOut: UIButton!
     var newsDetailModel : NewsDetailModel?
     
     override func viewDidLoad() {
@@ -32,6 +33,7 @@ class NewsDetailsVC: UIViewController,UICollectionViewDelegate,UICollectionViewD
         if let drawerController = navigationController?.parent as? KYDrawerController {
                    drawerController.screenEdgePanGestureEnabled = false
                }
+        self.backBtnOut.setImage(kSharedUserDefaults.getLanguageName() == "en" ? UIImage.init(named: "arrow-back") : UIImage.init(named: "Back arrow"), for: .normal)
         // Do any additional setup after loading the view.
     }
     

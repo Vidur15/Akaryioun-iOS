@@ -11,6 +11,7 @@ import KYDrawerController
 
 class OtherServicesVC: UIViewController {
 
+    @IBOutlet weak var backBtnOut: UIButton!
     @IBOutlet weak var mainTableView: UITableView!
     
     var servicesArr = [Member]()
@@ -30,6 +31,7 @@ class OtherServicesVC: UIViewController {
         if let drawerController = navigationController?.parent as? KYDrawerController {
                    drawerController.screenEdgePanGestureEnabled = false
                }
+        self.backBtnOut.setImage(kSharedUserDefaults.getLanguageName() == "en" ? UIImage.init(named: "arrow-back") : UIImage.init(named: "Back arrow"), for: .normal)
         // Do any additional setup after loading the view.
     }
     

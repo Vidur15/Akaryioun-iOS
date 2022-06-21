@@ -11,6 +11,7 @@ import KYDrawerController
 
 class NeighbourhoodSelectionVC: UIViewController {
 
+    @IBOutlet weak var backBtnOut: UIButton!
     @IBOutlet weak var mainTableView: UITableView!
     @IBOutlet weak var searchView: UIView!
     
@@ -28,6 +29,8 @@ class NeighbourhoodSelectionVC: UIViewController {
         self.mainTableView.dataSource = self
         let nib = UINib(nibName: "SelectionTVC", bundle: Bundle.main)
         self.mainTableView.register(nib, forCellReuseIdentifier: "SelectionTVC")
+        
+        self.backBtnOut.setImage(kSharedUserDefaults.getLanguageName() == "en" ? UIImage.init(named: "arrow-back") : UIImage.init(named: "Back arrow"), for: .normal)
         // Do any additional setup after loading the view.
     }
     

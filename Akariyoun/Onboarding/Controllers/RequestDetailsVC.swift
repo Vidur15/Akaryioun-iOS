@@ -11,6 +11,7 @@ import KYDrawerController
 
 class RequestDetailsVC: UIViewController {
 
+    @IBOutlet weak var backBtnOut: UIButton!
     @IBOutlet weak var contactLbl: UILabel!
     @IBOutlet weak var requestDescLbl: UILabel!
     @IBOutlet weak var requestTitleLbl: UILabel!
@@ -32,7 +33,7 @@ class RequestDetailsVC: UIViewController {
         }
         
         self.setData()
-        
+        self.backBtnOut.setImage(kSharedUserDefaults.getLanguageName() == "en" ? UIImage.init(named: "arrow-back") : UIImage.init(named: "Back arrow"), for: .normal)
         // Do any additional setup after loading the view.
     }
     

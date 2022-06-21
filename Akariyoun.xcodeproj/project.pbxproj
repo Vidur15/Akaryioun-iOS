@@ -1605,7 +1605,7 @@
 		03D4A78727F2FCB200CBB35D /* RealEstateGuideTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RealEstateGuideTVC.xib; sourceTree = "<group>"; };
 		03D4A78A27F3035A00CBB35D /* RealEstateContactVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealEstateContactVC.swift; sourceTree = "<group>"; };
 		03D5799527C4C00000DADE0B /* Akariyoun.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Akariyoun.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		03D5799827C4C00000DADE0B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = ../AppDelegate.swift; sourceTree = "<group>"; };
+		03D5799827C4C00000DADE0B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = ../AppDelegate.swift; sourceTree = "<group>"; wrapsLines = 0; };
 		03D5799A27C4C00000DADE0B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SceneDelegate.swift; path = ../SceneDelegate.swift; sourceTree = "<group>"; };
 		03D5799C27C4C00000DADE0B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = ../../ViewController.swift; sourceTree = "<group>"; };
 		03D5799F27C4C00000DADE0B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };

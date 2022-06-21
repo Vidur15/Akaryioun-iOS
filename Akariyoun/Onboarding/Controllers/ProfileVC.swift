@@ -11,6 +11,7 @@ import KYDrawerController
 
 class ProfileVC: UIViewController {
     
+    @IBOutlet weak var backBtnOut: UIButton!
     @IBOutlet var btnSelectOutColl: [UIButton]!
     @IBOutlet weak var emailLbl: UILabel!
     @IBOutlet weak var mobileNumLbl: UILabel!
@@ -86,6 +87,7 @@ class ProfileVC: UIViewController {
         self.dateF.dateFormat = "dd MMM, yyyy hh:mm a"
         
         self.getUserDetails()
+        self.backBtnOut.setImage(kSharedUserDefaults.getLanguageName() == "en" ? UIImage.init(named: "arrow-back") : UIImage.init(named: "Back arrow"), for: .normal)
         // Do any additional setup after loading the view.
     }
     

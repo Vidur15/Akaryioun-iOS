@@ -12,6 +12,7 @@ import KYDrawerController
 class ChooseMemberVC: UIViewController {
 
    
+    @IBOutlet weak var backBtnOut: UIButton!
     @IBOutlet weak var mainTableView: UITableView!
     
     var memberModel : MemberModel?
@@ -30,6 +31,7 @@ class ChooseMemberVC: UIViewController {
             drawerController.screenEdgePanGestureEnabled = false
         }
         self.getMemberList()
+        self.backBtnOut.setImage(kSharedUserDefaults.getLanguageName() == "en" ? UIImage.init(named: "arrow-back") : UIImage.init(named: "Back arrow"), for: .normal)
         // Do any additional setup after loading the view.
     }
     // k hfksjdhf sdhf kjshfjk sjshfj shf sdfsdfsdf sdfsdf

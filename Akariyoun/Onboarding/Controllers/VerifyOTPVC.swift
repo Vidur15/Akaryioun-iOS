@@ -12,6 +12,7 @@ import SVPinView
 
 class VerifyOTPVC: UIViewController {
     
+    @IBOutlet weak var backBtnOut: UIButton!
     @IBOutlet weak var resendBtnOut: UIButton!
     @IBOutlet weak var timerLbl: UILabel!
     
@@ -43,6 +44,7 @@ class VerifyOTPVC: UIViewController {
         RunLoop.main.add(self.timer, forMode: RunLoop.Mode.default)
         
         self.resendBtnOut.isHidden = true
+        self.backBtnOut.setImage(kSharedUserDefaults.getLanguageName() == "en" ? UIImage.init(named: "arrow-back") : UIImage.init(named: "Back arrow"), for: .normal)
         // Do any additional setup after loading the view.
     }
     
